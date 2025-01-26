@@ -245,23 +245,22 @@ window.addEventListener('pageshow', (event) => {
 
 // Анимация поиска
 const searchIcon = document.getElementById('search-icon');
-const searchBox = document.getElementById('search');
+const searchBox = document.querySelector('.search-box');
+const searchContainer = document.querySelector('.search-container');
 
-searchIcon.addEventListener('click', () => {
+searchIcon.addEventListener('click', (e) => {
+    e.stopPropagation();
+    searchBox.classList.toggle('active');
     if (searchBox.classList.contains('active')) {
-        // Если поле активно, плавно скрываем его
-        searchBox.classList.remove('active');
-        searchBox.blur(); // Убираем фокус с поля поиска
+        searchBox.focus();
     } else {
-        // Если поле не активно, плавно раскрываем его
-        searchBox.classList.add('active');
-        searchBox.focus(); // Автоматически фокусируемся на поле поиска
+        searchBox.blur();
     }
 });
 
-// Закрытие поля поиска при клике вне его области
-document.addEventListener('click', (event) => {
-    if (!searchIcon.contains(event.target) && !searchBox.contains(event.target)) {
+// Закрытие при клике вне области
+document.addEventListener('click', (e) => {
+    if (!searchContainer.contains(e.target)) {
         searchBox.classList.remove('active');
         searchBox.blur();
     }

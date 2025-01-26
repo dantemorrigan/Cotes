@@ -877,3 +877,81 @@ body {
   from { transform: translateY(-30px); }
   to { transform: translateY(0); }
 }
+/* ===== ПОИСК ===== */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0; /* Уменьшаем отступ сверху и снизу */
+    position: relative;
+    width: 100%;
+    gap: 8px; /* Добавляем промежуток между иконкой и полем поиска */
+}
+
+.search-icon {
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 8px;
+    transition: transform 0.2s ease;
+    margin-right: 0; /* Убираем смещение */
+    background: var(--card-bg); /* Добавляем фон для иконки */
+    border-radius: var(--radius); /* Скругляем углы */
+    border: 1px solid rgba(124, 93, 250, 0.2); /* Добавляем границу */
+    height: 44px; /* Фиксированная высота для контейнера иконки */
+    width: 44px; /* Фиксированная ширина для контейнера иконки */
+    display: flex;
+    align-items: center; /* Центрируем иконку по вертикали */
+    justify-content: center; /* Центрируем иконку по горизонтали */
+}
+
+.search-icon:hover {
+    opacity: 0.8; /* Альтернативный эффект */
+    background: rgba(124, 93, 250, 0.1); /* Легкий фон при наведении */
+}
+
+.search-box {
+    width: 0;
+    padding: 0 !important;
+    border: 2px solid transparent !important;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    flex-grow: 1;
+    height: 44px; /* Фиксированная высота */
+    position: absolute;
+    left: 3rem; /* Увеличиваем отступ от иконки */
+    pointer-events: none; /* Отключаем взаимодействие с неактивным полем */
+    background: var(--card-bg); /* Добавляем фон для поля поиска */
+}
+
+.search-box.active {
+    width: calc(100% - 4rem); /* Увеличиваем ширину с учетом отступа */
+    padding: 0 16px !important;
+    border-color: var(--primary) !important;
+    opacity: 1;
+    pointer-events: auto; /* Включаем взаимодействие с активным полем */
+}
+
+/* ===== СЕТКА ЗАМЕТОК ===== */
+.notes-grid {
+    display: grid;
+    gap: 1rem; /* Уменьшаем промежуток между карточками */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 1rem 0; /* Уменьшаем отступ сверху и снизу */
+}
+
+/* Уменьшаем отступы для заголовка и контента заметок */
+.note-card__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem; /* Уменьшаем отступ снизу */
+    font-weight: 600;
+}
+
+.note-card__content {
+    color: #666;
+    margin-bottom: 1rem; /* Уменьшаем отступ снизу */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
