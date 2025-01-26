@@ -193,3 +193,27 @@ window.addEventListener('pageshow', (event) => {
     document.body.classList.add('page-transition');
   }
 });
+
+// Анимация поиска
+const searchIcon = document.getElementById('search-icon');
+const searchBox = document.getElementById('search');
+
+searchIcon.addEventListener('click', () => {
+    if (searchBox.classList.contains('active')) {
+        // Если поле активно, плавно скрываем его
+        searchBox.classList.remove('active');
+        searchBox.blur(); // Убираем фокус с поля поиска
+    } else {
+        // Если поле не активно, плавно раскрываем его
+        searchBox.classList.add('active');
+        searchBox.focus(); // Автоматически фокусируемся на поле поиска
+    }
+});
+
+// Закрытие поля поиска при клике вне его области
+document.addEventListener('click', (event) => {
+    if (!searchIcon.contains(event.target) && !searchBox.contains(event.target)) {
+        searchBox.classList.remove('active');
+        searchBox.blur();
+    }
+});

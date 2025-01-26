@@ -11,23 +11,23 @@
         <div class="container header__content">
             <a href="index.html" class="btn btn-back">Назад</a>
             <h2>Мои заметки</h2>
+            <a href="editor.html" class="btn btn-new-note">✏️ Новая заметка</a>
         </div>
     </header>
 
     <main class="container">
-        <input 
-            type="text" 
-            class="search-box" 
-            id="search"
-            placeholder="🔍 Поиск по заметкам...">
-        
+        <!-- Лупа и поле поиска -->
+        <div class="search-container">
+            <div class="search-icon" id="search-icon">🔍</div>
+            <input 
+                type="text" 
+                class="search-box" 
+                id="search"
+                placeholder="Поиск по заметкам...">
+        </div>
+
+        <!-- Сетка заметок -->
         <div class="notes-grid" id="notes-list"></div>
-            
-        <a href="editor.html" class="btn">✏️ Новая заметка</a>
-    </div>
-    
-    <div class="notes-grid" id="notes-list"></div>
-	
     </main>
 
     <script src="assets/js/app.js"></script>

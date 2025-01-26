@@ -133,42 +133,115 @@ body {
   justify-content: flex-end;
 }
 
-/* ===== NOTES LIST ===== */
-.notes-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 2rem 0;
+/* ===== ОБЩИЕ СТИЛИ ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.note-card__title {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
 }
 
-.note-card__content {
-  color: #666;
-  margin-bottom: 1.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    background-color: #7c5dfa;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn-group {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: auto;
+.btn-back:hover {
+    background-color: #5a6268; /* Темнее при наведении */
+}
+
+.btn-back {
+    background-color: #6c757d; /* Серый цвет */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-new-note {
+    background-color: #a8d5b2; /* Пастельный зеленый */
+    color: #1a3a1e; /* Темно-зеленый текст для контраста */
+    border: 1px solid #8cbf97; /* Слегка темная граница для глубины */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-new-note:hover {
+    background-color: #8cbf97; /* Немного темнее при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+/* ===== ПОИСК ===== */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .search-box {
-  margin: 2rem 0;
-  width: 100%;
-  padding: 1rem;
-  border-radius: var(--radius);
-  border: 2px solid #eee;
-  font-size: 1rem;
+    width: 0;
+    padding: 0;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    left: 2rem;
+    opacity: 0;
+    pointer-events: none; /* Отключаем взаимодействие с неактивным полем */
+}
+
+.search-box.active {
+    width: calc(100% - 3rem);
+    padding: 1rem;
+    border: 2px solid #eee;
+    opacity: 1;
+    pointer-events: auto; /* Включаем взаимодействие с активным полем */
+}
+/* ===== СЕТКА ЗАМЕТОК ===== */
+.notes-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 2rem 0;
+}
+
+.note-card__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.note-card__content {
+    color: #666;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-group {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
 }
 
 /* ===== HERO SECTION ===== */
@@ -699,4 +772,16 @@ body {
     content: "Поддержка";
     font-size: 0.8rem;
   }
+}
+
+/* ===== КНОПКА РЕДАКТИРОВАТЬ ===== */
+.btn-edit {
+    background-color: #7c5dfa; /* Желтый цвет */
+    color: #fff; /* Черный текст для контраста */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800; /* Темнее при наведении */
 }
