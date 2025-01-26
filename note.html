@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметка - QuickNote Pro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__content">
+            <a href="notes.html" class="btn">← Назад</a>
+            <h2>Просмотр заметки</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="card" id="note-container">
+            <h1 id="note-title"></h1>
+            <pre id="note-content"></pre>
+        </div>
+        
+        <div class="editor__actions">
+            <a href="notes.html" class="btn">← Назад</a>
+            <a href="#" id="edit-btn" class="btn">✏️ Редактировать</a>
+        </div>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        document.getElementById('edit-btn').href = `editor.html?id=${new URLSearchParams(window.location.search).get('id')}`;
+    </script>
+</body>
+</html>

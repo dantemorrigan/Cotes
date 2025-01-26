@@ -1,0 +1,702 @@
+/* ===== CORE ===== */
+:root {
+  --primary: #7c5dfa;
+  --danger: #ff5c5c;
+  --text: #2d3436;
+  --bg: #f8f9fb;
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== COMPONENTS ===== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+
+}
+
+.btn.danger {
+  background: var(--danger);
+  
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== HEADER ===== */
+.header {
+  padding: 1.5rem 0;
+  background: var(--primary);
+  color: white;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ===== EDITOR ===== */
+.editor {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.editor__title {
+  font-size: 2rem;
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.editor__title:focus,
+.editor__content:focus {
+  outline: none;
+  box-shadow: 0 2px 0 var(--primary);
+}
+
+.editor__content {
+  min-height: 60vh;
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  resize: vertical;
+  font-size: 1.1rem;
+}
+
+.editor__actions {
+  margin-top: 1.5rem;
+  margin-bottom: 30px; /* Добавлено */
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* ===== NOTES LIST ===== */
+.notes-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 2rem 0;
+}
+
+.note-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.note-card__content {
+  color: #666;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.search-box {
+  margin: 2rem 0;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 2px solid #eee;
+  font-size: 1rem;
+}
+
+/* ===== HERO SECTION ===== */
+.main-hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-text {
+  color: #666;
+  font-size: 1.25rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.hero-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 3rem;
+  font-size: 1.25rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(124, 93, 250, 0.3);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--card-bg);
+  padding: 2rem 0;
+  margin-top: auto;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.footer .container {
+  color: #666;
+  padding: 0 1rem;
+}
+
+.footer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .editor__title {
+    font-size: 1.5rem;
+  }
+  
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  
+  .header__content {
+    flex-wrap: wrap;
+  }
+}
+
+.notes-header {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .notes-header .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Добавить в конец файла */
+#note-container {
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+#note-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+#note-content {
+  white-space: pre-wrap;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+
+/* ===== НОВЫЕ СТИЛИ ГЛАВНОЙ СТРАНИЦЫ ===== */
+.hero-header {
+  background: var(--primary);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-size: 1.75rem;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  position: relative; /* или absolute, если нужно */
+  right: -30px; /* Начальная позиция логотипа, можно изменять это значение для перемещения */
+}
+
+.main-hero {
+  padding: 4rem 0;
+  background: linear-gradient(45deg, var(--bg) 60%, #f3f1ff);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero-text {
+  padding: 1rem;
+  margin-bottom: -5rem;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4.2rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.hero-btn {
+  padding: 1.25rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+.hero-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Минимальная ширина 280px */
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center; /* Центрирует сетку, если контент уже */
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+  justify-content: space-between;
+  transition: var(--transition);
+  width: 100%; /* Занимает всю ширину ячейки */
+  box-sizing: border-box; /* Учитывает padding */
+  word-break: break-word; /* Перенос длинных слов */
+}
+
+/* Для выравнивания высоты всех карточек */
+.feature-card p {
+  margin: 0;
+  flex-grow: 1; /* Текст равномерно заполняет пространство */
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(124, 93, 250, 0.15);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124, 93, 250, 0.1);
+  border-radius: 16px;
+  transition: var(--transition);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+  background: rgba(124, 93, 250, 0.15);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .hero-features {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .feature-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+  }
+}
+
+/* ===== INDEX PAGE SPECIFIC STYLES ===== */
+.home-page .hero-header {
+  position: relative;
+  background: var(--primary);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+.home-page .main-hero {
+  flex: 1;
+  padding: 4rem 0;
+  background: linear-gradient(45deg, var(--bg) 60%, #f3f1ff);
+  display: flex;
+  align-items: center;
+}
+
+.home-page .hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-page .hero-text {
+  padding-right: 2rem;
+
+}
+
+.home-page .hero-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.home-page .hero-subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  max-width: 80%;
+}
+
+.home-page .hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.home-page .hero-btn {
+  border-radius: 12px;
+  padding: 1.25rem 2rem;
+}
+
+.home-page .hero-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.home-page .feature-card {
+  min-height: 320px;
+  padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .home-page .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .home-page .hero-text {
+    padding-right: 0;
+  }
+  
+  .home-page .hero-subtitle {
+    max-width: 100%;
+    margin: 0 auto 2rem;
+  }
+  
+  .home-page .hero-features {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .home-page .hero-actions {
+    flex-direction: column;
+  }
+  
+  .home-page .hero-btn {
+    width: 100%;
+  }
+  
+  .home-page .feature-card {
+    min-height: 250px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page .hero-title {
+    font-size: 2rem;
+  }
+  
+  .home-page .feature-icon {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* ===== НОВЫЕ СТИЛИ КНОПКИ НАЗАД ===== */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-back::before {
+    content: "←";
+    display: inline-block;
+    font-weight: 700;
+    transform: translateX(-2px);
+    transition: transform 0.2s ease;
+}
+
+.btn-back:hover::before {
+    transform: translateX(-6px);
+}
+
+/* Для темной темы на главной */
+.hero-header .btn-back {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary);
+    border-color: transparent;
+}
+
+.hero-header .btn-back:hover {
+    background: white;
+}
+
+/* ===== DONATE BUTTON ===== */
+.btn-donate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 237, 150, 0.95); /* Пастельный желтый */
+  color: #6b5a3c !important; /* Теплый коричневый */
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-left: auto;
+  border: 1px solid rgba(255, 215, 140, 0.3); /* Тонкая граница */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+.btn-donate:hover {
+  background: rgba(255, 242, 172, 0.98);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.btn-donate::before {
+  content: "❤️"; /* Измененная иконка */
+  filter: saturate(0.8);
+}
+
+/* Для темного хедера (notes.html) */
+.header .btn-donate {
+  background: rgba(255, 237, 150, 0.9);
+  color: #2d3436 !important;
+}
+
+@media (max-width: 768px) {
+  .btn-donate {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn-donate::before {
+    margin-right: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-donate span {
+    display: none;
+  }
+  
+  .btn-donate::after {
+    content: "Поддержка";
+    font-size: 0.8rem;
+  }
+}
