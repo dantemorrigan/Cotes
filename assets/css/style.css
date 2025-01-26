@@ -237,6 +237,46 @@ body {
     overflow: hidden;
 }
 
+/* Обновленные стили карточек заметок */
+.note-card {
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.note-card > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.delete-btn:hover svg {
+  fill: #ff0000; /* Более яркий цвет при наведении */
+}
+
+
+.delete-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--danger);
+}
+
 .btn-group {
     display: flex;
     gap: 0.75rem;
@@ -784,4 +824,56 @@ body {
 
 .btn-edit:hover {
     background-color: #e0a800; /* Темнее при наведении */
+}
+
+/* Модальное окно подтверждения */
+.confirm-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: modal-fade 0.3s ease;
+}
+
+.confirm-modal.active {
+  display: flex;
+}
+
+.confirm-dialog {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  max-width: 400px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transform: translateY(-20px);
+  animation: modal-slide 0.3s ease;
+}
+
+.confirm-text {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@keyframes modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-slide {
+  from { transform: translateY(-30px); }
+  to { transform: translateY(0); }
 }

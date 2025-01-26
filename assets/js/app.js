@@ -94,26 +94,75 @@ function renderNotes(searchQuery = '') {
     card.className = 'card note-card';
     card.style.animationDelay = `${index * 0.1}s`;
     card.innerHTML = `
-      <h2 class="note-card__title">${escapeHTML(note.title)}</h2>
-      <p class="note-card__content">${escapeHTML(note.content.slice(0, 100))}...</p>
-      <div class="btn-group">
-        <a href="note.html?id=${encodeURIComponent(note.id)}" class="btn">Открыть</a>
-        <button class="btn danger" onclick="deleteNote('${encodeURIComponent(note.id)}')">Удалить</button>
-      </div>
+      <a href="note.html?id=${encodeURIComponent(note.id)}" class="note-link">
+        <h2 class="note-card__title">${escapeHTML(note.title)}</h2>
+        <p class="note-card__content">${escapeHTML(note.content.slice(0, 100))}...</p>
+      </a>
+      <button class="delete-btn" onclick="deleteNote('${encodeURIComponent(note.id)}', event)">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+        </svg>
+      </button>
     `;
     container.appendChild(card);
   });
 }
 
 // ===== УДАЛЕНИЕ ЗАМЕТКИ =====
-function deleteNote(encodedId) {
-  const id = decodeURIComponent(encodedId);
-  if (confirm('Удалить заметку?')) {
-    notesManager.delete(id);
-    document.body.classList.add('fade-out');
-    setTimeout(renderNotes, 300);
-  }
+// ===== УДАЛЕНИЕ ЗАМЕТКИ =====
+let currentNoteToDelete = null;
+
+function showDeleteModal(encodedId) {
+  currentNoteToDelete = encodedId;
+  const modal = document.getElementById('confirmModal');
+  modal.classList.add('active');
 }
+
+function deleteNote(encodedId, event) {
+  event.stopPropagation();
+  showDeleteModal(encodedId);
+}
+
+// ===== ИНИЦИАЛИЗАЦИЯ =====
+document.addEventListener('DOMContentLoaded', () => {
+  // ... предыдущий код инициализации ...
+
+  // Обработчики модалки удаления
+  const modal = document.getElementById('confirmModal');
+  
+  document.getElementById('confirmDelete').addEventListener('click', () => {
+    if(currentNoteToDelete) {
+      const id = decodeURIComponent(currentNoteToDelete);
+      notesManager.delete(id);
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        renderNotes();
+        modal.classList.remove('active');
+        currentNoteToDelete = null;
+      }, 300);
+    }
+  });
+
+  document.getElementById('cancelDelete').addEventListener('click', () => {
+    modal.classList.remove('active');
+    currentNoteToDelete = null;
+  });
+
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) {
+      modal.classList.remove('active');
+      currentNoteToDelete = null;
+    }
+  });
+
+  // Закрытие по Esc
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') {
+      modal.classList.remove('active');
+      currentNoteToDelete = null;
+    }
+  });
+});
 
 // ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
 function escapeHTML(str) {
@@ -217,3 +266,4 @@ document.addEventListener('click', (event) => {
         searchBox.blur();
     }
 });
+
