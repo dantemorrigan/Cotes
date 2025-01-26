@@ -38,21 +38,32 @@ body {
   padding: 0 1.5rem;
 }
 
+/* ===== BUTTONS ===== */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: var(--radius);
-  background: var(--primary);
-  color: white;
-  cursor: pointer;
-  transition: var(--transition);
-  text-decoration: none;
-
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень по умолчанию */
 }
 
+.btn:hover {
+    background: #6a4dfa; /* Немного темнее основной цвет */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
+    box-shadow: 0 6px 12px rgba(124, 93, 250, 0.2); /* Увеличенная тень при наведении */
+}
+
+.btn:active {
+    transform: translateY(0); /* Возвращаем кнопку в исходное положение при нажатии */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Возвращаем тень в исходное состояние */
+}
 .btn.danger {
   background: var(--danger);
   
@@ -77,52 +88,104 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-  padding: 1.5rem 0;
-  background: var(--primary);
-  color: white;
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    padding: 1rem 0; /* Уменьшаем отступы сверху и снизу */
+    background: var(--primary);
+    color: white;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .header__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+    display: flex;
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1.5rem; /* Добавляем отступы слева и справа */
 }
 
+.header__content h2 {
+    margin: 0; /* Убираем отступы у заголовка */
+    font-size: 1.5rem; /* Уменьшаем размер заголовка */
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    text-align: center; /* Центрируем текст */
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    margin-right: auto; /* Выравниваем кнопку "Назад" слева */
+    margin-left: 1.3rem; /* Сдвигаем кнопку вправо на 1rem */
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
 /* ===== EDITOR ===== */
-.editor {
-  flex: 1;
-  padding: 2rem 0;
+/* ===== EDITOR ===== */
+.editor__title,
+.editor__content {
+    transition: var(--transition); /* Используем общий переход из :root */
+    border: 2px solid transparent; /* Прозрачная граница по умолчанию */
+    background: var(--card-bg); /* Фон поля */
+    border-radius: var(--radius); /* Скругление углов */
+    padding: 1.5rem; /* Отступы внутри поля */
+    width: 100%; /* Ширина на всю доступную область */
+    font-size: 1rem; /* Размер шрифта */
+    color: var(--text); /* Цвет текста */
+    box-shadow: var(--shadow); /* Тень по умолчанию */
 }
 
 .editor__title {
-  font-size: 2rem;
-  border: none;
-  background: transparent;
-  width: 100%;
-  padding: 1rem 0;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+    margin-top: 2rem; /* Добавляем отступ сверху */
+    font-size: 2rem; /* Увеличиваем размер шрифта для заголовка */
+    font-weight: 600; /* Жирный шрифт для заголовка */
+    margin-bottom: 1.5rem; /* Отступ снизу */
+}
+
+.editor__content {
+    min-height: 60vh; /* Минимальная высота текстового поля */
+    resize: vertical; /* Разрешаем изменение высоты только по вертикали */
+}
+
+.editor__title:hover,
+.editor__content:hover {
+    border-color: var(--primary); /* Изменение цвета границы при наведении */
+    box-shadow: 0 4px 12px rgba(124, 93, 250, 0.15); /* Тень при наведении */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
 }
 
 .editor__title:focus,
 .editor__content:focus {
-  outline: none;
-  box-shadow: 0 2px 0 var(--primary);
+    outline: none; /* Убираем стандартный outline */
+    border-color: var(--primary); /* Цвет границы при фокусе */
+    box-shadow: 0 4px 16px rgba(124, 93, 250, 0.2); /* Тень при фокусе */
+}
+.editor__title {
+    font-size: 2rem; /* Увеличиваем размер шрифта для заголовка */
+    font-weight: 600; /* Жирный шрифт для заголовка */
+    margin-bottom: 1.5rem; /* Отступ снизу */
 }
 
 .editor__content {
-  min-height: 60vh;
-  width: 100%;
-  padding: 1.5rem;
-  border: none;
-  border-radius: var(--radius);
-  resize: vertical;
-  font-size: 1.1rem;
+    min-height: 60vh; /* Минимальная высота текстового поля */
+    resize: vertical; /* Разрешаем изменение высоты только по вертикали */
+}
 }
 
 .editor__actions {
@@ -147,21 +210,34 @@ body {
     padding: 1rem 0;
 }
 
+/* ===== BUTTONS ===== */
 .btn {
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius);
-    background-color: #7c5dfa;
-    color: white;
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
     border: none;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: var(--transition);
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень по умолчанию */
+    margin-top: 0.5rem; /* Отступ сверху */
 }
 
-.btn-back:hover {
-    background-color: #5a6268; /* Темнее при наведении */
+
+.btn:hover {
+    background: #6a4dfa; /* Немного темнее основной цвет */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
+    box-shadow: 0 6px 12px rgba(124, 93, 250, 0.2); /* Увеличенная тень при наведении */
 }
 
+.btn:active {
+    transform: translateY(0); /* Возвращаем кнопку в исходное положение при нажатии */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Возвращаем тень в исходное состояние */
+}
 .btn-back {
     background-color: #6c757d; /* Серый цвет */
     color: white;
@@ -174,8 +250,12 @@ body {
     color: #1a3a1e; /* Темно-зеленый текст для контраста */
     border: 1px solid #8cbf97; /* Слегка темная граница для глубины */
     transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 0.75rem 1.5rem; /* Увеличиваем отступы для лучшего визуального баланса */
+    border-radius: var(--radius);
+    text-decoration: none;
+    margin-left: auto; /* Выравниваем кнопку "Новая заметка" справа */
+    margin-right: 1rem; /* Сдвигаем кнопку влево на 1rem */
 }
-
 .btn-new-note:hover {
     background-color: #8cbf97; /* Немного темнее при наведении */
     transform: scale(1.05); /* Легкое увеличение при наведении */
@@ -214,29 +294,27 @@ body {
     opacity: 1;
     pointer-events: auto; /* Включаем взаимодействие с активным полем */
 }
+
+
 /* ===== СЕТКА ЗАМЕТОК ===== */
 .notes-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem; /* Уменьшаем промежуток между карточками */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    padding: 2rem 0;
+    padding: 1rem 1.5rem; /* Добавляем отступы слева и справа, как в хедере */
 }
 
-.note-card__title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+.note-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    transition: var(--transition);
 }
 
-.note-card__content {
-    color: #666;
-    margin-bottom: 1.5rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.note-card:hover {
+    transform: translateY(-3px);
 }
-
 /* Обновленные стили карточек заметок */
 .note-card {
   position: relative;
@@ -464,7 +542,7 @@ body {
 .hero-actions {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 4.2rem;
+  margin-bottom: 4.3rem;
   margin-top: auto;
   padding-top: 2rem;
 }
