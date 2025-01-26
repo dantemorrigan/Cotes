@@ -266,3 +266,25 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Theme Manager
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+}
+
+// Добавьте в DOMContentLoaded:
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', toggleTheme);
+  });
+});
+
