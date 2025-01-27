@@ -246,20 +246,38 @@ body {
 }
 
 .btn-new-note {
-    background-color: #a8d5b2; /* Пастельный зеленый */
-    color: #1a3a1e; /* Темно-зеленый текст для контраста */
-    border: 1px solid #8cbf97; /* Слегка темная граница для глубины */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    padding: 0.75rem 1.5rem; /* Увеличиваем отступы для лучшего визуального баланса */
+    background-color: #a8d5b2;
+    color: #1a3a1e;
+    border: 1px solid #8cbf97;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
     border-radius: var(--radius);
     text-decoration: none;
-    margin-left: auto; /* Выравниваем кнопку "Новая заметка" справа */
-    margin-right: 1rem; /* Сдвигаем кнопку влево на 1rem */
+    margin-left: auto;
+    margin-right: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .btn-new-note:hover {
-    background-color: #8cbf97; /* Немного темнее при наведении */
-    transform: scale(1.05); /* Легкое увеличение при наведении */
+    background-color: #8cbf97;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(140, 191, 151, 0.2);
 }
+
+.btn-new-note:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: button-click 0.2s ease;
+}
+
+@keyframes button-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+
+
 /* ===== ПОИСК ===== */
 .search-container {
     display: flex;
@@ -894,16 +912,33 @@ body {
 
 /* ===== КНОПКА РЕДАКТИРОВАТЬ ===== */
 .btn-edit {
-    background-color: #7c5dfa; /* Желтый цвет */
-    color: #fff; /* Черный текст для контраста */
+    background-color: #7c5dfa; /* Основной цвет кнопки */
+    color: #fff; /* Цвет текста */
     border: none;
-    transition: background-color 0.3s ease;
+    transition: var(--transition); /* Используем общий переход из :root */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень по умолчанию */
 }
 
 .btn-edit:hover {
-    background-color: #e0a800; /* Темнее при наведении */
+    background-color: #6a4dfa; /* Немного темнее основной цвет */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
+    box-shadow: 0 6px 12px rgba(124, 93, 250, 0.2); /* Увеличенная тень при наведении */
 }
 
+.btn-edit:active {
+    transform: translateY(0); /* Возвращаем кнопку в исходное положение при нажатии */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Возвращаем тень в исходное состояние */
+}
+
+@keyframes button-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.btn-edit:active {
+    animation: button-click 0.2s ease;
+}
 /* Модальное окно подтверждения */
 .confirm-modal {
   position: fixed;
@@ -1110,4 +1145,51 @@ body {
 [data-theme="dark"] .search-icon {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Дополнение к существующим стилям темы */
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(8deg) scale(1.1);
+}
+
+.theme-icon {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Анимация переключения */
+.theme-icon.moon { transform: rotate(0deg); opacity: 1; }
+.theme-icon.sun { transform: rotate(180deg); opacity: 0; }
+
+[data-theme="dark"] .theme-icon.moon {
+    transform: rotate(-180deg);
+    opacity: 0;
+}
+[data-theme="dark"] .theme-icon.sun {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+/* Эффект при клике */
+@keyframes theme-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.theme-toggle:active {
+    animation: theme-click 0.3s ease;
 }
