@@ -98,19 +98,20 @@ body {
 }
 
 .header__content {
-    display: flex;
-    align-items: center; /* Выравниваем элементы по центру по вертикали */
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0 1.5rem; /* Добавляем отступы слева и справа */
+    display: flex; /* Включаем flexbox для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    padding-top: env(safe-area-inset-top, 20px); /* Учет области камеры сверху */
+    text-align: center; /* Центрируем текст внутри */
 }
 
 .header__content h2 {
-    margin: 0; /* Убираем отступы у заголовка */
-    font-size: 2rem; /* Уменьшаем размер заголовка */
-    flex-grow: 1; /* Занимает оставшееся пространство */
-    text-align: center; /* Центрируем текст */
+    margin: 0; /* Убираем отступы */
+    font-size: 2rem; /* Размер текста */
+    max-width: 90%; /* Ограничиваем ширину текста для предотвращения разрыва */
+    word-wrap: break-word; /* Переносим слова, если они слишком длинные */
 }
+
 
 .btn-back {
     display: inline-flex;
