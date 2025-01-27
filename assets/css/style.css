@@ -107,7 +107,7 @@ body {
 
 .header__content h2 {
     margin: 0; /* Убираем отступы у заголовка */
-    font-size: 1.5rem; /* Уменьшаем размер заголовка */
+    font-size: 2rem; /* Уменьшаем размер заголовка */
     flex-grow: 1; /* Занимает оставшееся пространство */
     text-align: center; /* Центрируем текст */
 }
@@ -511,15 +511,38 @@ body {
 
 .logo {
   color: white;
-  font-size: 1.75rem;
+  font-size: 1.75rem; /* Базовый размер шрифта для логотипа */
   display: flex;
   font-weight: 700;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  position: relative; /* или absolute, если нужно */
-  right: -30px; /* Начальная позиция логотипа, можно изменять это значение для перемещения */
+  position: relative; /* Или absolute, если это требуется */
+  right: -30px; /* Начальная позиция логотипа */
 }
+
+/* Медиазапросы для адаптации логотипа под разные экраны */
+@media (max-width: 1024px) {
+  .logo {
+    font-size: 1.5rem; /* Уменьшаем размер шрифта для средних экранов */
+    right: -20px; /* Корректируем позицию */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.25rem; /* Еще меньше для планшетов */
+    right: -10px; /* Подстраиваем позицию */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem; /* Маленький размер для телефонов */
+    right: 0; /* Позиционируем ближе к центру */
+  }
+}
+
 
 .main-hero {
   padding: 4rem 0;
