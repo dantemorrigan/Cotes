@@ -5,36 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мои заметки - Cotes</title>
     <link rel="stylesheet" href="assets/css/style.css">
-	<script src="assets/js/app.js" defer></script>
-
+    <script src="assets/js/app.js" defer></script>
 </head>
-<body>
-<header class="header">
-    <div class="container header__content">
-        <a href="index.html" class="btn btn-back">Назад</a>
-        <h2>Мои заметки</h2>
-        <a href="editor.html" class="btn btn-new-note">✏️ Новая заметка</a>
-    </div>
-</header>
+<body class="fade-in notes-page"> <--- Важно: класс notes-page
+    <header class="header">
+        <div class="container header__content">
+            <a href="index.html" class="btn btn-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11H7.83L13.16 5.67L11.75 4.25L4 12L11.75 19.75L13.17 18.33L7.83 13H20V11Z" fill="currentColor"/>
+                </svg>
+            </a>
+            <h2>Мои заметки</h2>
+            <a href="editor.html" class="btn btn-new-note">✏️ Новая заметка</a>
+        </div>
+    </header>
 
     <main class="container">
-<div class="search-container">
-    <div class="search-icon" id="search-icon">
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--primary)">
-            <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-        </svg>
-    </div>
-    <input 
-        type="text" 
-        class="search-box" 
-        placeholder="Поиск заметок..."
-        id="search">
-</div>
-        <!-- Сетка заметок -->
+        <div class="search-container">
+            <div class="search-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                    <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+            </div>
+            <input type="text" class="search-box" placeholder="Поиск заметок..." id="search">
+        </div>
         <div class="notes-grid" id="notes-list"></div>
     </main>
 
-    <!-- Модальное окно подтверждения удаления -->
     <div class="confirm-modal" id="confirmModal">
         <div class="confirm-dialog">
             <p class="confirm-text">Вы уверены, что хотите удалить заметку?<br>Гениальные мысли приходят не так часто...</p>
@@ -46,8 +43,5 @@
     </div>
 
     <script src="assets/js/app.js"></script>
-<!-- Во всех файлах исправляем двойной тег body -->
-<body class="fade-in">
-
 </body>
 </html>

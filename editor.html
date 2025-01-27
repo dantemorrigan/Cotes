@@ -5,41 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Редактор - Cotes</title>
     <link rel="stylesheet" href="assets/css/style.css">
-	<script src="assets/js/app.js" defer></script>
-
-
+    <script src="assets/js/app.js" defer></script>
 </head>
-<!-- Во всех файлах исправляем двойной тег body -->
 <body class="fade-in">
 
-    <header class="header">
+    <header class="editor-header">
         <div class="container header__content">
-            <a href="index.html" class="btn btn-back">Назад</a>
-            <h2 id="editor-title">Новая заметка</h2>
+            <a href="index.html" class="btn-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11H7.83L13.16 5.67L11.75 4.25L4 12L11.75 19.75L13.17 18.33L7.83 13H20V11Z" fill="currentColor"/>
+                </svg>
+            </a>
         </div>
     </header>
 
     <main class="container editor">
-        <input 
-            type="text" 
-            class="editor__title" 
-            placeholder="Название заметки"
-            id="note-title">
-
-        <textarea 
-            class="editor__content card"
-            placeholder="Начните писать здесь..."
-            id="note-content"></textarea>
-
+        <input type="text" class="editor__title" placeholder="Название заметки" id="note-title">
+        <textarea class="editor__content" placeholder="Начните писать здесь..." id="note-content"></textarea>
         <div class="editor__actions">
-            <button class="btn" onclick="saveNote()">💾 Сохранить</button>
+            <button class="btn" onclick="saveNote()"> Сохранить</button>
         </div>
     </main>
 
     <script src="assets/js/app.js"></script>
-    <script>
-        document.getElementById('editor-title').textContent = 
-            window.location.search.includes('id') ? 'Редактирование заметки' : 'Новая заметка';
-    </script>
 </body>
 </html>

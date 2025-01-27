@@ -349,3 +349,526 @@ body {
     padding-right: max(1rem, env(safe-area-inset-right));
   }
 }
+
+/* ===== Modern Reset ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ===== CSS Variables ===== */
+:root {
+    --purple: #e6d0ff;
+    --purple-dark: #d0a8ff;
+    --cyan: #a0f0ed;
+    --white: #fff9fe;
+    --black: #1a1a1a;
+    --gray: #e0e0e0;
+    --light-gray: #f5f5f5; /* Добавим еще один оттенок серого */
+
+    --font-base: 'Montserrat', system-ui, sans-serif;
+    --radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: var(--font-base);
+    line-height: 1.6;
+    background: var(--light-gray); /* Светло-серый фон для body */
+    color: var(--black);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    transition: var(--transition);
+}
+
+/* ===== Animations ===== */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+/* ===== Editor Header Styles ===== */
+.editor-header {
+    padding: 1rem 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для хедера */
+}
+
+.editor-header .header__content {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: var(--black);
+    padding: 0;
+}
+
+.btn-back svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition);
+}
+
+.btn-back:hover {
+    background-color: var(--gray);
+}
+
+.btn-back:hover svg {
+    transform: translateX(-3px);
+}
+
+/* ===== Editor Styles ===== */
+.editor {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: var(--white); /* Белый фон для редактора */
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для всего блока редактора */
+}
+
+.editor__title,
+.editor__content {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--gray);
+    border-radius: var(--radius);
+    font-family: var(--font-base);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    outline: none;
+    background-color: var(--white); /* Белый фон для полей ввода */
+}
+
+.editor__title {
+    font-size: 1.4rem;
+    border-bottom: none; /* Убираем нижнюю границу у заголовка */
+    margin-bottom: 0; /* Убираем отступ снизу у заголовка */
+    border-bottom-left-radius: 0; /* Скругляем только верхние углы */
+    border-bottom-right-radius: 0;
+}
+
+.editor__content {
+    height: 400px;
+    line-height: 1.6;
+    resize: vertical;
+    border-top: none; /* Убираем верхнюю границу у текстареа */
+    border-top-left-radius: 0; /* Скругляем только нижние углы */
+    border-top-right-radius: 0;
+    box-shadow: none; /* Убираем тень у текстареа, тень теперь у всего редактора */
+}
+
+/* Анимации при наведении */
+.editor__title:hover,
+.editor__content:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Менее выраженная тень при наведении */
+    transform: translateY(-1px); /* Меньшее смещение */
+    border-color: var(--purple-dark);
+}
+
+.editor__title:focus,
+.editor__content:focus {
+    border-color: var(--purple);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+.editor__actions {
+    margin-top: 1rem;
+    text-align: right;
+    padding: 0 1rem 1rem 1rem; /* Добавляем отступы снизу и по бокам */
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    background-color: var(--purple);
+    color: var(--black);
+    cursor: pointer;
+    font-family: var(--font-base);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Media Queries для редактора */
+@media (max-width: 768px) {
+    .editor {
+        padding: 1rem;
+    }
+
+    .editor__title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .editor__title {
+        font-size: 1.1rem;
+    }
+
+    .editor__content {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ===== Modern Reset ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ===== CSS Variables ===== */
+:root {
+    --purple: #e6d0ff;
+    --purple-dark: #d0a8ff;
+    --cyan: #a0f0ed;
+    --white: #fff9fe;
+    --black: #1a1a1a;
+    --gray: #e0e0e0;
+    --light-gray: #f5f5f5;
+
+    --font-base: 'Montserrat', system-ui, sans-serif;
+    --radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: var(--font-base);
+    line-height: 1.6;
+    background: var(--light-gray);
+    color: var(--black);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    transition: var(--transition);
+}
+
+/* ===== Animations ===== */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+/* ===== Notes Page Styles ===== */
+.notes-page {
+    padding-top: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.notes-page .header {
+    padding: 1rem 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notes-page .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.notes-page .btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: var(--black);
+    padding: 0;
+}
+
+.notes-page .btn-back svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition);
+}
+
+.notes-page .btn-back:hover {
+    background-color: var(--gray);
+}
+
+.notes-page .btn-back:hover svg {
+    transform: translateX(-3px);
+}
+
+.notes-page .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 1px solid var(--gray);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.notes-page .search-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    border-color: var(--purple-dark);
+}
+
+.notes-page .search-icon {
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    transition: var(--transition);
+}
+
+.notes-page .search-box {
+    flex-grow: 1;
+    border: none;
+    padding: 0.75rem;
+    font-family: var(--font-base);
+    font-size: 1rem;
+    outline: none;
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+.notes-page .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.notes-page .note-card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 1px solid var(--gray);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.notes-page .note-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.notes-page .note-card h3 {
+    margin-bottom: 0.5rem;
+    flex: 0 0 auto;
+}
+
+.notes-page .note-card p {
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    flex: 1 1 auto; /* Текст занимает доступное пространство */
+}
+.notes-page .note-card .delete-button {
+    margin-top: auto; /* Кнопка удаления внизу карточки */
+    display: block;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.notes-page .note
+
+/* ... (Предыдущий CSS) */
+
+/* ===== Note Page Styles ===== */
+.note-page {
+    padding-top: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray);
+}
+
+.note-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.note-page .header {
+    padding: 1rem 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-page .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.note-page .btn-back { /* Стили для кнопки "Назад" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: var(--black);
+    padding: 0;
+}
+
+.note-page .btn-back svg {
+    width: 20px;
+    height: 20px;
+    transition: var(--transition);
+}
+
+.note-page .btn-back:hover {
+    background-color: var(--gray);
+}
+
+.note-page .btn-back:hover svg {
+    transform: translateX(-3px);
+}
+
+.note-page .card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem; /* Отступ снизу */
+    border: 1px solid var(--gray);
+}
+
+.note-page .card h1 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.note-page .card pre {
+    white-space: pre-wrap; /* Перенос длинных слов */
+    font-family: monospace; /* Моноширинный шрифт для кода */
+    line-height: 1.6;
+    color: #333;
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку, если код не помещается */
+}
+
+.note-page .editor__actions {
+    text-align: right;
+}
+
+.note-page .btn-edit {
+    background-color: var(--cyan);
+    color: var(--black);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.note-page .btn-edit:hover {
+    background-color: #90e0dd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
