@@ -288,3 +288,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+
+    // Добавляем класс для появления страницы при загрузке
+    body.classList.add('fade-in');
+
+    // Обрабатываем все переходы по ссылкам
+    document.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', event => {
+            const href = link.getAttribute('href');
+
+            // Пропускаем якорные и внешние ссылки
+            if (!href || href.startsWith('#') || href.startsWith('http')) return;
+
+            // Отменяем стандартное поведение
+            event.preventDefault();
+
+            // Добавляем класс для исчезновения
+            body.classList.add('fade-out');
+
+            // Ждем завершения анимации перед переходом
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500); // 500 мс - время анимации
+        });
+    });
+});

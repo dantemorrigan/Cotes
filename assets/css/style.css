@@ -1343,3 +1343,20 @@ body {
     font-size: 0.9rem;
   }
 }
+
+/* Исходное состояние страницы */
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Появление страницы */
+body.fade-in {
+    opacity: 1;
+}
+
+/* Исчезновение страницы */
+body.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Отключаем клики во время анимации */
+}
