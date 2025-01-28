@@ -1117,22 +1117,38 @@ body {
     padding: 0 1rem;
 }
 
+/* Стиль для контейнера логотипа */
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem; /* Увеличен промежуток между иконкой и текстом */
     font-weight: 700;
     color: var(--black);
     text-decoration: none;
-    transition: var(--transition);
+    transition: transform 0.3s ease, color 0.3s ease; /* Добавили анимацию при наведении */
     flex-shrink: 1;
     min-width: 0;
+    font-size: 1.5rem; /* Увеличиваем шрифт текста логотипа */
 }
 
-.logo-image {
-    width: 32px;
-    height: 32px;
+.logo:hover {
+    color: var(--purple); /* Подсветка текста при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
 }
+
+/* Стиль для изображения логотипа */
+.logo-image {
+    width: 48px; /* Увеличили ширину */
+    height: 48px; /* Увеличили высоту */
+    border-radius: 8px; /* Легкие скругления для более стильного вида */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавили тень */
+    transition: transform 0.3s ease; /* Анимация для изображения */
+}
+
+.logo-image:hover {
+    transform: rotate(10deg) scale(1.1); /* Лёгкий поворот и увеличение при наведении */
+}
+
 
 /* Обычные стили для кнопки */
 .btn-donate {
