@@ -316,4 +316,67 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// app.js
 
+document.addEventListener('DOMContentLoaded', () => {
+    const notesList = document.getElementById('notes-list');
+    const searchBox = document.getElementById('search');
+    const confirmModal = document.getElementById('confirmModal');
+    const confirmDeleteBtn = document.getElementById('confirmDelete');
+    const cancelDeleteBtn = document.getElementById('cancelDelete');
+
+    let notes = [
+        { id: 1, title: 'Первая заметка', content: 'Это содержание первой заметки.' },
+        { id: 2, title: 'Вторая заметка', content: 'Это содержание второй заметки.' },
+        { id: 3, title: 'Третья заметка', content: 'Это содержание третьей заметки.' }
+    ];
+
+    let noteToDelete = null;
+
+    function renderNotes(filteredNotes = notes) {
+        notesList.innerHTML = '';
+        filteredNotes.forEach(note => {
+            const noteCard = document.createElement('div');
+            noteCard.className = 'note-card';
+            noteCard.innerHTML = `
+                <h3>${note.title}</h3>
+                <p>${note.content}</p>
+                <button class="delete-button" data-id="${note.id}"></button>
+            `;
+            notesList.appendChild(noteCard);
+        });
+
+        // Добавляем обработчики для кнопок удаления
+        document.querySelectorAll('.delete-button').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                noteToDelete = notes.find(note => note.id === parseInt(button.dataset.id));
+                confirmModal.style.display = 'flex';
+            });
+        });
+    }
+
+    // Поиск заметок
+    searchBox.addEventListener('input', () => {
+        const searchTerm = searchBox.value.toLowerCase();
+        const filteredNotes = notes.filter(note => 
+            note.title.toLowerCase().includes(searchTerm) || 
+            note.content.toLowerCase().includes(searchTerm)
+        );
+        renderNotes(filteredNotes);
+    });
+
+    // Удаление заметки
+    confirmDeleteBtn.addEventListener('click', () => {
+        notes = notes.filter(note => note.id !== noteToDelete.id);
+        renderNotes();
+        confirmModal.style.display = 'none';
+    });
+
+    cancelDeleteBtn.addEventListener('click', () => {
+        confirmModal.style.display = 'none';
+    });
+
+    // Инициализация
+    renderNotes();
+});
