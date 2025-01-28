@@ -31,6 +31,7 @@ body {
   color: var(--black);
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   transition: var(--transition);
+  min-height: 100vh;
 }
 
 /* ===== Animations ===== */
@@ -1075,3 +1076,99 @@ body {
 .btn:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0
+	
+	/* ===== Modern Reset ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* ===== CSS Variables ===== */
+:root {
+    --purple: #e6d0ff;
+    --purple-dark: #d0a8ff;
+    --cyan: #a0f0ed;
+    --white: #fff9fe;
+    --black: #1a1a1a;
+    --gray: #e0e0e0;
+    --light-gray: #f5f5f5;
+
+    --font-base: 'Montserrat', system-ui, sans-serif;
+    --radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: var(--font-base);
+    line-height: 1.6;
+    background: var(--light-gray);
+    color: var(--black);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    transition: var(--transition);
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
+/* ===== Animations ===== */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+/* ===== Header Styles ===== */
+/* ... (остальные стили header) */
+
+/* ===== Notes Page Styles ===== */
+.notes-page {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notes-page h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* ... (остальные стили note-card) */
+
+/* ===== Confirm Modal ===== */
+.confirm-modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное позиционирование относительно всего окна браузера */
+    top: 50%; /* Размещаем верхнюю границу по центру вертикали */
+    left: 50%; /* Размещаем левую границу по центру горизонтали */
+    transform: translate(-50%, -50%); /* Смещаем элемент на половину его ширины и высоты назад */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center;     /* Центрируем содержимое по вертикали */
+}
+
+.confirm-dialog {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
