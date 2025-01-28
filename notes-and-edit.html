@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes and Edit</title>
+    <title>Заметки и Редактирование</title>
     <link rel="stylesheet" href="F:\develop\Cotes\assets\css\notes-and-edit.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,90 +14,158 @@
 
     <div class="notes-page">
         <div class="container">
-            <h1>My Notes</h1>
-            <div class="notes-grid" id="notes-container">
-                </div>
+            <h1>Мои Заметки</h1>
+            <div class="notes-grid" id="notes-container"></div>
+            <button class="btn" id="add-note-button">Добавить Заметку</button>
 
-            <button class="btn" id="add-note-button">Add Note</button>
+            <div id="note-editor" style="display: none;">
+                <h2></h2>
+                <p></p>
+                <div id="edit-form" style="display: none;">
+                    <input type="text" id="edit-title">
+                    <textarea id="edit-content"></textarea>
+                    <button class="btn" id="save-edit-button">Сохранить изменения</button>
+                    <button class="btn" id="cancel-edit-button">Отмена</button>
+                </div>
+                <div id="view-form">
+                    <button class="btn" id="edit-button">Редактировать</button>
+                    <button class="btn danger" id="delete-button">Удалить</button>
+                    <button class="btn" id="close-button">Закрыть</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="confirm-modal" id="delete-modal">
         <div class="confirm-dialog">
-            <p class="confirm-text">Are you sure you want to delete this note?</p>
+            <p class="confirm-text">Вы уверены, что хотите удалить эту заметку?</p>
             <div class="confirm-buttons">
-                <button class="btn danger" id="confirm-delete">Delete</button>
-                <button class="btn" id="cancel-delete">Cancel</button>
+                <button class="btn danger" id="confirm-delete">Удалить</button>
+                <button class="btn" id="cancel-delete">Отмена</button>
             </div>
         </div>
     </div>
 
     <script>
-        const notesContainer = document.getElementById('notes-container');
-        const addNoteButton = document.getElementById('add-note-button');
-        const deleteModal = document.getElementById('delete-modal');
-        const confirmDeleteButton = document.getElementById('confirm-delete');
-        const cancelDeleteButton = document.getElementById('cancel-delete');
+        document.addEventListener('DOMContentLoaded', () => {
+            const notesContainer = document.getElementById('notes-container');
+            const addNoteButton = document.getElementById('add-note-button');
+            const noteEditor = document.getElementById('note-editor');
+            const editForm = document.getElementById('edit-form');
+            const viewForm = document.getElementById('view-form');
+            const editTitle = document.getElementById('edit-title');
+            const editContent = document.getElementById('edit-content');
+            const saveEditButton = document.getElementById('save-edit-button');
+            const cancelEditButton = document.getElementById('cancel-edit-button');
+            const editButton = document.getElementById('edit-button');
+            const deleteButton = document.getElementById('delete-button');
+            const closeButton = document.getElementById('close-button');
+            const deleteModal = document.getElementById('delete-modal');
+            const confirmDeleteButton = document.getElementById('confirm-delete');
+            const cancelDeleteButton = document.getElementById('cancel-delete');
 
-        let notes = JSON.parse(localStorage.getItem('notes')) || [];
+            let notes = JSON.parse(localStorage.getItem('notes')) || [];
+            let currentNoteIndex = null;
 
-        function saveNotes() {
-            localStorage.setItem('notes', JSON.stringify(notes));
-        }
+            function saveNotes() {
+                localStorage.setItem('notes', JSON.stringify(notes));
+            }
 
-        function displayNotes() {
-            notesContainer.innerHTML = ''; // Clear existing notes
+            function displayNotes() {
+                notesContainer.innerHTML = '';
 
-            notes.forEach((note, index) => {
-                const noteCard = document.createElement('div');
-                noteCard.classList.add('note-card');
-                noteCard.dataset.index = index;  // Store index for easy access
+                notes.forEach((note, index) => {
+                    const noteCard = document.createElement('div');
+                    noteCard.classList.add('note-card');
+                    noteCard.dataset.index = index;
 
-                const title = document.createElement('h3');
-                title.textContent = note.title || "Untitled Note"; // Handle missing titles
-                noteCard.appendChild(title);
+                    const title = document.createElement('h3');
+                    title.textContent = note.title || "Без названия";
+                    noteCard.appendChild(title);
 
-                const content = document.createElement('p');
-                content.textContent = note.content;
-                noteCard.appendChild(content);
+                    const content = document.createElement('p');
+                    content.textContent = note.content;
+                    noteCard.appendChild(content);
 
-                const deleteButton = document.createElement('button');
-                deleteButton.classList.add('delete-button');
-                deleteButton.addEventListener('click', (event) => {
-                    event.stopPropagation(); // Prevent card click
-                    deleteModal.style.display = 'flex';
-                    deleteModal.dataset.index = index; // Store index of note to delete
+                    const deleteButton = document.createElement('button');
+                    deleteButton.classList.add('delete-button');
+                    deleteButton.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        deleteModal.style.display = 'flex';
+                        deleteModal.dataset.index = index;
+                    });
+                    noteCard.appendChild(deleteButton);
 
+                    noteCard.addEventListener('click', () => {
+                        showNote(index);
+                    });
+
+                    notesContainer.appendChild(noteCard);
                 });
-                noteCard.appendChild(deleteButton);
+            }
 
-                noteCard.addEventListener('click', () => {
-                    window.location.href = `note.html?index=${index}`;
-                });
-
-                notesContainer.appendChild(noteCard);
+            addNoteButton.addEventListener('click', () => {
+                window.location.href = 'editor.html';
             });
-        }
 
-        addNoteButton.addEventListener('click', () => {
-             window.location.href = 'edit-note.html'; // Redirect to the editor page
-        });
+            function showNote(index) {
+                currentNoteIndex = index;
+                const note = notes[index];
 
-        confirmDeleteButton.addEventListener('click', () => {
-            const indexToDelete = deleteModal.dataset.index;
-            notes.splice(indexToDelete, 1);
-            saveNotes();
+                noteEditor.querySelector('h2').textContent = note.title || "Без названия";
+                noteEditor.querySelector('p').textContent = note.content;
+
+                editTitle.value = note.title || "";
+                editContent.value = note.content;
+
+                editForm.style.display = 'none';
+                viewForm.style.display = 'block';
+                noteEditor.style.display = 'block';
+            }
+
+            editButton.addEventListener('click', () => {
+                editForm.style.display = 'block';
+                viewForm.style.display = 'none';
+            });
+
+            saveEditButton.addEventListener('click', () => {
+                const newTitle = editTitle.value;
+                const newContent = editContent.value;
+
+                notes[currentNoteIndex] = { title: newTitle, content: newContent };
+                saveNotes();
+                showNote(currentNoteIndex);
+                displayNotes(); // Обновляем список заметок
+            });
+
+            cancelEditButton.addEventListener('click', () => {
+                showNote(currentNoteIndex);
+            });
+
+            deleteButton.addEventListener('click', () => {
+                deleteModal.style.display = 'flex';
+                deleteModal.dataset.index = currentNoteIndex;
+            });
+
+            closeButton.addEventListener('click', () => {
+                noteEditor.style.display = 'none';
+            });
+
+            confirmDeleteButton.addEventListener('click', () => {
+                const indexToDelete = deleteModal.dataset.index;
+                notes.splice(indexToDelete, 1);
+                saveNotes();
+                displayNotes();
+                deleteModal.style.display = 'none';
+                noteEditor.style.display = 'none';
+            });
+
+            cancelDeleteButton.addEventListener('click', () => {
+                deleteModal.style.display = 'none';
+            });
+
             displayNotes();
-            deleteModal.style.display = 'none';
         });
-
-        cancelDeleteButton.addEventListener('click', () => {
-            deleteModal.style.display = 'none';
-        });
-
-        displayNotes(); // Initial display of notes
-
-
     </script>
 
 </body>
