@@ -23,9 +23,11 @@
         </div>
     </header>
 
-    <main class="container notes-page">  <h1>Мои Заметки</h1>
+    <main class="container notes-page">
+        <h1>Мои Заметки</h1>
         <div class="notes-grid" id="notes-container"></div>
-        <button class="btn primary" id="add-note-button">Добавить Заметку</button> </main>
+        <button class="btn primary" id="add-note-button">Добавить Заметку</button>
+    </main>
 
     <div class="confirm-modal" id="delete-modal">
         <div class="confirm-dialog">
@@ -64,11 +66,12 @@
                     noteCard.appendChild(title);
 
                     const content = document.createElement('p');
-                    content.textContent = note.content;
+                    content.textContent = note.content || ""; // Проверка на пустое содержимое
                     noteCard.appendChild(content);
 
                     const deleteButton = document.createElement('button');
                     deleteButton.classList.add('delete-button');
+                    deleteButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>`; // SVG прямо в коде
                     deleteButton.addEventListener('click', (event) => {
                         event.stopPropagation();
                         deleteModal.style.display = 'flex';

@@ -520,6 +520,7 @@ body {
     cursor: pointer;
     font-family: var(--font-base);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem; /* или другое значение, которое вам подойдет */
 }
 
 .btn:hover {
@@ -828,3 +829,5 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+
