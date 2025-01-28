@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="fade-in">
-
     <header class="hero-header">
         <div class="container">
             <nav class="header__content">
@@ -25,6 +24,25 @@
 
     <main class="container notes-page">
         <h1>Мои Заметки</h1>
+
+        <div class="search-wrapper">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Поиск заметок..." autocomplete="off">
+                <button id="search-button" class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button id="search-clear" class="search-clear hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
         <div class="notes-grid" id="notes-container"></div>
         <button class="btn primary" id="add-note-button">Добавить Заметку</button>
     </main>
@@ -41,43 +59,50 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // DOM Elements
             const notesContainer = document.getElementById('notes-container');
             const addNoteButton = document.getElementById('add-note-button');
             const deleteModal = document.getElementById('delete-modal');
             const confirmDeleteButton = document.getElementById('confirm-delete');
             const cancelDeleteButton = document.getElementById('cancel-delete');
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+            const searchClear = document.getElementById('search-clear');
+            const searchContainer = document.querySelector('.search-container');
 
+            // State
             let notes = JSON.parse(localStorage.getItem('notes')) || [];
+            let isSearchExpanded = false;
 
+            // Functions
             function saveNotes() {
                 localStorage.setItem('notes', JSON.stringify(notes));
             }
 
-            function displayNotes() {
+            function displayNotes(filteredNotes = notes) {
                 notesContainer.innerHTML = '';
 
-                notes.forEach((note, index) => {
+                filteredNotes.forEach((note, index) => {
                     const noteCard = document.createElement('div');
                     noteCard.classList.add('note-card');
                     noteCard.dataset.index = index;
+                    
+                    noteCard.innerHTML = `
+                        <h3>${note.title || "Без названия"}</h3>
+                        <p>${note.content || ""}</p>
+                        <button class="delete-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                            </svg>
+                        </button>
+                    `;
 
-                    const title = document.createElement('h3');
-                    title.textContent = note.title || "Без названия";
-                    noteCard.appendChild(title);
-
-                    const content = document.createElement('p');
-                    content.textContent = note.content || ""; // Проверка на пустое содержимое
-                    noteCard.appendChild(content);
-
-                    const deleteButton = document.createElement('button');
-                    deleteButton.classList.add('delete-button');
-                    deleteButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>`; // SVG прямо в коде
-                    deleteButton.addEventListener('click', (event) => {
+                    // Event Listeners for note card
+                    noteCard.querySelector('.delete-button').addEventListener('click', (event) => {
                         event.stopPropagation();
                         deleteModal.style.display = 'flex';
                         deleteModal.dataset.index = index;
                     });
-                    noteCard.appendChild(deleteButton);
 
                     noteCard.addEventListener('click', () => {
                         window.location.href = `editor.html?index=${index}`;
@@ -87,12 +112,46 @@
                 });
             }
 
+            function filterNotes() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const filteredNotes = notes.filter(note => 
+                    note.title.toLowerCase().includes(searchTerm) ||
+                    note.content.toLowerCase().includes(searchTerm)
+                );
+                displayNotes(filteredNotes);
+            }
+
+            // Search Functionality
+            searchInput.addEventListener('input', (e) => {
+                const hasValue = e.target.value.length > 0;
+                searchClear.classList.toggle('hidden', !hasValue);
+                filterNotes();
+            });
+
+            searchInput.addEventListener('focus', () => {
+                searchContainer.classList.add('expanded');
+            });
+
+            searchInput.addEventListener('blur', () => {
+                if (!searchInput.value) {
+                    searchContainer.classList.remove('expanded');
+                }
+            });
+
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                searchClear.classList.add('hidden');
+                searchInput.focus();
+                filterNotes();
+            });
+
+            // Event Listeners
             addNoteButton.addEventListener('click', () => {
-                window.location.href = 'editor.html'; // For adding a new note
+                window.location.href = 'editor.html';
             });
 
             confirmDeleteButton.addEventListener('click', () => {
-                const indexToDelete = deleteModal.dataset.index;
+                const indexToDelete = parseInt(deleteModal.dataset.index);
                 notes.splice(indexToDelete, 1);
                 saveNotes();
                 displayNotes();
@@ -103,9 +162,9 @@
                 deleteModal.style.display = 'none';
             });
 
+            // Initial render
             displayNotes();
         });
     </script>
-
 </body>
 </html>
