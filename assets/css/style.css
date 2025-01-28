@@ -1268,7 +1268,8 @@ body {
 }
 
 .btn {
-    display: inline-block;
+    display: block; /* Делаем кнопку блочным элементом */
+    margin: 2rem auto; /* Автоматические отступы слева и справа для центрирования */
     padding: 0.75rem 1.5rem;
     border-radius: var(--radius);
     text-decoration: none;
@@ -1279,8 +1280,8 @@ body {
     cursor: pointer;
     font-family: var(--font-base);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-top: 2rem; /* Отступ сверху для кнопки */
 }
+
 
 .btn:hover {
     background-color: var(--purple-dark);
