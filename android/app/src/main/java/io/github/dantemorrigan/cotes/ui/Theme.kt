@@ -1,16 +1,28 @@
 package io.github.dantemorrigan.cotes.ui
 
-import androidx.compose.foundation.isSystemInDarkTheme
+import android.os.Build
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.dynamicDarkColorScheme
+import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Immutable
-import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.compositionLocalOf
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontFamily
+import io.github.dantemorrigan.cotes.Accent
+import io.github.dantemorrigan.cotes.AppSettings
+import io.github.dantemorrigan.cotes.EditorFont
 
-// Цвета — из replica/design/tokens.json и tokens.dark.json (те же, что у веб-версии).
+// Фирменные цвета — из replica/design/tokens.json и tokens.dark.json (как у веб-версии).
 
 private val Light = lightColorScheme(
     primary = Color(0xFF6A3FB5),
@@ -64,17 +76,115 @@ private val Dark = darkColorScheme(
     error = Color(0xFFFF8A80),
 )
 
+/** Схема для акцента: фон и поверхности слегка подкрашены выбранным цветом. */
+private fun accentScheme(accent: Accent, dark: Boolean, pureBlack: Boolean): ColorScheme {
+    if (accent == Accent.LAVENDER && !pureBlack) return if (dark) Dark else Light
+    if (!dark) {
+        val a = Color(accent.light)
+        fun t(f: Float) = lerp(Color.White, a, f)
+        return Light.copy(
+            primary = a,
+            onPrimary = Color.White,
+            primaryContainer = t(0.22f),
+            onPrimaryContainer = Color(0xFF1C1B1F),
+            secondaryContainer = t(0.12f),
+            onSecondaryContainer = Color(0xFF1C1B1F),
+            background = t(0.015f),
+            surface = t(0.015f),
+            surfaceVariant = t(0.12f),
+            onSurfaceVariant = Color(0xFF5E5C66),
+            surfaceContainerLowest = Color.White,
+            surfaceContainerLow = t(0.045f),
+            surfaceContainer = t(0.045f),
+            surfaceContainerHigh = t(0.10f),
+            surfaceContainerHighest = t(0.14f),
+            outlineVariant = t(0.16f),
+            inversePrimary = Color(accent.dark),
+        )
+    }
+    val a = Color(accent.dark)
+    val base = if (pureBlack) Color.Black else Color(0xFF141416)
+    fun t(f: Float) = lerp(base, a, f)
+    return Dark.copy(
+        primary = a,
+        onPrimary = Color(0xFF16141A),
+        primaryContainer = t(0.28f),
+        onPrimaryContainer = Color(0xFFECE8F2),
+        secondaryContainer = t(0.16f),
+        onSecondaryContainer = Color(0xFFECE8F2),
+        background = base,
+        surface = base,
+        surfaceVariant = t(0.16f),
+        onSurfaceVariant = Color(0xFFA9A6B2),
+        surfaceContainerLowest = base,
+        surfaceContainerLow = t(0.05f),
+        surfaceContainer = t(0.05f),
+        surfaceContainerHigh = t(0.12f),
+        surfaceContainerHighest = t(0.18f),
+        outlineVariant = t(0.20f),
+        inversePrimary = Color(accent.light),
+    )
+}
+
+/** Плавная смена темы и акцента: основные цвета перетекают, а не переключаются. */
+@Composable
+private fun ColorScheme.animated(): ColorScheme {
+    val spec = tween<Color>(durationMillis = 350)
+
+    @Composable
+    fun a(c: Color): Color = animateColorAsState(c, spec, label = "scheme").value
+
+    return copy(
+        primary = a(primary),
+        onPrimary = a(onPrimary),
+        primaryContainer = a(primaryContainer),
+        onPrimaryContainer = a(onPrimaryContainer),
+        secondaryContainer = a(secondaryContainer),
+        onSecondaryContainer = a(onSecondaryContainer),
+        background = a(background),
+        onBackground = a(onBackground),
+        surface = a(surface),
+        onSurface = a(onSurface),
+        surfaceVariant = a(surfaceVariant),
+        onSurfaceVariant = a(onSurfaceVariant),
+        surfaceContainerLow = a(surfaceContainerLow),
+        surfaceContainer = a(surfaceContainer),
+        surfaceContainerHigh = a(surfaceContainerHigh),
+        surfaceContainerHighest = a(surfaceContainerHighest),
+        outline = a(outline),
+        outlineVariant = a(outlineVariant),
+    )
+}
+
 @Immutable
 data class CotesExtraColors(val mark: Color)
 
 val LocalCotesColors = staticCompositionLocalOf { CotesExtraColors(mark = Color(0xFFA0F0ED)) }
+val LocalAppSettings = compositionLocalOf { AppSettings() }
+
+fun EditorFont.family(): FontFamily = when (this) {
+    EditorFont.SANS -> FontFamily.SansSerif
+    EditorFont.SERIF -> FontFamily.Serif
+    EditorFont.MONO -> FontFamily.Monospace
+}
+
+val dynamicColorAvailable: Boolean get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 
 @Composable
-fun CotesTheme(content: @Composable () -> Unit) {
-    val dark = isSystemInDarkTheme()
+fun CotesTheme(settings: AppSettings, dark: Boolean, content: @Composable () -> Unit) {
+    val context = LocalContext.current
+    var scheme = if (settings.dynamicColor && dynamicColorAvailable) {
+        if (dark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+    } else {
+        accentScheme(settings.accent, dark, settings.pureBlack)
+    }
+    if (dark && settings.pureBlack && settings.dynamicColor && dynamicColorAvailable) {
+        scheme = scheme.copy(background = Color.Black, surface = Color.Black)
+    }
     CompositionLocalProvider(
-        LocalCotesColors provides CotesExtraColors(mark = if (dark) Color(0xFF1D5552) else Color(0xFFA0F0ED))
+        LocalCotesColors provides CotesExtraColors(mark = if (dark) Color(0xFF1D5552) else Color(0xFFA0F0ED)),
+        LocalAppSettings provides settings,
     ) {
-        MaterialTheme(colorScheme = if (dark) Dark else Light, content = content)
+        MaterialTheme(colorScheme = scheme.animated(), content = content)
     }
 }

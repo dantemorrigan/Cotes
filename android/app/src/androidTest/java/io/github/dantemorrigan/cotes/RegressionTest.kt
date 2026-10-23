@@ -15,6 +15,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeLeft
@@ -45,6 +46,7 @@ class RegressionTest {
     private val instrumentation get() = InstrumentationRegistry.getInstrumentation()
     private val context get() = instrumentation.targetContext
     private val repo get() = NotesRepository.get(context)
+    private val settingsRepo get() = SettingsRepository.get(context)
     private val night: Boolean
         get() = (context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) ==
             Configuration.UI_MODE_NIGHT_YES
@@ -52,6 +54,7 @@ class RegressionTest {
     @Before
     fun setUp() {
         repo.resetForTests()
+        settingsRepo.reset()
     }
 
     @After
@@ -185,13 +188,40 @@ class RegressionTest {
     }
 
     @Test
-    fun menu_opens() {
+    fun settings_themeAccentAndTextApply_andPersist() {
         seed("Одна" to "заметка")
         launch()
-        compose.onNodeWithContentDescription("Ещё").performClick()
-        compose.onNodeWithText("Резервная копия всех (.json)").assertIsDisplayed()
-        compose.onNodeWithText("Восстановить из копии…").assertIsDisplayed()
-        shot("10-menu")
+        compose.onNodeWithContentDescription("Настройки").performClick()
+        compose.onNodeWithText("Настройки").assertIsDisplayed()
+        compose.onNodeWithTag("version").assert(hasText("Версия", substring = true))
+        shot("10-settings")
+
+        compose.onNodeWithText("Тёмная").performClick()
+        compose.onNodeWithContentDescription("Цвет Мята").performClick()
+        compose.onNodeWithText("XL").performScrollTo().performClick()
+        compose.onNodeWithText("С засечками").performScrollTo().performClick()
+        val s = settingsRepo.settings.value
+        assertEquals(ThemeMode.DARK, s.theme)
+        assertEquals(Accent.MINT, s.accent)
+        assertEquals(TextSize.XL, s.textSize)
+        assertEquals(EditorFont.SERIF, s.editorFont)
+        shot("11-settings-changed")
+
+        compose.onNodeWithText("Компактный список").performScrollTo().performClick()
+        assertTrue(settingsRepo.settings.value.compactList)
+        compose.onNodeWithText("Резервная копия всех заметок").performScrollTo().assertIsDisplayed()
+
+        // «Назад» закрывает настройки, а не приложение; новый вид уже применён.
+        systemBack()
+        compose.onNodeWithText("Одна").assertIsDisplayed()
+        shot("12-list-mint-dark-compact")
+        compose.onNodeWithText("Одна").performClick()
+        shot("13-editor-serif-xl")
+
+        compose.onNodeWithTag("back").performClick()
+        compose.onNodeWithContentDescription("Настройки").performClick()
+        compose.onNodeWithText("Сбросить настройки").performScrollTo().performClick()
+        assertEquals(AppSettings(), settingsRepo.settings.value)
     }
 
     @Test

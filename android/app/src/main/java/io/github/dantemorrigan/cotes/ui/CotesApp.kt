@@ -55,12 +55,10 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.HorizontalDivider
@@ -120,6 +118,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.dantemorrigan.cotes.Note
 import io.github.dantemorrigan.cotes.NotesRepository
+import io.github.dantemorrigan.cotes.SettingsRepository
 import io.github.dantemorrigan.cotes.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -129,8 +128,15 @@ import java.time.LocalDate
 private val byPinThenRecent = compareByDescending<Note> { it.pinned }.thenByDescending { it.updated }
 
 @Composable
-fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> Unit) {
+fun CotesApp(
+    repo: NotesRepository,
+    settingsRepo: SettingsRepository,
+    incoming: String?,
+    onIncomingHandled: () -> Unit,
+) {
     val notes by repo.notes.collectAsStateWithLifecycle()
+    val settings by settingsRepo.settings.collectAsStateWithLifecycle()
+    var settingsOpen by rememberSaveable { mutableStateOf(false) }
     val saving by repo.saving.collectAsStateWithLifecycle()
     var selectedId by rememberSaveable { mutableStateOf<String?>(null) }
     var query by rememberSaveable { mutableStateOf("") }
@@ -249,8 +255,7 @@ fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> 
                     onNew = { newNote() },
                     onDelete = { delete(it) },
                     onTogglePin = { togglePin(it) },
-                    onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
-                    onImport = { importLauncher.launch(arrayOf("application/json", "text/*", "application/octet-stream")) },
+                    onOpenSettings = { settingsOpen = true },
                     modifier = modifier,
                 )
             }
@@ -308,12 +313,32 @@ fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> 
                         else list(Modifier.fillMaxSize())
                     }
                 }
+                AnimatedVisibility(
+                    visible = settingsOpen,
+                    enter = slideInHorizontally(tween(280)) { it / 3 } + fadeIn(tween(220)),
+                    exit = slideOutHorizontally(tween(260)) { it / 3 } + fadeOut(tween(180)),
+                ) {
+                    SettingsScreen(
+                        settings = settings,
+                        onChange = { settingsRepo.update(it) },
+                        onBack = { settingsOpen = false },
+                        onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
+                        onImport = { importLauncher.launch(arrayOf("application/json", "text/*", "application/octet-stream")) },
+                        onReset = {
+                            settingsRepo.reset()
+                            message("Настройки сброшены")
+                        },
+                    )
+                }
+                // Объявлен последним — «назад» сначала закрывает настройки.
+                BackHandler(enabled = settingsOpen) { settingsOpen = false }
+
                 // На экране списка сообщение поднимается над кнопкой «Новая».
                 SnackbarHost(
                     snackbar,
                     Modifier
                         .align(Alignment.BottomCenter)
-                        .padding(bottom = if (listShown) 84.dp else 0.dp),
+                        .padding(bottom = if (listShown && !settingsOpen) 84.dp else 0.dp),
                 )
             }
         }
@@ -349,14 +374,12 @@ private fun NoteListPane(
     onNew: () -> Unit,
     onDelete: (String) -> Unit,
     onTogglePin: (String) -> Unit,
-    onExport: () -> Unit,
-    onImport: () -> Unit,
+    onOpenSettings: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
     val q = query.trim()
     val focus = LocalFocusManager.current
-    var menuOpen by remember { mutableStateOf(false) }
     val listState = rememberLazyListState()
     val scrolled by remember { derivedStateOf { listState.canScrollBackward } }
     val fabExpanded by remember { derivedStateOf { listState.firstVisibleItemIndex == 0 } }
@@ -380,20 +403,8 @@ private fun NoteListPane(
                         Spacer(Modifier.width(12.dp))
                         Text("Cotes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(Modifier.weight(1f))
-                        Box {
-                            IconButton(onClick = { menuOpen = true }) {
-                                Icon(Icons.Default.MoreVert, contentDescription = "Ещё")
-                            }
-                            DropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
-                                DropdownMenuItem(
-                                    text = { Text("Резервная копия всех (.json)") },
-                                    onClick = { menuOpen = false; onExport() },
-                                )
-                                DropdownMenuItem(
-                                    text = { Text("Восстановить из копии…") },
-                                    onClick = { menuOpen = false; onImport() },
-                                )
-                            }
+                        IconButton(onClick = onOpenSettings) {
+                            Icon(Icons.Default.Settings, contentDescription = "Настройки")
                         }
                     }
 
@@ -587,6 +598,8 @@ private fun SwipeableNoteRow(
 @Composable
 private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () -> Unit) {
     val colors = MaterialTheme.colorScheme
+    val settings = LocalAppSettings.current
+    val compact = settings.compactList
     val mark = SpanStyle(background = LocalCotesColors.current.mark, color = colors.onSurface)
     val title = note.displayTitle
     val bg by animateColorAsState(if (selected) colors.secondaryContainer else colors.surfaceContainerLow, label = "row")
@@ -595,7 +608,7 @@ private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () ->
             .fillMaxWidth()
             .background(bg)
             .clickable(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = 12.dp)
+            .padding(horizontal = 14.dp, vertical = if (compact) 7.dp else 12.dp)
     ) {
         Text(
             text = if (title.isEmpty()) AnnotatedString(if (note.isBlank) "Новая заметка" else "Без названия")
@@ -606,13 +619,13 @@ private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () ->
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
         )
-        val preview = note.preview(query)
+        val preview = if (settings.showPreview) note.preview(query) else ""
         if (preview.isNotEmpty()) {
             Text(
                 text = highlight(preview, query, mark),
                 style = MaterialTheme.typography.bodyMedium,
                 color = colors.onSurfaceVariant,
-                maxLines = 2,
+                maxLines = if (compact) 1 else 2,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.padding(top = 2.dp),
             )
@@ -698,6 +711,7 @@ private fun EditorPane(
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+    val settings = LocalAppSettings.current
     var title by rememberSaveable(note.id) { mutableStateOf(note.title) }
     var content by rememberSaveable(note.id, stateSaver = TextFieldValue.Saver) {
         mutableStateOf(TextFieldValue(note.content))
@@ -771,6 +785,7 @@ private fun EditorPane(
                         textStyle = MaterialTheme.typography.headlineSmall.copy(
                             color = colors.onSurface,
                             fontWeight = FontWeight.Bold,
+                            fontFamily = settings.editorFont.family(),
                         ),
                         singleLine = true,
                         cursorBrush = SolidColor(colors.primary),
@@ -808,8 +823,9 @@ private fun EditorPane(
                             .testTag("content"),
                         textStyle = MaterialTheme.typography.bodyLarge.copy(
                             color = colors.onSurface,
-                            fontSize = 17.sp,
-                            lineHeight = 28.sp,
+                            fontSize = settings.textSize.sp.sp,
+                            lineHeight = settings.textSize.lineHeight.sp,
+                            fontFamily = settings.editorFont.family(),
                         ),
                         cursorBrush = SolidColor(colors.primary),
                         keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
@@ -818,7 +834,11 @@ private fun EditorPane(
                                 if (content.text.isEmpty()) {
                                     Text(
                                         "Начните писать…",
-                                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = 17.sp, lineHeight = 28.sp),
+                                        style = MaterialTheme.typography.bodyLarge.copy(
+                                            fontSize = settings.textSize.sp.sp,
+                                            lineHeight = settings.textSize.lineHeight.sp,
+                                            fontFamily = settings.editorFont.family(),
+                                        ),
                                         color = colors.onSurfaceVariant.copy(alpha = 0.6f),
                                     )
                                 }
