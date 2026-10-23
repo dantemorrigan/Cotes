@@ -167,6 +167,7 @@ class RegressionTest {
         compose.waitForIdle()
         compose.onNodeWithText("Вторая").assertIsDisplayed()
         assertEquals(2, repo.notes.value.size)
+        shot("08b-undo")
     }
 
     @Test

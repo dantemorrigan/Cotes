@@ -79,7 +79,7 @@ import androidx.compose.material3.SwipeToDismissBox
 import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.VerticalDivider
-import androidx.compose.material3.rememberSwipeToDismissBoxState
+import androidx.compose.material3.SwipeToDismissBoxState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -101,6 +101,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.testTag
@@ -307,7 +308,13 @@ fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> 
                         else list(Modifier.fillMaxSize())
                     }
                 }
-                SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter))
+                // На экране списка сообщение поднимается над кнопкой «Новая».
+                SnackbarHost(
+                    snackbar,
+                    Modifier
+                        .align(Alignment.BottomCenter)
+                        .padding(bottom = if (listShown) 84.dp else 0.dp),
+                )
             }
         }
     }
@@ -510,7 +517,12 @@ private fun SwipeableNoteRow(
     val colors = MaterialTheme.colorScheme
     val currentDelete by rememberUpdatedState(onDelete)
     val currentPin by rememberUpdatedState(onTogglePin)
-    val state = rememberSwipeToDismissBoxState(positionalThreshold = { it * 0.35f })
+    // Обычный remember, а не rememberSaveable: список хранит сохраняемое состояние по ключу
+    // заметки, и после «Отменить» строка вернулась бы уже смахнутой за край.
+    val density = LocalDensity.current
+    val state = remember {
+        SwipeToDismissBoxState(SwipeToDismissBoxValue.Settled, density, positionalThreshold = { it * 0.35f })
+    }
 
     // Действие — когда свайп доведён до конца; закрепление возвращает строку на место.
     LaunchedEffect(state.currentValue) {
