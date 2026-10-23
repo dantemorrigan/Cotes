@@ -3,62 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Cotes — простой редактор заметок, который хранит всё только в вашем браузере.">
+    <meta name="color-scheme" content="light dark">
+    <title>Cotes — заметки, которые остаются у вас</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/style.css">
-	<link rel="icon" href="assets/images/favicon.png" type="image/png">
-
-    <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/theme.js"></script>
 </head>
-<body class="fade-in">
-<header class="hero-header">
-    <div class="container">
-        <nav class="header__content">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.svg" alt="Cotes Logo" class="logo-image">
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+</svg>
+
+<div class="site">
+    <header class="site-header">
+        <div class="wrap">
+            <a href="index.html" class="brand">
+                <span class="brand__tile"><img src="assets/images/logo.svg" alt=""></span>
                 Cotes
             </a>
-            <a href="https://boosty.to/svdo/donate" class="btn-donate">
-                <span>Поддержать проект</span>
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Тема">
+                <svg class="icon icon-system"><use href="#i-monitor"/></svg>
+                <svg class="icon icon-light"><use href="#i-sun"/></svg>
+                <svg class="icon icon-dark"><use href="#i-moon"/></svg>
+            </button>
+            <a href="https://boosty.to/svdo/donate" class="btn btn--ghost" rel="noopener">
+                <svg class="icon"><use href="#i-heart"/></svg>
+                <span class="donate-label">Поддержать</span>
             </a>
-        </nav>
-    </div>
-</header>
-<main class="main-hero">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Ваши мысли заслуживают лучшего места</h1>
-                <p class="hero-subtitle">Создавайте, организуйте и вдохновляйтесь в Cotes</p>
-                <div class="hero-actions">
-                    <a href="editor.html" class="hero-btn primary">✍️ Новая заметка</a>
-                    <a href="notes-and-edit.html" class="hero-btn secondary">📚 Список заметок</a>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="wrap">
+            <div>
+                <p class="hero__eyebrow"><span class="dot"></span>Без аккаунта и без серверов</p>
+                <h1 class="hero__title">Пишите. <em>Cotes</em> запомнит.</h1>
+                <p class="hero__lead">Простой блокнот в браузере: открыли и пишете. Всё сохраняется само
+                    и остаётся только на этом устройстве.</p>
+                <div class="hero__actions">
+                    <a href="notes-and-edit.html#new" class="btn btn--solid btn--lg">Новая заметка</a>
+                    <a href="notes-and-edit.html" class="btn btn--primary btn--lg" id="open-notes">Мои заметки</a>
+                </div>
+                <p class="hero__note" id="local-count" hidden></p>
+            </div>
+
+            <div class="preview" aria-hidden="true">
+                <div class="preview__list">
+                    <div class="preview__search"></div>
+                    <div class="preview__item is-active"><b>Планы на выходные</b><span>Сегодня · 14:05</span></div>
+                    <div class="preview__item"><b>Купить</b><span>Вчера</span></div>
+                    <div class="preview__item"><b>Идеи для рассказа</b><span>12 окт.</span></div>
+                    <div class="preview__item"><b>Цитаты</b><span>3 окт.</span></div>
+                </div>
+                <div class="preview__doc">
+                    <h3>Планы на выходные</h3>
+                    <p>Суббота — выставка и прогулка по набережной.</p>
+                    <p>Воскресенье — дочитать книгу, позвонить родителям<span class="preview__caret"></span></p>
                 </div>
             </div>
-            <div class="hero-features">
-                <article class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>Мгновенный старт</h3>
-                    <p>Начните работать сразу после открытия приложения</p>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Полная приватность</h3>
-                    <p>Все данные хранятся исключительно на вашем устройстве</p>
-                </article>
-                <article class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Умный поиск</h3>
-                    <p>Мгновенный поиск по всему содержимому заметок</p>
-                </article>
-            </div>
         </div>
-    </div>
-</main>
-<footer class="footer">
-    <div class="container">
-        <p>© 2025 · <a href="https://github.com/dantemorrigan/Cotes">Cotes</a> · Цените свои идеи ❤️</p>
-    </div>
-</footer>
+    </main>
+
+    <section class="features" aria-label="Возможности">
+        <div class="wrap">
+            <ul>
+                <li class="feature">
+                    <svg class="icon"><use href="#i-save"/></svg>
+                    <h2>Сохраняет само</h2>
+                    <p>Никаких кнопок «Сохранить»: каждое слово записывается, пока вы печатаете.</p>
+                </li>
+                <li class="feature">
+                    <svg class="icon"><use href="#i-lock"/></svg>
+                    <h2>Только у вас</h2>
+                    <p>Заметки лежат в браузере. Ни регистрации, ни облака, ни внешних запросов.</p>
+                </li>
+                <li class="feature">
+                    <svg class="icon"><use href="#i-search"/></svg>
+                    <h2>Найдёт за секунду</h2>
+                    <p>Поиск по заголовкам и тексту с подсветкой совпадений.</p>
+                </li>
+                <li class="feature">
+                    <svg class="icon"><use href="#i-download"/></svg>
+                    <h2>Копия в один клик</h2>
+                    <p>Выгрузите все заметки в файл и верните их на любом устройстве.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>© 2025 Cotes</span>
+            <a href="https://github.com/dantemorrigan/Cotes" rel="noopener">Исходный код на GitHub</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    (function () {
+        var count = 0;
+        try {
+            var notes = JSON.parse(localStorage.getItem('notes') || '[]');
+            if (Array.isArray(notes)) count = notes.length;
+        } catch (e) { /* нет доступа к хранилищу — просто не показываем счётчик */ }
+        if (!count) return;
+        var mod10 = count % 10, mod100 = count % 100;
+        var word = mod10 === 1 && mod100 !== 11 ? 'заметка'
+            : mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14) ? 'заметки' : 'заметок';
+        var el = document.getElementById('local-count');
+        el.textContent = 'На этом устройстве: ' + count + ' ' + word + '.';
+        el.hidden = false;
+        document.getElementById('open-notes').textContent = 'Продолжить';
+    })();
+</script>
 </body>
 </html>

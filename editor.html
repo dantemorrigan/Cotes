@@ -3,64 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Редактирование заметки</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-	<link rel="icon" href="assets/images/favicon.png" type="image/png">
-
-</head>
-<body class="fade-in">
-
-    <header class="hero-header">
-        <div class="container">
-            <nav class="header__content">
-                <a href="index.html" class="logo">
-                    <img src="assets/images/logo.svg" alt="Cotes Logo" class="logo-image">
-                    Cotes
-                </a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container editor">
-        <input type="text" class="editor__title" placeholder="Название заметки" id="note-title">
-        <textarea class="editor__content" placeholder="Начните писать здесь..." id="note-content"></textarea>
-        <div class="editor__actions">
-            <button class="btn primary" id="save-button">Сохранить</button>
-        </div>
-    </main>
-
+    <title>Cotes</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const saveButton = document.getElementById('save-button');
-            const noteTitle = document.getElementById('note-title');
-            const noteContent = document.getElementById('note-content');
-
-            let notes = JSON.parse(localStorage.getItem('notes')) || [];
-            const urlParams = new URLSearchParams(window.location.search);
-            const noteIndex = urlParams.get('index');
-
-            if (noteIndex !== null) {
-                const note = notes[noteIndex];
-                noteTitle.value = note.title || "";
-                noteContent.value = note.content;
-            }
-
-            saveButton.addEventListener('click', () => {
-                const title = noteTitle.value;
-                const content = noteContent.value;
-
-                if (noteIndex !== null) { // Редактирование существующей заметки
-                    notes[noteIndex] = { title, content };
-                } else { // Добавление новой заметки
-                    notes.push({ title, content });
-                }
-
-                localStorage.setItem('notes', JSON.stringify(notes));
-                window.location.href = 'notes-and-edit.html';
-            });
-        });
+        // Редактор теперь живёт на странице заметок. Старые ссылки
+        // (editor.html и editor.html?index=N) ведут туда же.
+        (function () {
+            var index = new URLSearchParams(location.search).get('index');
+            location.replace('notes-and-edit.html' + (index !== null ? '?index=' + encodeURIComponent(index) : '#new'));
+        })();
     </script>
-
+</head>
+<body>
+    <p><a href="notes-and-edit.html">Открыть заметки</a></p>
 </body>
 </html>

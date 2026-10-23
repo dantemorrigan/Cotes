@@ -1,0 +1,96 @@
+{
+  "_about": "Cotes dark theme. Same roles and pairs as tokens.json.",
+  "color": {
+    "bg": "#16141a",
+    "surface": "#1d1a23",
+    "surface-2": "#2a2532",
+    "border": "#322c3b",
+    "border-input": "#7f778c",
+    "text": "#ece8f2",
+    "text-muted": "#a8a1b4",
+    "accent": "#c7a6ff",
+    "on-accent": "#1a1420",
+    "accent-soft": "#3b2d55",
+    "on-accent-soft": "#ece8f2",
+    "mark": "#1d5552",
+    "danger": "#ff8a80",
+    "success": "#62d39c"
+  },
+  "pairs": [
+    [
+      "text",
+      "bg"
+    ],
+    [
+      "text",
+      "surface"
+    ],
+    [
+      "text",
+      "surface-2"
+    ],
+    [
+      "text-muted",
+      "bg"
+    ],
+    [
+      "text-muted",
+      "surface"
+    ],
+    [
+      "text-muted",
+      "surface-2"
+    ],
+    [
+      "on-accent",
+      "accent"
+    ],
+    [
+      "on-accent-soft",
+      "accent-soft"
+    ],
+    [
+      "accent",
+      "bg"
+    ],
+    [
+      "accent",
+      "surface"
+    ],
+    [
+      "accent",
+      "surface-2"
+    ],
+    [
+      "text",
+      "mark"
+    ],
+    [
+      "danger",
+      "bg"
+    ],
+    [
+      "danger",
+      "surface"
+    ],
+    [
+      "success",
+      "bg"
+    ],
+    [
+      "border-input",
+      "bg",
+      "ui"
+    ],
+    [
+      "border-input",
+      "surface",
+      "ui"
+    ],
+    [
+      "accent",
+      "bg",
+      "ui"
+    ]
+  ]
+}
