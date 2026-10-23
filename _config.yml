@@ -2,3 +2,5 @@
 exclude:
   - replica/
   - README.md
+  - docs/
+  - android/
