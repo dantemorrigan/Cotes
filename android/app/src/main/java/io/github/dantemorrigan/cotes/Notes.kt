@@ -112,6 +112,10 @@ class NotesRepository private constructor(context: Context) {
     private var pendingSave: Job? = null
     private val _notes = MutableStateFlow(load())
     val notes: StateFlow<List<Note>> = _notes.asStateFlow()
+    private val _saving = MutableStateFlow(false)
+
+    /** true, пока последнее изменение ещё не записано в файл. */
+    val saving: StateFlow<Boolean> = _saving.asStateFlow()
 
     fun find(id: String?): Note? = id?.let { key -> _notes.value.firstOrNull { it.id == key } }
 
@@ -187,8 +191,16 @@ class NotesRepository private constructor(context: Context) {
         write()
     }
 
+    /** Для инструментальных тестов: начать с пустого списка. */
+    fun resetForTests() {
+        pendingSave?.cancel()
+        _notes.value = emptyList()
+        write()
+    }
+
     private fun scheduleSave() {
         pendingSave?.cancel()
+        _saving.value = true
         pendingSave = scope.launch {
             delay(SAVE_DELAY_MS)
             write()
@@ -197,6 +209,7 @@ class NotesRepository private constructor(context: Context) {
 
     private fun saveNow() {
         pendingSave?.cancel()
+        _saving.value = true
         pendingSave = scope.launch { write() }
     }
 
@@ -222,6 +235,7 @@ class NotesRepository private constructor(context: Context) {
         } catch (e: IOException) {
             file.failWrite(out)
         }
+        _saving.value = false
     }
 
     companion object {

@@ -4,9 +4,25 @@ import android.content.Intent
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.scaleOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -26,6 +42,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
@@ -35,6 +52,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.MoreVert
@@ -43,7 +61,8 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.Button
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
-import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -55,32 +74,44 @@ import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.Surface
+import androidx.compose.material3.SwipeToDismissBox
+import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.VerticalDivider
+import androidx.compose.material3.rememberSwipeToDismissBoxState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -99,11 +130,13 @@ private val byPinThenRecent = compareByDescending<Note> { it.pinned }.thenByDesc
 @Composable
 fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> Unit) {
     val notes by repo.notes.collectAsStateWithLifecycle()
+    val saving by repo.saving.collectAsStateWithLifecycle()
     var selectedId by rememberSaveable { mutableStateOf<String?>(null) }
     var query by rememberSaveable { mutableStateOf("") }
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
+    val haptics = LocalHapticFeedback.current
 
     val q = query.trim()
     val visible = remember(notes, q) { notes.filter { it.matches(q) }.sortedWith(byPinThenRecent) }
@@ -128,18 +161,21 @@ fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> 
         }
     }
 
-    fun delete(note: Note) {
-        val removed = repo.delete(note.id) ?: return
-        selectedId = null
+    fun delete(id: String) {
+        val removed = repo.delete(id) ?: return
+        if (selectedId == id) selectedId = null
         if (removed.isBlank) return
+        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
         scope.launch {
             snackbar.currentSnackbarData?.dismiss()
             val result = snackbar.showSnackbar("Заметка удалена", actionLabel = "Отменить", duration = SnackbarDuration.Long)
-            if (result == SnackbarResult.ActionPerformed) {
-                repo.restore(removed)
-                open(removed.id)
-            }
+            if (result == SnackbarResult.ActionPerformed) repo.restore(removed)
         }
+    }
+
+    fun togglePin(id: String) {
+        haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+        repo.togglePin(id)
     }
 
     fun share(note: Note) {
@@ -191,14 +227,15 @@ fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> 
         }
     }
 
-    Box(
-        Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
-            .safeDrawingPadding()
-    ) {
+    // Surface задаёт цвет текста и иконок по умолчанию для своей темы.
+    Surface(color = MaterialTheme.colorScheme.background, contentColor = MaterialTheme.colorScheme.onBackground) {
         BoxWithConstraints(Modifier.fillMaxSize()) {
             val wide = maxWidth >= 720.dp
+            val listShown = !wide && selected == null
+            val rootColor by animateColorAsState(
+                if (listShown) MaterialTheme.colorScheme.surfaceContainerLow else MaterialTheme.colorScheme.background,
+                label = "root",
+            )
 
             val list = @Composable { modifier: Modifier ->
                 NoteListPane(
@@ -209,6 +246,8 @@ fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> 
                     selectedId = if (wide) selectedId else null,
                     onOpen = { open(it) },
                     onNew = { newNote() },
+                    onDelete = { delete(it) },
+                    onTogglePin = { togglePin(it) },
                     onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
                     onImport = { importLauncher.launch(arrayOf("application/json", "text/*", "application/octet-stream")) },
                     modifier = modifier,
@@ -217,34 +256,60 @@ fun CotesApp(repo: NotesRepository, incoming: String?, onIncomingHandled: () -> 
             val editor = @Composable { note: Note, modifier: Modifier ->
                 EditorPane(
                     note = note,
+                    saving = saving,
                     showBack = !wide,
                     onBack = { open(null) },
                     onEdit = { title, content -> repo.edit(note.id, title, content) },
-                    onTogglePin = { repo.togglePin(note.id) },
-                    onDelete = { delete(note) },
+                    onTogglePin = { togglePin(note.id) },
+                    onDelete = { delete(note.id) },
                     onShare = { share(note) },
                     modifier = modifier,
                 )
             }
 
-            if (wide) {
-                // На планшете сразу открываем последнюю заметку, как в веб-версии.
-                LaunchedEffect(Unit) {
-                    if (selectedId == null) visible.firstOrNull()?.let { selectedId = it.id }
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .background(rootColor)
+                    .safeDrawingPadding()
+            ) {
+                if (wide) {
+                    // На планшете сразу открываем последнюю заметку, как в веб-версии.
+                    LaunchedEffect(Unit) {
+                        if (selectedId == null) visible.firstOrNull()?.let { selectedId = it.id }
+                    }
+                    Row(Modifier.fillMaxSize()) {
+                        list(Modifier.width(340.dp).fillMaxHeight())
+                        VerticalDivider(color = MaterialTheme.colorScheme.outlineVariant)
+                        Crossfade(targetState = selected?.id, modifier = Modifier.weight(1f), label = "editor") { id ->
+                            val note = notes.firstOrNull { it.id == id }
+                            if (note != null) editor(note, Modifier.fillMaxSize())
+                            else EmptyPane(onNew = { newNote() })
+                        }
+                    }
+                } else {
+                    BackHandler(enabled = selected != null) { open(null) }
+                    AnimatedContent(
+                        targetState = selected?.id,
+                        transitionSpec = {
+                            if (targetState != null) {
+                                (slideInHorizontally(tween(260)) { it / 3 } + fadeIn(tween(200)))
+                                    .togetherWith(slideOutHorizontally(tween(260)) { -it / 8 } + fadeOut(tween(160)))
+                            } else {
+                                (slideInHorizontally(tween(260)) { -it / 8 } + fadeIn(tween(200)))
+                                    .togetherWith(slideOutHorizontally(tween(260)) { it / 3 } + fadeOut(tween(160)))
+                            }
+                        },
+                        label = "pane",
+                    ) { id ->
+                        val note = notes.firstOrNull { it.id == id }
+                        if (note != null) editor(note, Modifier.fillMaxSize())
+                        else list(Modifier.fillMaxSize())
+                    }
                 }
-                Row(Modifier.fillMaxSize()) {
-                    list(Modifier.width(340.dp).fillMaxHeight())
-                    VerticalDivider(color = MaterialTheme.colorScheme.outlineVariant)
-                    if (selected != null) editor(selected, Modifier.weight(1f))
-                    else EmptyPane(onNew = { newNote() }, modifier = Modifier.weight(1f))
-                }
-            } else {
-                BackHandler(enabled = selected != null) { open(null) }
-                if (selected != null) editor(selected, Modifier.fillMaxSize())
-                else list(Modifier.fillMaxSize())
+                SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter))
             }
         }
-        SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter))
     }
 }
 
@@ -275,6 +340,8 @@ private fun NoteListPane(
     selectedId: String?,
     onOpen: (String) -> Unit,
     onNew: () -> Unit,
+    onDelete: (String) -> Unit,
+    onTogglePin: (String) -> Unit,
     onExport: () -> Unit,
     onImport: () -> Unit,
     modifier: Modifier = Modifier,
@@ -283,113 +350,223 @@ private fun NoteListPane(
     val q = query.trim()
     val focus = LocalFocusManager.current
     var menuOpen by remember { mutableStateOf(false) }
+    val listState = rememberLazyListState()
+    val scrolled by remember { derivedStateOf { listState.canScrollBackward } }
+    val fabExpanded by remember { derivedStateOf { listState.firstVisibleItemIndex == 0 } }
+    val headerColor by animateColorAsState(
+        if (scrolled) colors.surfaceContainerHigh else colors.surfaceContainerLow,
+        label = "header",
+    )
 
-    Box(modifier.background(colors.surfaceContainerLow)) {
-        Column(Modifier.fillMaxSize()) {
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .height(60.dp)
-                    .padding(start = 16.dp, end = 4.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                BrandTile(34)
-                Spacer(Modifier.width(12.dp))
-                Text("Cotes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                Spacer(Modifier.weight(1f))
-                Box {
-                    IconButton(onClick = { menuOpen = true }) {
-                        Icon(Icons.Default.MoreVert, contentDescription = "Ещё")
-                    }
-                    DropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
-                        DropdownMenuItem(
-                            text = { Text("Резервная копия всех (.json)") },
-                            onClick = { menuOpen = false; onExport() },
-                        )
-                        DropdownMenuItem(
-                            text = { Text("Восстановить из копии…") },
-                            onClick = { menuOpen = false; onImport() },
-                        )
-                    }
-                }
-            }
-
-            OutlinedTextField(
-                value = query,
-                onValueChange = onQuery,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 12.dp),
-                placeholder = { Text("Поиск") },
-                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                trailingIcon = {
-                    if (query.isNotEmpty()) {
-                        IconButton(onClick = { onQuery("") }) {
-                            Icon(Icons.Default.Close, contentDescription = "Очистить поиск")
+    Surface(modifier, color = colors.surfaceContainerLow, contentColor = colors.onSurface) {
+        Box(Modifier.fillMaxSize()) {
+            Column(Modifier.fillMaxSize()) {
+                Column(Modifier.background(headerColor)) {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .height(60.dp)
+                            .padding(start = 16.dp, end = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        BrandTile(34)
+                        Spacer(Modifier.width(12.dp))
+                        Text("Cotes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                        Spacer(Modifier.weight(1f))
+                        Box {
+                            IconButton(onClick = { menuOpen = true }) {
+                                Icon(Icons.Default.MoreVert, contentDescription = "Ещё")
+                            }
+                            DropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
+                                DropdownMenuItem(
+                                    text = { Text("Резервная копия всех (.json)") },
+                                    onClick = { menuOpen = false; onExport() },
+                                )
+                                DropdownMenuItem(
+                                    text = { Text("Восстановить из копии…") },
+                                    onClick = { menuOpen = false; onImport() },
+                                )
+                            }
                         }
                     }
-                },
-                singleLine = true,
-                shape = RoundedCornerShape(12.dp),
-                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-                keyboardActions = KeyboardActions(onSearch = { focus.clearFocus() }),
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = colors.background,
-                    unfocusedContainerColor = colors.background,
-                    unfocusedBorderColor = colors.outlineVariant,
-                ),
-            )
 
-            val countText = when {
-                q.isNotEmpty() -> "Найдено: ${notes.size}"
-                total > 0 -> "$total ${plural(total, "заметка", "заметки", "заметок")}"
-                else -> ""
-            }
-            if (countText.isNotEmpty()) {
-                Text(
-                    countText,
-                    style = MaterialTheme.typography.labelMedium,
-                    color = colors.onSurfaceVariant,
-                    modifier = Modifier.padding(start = 20.dp, top = 12.dp, bottom = 4.dp),
-                )
-            }
+                    OutlinedTextField(
+                        value = query,
+                        onValueChange = onQuery,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(start = 12.dp, end = 12.dp, bottom = 8.dp)
+                            .testTag("search"),
+                        placeholder = { Text("Поиск") },
+                        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                        trailingIcon = {
+                            AnimatedVisibility(query.isNotEmpty(), enter = scaleIn() + fadeIn(), exit = scaleOut() + fadeOut()) {
+                                IconButton(onClick = { onQuery("") }) {
+                                    Icon(Icons.Default.Close, contentDescription = "Очистить поиск")
+                                }
+                            }
+                        },
+                        singleLine = true,
+                        shape = RoundedCornerShape(14.dp),
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                        keyboardActions = KeyboardActions(onSearch = { focus.clearFocus() }),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedContainerColor = colors.background,
+                            unfocusedContainerColor = colors.background,
+                            unfocusedBorderColor = colors.outlineVariant,
+                        ),
+                    )
+                }
 
-            when {
-                notes.isEmpty() && q.isNotEmpty() -> EmptyMessage(
-                    title = "Ничего не нашлось",
-                    text = "По запросу «$q» заметок нет.",
-                    action = "Сбросить поиск",
-                    onAction = { onQuery("") },
-                    filled = false,
-                )
-                notes.isEmpty() -> EmptyMessage(
-                    title = "Пока пусто",
-                    text = "Первая заметка сохранится только на этом устройстве.",
-                    action = "Новая заметка",
-                    onAction = onNew,
-                    filled = true,
-                )
-                else -> LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 96.dp),
-                ) {
-                    items(notes, key = { it.id }) { note ->
-                        NoteRow(note, q, selected = note.id == selectedId, onClick = { focus.clearFocus(); onOpen(note.id) })
+                val countText = when {
+                    q.isNotEmpty() -> "Найдено: ${notes.size}"
+                    total > 0 -> "$total ${plural(total, "заметка", "заметки", "заметок")} · свайп → закрепить, ← удалить"
+                    else -> ""
+                }
+                AnimatedVisibility(countText.isNotEmpty()) {
+                    Text(
+                        countText,
+                        style = MaterialTheme.typography.labelMedium,
+                        color = colors.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.padding(start = 20.dp, end = 16.dp, top = 6.dp, bottom = 4.dp),
+                    )
+                }
+
+                val mode = when {
+                    notes.isNotEmpty() -> 0
+                    q.isNotEmpty() -> 1
+                    else -> 2
+                }
+                Crossfade(targetState = mode, label = "list-state") { m ->
+                    when (m) {
+                        1 -> EmptyMessage(
+                            title = "Ничего не нашлось",
+                            text = "По запросу «$q» заметок нет.",
+                            action = "Сбросить поиск",
+                            onAction = { onQuery("") },
+                            filled = false,
+                        )
+                        2 -> EmptyMessage(
+                            title = "Пока пусто",
+                            text = "Первая заметка сохранится только на этом устройстве.",
+                            action = "Написать заметку",
+                            onAction = onNew,
+                            filled = true,
+                        )
+                        else -> LazyColumn(
+                            state = listState,
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .testTag("note-list"),
+                            contentPadding = PaddingValues(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 104.dp),
+                        ) {
+                            items(notes, key = { it.id }) { note ->
+                                SwipeableNoteRow(
+                                    note = note,
+                                    query = q,
+                                    selected = note.id == selectedId,
+                                    onClick = { focus.clearFocus(); onOpen(note.id) },
+                                    onDelete = { onDelete(note.id) },
+                                    onTogglePin = { onTogglePin(note.id) },
+                                    modifier = Modifier.animateItem(),
+                                )
+                            }
+                        }
                     }
                 }
             }
-        }
 
-        FloatingActionButton(
-            onClick = onNew,
-            modifier = Modifier
-                .align(Alignment.BottomEnd)
-                .padding(20.dp),
-            containerColor = colors.primary,
-            contentColor = colors.onPrimary,
-        ) {
-            Icon(Icons.Default.Add, contentDescription = "Новая заметка")
+            ExtendedFloatingActionButton(
+                onClick = onNew,
+                expanded = fabExpanded,
+                icon = { Icon(Icons.Default.Add, contentDescription = null) },
+                text = { Text("Новая") },
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(20.dp)
+                    .testTag("fab"),
+                containerColor = colors.primary,
+                contentColor = colors.onPrimary,
+            )
         }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SwipeableNoteRow(
+    note: Note,
+    query: String,
+    selected: Boolean,
+    onClick: () -> Unit,
+    onDelete: () -> Unit,
+    onTogglePin: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val colors = MaterialTheme.colorScheme
+    val currentDelete by rememberUpdatedState(onDelete)
+    val currentPin by rememberUpdatedState(onTogglePin)
+    val state = rememberSwipeToDismissBoxState(positionalThreshold = { it * 0.35f })
+
+    // Действие — когда свайп доведён до конца; закрепление возвращает строку на место.
+    LaunchedEffect(state.currentValue) {
+        when (state.currentValue) {
+            SwipeToDismissBoxValue.EndToStart -> currentDelete()
+            SwipeToDismissBoxValue.StartToEnd -> {
+                currentPin()
+                state.reset()
+            }
+            SwipeToDismissBoxValue.Settled -> Unit
+        }
+    }
+
+    SwipeToDismissBox(
+        state = state,
+        modifier = modifier
+            .padding(vertical = 2.dp)
+            .clip(RoundedCornerShape(14.dp))
+            .testTag("row"),
+        backgroundContent = {
+            val direction = state.dismissDirection
+            val bg by animateColorAsState(
+                when (direction) {
+                    SwipeToDismissBoxValue.EndToStart -> colors.error.copy(alpha = 0.18f)
+                    SwipeToDismissBoxValue.StartToEnd -> colors.primaryContainer
+                    else -> Color.Transparent
+                },
+                label = "swipe-bg",
+            )
+            val reached = state.targetValue != SwipeToDismissBoxValue.Settled
+            val iconScale by animateFloatAsState(
+                if (reached) 1.25f else 0.9f,
+                spring(dampingRatio = Spring.DampingRatioMediumBouncy),
+                label = "swipe-icon",
+            )
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .background(bg)
+                    .padding(horizontal = 24.dp),
+                contentAlignment = if (direction == SwipeToDismissBoxValue.EndToStart) Alignment.CenterEnd else Alignment.CenterStart,
+            ) {
+                when (direction) {
+                    SwipeToDismissBoxValue.EndToStart -> Icon(
+                        Icons.Default.Delete, contentDescription = null, tint = colors.error,
+                        modifier = Modifier.scale(iconScale),
+                    )
+                    SwipeToDismissBoxValue.StartToEnd -> Icon(
+                        painterResource(if (note.pinned) R.drawable.ic_pin else R.drawable.ic_pin_filled),
+                        contentDescription = null, tint = colors.primary,
+                        modifier = Modifier.scale(iconScale),
+                    )
+                    else -> Unit
+                }
+            }
+        },
+    ) {
+        NoteRow(note, query, selected, onClick)
     }
 }
 
@@ -398,12 +575,11 @@ private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () ->
     val colors = MaterialTheme.colorScheme
     val mark = SpanStyle(background = LocalCotesColors.current.mark, color = colors.onSurface)
     val title = note.displayTitle
+    val bg by animateColorAsState(if (selected) colors.secondaryContainer else colors.surfaceContainerLow, label = "row")
     Column(
         Modifier
             .fillMaxWidth()
-            .padding(vertical = 1.dp)
-            .clip(RoundedCornerShape(12.dp))
-            .background(if (selected) colors.secondaryContainer else Color.Transparent)
+            .background(bg)
             .clickable(onClick = onClick)
             .padding(horizontal = 14.dp, vertical = 12.dp)
     ) {
@@ -428,14 +604,15 @@ private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () ->
             )
         }
         Row(Modifier.padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-            if (note.pinned) {
+            AnimatedVisibility(note.pinned, enter = scaleIn() + fadeIn(), exit = scaleOut() + fadeOut()) {
                 Icon(
                     painterResource(R.drawable.ic_pin_filled),
                     contentDescription = "Закреплена",
                     tint = colors.primary,
-                    modifier = Modifier.size(12.dp),
+                    modifier = Modifier
+                        .padding(end = 4.dp)
+                        .size(12.dp),
                 )
-                Spacer(Modifier.width(4.dp))
             }
             Text(shortDate(note.updated), style = MaterialTheme.typography.labelSmall, color = colors.onSurfaceVariant)
         }
@@ -451,7 +628,12 @@ private fun EmptyMessage(title: String, text: String, action: String, onAction: 
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
-        Text(title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+        Text(
+            title,
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onSurface,
+        )
         Text(
             text,
             style = MaterialTheme.typography.bodyMedium,
@@ -476,6 +658,7 @@ private fun EmptyPane(onNew: () -> Unit, modifier: Modifier = Modifier) {
             "Выберите заметку",
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.padding(top = 16.dp),
         )
         Text(
@@ -491,6 +674,7 @@ private fun EmptyPane(onNew: () -> Unit, modifier: Modifier = Modifier) {
 @Composable
 private fun EditorPane(
     note: Note,
+    saving: Boolean,
     showBack: Boolean,
     onBack: () -> Unit,
     onEdit: (String, String) -> Unit,
@@ -501,139 +685,193 @@ private fun EditorPane(
 ) {
     val colors = MaterialTheme.colorScheme
     var title by rememberSaveable(note.id) { mutableStateOf(note.title) }
-    var content by rememberSaveable(note.id) { mutableStateOf(note.content) }
+    var content by rememberSaveable(note.id, stateSaver = TextFieldValue.Saver) {
+        mutableStateOf(TextFieldValue(note.content))
+    }
     val titleFocus = remember { FocusRequester() }
     val contentFocus = remember { FocusRequester() }
+    val pinTint by animateColorAsState(if (note.pinned) colors.primary else colors.onSurfaceVariant, label = "pin")
+    val pinScale by animateFloatAsState(
+        if (note.pinned) 1.15f else 1f,
+        spring(dampingRatio = Spring.DampingRatioHighBouncy, stiffness = Spring.StiffnessMedium),
+        label = "pin-scale",
+    )
 
     LaunchedEffect(note.id) {
         if (note.isBlank) runCatching { titleFocus.requestFocus() }
     }
 
-    Column(modifier.background(colors.background)) {
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .height(56.dp)
-                .padding(horizontal = 4.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            if (showBack) {
-                IconButton(onClick = onBack) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "К списку заметок")
+    Surface(modifier, color = colors.background, contentColor = colors.onBackground) {
+        Column(Modifier.fillMaxSize()) {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .height(56.dp)
+                    .padding(horizontal = 4.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                if (showBack) {
+                    IconButton(onClick = onBack, modifier = Modifier.testTag("back")) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "К списку заметок")
+                    }
+                }
+                Spacer(Modifier.weight(1f))
+                IconButton(onClick = onTogglePin, modifier = Modifier.testTag("pin")) {
+                    Crossfade(note.pinned, label = "pin-icon") { pinned ->
+                        Icon(
+                            painterResource(if (pinned) R.drawable.ic_pin_filled else R.drawable.ic_pin),
+                            contentDescription = if (pinned) "Открепить" else "Закрепить",
+                            tint = pinTint,
+                            modifier = Modifier.scale(pinScale),
+                        )
+                    }
+                }
+                IconButton(onClick = onShare, enabled = !note.isBlank) {
+                    Icon(Icons.Default.Share, contentDescription = "Поделиться")
+                }
+                IconButton(onClick = onDelete, modifier = Modifier.testTag("delete")) {
+                    Icon(Icons.Default.Delete, contentDescription = "Удалить заметку")
                 }
             }
-            Spacer(Modifier.weight(1f))
-            IconButton(onClick = onTogglePin) {
-                Icon(
-                    painterResource(if (note.pinned) R.drawable.ic_pin_filled else R.drawable.ic_pin),
-                    contentDescription = if (note.pinned) "Открепить" else "Закрепить",
-                    tint = if (note.pinned) colors.primary else colors.onSurfaceVariant,
-                )
-            }
-            IconButton(onClick = onShare, enabled = !note.isBlank) {
-                Icon(Icons.Default.Share, contentDescription = "Поделиться")
-            }
-            IconButton(onClick = onDelete) {
-                Icon(Icons.Default.Delete, contentDescription = "Удалить заметку")
-            }
-        }
 
-        Box(
-            Modifier
-                .weight(1f)
-                .fillMaxWidth()
-                .verticalScroll(rememberScrollState()),
-            contentAlignment = Alignment.TopCenter,
-        ) {
-            Column(
+            Box(
                 Modifier
-                    .widthIn(max = 680.dp)
+                    .weight(1f)
                     .fillMaxWidth()
-                    .padding(horizontal = 20.dp, vertical = 8.dp)
+                    .verticalScroll(rememberScrollState()),
+                contentAlignment = Alignment.TopCenter,
             ) {
-                BasicTextField(
-                    value = title,
-                    onValueChange = { title = it; onEdit(it, content) },
-                    modifier = Modifier
+                Column(
+                    Modifier
+                        .widthIn(max = 680.dp)
                         .fillMaxWidth()
-                        .focusRequester(titleFocus),
-                    textStyle = MaterialTheme.typography.headlineSmall.copy(
-                        color = colors.onSurface,
-                        fontWeight = FontWeight.Bold,
-                    ),
-                    singleLine = true,
-                    cursorBrush = SolidColor(colors.primary),
-                    keyboardOptions = KeyboardOptions(
-                        capitalization = KeyboardCapitalization.Sentences,
-                        imeAction = ImeAction.Next,
-                    ),
-                    keyboardActions = KeyboardActions(onNext = { contentFocus.requestFocus() }),
-                    decorationBox = { inner ->
-                        Box {
-                            if (title.isEmpty()) {
-                                Text(
-                                    "Заголовок",
-                                    style = MaterialTheme.typography.headlineSmall,
-                                    fontWeight = FontWeight.Bold,
-                                    color = colors.onSurfaceVariant.copy(alpha = 0.6f),
-                                )
+                        .padding(horizontal = 20.dp, vertical = 8.dp)
+                ) {
+                    BasicTextField(
+                        value = title,
+                        onValueChange = { title = it; onEdit(it, content.text) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .focusRequester(titleFocus)
+                            .testTag("title"),
+                        textStyle = MaterialTheme.typography.headlineSmall.copy(
+                            color = colors.onSurface,
+                            fontWeight = FontWeight.Bold,
+                        ),
+                        singleLine = true,
+                        cursorBrush = SolidColor(colors.primary),
+                        keyboardOptions = KeyboardOptions(
+                            capitalization = KeyboardCapitalization.Sentences,
+                            imeAction = ImeAction.Next,
+                        ),
+                        keyboardActions = KeyboardActions(onNext = { contentFocus.requestFocus() }),
+                        decorationBox = { inner ->
+                            Box {
+                                if (title.isEmpty()) {
+                                    Text(
+                                        "Заголовок",
+                                        style = MaterialTheme.typography.headlineSmall,
+                                        fontWeight = FontWeight.Bold,
+                                        color = colors.onSurfaceVariant.copy(alpha = 0.6f),
+                                    )
+                                }
+                                inner()
                             }
-                            inner()
-                        }
-                    },
-                )
-                Spacer(Modifier.height(12.dp))
-                BasicTextField(
-                    value = content,
-                    onValueChange = { content = it; onEdit(title, it) },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .heightIn(min = 320.dp)
-                        .focusRequester(contentFocus),
-                    textStyle = MaterialTheme.typography.bodyLarge.copy(
-                        color = colors.onSurface,
-                        fontSize = 17.sp,
-                        lineHeight = 28.sp,
-                    ),
-                    cursorBrush = SolidColor(colors.primary),
-                    keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
-                    decorationBox = { inner ->
-                        Box {
-                            if (content.isEmpty()) {
-                                Text(
-                                    "Начните писать…",
-                                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 17.sp, lineHeight = 28.sp),
-                                    color = colors.onSurfaceVariant.copy(alpha = 0.6f),
-                                )
+                        },
+                    )
+                    Spacer(Modifier.height(12.dp))
+                    BasicTextField(
+                        value = content,
+                        onValueChange = {
+                            val changed = it.text != content.text
+                            content = it
+                            if (changed) onEdit(title, it.text)
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = 120.dp)
+                            .focusRequester(contentFocus)
+                            .testTag("content"),
+                        textStyle = MaterialTheme.typography.bodyLarge.copy(
+                            color = colors.onSurface,
+                            fontSize = 17.sp,
+                            lineHeight = 28.sp,
+                        ),
+                        cursorBrush = SolidColor(colors.primary),
+                        keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
+                        decorationBox = { inner ->
+                            Box {
+                                if (content.text.isEmpty()) {
+                                    Text(
+                                        "Начните писать…",
+                                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = 17.sp, lineHeight = 28.sp),
+                                        color = colors.onSurfaceVariant.copy(alpha = 0.6f),
+                                    )
+                                }
+                                inner()
                             }
-                            inner()
+                        },
+                    )
+                    // Нажатие на пустое место под текстом ставит курсор в конец.
+                    Spacer(
+                        Modifier
+                            .fillMaxWidth()
+                            .height(320.dp)
+                            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
+                                content = content.copy(selection = TextRange(content.text.length))
+                                runCatching { contentFocus.requestFocus() }
+                            }
+                    )
+                }
+            }
+
+            HorizontalDivider(color = colors.outlineVariant)
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 20.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                val status = when {
+                    note.isBlank -> "Новая заметка"
+                    saving -> "Сохранение…"
+                    else -> "Сохранено · ${longDate(note.updated)}"
+                }
+                AnimatedContent(
+                    targetState = status,
+                    transitionSpec = { fadeIn(tween(150)) togetherWith fadeOut(tween(150)) },
+                    modifier = Modifier.weight(1f),
+                    label = "status",
+                ) { text ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (text.startsWith("Сохранено")) {
+                            Icon(
+                                Icons.Default.Check,
+                                contentDescription = null,
+                                tint = colors.primary,
+                                modifier = Modifier
+                                    .padding(end = 4.dp)
+                                    .size(14.dp),
+                            )
                         }
-                    },
+                        Text(
+                            text,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = colors.onSurfaceVariant,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+                val text = content.text
+                val words = wordCount(text)
+                Text(
+                    "$words ${plural(words, "слово", "слова", "слов")} · ${text.length} ${plural(text.length, "символ", "символа", "символов")}",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = colors.onSurfaceVariant,
+                    modifier = Modifier.testTag("counts"),
                 )
             }
-        }
-
-        HorizontalDivider(color = colors.outlineVariant)
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp, vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            val words = wordCount(content)
-            Text(
-                if (note.isBlank) "Новая заметка" else "Изменено ${longDate(note.updated)}",
-                style = MaterialTheme.typography.labelSmall,
-                color = colors.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Text(
-                "$words ${plural(words, "слово", "слова", "слов")} · ${content.length} ${plural(content.length, "символ", "символа", "символов")}",
-                style = MaterialTheme.typography.labelSmall,
-                color = colors.onSurfaceVariant,
-            )
         }
     }
 }
