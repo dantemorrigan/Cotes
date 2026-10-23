@@ -2,15 +2,11 @@ package io.github.dantemorrigan.cotes.ui
 
 import android.content.Intent
 import android.net.Uri
-import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.scaleIn
-import androidx.compose.animation.scaleOut
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -50,6 +46,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -422,6 +419,11 @@ private fun <T> Segmented(
 @Composable
 private fun AccentSwatch(accent: Accent, selected: Boolean, dark: Boolean, onClick: () -> Unit) {
     val color = Color(if (dark) accent.dark else accent.light)
+    val checkScale by animateFloatAsState(
+        if (selected) 1f else 0f,
+        spring(dampingRatio = Spring.DampingRatioMediumBouncy),
+        label = "check",
+    )
     val ring by animateDpAsState(
         if (selected) 3.dp else 0.dp,
         spring(dampingRatio = Spring.DampingRatioMediumBouncy),
@@ -447,14 +449,14 @@ private fun AccentSwatch(accent: Accent, selected: Boolean, dark: Boolean, onCli
                 .background(color),
             contentAlignment = Alignment.Center,
         ) {
-            AnimatedVisibility(selected, enter = scaleIn() + fadeIn(), exit = scaleOut() + fadeOut()) {
-                Icon(
-                    Icons.Default.Check,
-                    contentDescription = null,
-                    tint = if (dark) Color(0xFF16141A) else Color.White,
-                    modifier = Modifier.size(20.dp),
-                )
-            }
+            Icon(
+                Icons.Default.Check,
+                contentDescription = null,
+                tint = if (dark) Color(0xFF16141A) else Color.White,
+                modifier = Modifier
+                    .size(20.dp)
+                    .scale(checkScale),
+            )
         }
         Text(
             accent.title,
