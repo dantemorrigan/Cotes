@@ -6,6 +6,12 @@ PKG=io.github.dantemorrigan.cotes
 OUT=build/regress
 status=0
 mkdir -p "$OUT"
+# Эмулятор в CI часто показывает «Pixel Launcher isn't responding», и окно
+# перехватывает фокус. Лаунчер тестам не нужен, системные диалоги ошибок прячем.
+sleep 15
+adb shell settings put global hide_error_dialogs 1 || true
+adb shell pm disable-user --user 0 com.google.android.apps.nexuslauncher || true
+adb shell am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS || true
 adb shell input keyevent 82 || true
 adb shell settings put system screen_off_timeout 1800000 || true
 adb shell rm -rf /sdcard/cotes-shots

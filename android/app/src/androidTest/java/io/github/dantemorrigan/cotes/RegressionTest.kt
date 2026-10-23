@@ -20,7 +20,6 @@ import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeLeft
 import androidx.compose.ui.test.swipeRight
 import androidx.test.core.app.ActivityScenario
-import androidx.test.espresso.Espresso
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.After
@@ -90,6 +89,11 @@ class RegressionTest {
         compose.waitUntil(5_000) { !repo.saving.value }
     }
 
+    private fun systemBack() {
+        scenario.onActivity { it.onBackPressedDispatcher.onBackPressed() }
+        compose.waitForIdle()
+    }
+
     private fun row(title: String) =
         compose.onAllNodesWithTag("row").filter(hasAnyDescendant(hasText(title))).onFirst()
 
@@ -109,7 +113,6 @@ class RegressionTest {
         val stored = File(context.filesDir, "notes.json").readText()
         assertTrue("заметка записана в файл", stored.contains("Список покупок"))
 
-        Espresso.closeSoftKeyboard()
         compose.onNodeWithTag("back").performClick()
         compose.onNodeWithText("Список покупок").assertIsDisplayed()
         compose.onNodeWithText("1 заметка", substring = true).assertIsDisplayed()
@@ -120,7 +123,6 @@ class RegressionTest {
     fun blankNote_isDiscarded() {
         launch()
         compose.onNodeWithTag("fab").performClick()
-        Espresso.closeSoftKeyboard()
         compose.onNodeWithTag("back").performClick()
         compose.onNodeWithText("Пока пусто").assertIsDisplayed()
         assertTrue(repo.notes.value.isEmpty())
@@ -141,8 +143,7 @@ class RegressionTest {
         compose.onNodeWithTag("title").assert(hasText("Идеи"))
         shot("06-editor-existing")
 
-        Espresso.closeSoftKeyboard()
-        Espresso.pressBack()
+        systemBack()
         compose.onNodeWithTag("search").assert(hasText("кофе"))
     }
 
@@ -190,7 +191,6 @@ class RegressionTest {
         compose.onNodeWithText("Резервная копия всех (.json)").assertIsDisplayed()
         compose.onNodeWithText("Восстановить из копии…").assertIsDisplayed()
         shot("10-menu")
-        Espresso.pressBack()
     }
 
     @Test

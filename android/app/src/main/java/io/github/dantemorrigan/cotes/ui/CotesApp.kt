@@ -470,7 +470,9 @@ private fun NoteListPane(
                                     onClick = { focus.clearFocus(); onOpen(note.id) },
                                     onDelete = { onDelete(note.id) },
                                     onTogglePin = { onTogglePin(note.id) },
-                                    modifier = Modifier.animateItem(),
+                                    // Без анимации исчезновения: иначе после «Отменить» строка вернулась бы
+                                    // со старым состоянием свайпа (смахнутой за край).
+                                    modifier = Modifier.animateItem(fadeOutSpec = null),
                                 )
                             }
                         }
