@@ -1,0 +1,30 @@
+feature,area,priority,original,clone,notes
+Stable note ids (open/delete the right note after search),data,must,yes,no,B1
+Render note text safely (no HTML injection),security,must,yes,no,B2
+Autosave while typing + on leave,editor,must,yes,no,B3; Simplenote/Apple Notes
+Migrate old {title content} notes without loss,data,must,yes,no,same localStorage key
+Two-pane list + editor; single pane on mobile,layout,must,yes,no,Apple Notes/Simplenote
+Sort by last edited,list,must,yes,no,
+Instant search in title and text,search,must,yes,no,fix B5
+Empty states: no notes / no results / nothing selected,list,must,yes,no,
+Delete with Undo toast,list,must,yes,no,Google Keep; replaces confirm modal
+Broken/unknown note link handled,editor,must,yes,no,B4
+No external requests (system fonts),privacy,must,yes,no,B7
+Remove 404 app.js and duplicated CSS,tech,must,yes,no,B6 B8
+Keep Cotes icon and favicon,brand,must,yes,no,user requirement
+Dates in list and status bar,list,should,yes,no,
+Word and character count,editor,should,yes,no,Simplenote
+Pin notes to top,list,should,yes,no,Apple Notes/Keep
+Dark theme (system + toggle),design,should,yes,no,
+Keyboard shortcuts (Alt+N; Ctrl+K; Ctrl+S; Esc),editor,should,yes,no,
+Search match highlight in list,search,should,yes,no,Bear
+Export all as JSON + current as .txt; import JSON,data,should,yes,no,Standard Notes
+Sync between open tabs,data,should,yes,no,B10
+Readable line length and typography,design,should,yes,no,iA Writer
+Storage-full error shown,data,should,yes,no,
+editor.html redirects to the app (old links work),tech,should,yes,no,
+Focus mode (hide sidebar),editor,could,yes,no,Bear/iA Writer
+Markdown rendering,editor,skip,yes,no,out of quick scope
+Tags/folders,list,skip,yes,no,out of quick scope
+Cloud sync / accounts,data,skip,yes,no,contradicts local-only promise
+Offline service worker,tech,skip,yes,no,does not work from file://
