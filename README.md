@@ -19,6 +19,18 @@
 
 2) Откройте index.html в браузере — и всё!
 
+# 📱 Android
+
+Нативное приложение на Kotlin и Jetpack Compose лежит в папке `android/`.
+GitHub Actions собирает его при каждом изменении: откройте последний запуск
+**Android build** во вкладке Actions и скачайте артефакт `Cotes-android-N` —
+внутри APK для установки на телефон.
+
+Заметки переносятся между веб-версией и телефоном через резервную копию:
+«Резервная копия всех (.json)» в одной версии и «Восстановить из копии…» в другой.
+
+Собрать локально: `cd android && ./gradlew assembleRelease` (нужны JDK 17 и Android SDK).
+
 # 🎨 Скриншоты
 ![image](https://github.com/user-attachments/assets/e0151c65-c654-4f00-b0da-cd7595e3d177)
 
