@@ -1,5 +1,4 @@
-Cotes 1.1.1
-• An open note now shows changes made on another device right away, so editing it never overwrites them
-• If Google access expires, the message after pulling to refresh has a "Sign in again" button
-• Sync is more careful when you sign out while it is running
-• Connections are always encrypted, including on Android 8
+Cotes 1.1.2
+• Soft sounds for creating, pinning and deleting notes, undo, sign-in and pull-to-refresh sync
+• Typing, opening notes and background sync stay silent; sounds follow your phone’s silent mode
+• Turn them off any time: Settings → Sounds
