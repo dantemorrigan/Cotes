@@ -59,6 +59,6 @@ docs/STORES.md              как публиковать в Google Play, RuStor
 
 **Версии.** `versionCode` — число коммитов, `versionName` берётся из тега `vX.Y.Z` (между релизами — `X.Y.Z-dev.N`).
 
-**Релиз.** `git tag v1.0.0 && git push origin v1.0.0` — workflow `Release` соберёт APK и AAB, проверит подпись и создаст GitHub Release с заметками из `fastlane/metadata/android/*/changelogs/`.
+**Релиз.** Actions → `Release` → Run workflow, версия `X.Y.Z` (или `git push origin vX.Y.Z`). Workflow создаст тег, соберёт APK и AAB, проверит подпись и опубликует GitHub Release с заметками из `fastlane/metadata/android/*/changelogs/` (`<versionCode>.txt`, иначе `default.txt`).
 
 **Ключ подписи** хранится в репозитории только в зашифрованном виде (`android/release.keystore.enc`, AES-256), пароль — в секрете `RELEASE_KEYSTORE_PASSWORD`. Без пароля сборка подписывается отладочным ключом. Отпечаток сертификата — в `android/release-cert-sha256.txt`. Потеря пароля означает, что выпускать обновления поверх установленной версии будет нельзя.

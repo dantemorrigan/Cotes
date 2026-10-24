@@ -4,7 +4,7 @@ plugins {
 }
 
 // versionCode — число коммитов: растёт с каждой сборкой из main и одинаково для тега и ветки.
-// versionName — из тега vX.Y.Z при релизе, иначе X.Y.Z-dev.N.
+// versionName — из тега vX.Y.Z при релизе (или COTES_VERSION_NAME от релизного workflow), иначе X.Y.Z-dev.N.
 val baseVersion = "1.0.0"
 val commitCount: Int = runCatching {
     providers.exec { commandLine("git", "rev-list", "--count", "HEAD") }
@@ -26,7 +26,7 @@ android {
         minSdk = 26
         targetSdk = 36
         versionCode = commitCount
-        versionName = releaseTag ?: "$baseVersion-dev.$commitCount"
+        versionName = System.getenv("COTES_VERSION_NAME") ?: releaseTag ?: "$baseVersion-dev.$commitCount"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

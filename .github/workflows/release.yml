@@ -1,9 +1,15 @@
 name: Release
 
 # Тег vX.Y.Z → подписанные APK и AAB, проверка подписи, GitHub Release с заметками на двух языках.
+# Можно запустить и вручную с номером версии: тогда тег создаётся здесь же, на текущем main.
 on:
   push:
     tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version without "v", e.g. 1.0.0'
+        required: true
 
 permissions:
   contents: write
@@ -16,6 +22,7 @@ jobs:
         working-directory: android
     env:
       RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+      TAG: ${{ github.event_name == 'workflow_dispatch' && format('v{0}', inputs.version) || github.ref_name }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,6 +32,13 @@ jobs:
           distribution: temurin
           java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
+      - name: Check version
+        run: |
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::Bad version tag $TAG"; exit 1; }
+          echo "COTES_VERSION_NAME=${TAG#v}" >> "$GITHUB_ENV"
+          if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ] && git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+            echo "::error::Tag $TAG already exists"; exit 1
+          fi
       - name: Decrypt signing key
         run: |
           [ -n "$RELEASE_KEYSTORE_PASSWORD" ] || { echo "::error::Secret RELEASE_KEYSTORE_PASSWORD is not set"; exit 1; }
@@ -34,13 +48,13 @@ jobs:
           chmod +x gradlew
           ./scripts/check-strings.sh
           ./gradlew --no-daemon testDebugUnitTest lintRelease assembleRelease bundleRelease
-          v="${GITHUB_REF_NAME#v}"
+          v="${TAG#v}"
           mkdir -p dist
           cp app/build/outputs/apk/release/app-release.apk "dist/Cotes-$v.apk"
           cp app/build/outputs/bundle/release/app-release.aab "dist/Cotes-$v.aab"
       - name: Verify signature
         run: |
-          v="${GITHUB_REF_NAME#v}"
+          v="${TAG#v}"
           "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "dist/Cotes-$v.apk" | tee dist/signature.txt
           expected=$(sed 's/^SHA256: //; s/://g' release-cert-sha256.txt | tr 'A-F' 'a-f')
           grep -q "SHA-256 digest: $expected" dist/signature.txt || { echo "::error::APK is not signed with the release key"; exit 1; }
@@ -54,10 +68,17 @@ jobs:
           }
           { notes en-US; printf '\n\n---\n\n'; notes ru-RU; } > dist/notes.md
           cat dist/notes.md
+      - name: Create tag
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git tag -a "$TAG" -m "Cotes ${TAG#v}"
+          git push origin "$TAG"
       - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          v="${GITHUB_REF_NAME#v}"
-          gh release create "$GITHUB_REF_NAME" "dist/Cotes-$v.apk" "dist/Cotes-$v.aab" dist/SHA256SUMS.txt \
+          v="${TAG#v}"
+          gh release create "$TAG" "dist/Cotes-$v.apk" "dist/Cotes-$v.aab" dist/SHA256SUMS.txt \
             --title "Cotes $v" --notes-file dist/notes.md --verify-tag
