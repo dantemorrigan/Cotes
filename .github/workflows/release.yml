@@ -1,0 +1,63 @@
+name: Release
+
+# Тег vX.Y.Z → подписанные APK и AAB, проверка подписи, GitHub Release с заметками на двух языках.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: android
+    env:
+      RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Decrypt signing key
+        run: |
+          [ -n "$RELEASE_KEYSTORE_PASSWORD" ] || { echo "::error::Secret RELEASE_KEYSTORE_PASSWORD is not set"; exit 1; }
+          ./scripts/decrypt-key.sh
+      - name: Check, test and build
+        run: |
+          chmod +x gradlew
+          ./scripts/check-strings.sh
+          ./gradlew --no-daemon testDebugUnitTest lintRelease assembleRelease bundleRelease
+          v="${GITHUB_REF_NAME#v}"
+          mkdir -p dist
+          cp app/build/outputs/apk/release/app-release.apk "dist/Cotes-$v.apk"
+          cp app/build/outputs/bundle/release/app-release.aab "dist/Cotes-$v.aab"
+      - name: Verify signature
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "dist/Cotes-$v.apk" | tee dist/signature.txt
+          expected=$(sed 's/^SHA256: //; s/://g' release-cert-sha256.txt | tr 'A-F' 'a-f')
+          grep -q "SHA-256 digest: $expected" dist/signature.txt || { echo "::error::APK is not signed with the release key"; exit 1; }
+          (cd dist && sha256sum "Cotes-$v.apk" "Cotes-$v.aab" > SHA256SUMS.txt)
+      - name: Release notes
+        run: |
+          code=$(git rev-list --count HEAD)
+          notes() {
+            f=../fastlane/metadata/android/$1/changelogs
+            if [ -f "$f/$code.txt" ]; then cat "$f/$code.txt"; else cat "$f/default.txt"; fi
+          }
+          { notes en-US; printf '\n\n---\n\n'; notes ru-RU; } > dist/notes.md
+          cat dist/notes.md
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" "dist/Cotes-$v.apk" "dist/Cotes-$v.aab" dist/SHA256SUMS.txt \
+            --title "Cotes $v" --notes-file dist/notes.md --verify-tag

@@ -1,45 +1,57 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
+// versionCode — число коммитов: растёт с каждой сборкой из main и одинаково для тега и ветки.
+// versionName — из тега vX.Y.Z при релизе, иначе X.Y.Z-dev.N.
+val baseVersion = "1.0.0"
+val commitCount: Int = runCatching {
+    providers.exec { commandLine("git", "rev-list", "--count", "HEAD") }
+        .standardOutput.asText.get().trim().toInt()
+}.getOrDefault(1)
+val releaseTag: String? = System.getenv("GITHUB_REF_NAME")
+    ?.takeIf { System.getenv("GITHUB_REF_TYPE") == "tag" && it.startsWith("v") }
+    ?.removePrefix("v")
+
+// Ключ подписи расшифровывает scripts/decrypt-key.sh (только в CI). Без него — отладочный ключ.
+val releaseKeystore: File? = System.getenv("COTES_KEYSTORE_FILE")?.let(::file)?.takeIf { it.exists() }
+
 android {
     namespace = "io.github.dantemorrigan.cotes"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "io.github.dantemorrigan.cotes"
         minSdk = 26
-        targetSdk = 35
-        versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 1
-        versionName = "1.0." + (System.getenv("GITHUB_RUN_NUMBER") ?: "0")
+        targetSdk = 36
+        versionCode = commitCount
+        versionName = releaseTag ?: "$baseVersion-dev.$commitCount"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    // Общий ключ из репозитория: каждая сборка подписана одинаково,
-    // поэтому новая версия ставится поверх старой без удаления заметок.
-    // Для Google Play нужен свой закрытый ключ.
+    androidResources {
+        generateLocaleConfig = true
+    }
+
     signingConfigs {
-        create("shared") {
-            storeFile = file("cotes-debug.keystore")
-            storePassword = "android"
-            keyAlias = "cotes"
-            keyPassword = "android"
+        if (releaseKeystore != null) {
+            create("release") {
+                storeFile = releaseKeystore
+                storeType = "PKCS12"
+                storePassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+                keyAlias = "cotes"
+                keyPassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+            }
         }
     }
 
     buildTypes {
-        debug {
-            signingConfig = signingConfigs.getByName("shared")
-        }
         release {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            signingConfig = signingConfigs.getByName("shared")
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
     }
 
@@ -51,31 +63,36 @@ android {
     buildFeatures {
         compose = true
     }
-}
 
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
+    lint {
+        abortOnError = true
+        checkReleaseBuilds = true
+        disable += setOf("GradleDependency", "AndroidGradlePluginVersion", "NewerVersionAvailable", "OldTargetApi")
     }
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2024.12.01")
+    val composeBom = platform("androidx.compose:compose-bom:2026.09.00")
     implementation(composeBom)
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-core")
-    implementation("androidx.core:core-ktx:1.15.0")
-    implementation("androidx.activity:activity-compose:1.9.3")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    implementation("androidx.core:core-ktx:1.19.1")
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    implementation("androidx.activity:activity-compose:1.13.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.11.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.11.0")
     // Ставит готовые профили Compose при установке: интерфейс плавный с первого запуска.
     implementation("androidx.profileinstaller:profileinstaller:1.4.1")
 
+    testImplementation("junit:junit:4.13.2")
+    // В юнит-тестах org.json из android.jar — заглушка, нужна настоящая библиотека.
+    testImplementation("org.json:json:20260814")
+
     androidTestImplementation(composeBom)
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test.ext:junit:1.3.0")
+    androidTestImplementation("androidx.test:runner:1.7.0")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }

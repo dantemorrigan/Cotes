@@ -22,16 +22,33 @@ jobs:
         working-directory: android
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
-      - name: Build APK
+      - name: Decrypt signing key
+        env:
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+        run: ./scripts/decrypt-key.sh
+      - name: Check, test and build APK
+        env:
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
         run: |
           chmod +x gradlew
-          ./gradlew --no-daemon assembleRelease
+          ./scripts/check-strings.sh
+          ./gradlew --no-daemon testDebugUnitTest lintRelease assembleRelease
           cp app/build/outputs/apk/release/app-release.apk "Cotes-${GITHUB_RUN_NUMBER}.apk"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Cotes-checks-${{ github.run_number }}
+          path: |
+            android/app/build/reports/lint-results-release.html
+            android/app/build/reports/tests/
+          if-no-files-found: ignore
       - uses: actions/upload-artifact@v4
         with:
           name: Cotes-android-${{ github.run_number }}
@@ -48,17 +65,25 @@ jobs:
         working-directory: android
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
+      - name: Decrypt signing key
+        env:
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+        run: ./scripts/decrypt-key.sh
       - name: Enable KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
       - name: Build app and tests
+        env:
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
         run: |
           chmod +x gradlew
           ./gradlew --no-daemon assembleRelease assembleDebug assembleDebugAndroidTest
@@ -73,6 +98,8 @@ jobs:
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
           working-directory: android
           script: ./scripts/regress.sh
+        env:
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
