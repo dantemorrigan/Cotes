@@ -1,0 +1,24 @@
+Cotes is a calm, minimal notes app. Open it and start writing — that's it.
+
+<b>Private by design</b>
+• No internet permission, no accounts, no ads, no analytics.
+• Notes live only in the app's private storage on your phone.
+• Nothing goes to cloud backups or device-to-device transfers — your notes leave the phone only when you share them or save a backup file yourself.
+
+<b>Writing without friction</b>
+• Autosave while you type — there is no Save button.
+• Instant search across titles and text, with matches highlighted.
+• Swipe right to pin a note on top, swipe left to delete — with Undo.
+• Share a note to any app, or share text from any app to Cotes to make a new note.
+• "New note" shortcut on the app icon.
+
+<b>Make it yours</b>
+• System, light or dark theme, plus pure black for AMOLED screens.
+• Five accent colors or your wallpaper colors (Material You).
+• Text size for the editor, compact list, text previews.
+• English and Russian, switchable right in the app.
+
+<b>Your data, your files</b>
+• Back up all notes to a single .json file and restore them on any phone.
+
+Works on Android 8.0 and newer, on phones and tablets (list and note side by side).
