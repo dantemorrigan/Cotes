@@ -98,7 +98,7 @@ object NoteImport {
     /** JSON любого из поддерживаемых форматов; null — если заметок в нём нет. */
     fun fromJson(text: String): Pair<ImportSource, List<Note>>? {
         val root: Any = try {
-            val t = text.trim().removePrefix("﻿")
+            val t = text.trim().removePrefix("\uFEFF")
             when {
                 t.startsWith("{") -> JSONObject(t)
                 t.startsWith("[") -> JSONArray(t)
@@ -126,7 +126,7 @@ object NoteImport {
      * если имя файла с неё начинается (так сохраняют Simplenote и многие другие), иначе имя файла.
      */
     fun fromText(path: String, raw: String, modified: Long? = null): Note? {
-        val text = raw.removePrefix("﻿").replace("\r\n", "\n").replace('\r', '\n')
+        val text = raw.removePrefix("\uFEFF").replace("\r\n", "\n").replace('\r', '\n')
         val stem = path.substringAfterLast('/').substringBeforeLast('.').trim()
         val body = stripFrontMatter(text).trim('\n')
         if (body.isBlank()) return null
@@ -319,7 +319,7 @@ object NoteImport {
             bytes[2].toInt() == 3 && bytes[3].toInt() == 4
 
     private fun looksLikeJson(bytes: ByteArray): Boolean {
-        val head = bytes.take(64).toByteArray().toString(Charsets.UTF_8).trimStart('﻿', ' ', '\n', '\r', '\t')
+        val head = bytes.take(64).toByteArray().toString(Charsets.UTF_8).trimStart('\uFEFF', ' ', '\n', '\r', '\t')
         return head.startsWith("{") || head.startsWith("[")
     }
 
