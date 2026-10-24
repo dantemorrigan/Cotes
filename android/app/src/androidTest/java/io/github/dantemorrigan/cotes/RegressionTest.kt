@@ -5,7 +5,10 @@ import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.longClick
 import androidx.compose.ui.test.onAllNodesWithTag
+import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
@@ -18,6 +21,7 @@ import androidx.compose.ui.test.swipeRight
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -93,6 +97,11 @@ class RegressionTest : CotesTest() {
         shot("07-pinned")
 
         row("Вторая").performTouchInput { swipeLeft(startX = right - 10f, endX = left) }
+        // Сначала — подтверждение; заметка ещё на месте.
+        compose.onNodeWithText(s(R.string.delete_one_title)).assertIsDisplayed()
+        assertEquals(2, repo.notes.value.size)
+        shot("08a-confirm-delete")
+        compose.onNodeWithTag("confirm-delete").performClick()
         compose.onNodeWithText(s(R.string.note_deleted)).assertIsDisplayed()
         assertEquals(1, repo.notes.value.size)
         shot("08-deleted-snackbar")
@@ -101,6 +110,56 @@ class RegressionTest : CotesTest() {
         compose.waitForIdle()
         compose.onNodeWithText("Вторая").assertIsDisplayed()
         assertEquals(2, repo.notes.value.size)
+    }
+
+    @Test
+    fun shortSwipe_doesNothing() {
+        seed("Заметка" to "текст")
+        launch()
+        row("Заметка").performTouchInput { swipeRight(startX = left + 10f, endX = left + width * 0.35f) }
+        compose.waitForIdle()
+        assertFalse(repo.notes.value.single().pinned)
+        row("Заметка").performTouchInput { swipeLeft(startX = right - 10f, endX = right - width * 0.35f) }
+        compose.waitForIdle()
+        assertTrue(compose.onAllNodesWithText(s(R.string.delete_one_title)).fetchSemanticsNodes().isEmpty())
+        assertEquals(1, repo.notes.value.size)
+    }
+
+    @Test
+    fun selection_deletesSeveral_withUndo() {
+        seed("Один" to "1", "Два" to "2", "Три" to "3")
+        launch()
+        row("Два").performTouchInput { longClick() }
+        compose.onNodeWithTag("selected-count").assert(hasText(q(R.plurals.selected_count, 1)))
+        row("Три").performClick()
+        compose.onNodeWithTag("selected-count").assert(hasText(q(R.plurals.selected_count, 2)))
+        shot("15-selection")
+        compose.onNodeWithContentDescription(s(R.string.delete_selected)).performClick()
+        compose.onNodeWithText(q(R.plurals.delete_many_title, 2)).assertIsDisplayed()
+        compose.onNodeWithTag("confirm-delete").performClick()
+        compose.onNodeWithText(q(R.plurals.notes_deleted, 2)).assertIsDisplayed()
+        assertEquals(listOf("Один"), repo.notes.value.map { it.title })
+        compose.onNodeWithText(s(R.string.undo)).performClick()
+        compose.waitUntil(5_000) { repo.notes.value.size == 3 }
+
+        // «Выбрать» в шапке, «Выбрать все» и выход по «назад».
+        compose.onNodeWithContentDescription(s(R.string.select)).performClick()
+        compose.onNodeWithContentDescription(s(R.string.select_all)).performClick()
+        compose.onNodeWithTag("selected-count").assert(hasText(q(R.plurals.selected_count, 3)))
+        systemBack()
+        compose.onNodeWithTag("fab").assertIsDisplayed()
+        assertEquals(3, repo.notes.value.size)
+    }
+
+    @Test
+    fun fab_collapsesWhileScrollingDown_andExpandsAtRest() {
+        seed(*(1..30).map { "Заметка $it" to "текст $it" }.toTypedArray())
+        launch()
+        compose.onNodeWithText(s(R.string.fab_new)).assertIsDisplayed()
+        compose.onNodeWithTag("note-list").performTouchInput { swipeUp(startY = bottom - 50f, endY = top + 50f, durationMillis = 600) }
+        compose.waitUntil(3_000) { compose.onAllNodesWithText(s(R.string.fab_new)).fetchSemanticsNodes().isEmpty() }
+        shot("16-fab-collapsed")
+        compose.waitUntil(5_000) { compose.onAllNodesWithText(s(R.string.fab_new)).fetchSemanticsNodes().isNotEmpty() }
     }
 
     @Test
@@ -113,6 +172,10 @@ class RegressionTest : CotesTest() {
         shot("09-editor-pinned")
 
         compose.onNodeWithTag("delete").performClick()
+        compose.onNodeWithText(s(R.string.cancel)).performClick()
+        assertEquals(1, repo.notes.value.size)
+        compose.onNodeWithTag("delete").performClick()
+        compose.onNodeWithTag("confirm-delete").performClick()
         compose.onNodeWithText(s(R.string.note_deleted)).assertIsDisplayed()
         compose.onNodeWithText(s(R.string.empty_title)).assertIsDisplayed()
     }

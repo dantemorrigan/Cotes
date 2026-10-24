@@ -15,7 +15,7 @@
         <item quantity="one">%d note</item>
         <item quantity="other">%d notes</item>
     </plurals>
-    <string name="list_hint">%1$s · swipe → pin, ← delete</string>
+    <string name="list_hint">%1$s · swipe → pin, ← delete, hold to select</string>
     <string name="empty_search_title">Nothing found</string>
     <string name="empty_search_text">No notes match “%1$s”.</string>
     <string name="empty_title">Nothing here yet</string>
@@ -44,6 +44,29 @@
         <item quantity="other">%d characters</item>
     </plurals>
     <string name="counts">%1$s · %2$s</string>
+
+    <!-- Delete confirmation, selection -->
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_one_title">Delete note?</string>
+    <string name="delete_one_text">“%1$s” will be deleted. You can undo it right after.</string>
+    <plurals name="delete_many_title">
+        <item quantity="one">Delete %d note?</item>
+        <item quantity="other">Delete %d notes?</item>
+    </plurals>
+    <string name="delete_many_text">You can undo it right after.</string>
+    <plurals name="notes_deleted">
+        <item quantity="one">%d note deleted</item>
+        <item quantity="other">%d notes deleted</item>
+    </plurals>
+    <string name="select">Select</string>
+    <string name="select_all">Select all</string>
+    <string name="cancel_selection">Cancel selection</string>
+    <string name="delete_selected">Delete selected</string>
+    <plurals name="selected_count">
+        <item quantity="one">%d selected</item>
+        <item quantity="other">%d selected</item>
+    </plurals>
 
     <!-- Dates -->
     <string name="date_yesterday">yesterday</string>

@@ -15,7 +15,7 @@
         <item quantity="many">%d заметок</item>
         <item quantity="other">%d заметки</item>
     </plurals>
-    <string name="list_hint">%1$s · свайп → закрепить, ← удалить</string>
+    <string name="list_hint">%1$s · свайп → закрепить, ← удалить, удержание — выбор</string>
     <string name="empty_search_title">Ничего не нашлось</string>
     <string name="empty_search_text">По запросу «%1$s» заметок нет.</string>
     <string name="empty_title">Пока пусто</string>
@@ -48,6 +48,35 @@
         <item quantity="other">%d символа</item>
     </plurals>
     <string name="counts">%1$s · %2$s</string>
+
+    <!-- Подтверждение удаления, выбор -->
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete_one_title">Удалить заметку?</string>
+    <string name="delete_one_text">«%1$s» будет удалена. Сразу после этого удаление можно отменить.</string>
+    <plurals name="delete_many_title">
+        <item quantity="one">Удалить %d заметку?</item>
+        <item quantity="few">Удалить %d заметки?</item>
+        <item quantity="many">Удалить %d заметок?</item>
+        <item quantity="other">Удалить %d заметки?</item>
+    </plurals>
+    <string name="delete_many_text">Сразу после этого удаление можно отменить.</string>
+    <plurals name="notes_deleted">
+        <item quantity="one">Удалена %d заметка</item>
+        <item quantity="few">Удалено %d заметки</item>
+        <item quantity="many">Удалено %d заметок</item>
+        <item quantity="other">Удалено %d заметки</item>
+    </plurals>
+    <string name="select">Выбрать</string>
+    <string name="select_all">Выбрать все</string>
+    <string name="cancel_selection">Отменить выбор</string>
+    <string name="delete_selected">Удалить выбранные</string>
+    <plurals name="selected_count">
+        <item quantity="one">Выбрана %d</item>
+        <item quantity="few">Выбрано %d</item>
+        <item quantity="many">Выбрано %d</item>
+        <item quantity="other">Выбрано %d</item>
+    </plurals>
 
     <!-- Даты -->
     <string name="date_yesterday">вчера</string>

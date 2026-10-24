@@ -13,6 +13,39 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.animate
+import androidx.compose.animation.expandHorizontally
+import androidx.compose.animation.shrinkHorizontally
+import androidx.compose.foundation.border
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.draggable
+import androidx.compose.foundation.gestures.rememberDraggableState
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.snapshotFlow
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
+import androidx.compose.ui.input.nestedscroll.NestedScrollSource
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.unit.IntOffset
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
+import kotlin.math.abs
+import kotlin.math.exp
+import kotlin.math.roundToInt
+import kotlin.math.sign
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
@@ -64,6 +97,7 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.HorizontalDivider
@@ -78,12 +112,9 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
-import androidx.compose.material3.SwipeToDismissBox
-import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
-import androidx.compose.material3.SwipeToDismissBoxState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.CompositionLocalProvider
@@ -164,6 +195,10 @@ fun CotesApp(
     var writeTipSeen by rememberSaveable { mutableStateOf(false) }
     val anchors = remember { CoachAnchors() }
     var selectedId by rememberSaveable { mutableStateOf<String?>(null) }
+    // Режим выбора для массового удаления и заметки, ожидающие подтверждения удаления.
+    var selecting by rememberSaveable { mutableStateOf(false) }
+    var selection by rememberSaveable { mutableStateOf(ArrayList<String>()) }
+    var confirmDelete by rememberSaveable { mutableStateOf<ArrayList<String>?>(null) }
     var query by rememberSaveable { mutableStateOf("") }
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
@@ -202,20 +237,42 @@ fun CotesApp(
         }
     }
 
-    fun delete(id: String) {
-        val removed = repo.delete(id) ?: return
-        if (selectedId == id) selectedId = null
-        if (removed.isBlank) return
+    fun exitSelection() {
+        selecting = false
+        selection = ArrayList()
+    }
+
+    fun delete(ids: List<String>) {
+        val removed = repo.deleteAll(ids)
+        if (selectedId in ids) selectedId = null
+        exitSelection()
+        val real = removed.filterNot { it.isBlank }
+        if (real.isEmpty()) return
         haptics.performHapticFeedback(HapticFeedbackType.LongPress)
         scope.launch {
             snackbar.currentSnackbarData?.dismiss()
             val result = snackbar.showSnackbar(
-                res.getString(R.string.note_deleted),
+                if (real.size == 1) res.getString(R.string.note_deleted)
+                else res.getQuantityString(R.plurals.notes_deleted, real.size, real.size),
                 actionLabel = res.getString(R.string.undo),
                 duration = SnackbarDuration.Long,
             )
-            if (result == SnackbarResult.ActionPerformed) repo.restore(removed)
+            if (result == SnackbarResult.ActionPerformed) repo.restoreAll(real)
         }
+    }
+
+    /** Удаление — только после подтверждения; пустую новую заметку убираем сразу. */
+    fun requestDelete(ids: List<String>) {
+        val notesToDelete = ids.mapNotNull { repo.find(it) }
+        if (notesToDelete.isEmpty()) return
+        if (notesToDelete.all { it.isBlank }) delete(ids) else confirmDelete = ArrayList(ids)
+    }
+
+    fun toggleSelected(id: String) {
+        val next = ArrayList(selection)
+        if (!next.remove(id)) next += id
+        selection = next
+        if (next.isEmpty()) selecting = false
     }
 
     fun togglePin(id: String) {
@@ -343,9 +400,23 @@ fun CotesApp(
                         selectedId = if (wide) selectedId else null,
                         onOpen = { open(it) },
                         onNew = { newNote() },
-                        onDelete = { delete(it); finishOnboarding() },
+                        onDelete = { requestDelete(listOf(it)); finishOnboarding() },
                         onTogglePin = { togglePin(it); finishOnboarding() },
                         onOpenSettings = { settingsOpen = true },
+                        selecting = selecting,
+                        selection = selection.toSet(),
+                        onStartSelection = { id ->
+                            haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                            selecting = true
+                            if (id != null && id !in selection) selection = ArrayList(selection + id)
+                        },
+                        onToggleSelected = { toggleSelected(it) },
+                        onSelectAll = {
+                            val all = visible.filterNot { it.isBlank }.map { it.id }
+                            selection = if (selection.containsAll(all)) ArrayList() else ArrayList(all)
+                        },
+                        onCancelSelection = { exitSelection() },
+                        onDeleteSelected = { requestDelete(selection.toList()) },
                         modifier = modifier,
                     )
                 }
@@ -358,7 +429,7 @@ fun CotesApp(
                         onBack = { open(null) },
                         onEdit = { title, content -> repo.edit(note.id, title, content) },
                         onTogglePin = { togglePin(note.id) },
-                        onDelete = { delete(note.id) },
+                        onDelete = { requestDelete(listOf(note.id)) },
                         onShare = { share(note) },
                         modifier = modifier,
                     )
@@ -423,6 +494,7 @@ fun CotesApp(
                             },
                         )
                     }
+                    BackHandler(enabled = selecting) { exitSelection() }
                     // Объявлен последним — «назад» сначала закрывает настройки.
                     BackHandler(enabled = settingsOpen) { settingsOpen = false }
 
@@ -453,6 +525,38 @@ fun CotesApp(
                             onSkip = if (tip == Tip.Write) ({ finishOnboarding() }) else null,
                         )
                     }
+                }
+
+                confirmDelete?.let { ids ->
+                    val single = ids.singleOrNull()?.let { id -> notes.firstOrNull { it.id == id } }
+                    AlertDialog(
+                        onDismissRequest = { confirmDelete = null },
+                        title = {
+                            Text(
+                                if (single != null) stringResource(R.string.delete_one_title)
+                                else pluralStringResource(R.plurals.delete_many_title, ids.size, ids.size)
+                            )
+                        },
+                        text = {
+                            Text(
+                                if (single != null) stringResource(
+                                    R.string.delete_one_text,
+                                    single.displayTitle.ifEmpty { stringResource(R.string.untitled) },
+                                )
+                                else stringResource(R.string.delete_many_text)
+                            )
+                        },
+                        confirmButton = {
+                            TextButton(
+                                onClick = { confirmDelete = null; delete(ids) },
+                                colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error),
+                                modifier = Modifier.testTag("confirm-delete"),
+                            ) { Text(stringResource(R.string.delete)) }
+                        },
+                        dismissButton = {
+                            TextButton(onClick = { confirmDelete = null }) { Text(stringResource(R.string.cancel)) }
+                        },
+                    )
                 }
 
                 if (damaged != null && !damagedHandled) {
@@ -506,37 +610,111 @@ private fun NoteListPane(
     onDelete: (String) -> Unit,
     onTogglePin: (String) -> Unit,
     onOpenSettings: () -> Unit,
+    selecting: Boolean,
+    selection: Set<String>,
+    onStartSelection: (String?) -> Unit,
+    onToggleSelected: (String) -> Unit,
+    onSelectAll: () -> Unit,
+    onCancelSelection: () -> Unit,
+    onDeleteSelected: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
     val anchors = LocalCoachAnchors.current
     val q = query.trim()
     val focus = LocalFocusManager.current
+    val scope = rememberCoroutineScope()
     val listState = rememberLazyListState()
     val scrolled by remember { derivedStateOf { listState.canScrollBackward } }
-    val fabExpanded by remember { derivedStateOf { listState.firstVisibleItemIndex == 0 } }
     val headerColor by animateColorAsState(
-        if (scrolled) colors.surfaceContainerHigh else colors.surfaceContainerLow,
+        if (selecting) colors.secondaryContainer else if (scrolled) colors.surfaceContainerHigh else colors.surfaceContainerLow,
         label = "header",
     )
+
+    // Кнопка «Новая» сворачивается в круг, пока список листают вниз, и раскрывается,
+    // когда его тянут вверх или оставляют в покое.
+    var fabCollapsed by remember { mutableStateOf(false) }
+    val fabScroll = remember {
+        object : NestedScrollConnection {
+            override fun onPreScroll(available: Offset, source: NestedScrollSource): Offset {
+                if (available.y < -2f) fabCollapsed = true else if (available.y > 2f) fabCollapsed = false
+                return Offset.Zero
+            }
+        }
+    }
+    LaunchedEffect(listState) {
+        snapshotFlow { listState.isScrollInProgress }.collectLatest { moving ->
+            if (!moving) {
+                delay(900)
+                fabCollapsed = false
+            }
+        }
+    }
+
+    // Шестерёнка проворачивается, и на середине оборота открываются настройки.
+    val gear = remember { Animatable(0f) }
 
     Surface(modifier, color = colors.surfaceContainerLow, contentColor = colors.onSurface) {
         Box(Modifier.fillMaxSize()) {
             Column(Modifier.fillMaxSize()) {
                 Column(Modifier.background(headerColor)) {
-                    Row(
-                        Modifier
-                            .fillMaxWidth()
-                            .height(60.dp)
-                            .padding(start = 16.dp, end = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        BrandTile(34)
-                        Spacer(Modifier.width(12.dp))
-                        Text("Cotes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        Spacer(Modifier.weight(1f))
-                        IconButton(onClick = onOpenSettings) {
-                            Icon(Icons.Default.Settings, contentDescription = stringResource(R.string.settings))
+                    AnimatedContent(
+                        targetState = selecting,
+                        transitionSpec = { fadeIn(tween(180)) togetherWith fadeOut(tween(120)) },
+                        label = "header-mode",
+                    ) { inSelection ->
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .height(60.dp)
+                                .padding(start = if (inSelection) 4.dp else 16.dp, end = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                        ) {
+                            if (inSelection) {
+                                IconButton(onClick = onCancelSelection, modifier = Modifier.testTag("cancel-selection")) {
+                                    Icon(Icons.Default.Close, contentDescription = stringResource(R.string.cancel_selection))
+                                }
+                                Text(
+                                    pluralStringResource(R.plurals.selected_count, selection.size, selection.size),
+                                    style = MaterialTheme.typography.titleLarge,
+                                    fontWeight = FontWeight.Bold,
+                                    modifier = Modifier.testTag("selected-count"),
+                                )
+                                Spacer(Modifier.weight(1f))
+                                IconButton(onClick = onSelectAll) {
+                                    Icon(painterResource(R.drawable.ic_select_all), contentDescription = stringResource(R.string.select_all))
+                                }
+                                IconButton(onClick = onDeleteSelected, enabled = selection.isNotEmpty()) {
+                                    Icon(Icons.Default.Delete, contentDescription = stringResource(R.string.delete_selected))
+                                }
+                            } else {
+                                BrandTile(34)
+                                Spacer(Modifier.width(12.dp))
+                                Text("Cotes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                                Spacer(Modifier.weight(1f))
+                                AnimatedVisibility(total > 0, enter = fadeIn() + scaleIn(), exit = fadeOut() + scaleOut()) {
+                                    IconButton(onClick = { focus.clearFocus(); onStartSelection(null) }) {
+                                        Icon(painterResource(R.drawable.ic_select), contentDescription = stringResource(R.string.select))
+                                    }
+                                }
+                                IconButton(onClick = {
+                                    scope.launch {
+                                        val start = gear.value
+                                        launch {
+                                            gear.animateTo(start + 180f, tween(620, easing = FastOutSlowInEasing))
+                                            gear.snapTo(gear.value % 360f)
+                                        }
+                                        snapshotFlow { gear.value }.first { it >= start + 70f || it < start }
+                                        onOpenSettings()
+                                    }
+                                }) {
+                                    Icon(
+                                        Icons.Default.Settings,
+                                        contentDescription = stringResource(R.string.settings),
+                                        modifier = Modifier.graphicsLayer { rotationZ = gear.value },
+                                    )
+                                }
+                            }
                         }
                     }
 
@@ -609,6 +787,7 @@ private fun NoteListPane(
                             state = listState,
                             modifier = Modifier
                                 .fillMaxSize()
+                                .nestedScroll(fabScroll)
                                 .testTag("note-list"),
                             contentPadding = PaddingValues(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 104.dp),
                         ) {
@@ -618,11 +797,17 @@ private fun NoteListPane(
                                     first = index == 0,
                                     query = q,
                                     selected = note.id == selectedId,
-                                    onClick = { focus.clearFocus(); onOpen(note.id) },
+                                    checked = if (selecting) note.id in selection else null,
+                                    onClick = {
+                                        focus.clearFocus()
+                                        if (selecting) onToggleSelected(note.id) else onOpen(note.id)
+                                    },
+                                    onLongClick = {
+                                        focus.clearFocus()
+                                        if (selecting) onToggleSelected(note.id) else onStartSelection(note.id)
+                                    },
                                     onDelete = { onDelete(note.id) },
                                     onTogglePin = { onTogglePin(note.id) },
-                                    // Без анимации исчезновения: иначе после «Отменить» строка вернулась бы
-                                    // со старым состоянием свайпа (смахнутой за край).
                                     modifier = Modifier.animateItem(fadeOutSpec = null),
                                 )
                             }
@@ -631,31 +816,46 @@ private fun NoteListPane(
                 }
             }
 
-            ExtendedFloatingActionButton(
-                onClick = onNew,
-                expanded = fabExpanded,
-                icon = { Icon(Icons.Default.Add, contentDescription = null) },
-                text = { Text(stringResource(R.string.fab_new)) },
+            AnimatedVisibility(
+                visible = !selecting,
+                enter = scaleIn(spring(dampingRatio = Spring.DampingRatioMediumBouncy)) + fadeIn(),
+                exit = scaleOut() + fadeOut(),
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
-                    .padding(20.dp)
-                    .coachAnchor(anchors, CoachTarget.NewNote)
-                    .testTag("fab"),
-                containerColor = colors.primary,
-                contentColor = colors.onPrimary,
-            )
+                    .padding(20.dp),
+            ) {
+                ExtendedFloatingActionButton(
+                    onClick = onNew,
+                    expanded = !fabCollapsed,
+                    icon = { Icon(Icons.Default.Add, contentDescription = stringResource(R.string.new_note)) },
+                    text = { Text(stringResource(R.string.fab_new)) },
+                    modifier = Modifier
+                        .coachAnchor(anchors, CoachTarget.NewNote)
+                        .testTag("fab"),
+                    containerColor = colors.primary,
+                    contentColor = colors.onPrimary,
+                )
+            }
         }
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+private enum class SwipeAction { Pin, Delete }
+
+/**
+ * Строка со свайпом. Тянется «резиново»: чем дальше, тем туже. Действие срабатывает,
+ * только если протянуть примерно на две трети ширины, — тогда строка вибрирует, подпись
+ * и значок становятся яркими. Отпустили раньше — строка просто пружинит обратно.
+ */
 @Composable
 private fun SwipeableNoteRow(
     note: Note,
     first: Boolean,
     query: String,
     selected: Boolean,
+    checked: Boolean?,
     onClick: () -> Unit,
+    onLongClick: () -> Unit,
     onDelete: () -> Unit,
     onTogglePin: () -> Unit,
     modifier: Modifier = Modifier,
@@ -667,125 +867,213 @@ private fun SwipeableNoteRow(
     }
     val currentDelete by rememberUpdatedState(onDelete)
     val currentPin by rememberUpdatedState(onTogglePin)
-    // Обычный remember, а не rememberSaveable: список хранит сохраняемое состояние по ключу
-    // заметки, и после «Отменить» строка вернулась бы уже смахнутой за край.
-    val density = LocalDensity.current
-    val state = remember {
-        SwipeToDismissBoxState(SwipeToDismissBoxValue.Settled, density, positionalThreshold = { it * 0.35f })
+    val haptics = LocalHapticFeedback.current
+    var width by remember { mutableIntStateOf(1) }
+    var raw by remember { mutableFloatStateOf(0f) }
+    val limit = width * 0.7f
+    val shown = if (raw == 0f) 0f else sign(raw) * limit * (1f - exp(-abs(raw) / limit))
+    val threshold = width * 0.4f
+    val armed = abs(shown) >= threshold
+    LaunchedEffect(armed) {
+        if (armed) haptics.performHapticFeedback(HapticFeedbackType.LongPress)
     }
+    val dragState = rememberDraggableState { delta -> raw += delta }
 
-    // Действие — когда свайп доведён до конца; закрепление возвращает строку на место.
-    LaunchedEffect(state.currentValue) {
-        when (state.currentValue) {
-            SwipeToDismissBoxValue.EndToStart -> currentDelete()
-            SwipeToDismissBoxValue.StartToEnd -> {
-                // Сначала строка возвращается на место, потом заметка уезжает наверх:
-                // иначе перестановка в списке прерывает анимацию и строка остаётся за краем.
-                runCatching { state.reset() }
-                if (state.currentValue != SwipeToDismissBoxValue.Settled) state.snapTo(SwipeToDismissBoxValue.Settled)
-                currentPin()
-            }
-            SwipeToDismissBoxValue.Settled -> Unit
-        }
-    }
-
-    SwipeToDismissBox(
-        state = state,
-        modifier = modifier
+    Box(
+        modifier
             .padding(vertical = 2.dp)
             .then(if (first) Modifier.coachAnchor(anchors, CoachTarget.FirstNote) else Modifier)
             .clip(RoundedCornerShape(14.dp))
+            .onSizeChanged { width = it.width.coerceAtLeast(1) }
             .testTag("row"),
-        backgroundContent = {
-            val direction = state.dismissDirection
-            val bg by animateColorAsState(
-                when (direction) {
-                    SwipeToDismissBoxValue.EndToStart -> colors.error.copy(alpha = 0.18f)
-                    SwipeToDismissBoxValue.StartToEnd -> colors.primaryContainer
-                    else -> Color.Transparent
-                },
-                label = "swipe-bg",
-            )
-            val reached = state.targetValue != SwipeToDismissBoxValue.Settled
-            val iconScale by animateFloatAsState(
-                if (reached) 1.25f else 0.9f,
-                spring(dampingRatio = Spring.DampingRatioMediumBouncy),
-                label = "swipe-icon",
-            )
-            Box(
-                Modifier
-                    .fillMaxSize()
-                    .background(bg)
-                    .padding(horizontal = 24.dp),
-                contentAlignment = if (direction == SwipeToDismissBoxValue.EndToStart) Alignment.CenterEnd else Alignment.CenterStart,
-            ) {
-                when (direction) {
-                    SwipeToDismissBoxValue.EndToStart -> Icon(
-                        Icons.Default.Delete, contentDescription = null, tint = colors.error,
-                        modifier = Modifier.scale(iconScale),
-                    )
-                    SwipeToDismissBoxValue.StartToEnd -> Icon(
-                        painterResource(if (note.pinned) R.drawable.ic_pin else R.drawable.ic_pin_filled),
-                        contentDescription = null, tint = colors.primary,
-                        modifier = Modifier.scale(iconScale),
-                    )
-                    else -> Unit
-                }
-            }
-        },
     ) {
-        NoteRow(note, query, selected, onClick)
+        if (shown != 0f) {
+            SwipeBackground(
+                action = if (shown > 0) SwipeAction.Pin else SwipeAction.Delete,
+                pinned = note.pinned,
+                progress = (abs(shown) / threshold).coerceIn(0f, 1f),
+                armed = armed,
+                modifier = Modifier.matchParentSize(),
+            )
+        }
+        Box(
+            Modifier
+                .offset { IntOffset(shown.roundToInt(), 0) }
+                .draggable(
+                    state = dragState,
+                    orientation = Orientation.Horizontal,
+                    enabled = checked == null,
+                    onDragStopped = { velocity ->
+                        val action = when {
+                            shown >= threshold -> SwipeAction.Pin
+                            shown <= -threshold -> SwipeAction.Delete
+                            else -> null
+                        }
+                        animate(
+                            initialValue = raw,
+                            targetValue = 0f,
+                            initialVelocity = velocity,
+                            animationSpec = spring(dampingRatio = 0.62f, stiffness = Spring.StiffnessMediumLow),
+                        ) { value, _ -> raw = value }
+                        when (action) {
+                            SwipeAction.Pin -> currentPin()
+                            SwipeAction.Delete -> currentDelete()
+                            null -> Unit
+                        }
+                    },
+                )
+        ) {
+            NoteRow(note, query, selected, checked, onClick, onLongClick)
+        }
     }
 }
 
 @Composable
-private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () -> Unit) {
+private fun SwipeBackground(action: SwipeAction, pinned: Boolean, progress: Float, armed: Boolean, modifier: Modifier) {
+    val colors = MaterialTheme.colorScheme
+    val pin = action == SwipeAction.Pin
+    val base = colors.surfaceContainerHigh
+    val target = if (pin) colors.primaryContainer else colors.errorContainer
+    val bg by animateColorAsState(if (armed) (if (pin) colors.primary else colors.error) else lerp(base, target, progress), label = "swipe-bg")
+    val fg by animateColorAsState(
+        if (armed) (if (pin) colors.onPrimary else colors.onError) else if (pin) colors.primary else colors.error,
+        label = "swipe-fg",
+    )
+    val iconScale by animateFloatAsState(
+        if (armed) 1.2f else 0.75f + 0.25f * progress,
+        spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMedium),
+        label = "swipe-icon",
+    )
+    Row(
+        modifier
+            .background(bg)
+            .padding(horizontal = 22.dp),
+        horizontalArrangement = if (pin) Arrangement.Start else Arrangement.End,
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        val icon = @Composable {
+            Icon(
+                if (pin) painterResource(if (pinned) R.drawable.ic_pin else R.drawable.ic_pin_filled)
+                else rememberVectorPainter(Icons.Default.Delete),
+                contentDescription = null,
+                tint = fg,
+                modifier = Modifier.scale(iconScale),
+            )
+        }
+        val label = @Composable {
+            Text(
+                stringResource(if (!pin) R.string.delete else if (pinned) R.string.unpin else R.string.pin),
+                color = fg,
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier
+                    .padding(horizontal = 10.dp)
+                    .graphicsLayer { alpha = ((progress - 0.35f) / 0.65f).coerceIn(0f, 1f) },
+            )
+        }
+        if (pin) { icon(); label() } else { label(); icon() }
+    }
+}
+
+@Composable
+private fun NoteRow(
+    note: Note,
+    query: String,
+    selected: Boolean,
+    checked: Boolean?,
+    onClick: () -> Unit,
+    onLongClick: () -> Unit,
+) {
     val colors = MaterialTheme.colorScheme
     val settings = LocalAppSettings.current
     val compact = settings.compactList
     val mark = SpanStyle(background = LocalCotesColors.current.mark, color = colors.onSurface)
     val title = note.displayTitle
-    val bg by animateColorAsState(if (selected) colors.secondaryContainer else colors.surfaceContainerLow, label = "row")
-    Column(
+    val bg by animateColorAsState(
+        if (checked == true || selected) colors.secondaryContainer else colors.surfaceContainerLow,
+        label = "row",
+    )
+    Row(
         Modifier
             .fillMaxWidth()
             .background(bg)
-            .clickable(onClick = onClick)
-            .padding(horizontal = 14.dp, vertical = if (compact) 7.dp else 12.dp)
+            .combinedClickable(onClick = onClick, onLongClick = onLongClick)
+            .semantics { if (checked != null) this.selected = checked }
+            .padding(horizontal = 14.dp, vertical = if (compact) 7.dp else 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Text(
-            text = if (title.isEmpty()) AnnotatedString(stringResource(if (note.isBlank) R.string.new_note else R.string.untitled))
-            else highlight(title, query, mark),
-            style = MaterialTheme.typography.bodyLarge,
-            fontWeight = FontWeight.SemiBold,
-            color = if (title.isEmpty()) colors.onSurfaceVariant else colors.onSurface,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-        )
-        val preview = if (settings.showPreview) note.preview(query) else ""
-        if (preview.isNotEmpty()) {
-            Text(
-                text = highlight(preview, query, mark),
-                style = MaterialTheme.typography.bodyMedium,
-                color = colors.onSurfaceVariant,
-                maxLines = if (compact) 1 else 2,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.padding(top = 2.dp),
-            )
+        AnimatedVisibility(
+            visible = checked != null,
+            enter = expandHorizontally() + fadeIn(),
+            exit = shrinkHorizontally() + fadeOut(),
+        ) {
+            SelectionMark(checked == true, Modifier.padding(end = 12.dp))
         }
-        Row(Modifier.padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-            AnimatedVisibility(note.pinned, enter = scaleIn() + fadeIn(), exit = scaleOut() + fadeOut()) {
-                Icon(
-                    painterResource(R.drawable.ic_pin_filled),
-                    contentDescription = stringResource(R.string.pinned),
-                    tint = colors.primary,
-                    modifier = Modifier
-                        .padding(end = 4.dp)
-                        .size(12.dp),
+        Column(Modifier.weight(1f)) {
+            Text(
+                text = if (title.isEmpty()) AnnotatedString(stringResource(if (note.isBlank) R.string.new_note else R.string.untitled))
+                else highlight(title, query, mark),
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.SemiBold,
+                color = if (title.isEmpty()) colors.onSurfaceVariant else colors.onSurface,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+            )
+            val preview = if (settings.showPreview) note.preview(query) else ""
+            if (preview.isNotEmpty()) {
+                Text(
+                    text = highlight(preview, query, mark),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = colors.onSurfaceVariant,
+                    maxLines = if (compact) 1 else 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.padding(top = 2.dp),
                 )
             }
-            Text(shortDate(LocalContext.current, note.updated), style = MaterialTheme.typography.labelSmall, color = colors.onSurfaceVariant)
+            Row(Modifier.padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                AnimatedVisibility(note.pinned, enter = scaleIn() + fadeIn(), exit = scaleOut() + fadeOut()) {
+                    Icon(
+                        painterResource(R.drawable.ic_pin_filled),
+                        contentDescription = stringResource(R.string.pinned),
+                        tint = colors.primary,
+                        modifier = Modifier
+                            .padding(end = 4.dp)
+                            .size(12.dp),
+                    )
+                }
+                Text(shortDate(LocalContext.current, note.updated), style = MaterialTheme.typography.labelSmall, color = colors.onSurfaceVariant)
+            }
         }
+    }
+}
+
+/** Кружок выбора: заливается цветом и показывает галочку с пружинкой. */
+@Composable
+private fun SelectionMark(checked: Boolean, modifier: Modifier = Modifier) {
+    val colors = MaterialTheme.colorScheme
+    val fill by animateColorAsState(if (checked) colors.primary else Color.Transparent, label = "mark-fill")
+    val border by animateColorAsState(if (checked) colors.primary else colors.outline, label = "mark-border")
+    val checkScale by animateFloatAsState(
+        if (checked) 1f else 0f,
+        spring(dampingRatio = Spring.DampingRatioMediumBouncy),
+        label = "mark-check",
+    )
+    Box(
+        modifier
+            .size(24.dp)
+            .clip(CircleShape)
+            .background(fill)
+            .border(2.dp, border, CircleShape),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            Icons.Default.Check,
+            contentDescription = null,
+            tint = colors.onPrimary,
+            modifier = Modifier
+                .size(16.dp)
+                .scale(checkScale),
+        )
     }
 }
 

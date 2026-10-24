@@ -163,8 +163,22 @@ class NotesRepository internal constructor(notesFile: File) {
         return note
     }
 
-    fun restore(note: Note) {
-        _notes.update { list -> list.filterNot { it.id == note.id } + note }
+    fun restore(note: Note) = restoreAll(listOf(note))
+
+    /** Удаляет сразу несколько заметок одной записью файла; возвращает удалённые — для «Отменить». */
+    fun deleteAll(ids: Collection<String>): List<Note> {
+        val set = ids.toSet()
+        val removed = _notes.value.filter { it.id in set }
+        if (removed.isEmpty()) return removed
+        _notes.update { list -> list.filterNot { it.id in set } }
+        saveNow()
+        return removed
+    }
+
+    fun restoreAll(notes: List<Note>) {
+        if (notes.isEmpty()) return
+        val ids = notes.mapTo(HashSet()) { it.id }
+        _notes.update { list -> list.filterNot { it.id in ids } + notes }
         saveNow()
     }
 
