@@ -6,6 +6,7 @@ PKG=io.github.dantemorrigan.cotes
 OUT=build/regress
 status=0
 mkdir -p "$OUT"
+df -h / >> "$OUT/disk.txt" || true
 # Эмулятор в CI часто показывает «Pixel Launcher isn't responding», и окно
 # перехватывает фокус. Лаунчер тестам не нужен, системные диалоги ошибок прячем.
 sleep 15
