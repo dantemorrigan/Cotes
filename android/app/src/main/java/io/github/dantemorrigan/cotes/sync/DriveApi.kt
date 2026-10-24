@@ -124,38 +124,34 @@ class DriveApi(private val token: String) {
         error("unreachable")
     }
 
+    // Соединение не закрываем (disconnect): иначе каждая из сотен заметок заново устанавливала бы
+    // TLS — на первой синхронизации это минуты. Прочитанный до конца ответ возвращает соединение в пул.
     private suspend fun once(method: String, url: String, body: ByteArray?, type: String?): String =
         withContext(Dispatchers.IO) {
             val c = URL(url).openConnection() as HttpURLConnection
-            try {
-                // HttpURLConnection не умеет PATCH: Google понимает подмену через заголовок.
-                c.requestMethod = if (method == "PATCH") "POST" else method
-                if (method == "PATCH") c.setRequestProperty("X-HTTP-Method-Override", "PATCH")
-                c.connectTimeout = 15_000
-                c.readTimeout = 30_000
-                c.setRequestProperty("Authorization", "Bearer $token")
-                if (body != null) {
-                    c.doOutput = true
-                    c.setRequestProperty("Content-Type", type)
-                    c.setFixedLengthStreamingMode(body.size)
-                    c.outputStream.use { it.write(body) }
-                }
-                val code = c.responseCode
-                if (code !in 200..299) {
-                    // Тело читаем до конца: тогда соединение вернётся в пул и им воспользуется следующий запрос.
-                    val text = c.errorStream?.use { it.readBytes().toString(Charsets.UTF_8) }.orEmpty()
-                    if (code == 401) throw AuthExpiredException()
-                    val reason = runCatching {
-                        JSONObject(text).getJSONObject("error").getJSONArray("errors").getJSONObject(0).optString("reason")
-                    }.getOrNull()
-                    throw DriveException(code, reason, "Drive $code ${reason.orEmpty()}")
-                }
-                c.inputStream.use { it.readBytes().toString(Charsets.UTF_8) }
-            } finally {
-                // Не disconnect(): он закрывает соединение, и каждая из сотен заметок заново
-                // устанавливала бы TLS — на первой синхронизации это минуты. Без него запросы
-                // идут по уже открытым соединениям.
+            // HttpURLConnection не умеет PATCH: Google понимает подмену через заголовок.
+            c.requestMethod = if (method == "PATCH") "POST" else method
+            if (method == "PATCH") c.setRequestProperty("X-HTTP-Method-Override", "PATCH")
+            c.connectTimeout = 15_000
+            c.readTimeout = 30_000
+            c.setRequestProperty("Authorization", "Bearer $token")
+            if (body != null) {
+                c.doOutput = true
+                c.setRequestProperty("Content-Type", type)
+                c.setFixedLengthStreamingMode(body.size)
+                c.outputStream.use { it.write(body) }
             }
+            val code = c.responseCode
+            if (code !in 200..299) {
+                // Тело читаем до конца: тогда соединение вернётся в пул и им воспользуется следующий запрос.
+                val text = c.errorStream?.use { it.readBytes().toString(Charsets.UTF_8) }.orEmpty()
+                if (code == 401) throw AuthExpiredException()
+                val reason = runCatching {
+                    JSONObject(text).getJSONObject("error").getJSONArray("errors").getJSONObject(0).optString("reason")
+                }.getOrNull()
+                throw DriveException(code, reason, "Drive $code ${reason.orEmpty()}")
+            }
+            c.inputStream.use { it.readBytes().toString(Charsets.UTF_8) }
         }
 
     companion object {

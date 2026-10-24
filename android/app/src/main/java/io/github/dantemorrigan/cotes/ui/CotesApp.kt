@@ -114,6 +114,7 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
@@ -457,7 +458,14 @@ fun CotesApp(
                                 refreshing = false
                                 when (status) {
                                     SyncStatus.Offline -> message(res.getString(R.string.sync_status_offline))
-                                    SyncStatus.NeedsSignIn -> message(res.getString(R.string.sync_status_reconnect))
+                                    SyncStatus.NeedsSignIn -> scope.launch {
+                                        snackbar.currentSnackbarData?.dismiss()
+                                        val r = snackbar.showSnackbar(
+                                            res.getString(R.string.sync_expired),
+                                            actionLabel = res.getString(R.string.sync_reconnect),
+                                        )
+                                        if (r == SnackbarResult.ActionPerformed) signIn.reconnect()
+                                    }
                                     SyncStatus.SetupError, SyncStatus.Failed -> message(res.getString(R.string.sync_status_failed))
                                     else -> Unit
                                 }
@@ -1241,6 +1249,20 @@ private fun EditorPane(
 
     LaunchedEffect(note.id) {
         if (note.isBlank) runCatching { titleFocus.requestFocus() }
+    }
+
+    // Заметку изменили на другом устройстве, пока она открыта здесь: показываем новую версию,
+    // иначе следующая правка записала бы поверх неё старый текст. Свои правки сюда не попадают:
+    // они меняют и поле, и заметку одновременно.
+    LaunchedEffect(note.title, note.content) {
+        if (note.title != title) title = note.title
+        if (note.content != content.text) {
+            val end = note.content.length
+            content = TextFieldValue(
+                note.content,
+                TextRange(minOf(content.selection.start, end), minOf(content.selection.end, end)),
+            )
+        }
     }
 
     Surface(modifier, color = colors.background, contentColor = colors.onBackground) {

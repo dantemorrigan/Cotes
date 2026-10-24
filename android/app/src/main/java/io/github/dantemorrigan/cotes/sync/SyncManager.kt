@@ -229,6 +229,8 @@ class SyncManager private constructor(private val context: Context, private val 
     }
 
     private fun finish(status: SyncStatus): SyncStatus {
+        // Вышли из аккаунта во время синхронизации: её итог уже не относится к текущему состоянию.
+        if (_state.value.account == null) return status
         val now = System.currentTimeMillis()
         if (status == SyncStatus.Synced) prefs.edit().putLong("lastSync", now).apply()
         _state.update {
@@ -238,6 +240,7 @@ class SyncManager private constructor(private val context: Context, private val 
     }
 
     private suspend fun runPass(api: DriveApi) = coroutineScope {
+        val email = _state.value.account?.email
         val remote = api.list()
         val notes = repo.notes.value
         val deleted = repo.deleted.value
@@ -335,7 +338,8 @@ class SyncManager private constructor(private val context: Context, private val 
         repo.forgetDeleted(stale)
         stale.forEach { newBase.remove(it) }
 
-        writeBase(newBase)
+        // Пока шёл обмен, вышли из аккаунта (или вошли в другой): чужую базу не записываем.
+        if (_state.value.account?.email == email) writeBase(newBase)
         firstError?.let { throw it }
     }
 
