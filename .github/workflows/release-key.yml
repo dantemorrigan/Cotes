@@ -1,0 +1,44 @@
+name: Create release key
+
+# Запускается один раз вручную. Создаёт ключ подписи, шифрует его паролем
+# из секрета RELEASE_KEYSTORE_PASSWORD и кладёт зашифрованный файл в репозиторий.
+on: workflow_dispatch
+
+permissions:
+  contents: write
+
+jobs:
+  key:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Generate and encrypt
+        env:
+          PASS: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+        run: |
+          set -euo pipefail
+          [ -n "$PASS" ] || { echo "::error::Secret RELEASE_KEYSTORE_PASSWORD is not set"; exit 1; }
+          [ ${#PASS} -ge 20 ] || { echo "::error::RELEASE_KEYSTORE_PASSWORD is shorter than 20 characters"; exit 1; }
+          [ ! -e android/release.keystore.enc ] || { echo "::error::android/release.keystore.enc already exists"; exit 1; }
+          umask 077
+          KS="$RUNNER_TEMP/release.p12"
+          keytool -genkeypair -noprompt -storetype PKCS12 -keystore "$KS" -alias cotes \
+            -keyalg RSA -keysize 4096 -validity 10000 -dname "CN=Cotes" \
+            -storepass:env PASS -keypass:env PASS
+          openssl enc -aes-256-cbc -pbkdf2 -iter 600000 -salt -in "$KS" -out android/release.keystore.enc -pass env:PASS
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -in android/release.keystore.enc -pass env:PASS | cmp - "$KS"
+          keytool -list -v -keystore "$KS" -storepass:env PASS -alias cotes \
+            | grep -E 'SHA256:' | sed 's/^[[:space:]]*//' > android/release-cert-sha256.txt
+          rm -f "$KS"
+          cat android/release-cert-sha256.txt
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add android/release.keystore.enc android/release-cert-sha256.txt
+          git commit -m "Add encrypted release signing key"
+          git push
