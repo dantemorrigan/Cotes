@@ -199,12 +199,10 @@ class RegressionTest {
         compose.onNodeWithText("Тёмная").performClick()
         compose.onNodeWithContentDescription("Цвет Мята").performClick()
         compose.onNodeWithText("XL").performScrollTo().performClick()
-        compose.onNodeWithText("С засечками").performScrollTo().performClick()
         val s = settingsRepo.settings.value
         assertEquals(ThemeMode.DARK, s.theme)
         assertEquals(Accent.MINT, s.accent)
         assertEquals(TextSize.XL, s.textSize)
-        assertEquals(EditorFont.SERIF, s.editorFont)
         shot("11-settings-changed")
 
         compose.onNodeWithText("Компактный список").performScrollTo().performClick()
@@ -216,7 +214,7 @@ class RegressionTest {
         compose.onNodeWithText("Одна").assertIsDisplayed()
         shot("12-list-mint-dark-compact")
         compose.onNodeWithText("Одна").performClick()
-        shot("13-editor-serif-xl")
+        shot("13-editor-xl")
 
         compose.onNodeWithTag("back").performClick()
         compose.onNodeWithContentDescription("Настройки").performClick()

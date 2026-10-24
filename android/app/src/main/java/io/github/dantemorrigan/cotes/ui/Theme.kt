@@ -17,10 +17,8 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontFamily
 import io.github.dantemorrigan.cotes.Accent
 import io.github.dantemorrigan.cotes.AppSettings
-import io.github.dantemorrigan.cotes.EditorFont
 
 // Фирменные цвета — из replica/design/tokens.json и tokens.dark.json (как у веб-версии).
 
@@ -161,12 +159,6 @@ data class CotesExtraColors(val mark: Color)
 
 val LocalCotesColors = staticCompositionLocalOf { CotesExtraColors(mark = Color(0xFFA0F0ED)) }
 val LocalAppSettings = compositionLocalOf { AppSettings() }
-
-fun EditorFont.family(): FontFamily = when (this) {
-    EditorFont.SANS -> FontFamily.SansSerif
-    EditorFont.SERIF -> FontFamily.Serif
-    EditorFont.MONO -> FontFamily.Monospace
-}
 
 val dynamicColorAvailable: Boolean get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 

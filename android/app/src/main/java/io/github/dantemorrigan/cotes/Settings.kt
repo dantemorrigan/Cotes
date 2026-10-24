@@ -27,19 +27,12 @@ enum class TextSize(val title: String, val sp: Int, val lineHeight: Int) {
     XL("XL", 22, 34),
 }
 
-enum class EditorFont(val title: String) {
-    SANS("Обычный"),
-    SERIF("С засечками"),
-    MONO("Моноширинный"),
-}
-
 data class AppSettings(
     val theme: ThemeMode = ThemeMode.SYSTEM,
     val accent: Accent = Accent.LAVENDER,
     val dynamicColor: Boolean = false,
     val pureBlack: Boolean = false,
     val textSize: TextSize = TextSize.M,
-    val editorFont: EditorFont = EditorFont.SANS,
     val compactList: Boolean = false,
     val showPreview: Boolean = true,
 ) {
@@ -71,7 +64,6 @@ class SettingsRepository private constructor(context: Context) {
             dynamicColor = prefs.getBoolean("dynamicColor", d.dynamicColor),
             pureBlack = prefs.getBoolean("pureBlack", d.pureBlack),
             textSize = enumOr(prefs.getString("textSize", null), d.textSize),
-            editorFont = enumOr(prefs.getString("editorFont", null), d.editorFont),
             compactList = prefs.getBoolean("compactList", d.compactList),
             showPreview = prefs.getBoolean("showPreview", d.showPreview),
         )
@@ -84,7 +76,7 @@ class SettingsRepository private constructor(context: Context) {
             .putBoolean("dynamicColor", s.dynamicColor)
             .putBoolean("pureBlack", s.pureBlack)
             .putString("textSize", s.textSize.name)
-            .putString("editorFont", s.editorFont.name)
+            .remove("editorFont")
             .putBoolean("compactList", s.compactList)
             .putBoolean("showPreview", s.showPreview)
             .apply()

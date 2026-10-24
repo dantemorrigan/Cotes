@@ -62,7 +62,6 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.pm.PackageInfoCompat
 import io.github.dantemorrigan.cotes.Accent
 import io.github.dantemorrigan.cotes.AppSettings
-import io.github.dantemorrigan.cotes.EditorFont
 import io.github.dantemorrigan.cotes.R
 import io.github.dantemorrigan.cotes.TextSize
 import io.github.dantemorrigan.cotes.ThemeMode
@@ -178,20 +177,6 @@ fun SettingsScreen(
                             onSelect = { size -> onChange { it.copy(textSize = size) } },
                             modifier = Modifier.padding(12.dp),
                         )
-                        Divider()
-                        Text(
-                            "Шрифт",
-                            style = MaterialTheme.typography.bodyLarge,
-                            modifier = Modifier.padding(start = 16.dp, top = 14.dp),
-                        )
-                        Segmented(
-                            options = EditorFont.entries,
-                            selected = settings.editorFont,
-                            label = { it.title },
-                            fontFor = { it.family() },
-                            onSelect = { font -> onChange { it.copy(editorFont = font) } },
-                            modifier = Modifier.padding(12.dp),
-                        )
                         // Живой пример: как будет выглядеть заметка.
                         Column(
                             Modifier
@@ -203,14 +188,12 @@ fun SettingsScreen(
                         ) {
                             Text(
                                 "Планы на выходные",
-                                fontFamily = settings.editorFont.family(),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = (settings.textSize.sp + 5).sp,
                             )
                             Spacer(Modifier.height(6.dp))
                             Text(
                                 "Суббота — выставка и прогулка по набережной. Воскресенье — дочитать книгу.",
-                                fontFamily = settings.editorFont.family(),
                                 fontSize = settings.textSize.sp.sp,
                                 lineHeight = settings.textSize.lineHeight.sp,
                             )
@@ -273,8 +256,6 @@ fun SettingsScreen(
                         LinkRow("Исходный код", "github.com/dantemorrigan/Cotes") {
                             openLink("https://github.com/dantemorrigan/Cotes")
                         }
-                        Divider()
-                        LinkRow("Поддержать проект", "Boosty") { openLink("https://boosty.to/svdo/donate") }
                     }
 
                     Text(
@@ -379,7 +360,6 @@ private fun <T> Segmented(
     label: (T) -> String,
     onSelect: (T) -> Unit,
     modifier: Modifier = Modifier,
-    fontFor: ((T) -> androidx.compose.ui.text.font.FontFamily)? = null,
 ) {
     val colors = MaterialTheme.colorScheme
     Row(
@@ -408,7 +388,6 @@ private fun <T> Segmented(
                     label(option),
                     color = fg,
                     style = MaterialTheme.typography.labelLarge,
-                    fontFamily = fontFor?.invoke(option),
                     maxLines = 1,
                 )
             }

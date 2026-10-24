@@ -785,7 +785,6 @@ private fun EditorPane(
                         textStyle = MaterialTheme.typography.headlineSmall.copy(
                             color = colors.onSurface,
                             fontWeight = FontWeight.Bold,
-                            fontFamily = settings.editorFont.family(),
                         ),
                         singleLine = true,
                         cursorBrush = SolidColor(colors.primary),
@@ -825,7 +824,6 @@ private fun EditorPane(
                             color = colors.onSurface,
                             fontSize = settings.textSize.sp.sp,
                             lineHeight = settings.textSize.lineHeight.sp,
-                            fontFamily = settings.editorFont.family(),
                         ),
                         cursorBrush = SolidColor(colors.primary),
                         keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
@@ -837,7 +835,6 @@ private fun EditorPane(
                                         style = MaterialTheme.typography.bodyLarge.copy(
                                             fontSize = settings.textSize.sp.sp,
                                             lineHeight = settings.textSize.lineHeight.sp,
-                                            fontFamily = settings.editorFont.family(),
                                         ),
                                         color = colors.onSurfaceVariant.copy(alpha = 0.6f),
                                     )

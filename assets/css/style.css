@@ -312,7 +312,6 @@ kbd {
   .features ul { grid-template-columns: 1fr; }
   .preview { min-height: 260px; }
   .preview__doc { padding: var(--s4); }
-  .site-header .donate-label { display: none; }
 }
 
 /* ---------- Приложение ---------- */
