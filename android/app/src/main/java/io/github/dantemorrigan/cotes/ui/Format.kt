@@ -1,57 +1,60 @@
 package io.github.dantemorrigan.cotes.ui
 
+import android.content.Context
+import android.text.format.DateFormat
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import io.github.dantemorrigan.cotes.Note
+import io.github.dantemorrigan.cotes.R
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
+import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
-import java.util.Locale
 
-private val RU: Locale = Locale.forLanguageTag("ru")
-private val timeFmt = DateTimeFormatter.ofPattern("HH:mm", RU)
-private val dayFmt = DateTimeFormatter.ofPattern("d MMM", RU)
-private val fullFmt = DateTimeFormatter.ofPattern("d MMM yyyy", RU)
+/** Даты — на языке интерфейса и с 12- или 24-часовым временем, как в системе. */
+private class DateFormats(context: Context) {
+    private val locale = context.resources.configuration.locales[0]
+    private fun pattern(skeleton: String) =
+        DateTimeFormatter.ofPattern(DateFormat.getBestDateTimePattern(locale, skeleton), locale)
 
-fun shortDate(ts: Long): String {
-    val zone = ZoneId.systemDefault()
-    val at = Instant.ofEpochMilli(ts).atZone(zone)
-    val today = LocalDate.now(zone)
+    val time: DateTimeFormatter = pattern(if (DateFormat.is24HourFormat(context)) "Hm" else "hm")
+    val day: DateTimeFormatter = pattern("dMMM")
+    val full: DateTimeFormatter = pattern("dMMMyyyy")
+}
+
+private fun zoned(ts: Long): ZonedDateTime = Instant.ofEpochMilli(ts).atZone(ZoneId.systemDefault())
+
+/** Для списка: время сегодня, «вчера», число и месяц, а для прошлых лет — с годом. */
+fun shortDate(context: Context, ts: Long): String {
+    val f = DateFormats(context)
+    val at = zoned(ts)
+    val today = LocalDate.now(at.zone)
     val day = at.toLocalDate()
     return when {
-        day == today -> timeFmt.format(at)
-        day == today.minusDays(1) -> "вчера"
-        day.year == today.year -> dayFmt.format(at)
-        else -> fullFmt.format(at)
+        day == today -> f.time.format(at)
+        day == today.minusDays(1) -> context.getString(R.string.date_yesterday)
+        day.year == today.year -> f.day.format(at)
+        else -> f.full.format(at)
     }
 }
 
-fun longDate(ts: Long): String {
-    val zone = ZoneId.systemDefault()
-    val at = Instant.ofEpochMilli(ts).atZone(zone)
-    val today = LocalDate.now(zone)
-    val day = at.toLocalDate()
-    val time = timeFmt.format(at)
-    return when (day) {
-        today -> "сегодня в $time"
-        today.minusDays(1) -> "вчера в $time"
-        else -> fullFmt.format(at) + " в $time"
+/** Для строки «Сохранено · …» в редакторе. */
+fun longDate(context: Context, ts: Long): String {
+    val f = DateFormats(context)
+    val at = zoned(ts)
+    val today = LocalDate.now(at.zone)
+    val time = f.time.format(at)
+    return when (at.toLocalDate()) {
+        today -> context.getString(R.string.date_today_at, time)
+        today.minusDays(1) -> context.getString(R.string.date_yesterday_at, time)
+        else -> context.getString(R.string.date_at, f.full.format(at), time)
     }
 }
 
-fun plural(n: Int, one: String, few: String, many: String): String {
-    val a = n % 100
-    val b = n % 10
-    return when {
-        a in 11..19 -> many
-        b == 1 -> one
-        b in 2..4 -> few
-        else -> many
-    }
-}
+fun Context.notesCount(n: Int): String = resources.getQuantityString(R.plurals.notes_count, n, n)
 
 fun wordCount(text: String): Int = Regex("\\S+").findAll(text).count()
 

@@ -41,7 +41,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -58,6 +58,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
@@ -76,12 +77,16 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.SwipeToDismissBox
 import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
 import androidx.compose.material3.SwipeToDismissBoxState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -104,6 +109,8 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextRange
@@ -116,6 +123,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import io.github.dantemorrigan.cotes.AppLanguage
 import io.github.dantemorrigan.cotes.Note
 import io.github.dantemorrigan.cotes.NotesRepository
 import io.github.dantemorrigan.cotes.SettingsRepository
@@ -124,6 +132,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
+
+private enum class SaveStatus { Failed, New, Saving, Saved }
 
 private val byPinThenRecent = compareByDescending<Note> { it.pinned }.thenByDescending { it.updated }
 
@@ -138,6 +148,12 @@ fun CotesApp(
     val settings by settingsRepo.settings.collectAsStateWithLifecycle()
     var settingsOpen by rememberSaveable { mutableStateOf(false) }
     val saving by repo.saving.collectAsStateWithLifecycle()
+    val writeFailed by repo.writeFailed.collectAsStateWithLifecycle()
+    val damaged by repo.damaged.collectAsStateWithLifecycle()
+    var damagedHandled by rememberSaveable { mutableStateOf(false) }
+    val onboardingDone by settingsRepo.onboardingDone.collectAsStateWithLifecycle()
+    var writeTipSeen by rememberSaveable { mutableStateOf(false) }
+    val anchors = remember { CoachAnchors() }
     var selectedId by rememberSaveable { mutableStateOf<String?>(null) }
     var query by rememberSaveable { mutableStateOf("") }
     val snackbar = remember { SnackbarHostState() }
@@ -151,8 +167,16 @@ fun CotesApp(
     val selected = notes.firstOrNull { it.id == selectedId }
 
     fun open(id: String?) {
-        if (selectedId != id) repo.discardIfBlank(selectedId)
+        if (selectedId != id) {
+            repo.discardIfBlank(selectedId)
+            // Ушли из редактора — подсказку про автосохранение больше не показываем.
+            if (selectedId != null) writeTipSeen = true
+        }
         selectedId = id
+    }
+
+    fun finishOnboarding() {
+        if (!onboardingDone) settingsRepo.setOnboardingDone(true)
     }
 
     fun newNote() {
@@ -175,7 +199,11 @@ fun CotesApp(
         haptics.performHapticFeedback(HapticFeedbackType.LongPress)
         scope.launch {
             snackbar.currentSnackbarData?.dismiss()
-            val result = snackbar.showSnackbar("Заметка удалена", actionLabel = "Отменить", duration = SnackbarDuration.Long)
+            val result = snackbar.showSnackbar(
+                context.getString(R.string.note_deleted),
+                actionLabel = context.getString(R.string.undo),
+                duration = SnackbarDuration.Long,
+            )
             if (result == SnackbarResult.ActionPerformed) repo.restore(removed)
         }
     }
@@ -203,7 +231,10 @@ fun CotesApp(
                     context.contentResolver.openOutputStream(uri)?.use { it.write(json.toByteArray(Charsets.UTF_8)) } != null
                 }.getOrDefault(false)
             }
-            message(if (ok) "Копия сохранена: $total ${plural(total, "заметка", "заметки", "заметок")}" else "Не удалось сохранить файл")
+            message(
+                if (ok) context.getString(R.string.backup_saved, context.notesCount(total))
+                else context.getString(R.string.backup_failed)
+            )
         }
     }
 
@@ -218,128 +249,193 @@ fun CotesApp(
             val added = text?.let { repo.importJson(it) }
             message(
                 when {
-                    added == null -> "Это не похоже на копию Cotes"
-                    added == 0 -> "Все заметки из файла уже есть"
-                    else -> "Восстановлено: $added ${plural(added, "заметка", "заметки", "заметок")}"
+                    added == null -> context.getString(R.string.import_invalid)
+                    added == 0 -> context.getString(R.string.import_nothing)
+                    else -> context.getString(R.string.import_done, context.notesCount(added))
                 }
             )
         }
     }
 
-    // Текст, которым поделились из другого приложения, становится новой заметкой.
+    // Копия испорченного файла заметок — пользователь сохраняет её куда хочет.
+    val damagedLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
+        val source = damaged
+        if (uri == null || source == null) return@rememberLauncherForActivityResult
+        scope.launch {
+            val ok = withContext(Dispatchers.IO) {
+                runCatching {
+                    context.contentResolver.openOutputStream(uri)?.use { out -> source.inputStream().use { it.copyTo(out) } } != null
+                }.getOrDefault(false)
+            }
+            message(context.getString(if (ok) R.string.damaged_saved else R.string.backup_failed))
+        }
+    }
+
+    // Текст, которым поделились из другого приложения, становится новой заметкой;
+    // пустой текст — это ярлык «Новая заметка».
     LaunchedEffect(incoming) {
         if (incoming != null) {
-            open(repo.create(incoming).id)
+            if (incoming.isEmpty()) newNote() else open(repo.create(incoming).id)
             onIncomingHandled()
         }
     }
 
-    // Surface задаёт цвет текста и иконок по умолчанию для своей темы.
-    Surface(color = MaterialTheme.colorScheme.background, contentColor = MaterialTheme.colorScheme.onBackground) {
-        BoxWithConstraints(Modifier.fillMaxSize()) {
-            val wide = maxWidth >= 720.dp
-            val listShown = !wide && selected == null
-            val rootColor by animateColorAsState(
-                if (listShown) MaterialTheme.colorScheme.surfaceContainerLow else MaterialTheme.colorScheme.background,
-                label = "root",
-            )
+    // Подсказки — только для тех, кто начинает с нуля.
+    LaunchedEffect(Unit) {
+        if (!onboardingDone && repo.notes.value.any { !it.isBlank }) finishOnboarding()
+    }
 
-            val list = @Composable { modifier: Modifier ->
-                NoteListPane(
-                    notes = visible,
-                    total = total,
-                    query = query,
-                    onQuery = { query = it },
-                    selectedId = if (wide) selectedId else null,
-                    onOpen = { open(it) },
-                    onNew = { newNote() },
-                    onDelete = { delete(it) },
-                    onTogglePin = { togglePin(it) },
-                    onOpenSettings = { settingsOpen = true },
-                    modifier = modifier,
-                )
-            }
-            val editor = @Composable { note: Note, modifier: Modifier ->
-                EditorPane(
-                    note = note,
-                    saving = saving,
-                    showBack = !wide,
-                    onBack = { open(null) },
-                    onEdit = { title, content -> repo.edit(note.id, title, content) },
-                    onTogglePin = { togglePin(note.id) },
-                    onDelete = { delete(note.id) },
-                    onShare = { share(note) },
-                    modifier = modifier,
-                )
-            }
+    LaunchedEffect(writeFailed) {
+        if (writeFailed) message(context.getString(R.string.save_failed))
+    }
 
-            Box(
-                Modifier
-                    .fillMaxSize()
-                    .background(rootColor)
-                    .safeDrawingPadding()
-            ) {
-                if (wide) {
-                    // На планшете сразу открываем последнюю заметку, как в веб-версии.
-                    LaunchedEffect(Unit) {
-                        if (selectedId == null) visible.firstOrNull()?.let { selectedId = it.id }
-                    }
-                    Row(Modifier.fillMaxSize()) {
-                        list(Modifier.width(340.dp).fillMaxHeight())
-                        VerticalDivider(color = MaterialTheme.colorScheme.outlineVariant)
-                        Crossfade(targetState = selected?.id, modifier = Modifier.weight(1f), label = "editor") { id ->
+    CompositionLocalProvider(LocalCoachAnchors provides anchors) {
+        // Surface задаёт цвет текста и иконок по умолчанию для своей темы.
+        Surface(color = MaterialTheme.colorScheme.background, contentColor = MaterialTheme.colorScheme.onBackground) {
+            BoxWithConstraints(Modifier.fillMaxSize()) {
+                val wide = maxWidth >= 720.dp
+                val listShown = !wide && selected == null
+                val rootColor by animateColorAsState(
+                    if (listShown) MaterialTheme.colorScheme.surfaceContainerLow else MaterialTheme.colorScheme.background,
+                    label = "root",
+                )
+
+                val list = @Composable { modifier: Modifier ->
+                    NoteListPane(
+                        notes = visible,
+                        total = total,
+                        query = query,
+                        onQuery = { query = it },
+                        selectedId = if (wide) selectedId else null,
+                        onOpen = { open(it) },
+                        onNew = { newNote() },
+                        onDelete = { delete(it); finishOnboarding() },
+                        onTogglePin = { togglePin(it); finishOnboarding() },
+                        onOpenSettings = { settingsOpen = true },
+                        modifier = modifier,
+                    )
+                }
+                val editor = @Composable { note: Note, modifier: Modifier ->
+                    EditorPane(
+                        note = note,
+                        saving = saving,
+                        saveFailed = writeFailed,
+                        showBack = !wide,
+                        onBack = { open(null) },
+                        onEdit = { title, content -> repo.edit(note.id, title, content) },
+                        onTogglePin = { togglePin(note.id) },
+                        onDelete = { delete(note.id) },
+                        onShare = { share(note) },
+                        modifier = modifier,
+                    )
+                }
+
+                Box(
+                    Modifier
+                        .fillMaxSize()
+                        .background(rootColor)
+                        .safeDrawingPadding()
+                ) {
+                    if (wide) {
+                        // На планшете сразу открываем последнюю заметку.
+                        LaunchedEffect(Unit) {
+                            if (selectedId == null) visible.firstOrNull()?.let { selectedId = it.id }
+                        }
+                        Row(Modifier.fillMaxSize()) {
+                            list(Modifier.width(340.dp).fillMaxHeight())
+                            VerticalDivider(color = MaterialTheme.colorScheme.outlineVariant)
+                            Crossfade(targetState = selected?.id, modifier = Modifier.weight(1f), label = "editor") { id ->
+                                val note = notes.firstOrNull { it.id == id }
+                                if (note != null) editor(note, Modifier.fillMaxSize())
+                                else EmptyPane(onNew = { newNote() })
+                            }
+                        }
+                    } else {
+                        BackHandler(enabled = selected != null) { open(null) }
+                        AnimatedContent(
+                            targetState = selected?.id,
+                            transitionSpec = {
+                                if (targetState != null) {
+                                    (slideInHorizontally(tween(260)) { it / 3 } + fadeIn(tween(200)))
+                                        .togetherWith(slideOutHorizontally(tween(260)) { -it / 8 } + fadeOut(tween(160)))
+                                } else {
+                                    (slideInHorizontally(tween(260)) { -it / 8 } + fadeIn(tween(200)))
+                                        .togetherWith(slideOutHorizontally(tween(260)) { it / 3 } + fadeOut(tween(160)))
+                                }
+                            },
+                            label = "pane",
+                        ) { id ->
                             val note = notes.firstOrNull { it.id == id }
                             if (note != null) editor(note, Modifier.fillMaxSize())
-                            else EmptyPane(onNew = { newNote() })
+                            else list(Modifier.fillMaxSize())
                         }
                     }
-                } else {
-                    BackHandler(enabled = selected != null) { open(null) }
-                    AnimatedContent(
-                        targetState = selected?.id,
-                        transitionSpec = {
-                            if (targetState != null) {
-                                (slideInHorizontally(tween(260)) { it / 3 } + fadeIn(tween(200)))
-                                    .togetherWith(slideOutHorizontally(tween(260)) { -it / 8 } + fadeOut(tween(160)))
-                            } else {
-                                (slideInHorizontally(tween(260)) { -it / 8 } + fadeIn(tween(200)))
-                                    .togetherWith(slideOutHorizontally(tween(260)) { it / 3 } + fadeOut(tween(160)))
-                            }
-                        },
-                        label = "pane",
-                    ) { id ->
-                        val note = notes.firstOrNull { it.id == id }
-                        if (note != null) editor(note, Modifier.fillMaxSize())
-                        else list(Modifier.fillMaxSize())
+                    AnimatedVisibility(
+                        visible = settingsOpen,
+                        enter = slideInHorizontally(tween(280)) { it / 3 } + fadeIn(tween(220)),
+                        exit = slideOutHorizontally(tween(260)) { it / 3 } + fadeOut(tween(180)),
+                    ) {
+                        SettingsScreen(
+                            settings = settings,
+                            onChange = { settingsRepo.update(it) },
+                            onBack = { settingsOpen = false },
+                            onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
+                            onImport = { importLauncher.launch(arrayOf("application/json", "text/*", "application/octet-stream")) },
+                            onReset = {
+                                settingsRepo.reset()
+                                message(context.getString(R.string.settings_reset_done))
+                                AppLanguage.set(AppLanguage.SYSTEM)
+                            },
+                        )
+                    }
+                    // Объявлен последним — «назад» сначала закрывает настройки.
+                    BackHandler(enabled = settingsOpen) { settingsOpen = false }
+
+                    // На экране списка сообщение поднимается над кнопкой «Новая».
+                    SnackbarHost(
+                        snackbar,
+                        Modifier
+                            .align(Alignment.BottomCenter)
+                            .padding(bottom = if (listShown && !settingsOpen) 84.dp else 0.dp),
+                    )
+                }
+
+                val tip = when {
+                    onboardingDone || settingsOpen || damaged != null && !damagedHandled -> null
+                    selected != null && !writeTipSeen -> Tip.Write
+                    selected != null && !wide -> null
+                    total == 0 -> Tip.Create
+                    else -> Tip.Swipe
+                }
+                if (tip != null) {
+                    key(tip) {
+                        CoachMark(
+                            tip = tip,
+                            anchors = anchors,
+                            onPrimary = {
+                                if (tip == Tip.Write) writeTipSeen = true else finishOnboarding()
+                            },
+                            onSkip = if (tip == Tip.Write) ({ finishOnboarding() }) else null,
+                        )
                     }
                 }
-                AnimatedVisibility(
-                    visible = settingsOpen,
-                    enter = slideInHorizontally(tween(280)) { it / 3 } + fadeIn(tween(220)),
-                    exit = slideOutHorizontally(tween(260)) { it / 3 } + fadeOut(tween(180)),
-                ) {
-                    SettingsScreen(
-                        settings = settings,
-                        onChange = { settingsRepo.update(it) },
-                        onBack = { settingsOpen = false },
-                        onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
-                        onImport = { importLauncher.launch(arrayOf("application/json", "text/*", "application/octet-stream")) },
-                        onReset = {
-                            settingsRepo.reset()
-                            message("Настройки сброшены")
+
+                if (damaged != null && !damagedHandled) {
+                    AlertDialog(
+                        onDismissRequest = { damagedHandled = true },
+                        title = { Text(stringResource(R.string.damaged_title)) },
+                        text = { Text(stringResource(R.string.damaged_text)) },
+                        confirmButton = {
+                            TextButton(onClick = {
+                                damagedHandled = true
+                                damagedLauncher.launch(damaged?.name ?: "cotes-damaged.json")
+                            }) { Text(stringResource(R.string.damaged_save)) }
+                        },
+                        dismissButton = {
+                            TextButton(onClick = { damagedHandled = true }) { Text(stringResource(R.string.later)) }
                         },
                     )
                 }
-                // Объявлен последним — «назад» сначала закрывает настройки.
-                BackHandler(enabled = settingsOpen) { settingsOpen = false }
-
-                // На экране списка сообщение поднимается над кнопкой «Новая».
-                SnackbarHost(
-                    snackbar,
-                    Modifier
-                        .align(Alignment.BottomCenter)
-                        .padding(bottom = if (listShown && !settingsOpen) 84.dp else 0.dp),
-                )
             }
         }
     }
@@ -378,6 +474,7 @@ private fun NoteListPane(
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+    val anchors = LocalCoachAnchors.current
     val q = query.trim()
     val focus = LocalFocusManager.current
     val listState = rememberLazyListState()
@@ -404,7 +501,7 @@ private fun NoteListPane(
                         Text("Cotes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(Modifier.weight(1f))
                         IconButton(onClick = onOpenSettings) {
-                            Icon(Icons.Default.Settings, contentDescription = "Настройки")
+                            Icon(Icons.Default.Settings, contentDescription = stringResource(R.string.settings))
                         }
                     }
 
@@ -415,12 +512,12 @@ private fun NoteListPane(
                             .fillMaxWidth()
                             .padding(start = 12.dp, end = 12.dp, bottom = 8.dp)
                             .testTag("search"),
-                        placeholder = { Text("Поиск") },
+                        placeholder = { Text(stringResource(R.string.search)) },
                         leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                         trailingIcon = {
                             AnimatedVisibility(query.isNotEmpty(), enter = scaleIn() + fadeIn(), exit = scaleOut() + fadeOut()) {
                                 IconButton(onClick = { onQuery("") }) {
-                                    Icon(Icons.Default.Close, contentDescription = "Очистить поиск")
+                                    Icon(Icons.Default.Close, contentDescription = stringResource(R.string.clear_search))
                                 }
                             }
                         },
@@ -437,8 +534,8 @@ private fun NoteListPane(
                 }
 
                 val countText = when {
-                    q.isNotEmpty() -> "Найдено: ${notes.size}"
-                    total > 0 -> "$total ${plural(total, "заметка", "заметки", "заметок")} · свайп → закрепить, ← удалить"
+                    q.isNotEmpty() -> stringResource(R.string.found, notes.size)
+                    total > 0 -> stringResource(R.string.list_hint, pluralStringResource(R.plurals.notes_count, total, total))
                     else -> ""
                 }
                 AnimatedVisibility(countText.isNotEmpty()) {
@@ -460,16 +557,16 @@ private fun NoteListPane(
                 Crossfade(targetState = mode, label = "list-state") { m ->
                     when (m) {
                         1 -> EmptyMessage(
-                            title = "Ничего не нашлось",
-                            text = "По запросу «$q» заметок нет.",
-                            action = "Сбросить поиск",
+                            title = stringResource(R.string.empty_search_title),
+                            text = stringResource(R.string.empty_search_text, q),
+                            action = stringResource(R.string.clear_search),
                             onAction = { onQuery("") },
                             filled = false,
                         )
                         2 -> EmptyMessage(
-                            title = "Пока пусто",
-                            text = "Первая заметка сохранится только на этом устройстве.",
-                            action = "Написать заметку",
+                            title = stringResource(R.string.empty_title),
+                            text = stringResource(R.string.empty_text),
+                            action = stringResource(R.string.empty_action),
                             onAction = onNew,
                             filled = true,
                         )
@@ -480,9 +577,10 @@ private fun NoteListPane(
                                 .testTag("note-list"),
                             contentPadding = PaddingValues(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 104.dp),
                         ) {
-                            items(notes, key = { it.id }) { note ->
+                            itemsIndexed(notes, key = { _, it -> it.id }) { index, note ->
                                 SwipeableNoteRow(
                                     note = note,
+                                    first = index == 0,
                                     query = q,
                                     selected = note.id == selectedId,
                                     onClick = { focus.clearFocus(); onOpen(note.id) },
@@ -502,10 +600,11 @@ private fun NoteListPane(
                 onClick = onNew,
                 expanded = fabExpanded,
                 icon = { Icon(Icons.Default.Add, contentDescription = null) },
-                text = { Text("Новая") },
+                text = { Text(stringResource(R.string.fab_new)) },
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
                     .padding(20.dp)
+                    .coachAnchor(anchors, CoachTarget.NewNote)
                     .testTag("fab"),
                 containerColor = colors.primary,
                 contentColor = colors.onPrimary,
@@ -518,6 +617,7 @@ private fun NoteListPane(
 @Composable
 private fun SwipeableNoteRow(
     note: Note,
+    first: Boolean,
     query: String,
     selected: Boolean,
     onClick: () -> Unit,
@@ -526,6 +626,10 @@ private fun SwipeableNoteRow(
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
+    val anchors = LocalCoachAnchors.current
+    if (first) {
+        DisposableEffect(Unit) { onDispose { anchors.bounds.remove(CoachTarget.FirstNote) } }
+    }
     val currentDelete by rememberUpdatedState(onDelete)
     val currentPin by rememberUpdatedState(onTogglePin)
     // Обычный remember, а не rememberSaveable: список хранит сохраняемое состояние по ключу
@@ -551,6 +655,7 @@ private fun SwipeableNoteRow(
         state = state,
         modifier = modifier
             .padding(vertical = 2.dp)
+            .then(if (first) Modifier.coachAnchor(anchors, CoachTarget.FirstNote) else Modifier)
             .clip(RoundedCornerShape(14.dp))
             .testTag("row"),
         backgroundContent = {
@@ -611,7 +716,7 @@ private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () ->
             .padding(horizontal = 14.dp, vertical = if (compact) 7.dp else 12.dp)
     ) {
         Text(
-            text = if (title.isEmpty()) AnnotatedString(if (note.isBlank) "Новая заметка" else "Без названия")
+            text = if (title.isEmpty()) AnnotatedString(stringResource(if (note.isBlank) R.string.new_note else R.string.untitled))
             else highlight(title, query, mark),
             style = MaterialTheme.typography.bodyLarge,
             fontWeight = FontWeight.SemiBold,
@@ -634,14 +739,14 @@ private fun NoteRow(note: Note, query: String, selected: Boolean, onClick: () ->
             AnimatedVisibility(note.pinned, enter = scaleIn() + fadeIn(), exit = scaleOut() + fadeOut()) {
                 Icon(
                     painterResource(R.drawable.ic_pin_filled),
-                    contentDescription = "Закреплена",
+                    contentDescription = stringResource(R.string.pinned),
                     tint = colors.primary,
                     modifier = Modifier
                         .padding(end = 4.dp)
                         .size(12.dp),
                 )
             }
-            Text(shortDate(note.updated), style = MaterialTheme.typography.labelSmall, color = colors.onSurfaceVariant)
+            Text(shortDate(LocalContext.current, note.updated), style = MaterialTheme.typography.labelSmall, color = colors.onSurfaceVariant)
         }
     }
 }
@@ -682,19 +787,19 @@ private fun EmptyPane(onNew: () -> Unit, modifier: Modifier = Modifier) {
     ) {
         BrandTile(64)
         Text(
-            "Выберите заметку",
+            stringResource(R.string.pane_title),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold,
             color = MaterialTheme.colorScheme.onSurface,
             modifier = Modifier.padding(top = 16.dp),
         )
         Text(
-            "или начните новую — сохранять ничего не нужно.",
+            stringResource(R.string.pane_text),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(top = 6.dp, bottom = 16.dp),
         )
-        Button(onClick = onNew) { Text("Новая заметка") }
+        Button(onClick = onNew) { Text(stringResource(R.string.new_note)) }
     }
 }
 
@@ -702,6 +807,7 @@ private fun EmptyPane(onNew: () -> Unit, modifier: Modifier = Modifier) {
 private fun EditorPane(
     note: Note,
     saving: Boolean,
+    saveFailed: Boolean,
     showBack: Boolean,
     onBack: () -> Unit,
     onEdit: (String, String) -> Unit,
@@ -712,6 +818,9 @@ private fun EditorPane(
 ) {
     val colors = MaterialTheme.colorScheme
     val settings = LocalAppSettings.current
+    val context = LocalContext.current
+    val anchors = LocalCoachAnchors.current
+    DisposableEffect(Unit) { onDispose { anchors.bounds.remove(CoachTarget.SaveStatus) } }
     var title by rememberSaveable(note.id) { mutableStateOf(note.title) }
     var content by rememberSaveable(note.id, stateSaver = TextFieldValue.Saver) {
         mutableStateOf(TextFieldValue(note.content))
@@ -740,7 +849,7 @@ private fun EditorPane(
             ) {
                 if (showBack) {
                     IconButton(onClick = onBack, modifier = Modifier.testTag("back")) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "К списку заметок")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.back_to_list))
                     }
                 }
                 Spacer(Modifier.weight(1f))
@@ -748,17 +857,17 @@ private fun EditorPane(
                     Crossfade(note.pinned, label = "pin-icon") { pinned ->
                         Icon(
                             painterResource(if (pinned) R.drawable.ic_pin_filled else R.drawable.ic_pin),
-                            contentDescription = if (pinned) "Открепить" else "Закрепить",
+                            contentDescription = stringResource(if (pinned) R.string.unpin else R.string.pin),
                             tint = pinTint,
                             modifier = Modifier.scale(pinScale),
                         )
                     }
                 }
                 IconButton(onClick = onShare, enabled = !note.isBlank) {
-                    Icon(Icons.Default.Share, contentDescription = "Поделиться")
+                    Icon(Icons.Default.Share, contentDescription = stringResource(R.string.share))
                 }
                 IconButton(onClick = onDelete, modifier = Modifier.testTag("delete")) {
-                    Icon(Icons.Default.Delete, contentDescription = "Удалить заметку")
+                    Icon(Icons.Default.Delete, contentDescription = stringResource(R.string.delete_note))
                 }
             }
 
@@ -797,7 +906,7 @@ private fun EditorPane(
                             Box {
                                 if (title.isEmpty()) {
                                     Text(
-                                        "Заголовок",
+                                        stringResource(R.string.title_hint),
                                         style = MaterialTheme.typography.headlineSmall,
                                         fontWeight = FontWeight.Bold,
                                         color = colors.onSurfaceVariant.copy(alpha = 0.6f),
@@ -831,7 +940,7 @@ private fun EditorPane(
                             Box {
                                 if (content.text.isEmpty()) {
                                     Text(
-                                        "Начните писать…",
+                                        stringResource(R.string.content_hint),
                                         style = MaterialTheme.typography.bodyLarge.copy(
                                             fontSize = settings.textSize.sp.sp,
                                             lineHeight = settings.textSize.lineHeight.sp,
@@ -860,22 +969,30 @@ private fun EditorPane(
             Row(
                 Modifier
                     .fillMaxWidth()
+                    .coachAnchor(anchors, CoachTarget.SaveStatus)
                     .padding(horizontal = 20.dp, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 val status = when {
-                    note.isBlank -> "Новая заметка"
-                    saving -> "Сохранение…"
-                    else -> "Сохранено · ${longDate(note.updated)}"
+                    saveFailed -> SaveStatus.Failed
+                    note.isBlank -> SaveStatus.New
+                    saving -> SaveStatus.Saving
+                    else -> SaveStatus.Saved
                 }
                 AnimatedContent(
                     targetState = status,
                     transitionSpec = { fadeIn(tween(150)) togetherWith fadeOut(tween(150)) },
                     modifier = Modifier.weight(1f),
                     label = "status",
-                ) { text ->
+                ) { state ->
+                    val text = when (state) {
+                        SaveStatus.Failed -> stringResource(R.string.status_save_failed)
+                        SaveStatus.New -> stringResource(R.string.new_note)
+                        SaveStatus.Saving -> stringResource(R.string.status_saving)
+                        SaveStatus.Saved -> stringResource(R.string.status_saved, longDate(context, note.updated))
+                    }
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        if (text.startsWith("Сохранено")) {
+                        if (state == SaveStatus.Saved) {
                             Icon(
                                 Icons.Default.Check,
                                 contentDescription = null,
@@ -888,7 +1005,7 @@ private fun EditorPane(
                         Text(
                             text,
                             style = MaterialTheme.typography.labelSmall,
-                            color = colors.onSurfaceVariant,
+                            color = if (state == SaveStatus.Failed) colors.error else colors.onSurfaceVariant,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                         )
@@ -897,7 +1014,11 @@ private fun EditorPane(
                 val text = content.text
                 val words = wordCount(text)
                 Text(
-                    "$words ${plural(words, "слово", "слова", "слов")} · ${text.length} ${plural(text.length, "символ", "символа", "символов")}",
+                    stringResource(
+                        R.string.counts,
+                        pluralStringResource(R.plurals.words, words, words),
+                        pluralStringResource(R.plurals.chars, text.length, text.length),
+                    ),
                     style = MaterialTheme.typography.labelSmall,
                     color = colors.onSurfaceVariant,
                     modifier = Modifier.testTag("counts"),

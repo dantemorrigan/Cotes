@@ -41,7 +41,7 @@ fun newNoteId(): String =
     System.currentTimeMillis().toString(36) + UUID.randomUUID().toString().take(6)
 
 /**
- * Формат файла совпадает с резервной копией веб-версии Cotes:
+ * Формат файла заметок и резервной копии:
  * { app, version, exported, notes: [{ id, title, content, created, updated, pinned }] }.
  * Читается и голый массив заметок (старые копии).
  */
@@ -105,17 +105,32 @@ object NotesJson {
 /**
  * Одно хранилище на процесс: экраны и повторные запуски Activity видят одни и те же заметки.
  * Пустые заметки живут только в памяти, пока открыты, и в файл не попадают.
+ *
+ * Файл, который не удалось прочитать, никогда не перезаписывается: он переименовывается
+ * в notes-damaged-<время>.json, а приложение предлагает сохранить его копию.
  */
-class NotesRepository private constructor(context: Context) {
-    private val file = AtomicFile(File(context.filesDir, "notes.json"))
+class NotesRepository internal constructor(notesFile: File) {
+    private val file = AtomicFile(notesFile)
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private var pendingSave: Job? = null
+
+    /** Если файл заметок испорчен и его не удалось отложить в сторону — не пишем ничего. */
+    private var writesBlocked = false
+    private val _damaged = MutableStateFlow<File?>(null)
+
+    /** Отложенная копия испорченного файла заметок, если она появилась при этом запуске. */
+    val damaged: StateFlow<File?> = _damaged.asStateFlow()
+
     private val _notes = MutableStateFlow(load())
     val notes: StateFlow<List<Note>> = _notes.asStateFlow()
     private val _saving = MutableStateFlow(false)
 
     /** true, пока последнее изменение ещё не записано в файл. */
     val saving: StateFlow<Boolean> = _saving.asStateFlow()
+    private val _writeFailed = MutableStateFlow(false)
+
+    /** true, если последняя запись не удалась (нет места, файл недоступен). */
+    val writeFailed: StateFlow<Boolean> = _writeFailed.asStateFlow()
 
     fun find(id: String?): Note? = id?.let { key -> _notes.value.firstOrNull { it.id == key } }
 
@@ -213,28 +228,44 @@ class NotesRepository private constructor(context: Context) {
         pendingSave = scope.launch { write() }
     }
 
-    private fun load(): List<Note> = try {
-        NotesJson.decode(file.readFully().toString(Charsets.UTF_8)).orEmpty()
-    } catch (e: FileNotFoundException) {
-        emptyList()
-    } catch (e: IOException) {
-        emptyList()
+    private fun load(): List<Note> {
+        val bytes = try {
+            file.readFully()
+        } catch (e: FileNotFoundException) {
+            return emptyList()
+        } catch (e: IOException) {
+            setAsideDamaged()
+            return emptyList()
+        }
+        if (bytes.isEmpty()) return emptyList()
+        val notes = NotesJson.decode(bytes.toString(Charsets.UTF_8))
+        if (notes == null) setAsideDamaged()
+        return notes.orEmpty()
+    }
+
+    private fun setAsideDamaged() {
+        val base = file.baseFile
+        val target = File(base.parentFile, "notes-damaged-${System.currentTimeMillis()}.json")
+        if (base.renameTo(target)) _damaged.value = target else writesBlocked = true
     }
 
     @Synchronized
     private fun write() {
-        val json = NotesJson.encode(_notes.value.filterNot { it.isBlank })
-        val out = try {
-            file.startWrite()
+        val ok = !writesBlocked && try {
+            val json = NotesJson.encode(_notes.value.filterNot { it.isBlank })
+            val out = file.startWrite()
+            try {
+                out.write(json.toByteArray(Charsets.UTF_8))
+                file.finishWrite(out)
+                true
+            } catch (e: IOException) {
+                file.failWrite(out)
+                false
+            }
         } catch (e: IOException) {
-            return
+            false
         }
-        try {
-            out.write(json.toByteArray(Charsets.UTF_8))
-            file.finishWrite(out)
-        } catch (e: IOException) {
-            file.failWrite(out)
-        }
+        _writeFailed.value = !ok
         _saving.value = false
     }
 
@@ -246,7 +277,7 @@ class NotesRepository private constructor(context: Context) {
 
         fun get(context: Context): NotesRepository =
             instance ?: synchronized(this) {
-                instance ?: NotesRepository(context.applicationContext).also { instance = it }
+                instance ?: NotesRepository(File(context.applicationContext.filesDir, "notes.json")).also { instance = it }
             }
     }
 }

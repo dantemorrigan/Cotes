@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Список -->
+    <string name="settings">Настройки</string>
+    <string name="search">Поиск</string>
+    <string name="clear_search">Очистить поиск</string>
+    <string name="fab_new">Новая</string>
+    <string name="new_note">Новая заметка</string>
+    <string name="untitled">Без названия</string>
+    <string name="pinned">Закреплена</string>
+    <string name="found">Найдено: %1$d</string>
+    <plurals name="notes_count">
+        <item quantity="one">%d заметка</item>
+        <item quantity="few">%d заметки</item>
+        <item quantity="many">%d заметок</item>
+        <item quantity="other">%d заметки</item>
+    </plurals>
+    <string name="list_hint">%1$s · свайп → закрепить, ← удалить</string>
+    <string name="empty_search_title">Ничего не нашлось</string>
+    <string name="empty_search_text">По запросу «%1$s» заметок нет.</string>
+    <string name="empty_title">Пока пусто</string>
+    <string name="empty_text">Первая заметка сохранится только на этом устройстве.</string>
+    <string name="empty_action">Написать заметку</string>
+    <string name="pane_title">Выберите заметку</string>
+    <string name="pane_text">или начните новую — сохранять ничего не нужно.</string>
+
+    <!-- Редактор -->
+    <string name="back_to_list">К списку заметок</string>
+    <string name="pin">Закрепить</string>
+    <string name="unpin">Открепить</string>
+    <string name="share">Поделиться</string>
+    <string name="delete_note">Удалить заметку</string>
+    <string name="title_hint">Заголовок</string>
+    <string name="content_hint">Начните писать…</string>
+    <string name="status_saving">Сохранение…</string>
+    <string name="status_saved">Сохранено · %1$s</string>
+    <string name="status_save_failed">Не сохранено — память заполнена или недоступна</string>
+    <plurals name="words">
+        <item quantity="one">%d слово</item>
+        <item quantity="few">%d слова</item>
+        <item quantity="many">%d слов</item>
+        <item quantity="other">%d слова</item>
+    </plurals>
+    <plurals name="chars">
+        <item quantity="one">%d символ</item>
+        <item quantity="few">%d символа</item>
+        <item quantity="many">%d символов</item>
+        <item quantity="other">%d символа</item>
+    </plurals>
+    <string name="counts">%1$s · %2$s</string>
+
+    <!-- Даты -->
+    <string name="date_yesterday">вчера</string>
+    <string name="date_today_at">сегодня в %1$s</string>
+    <string name="date_yesterday_at">вчера в %1$s</string>
+    <string name="date_at">%1$s в %2$s</string>
+
+    <!-- Сообщения -->
+    <string name="note_deleted">Заметка удалена</string>
+    <string name="undo">Отменить</string>
+    <string name="backup_saved">Копия сохранена: %1$s</string>
+    <string name="backup_failed">Не удалось сохранить файл</string>
+    <string name="import_invalid">Это не похоже на копию Cotes</string>
+    <string name="import_nothing">Все заметки из файла уже есть</string>
+    <string name="import_done">Восстановлено: %1$s</string>
+    <string name="settings_reset_done">Настройки сброшены</string>
+    <string name="save_failed">Не удалось сохранить изменения. Освободите место на устройстве.</string>
+    <string name="damaged_title">Не удалось прочитать заметки</string>
+    <string name="damaged_text">Файл заметок повреждён. Cotes его не тронул — сохраните копию в надёжное место, а затем восстановите заметки из резервной копии.</string>
+    <string name="damaged_save">Сохранить копию</string>
+    <string name="damaged_saved">Копия повреждённого файла сохранена</string>
+    <string name="later">Позже</string>
+
+    <!-- Настройки -->
+    <string name="back">Назад</string>
+    <string name="section_theme">Тема</string>
+    <string name="theme_system">Системная</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="pure_black">Чёрный фон</string>
+    <string name="pure_black_sub">В тёмной теме — для AMOLED-экранов</string>
+    <string name="section_color">Цвет</string>
+    <string name="accent_lavender">Лаванда</string>
+    <string name="accent_mint">Мята</string>
+    <string name="accent_ocean">Океан</string>
+    <string name="accent_coral">Коралл</string>
+    <string name="accent_graphite">Графит</string>
+    <string name="accent_cd">Цвет %1$s</string>
+    <string name="dynamic_color">Цвета обоев</string>
+    <string name="dynamic_color_sub">Material You: акцент подбирается под обои</string>
+    <string name="section_language">Язык</string>
+    <string name="language_system">Как в системе</string>
+    <string name="section_editor">Редактор</string>
+    <string name="text_size">Размер текста</string>
+    <string name="sample_title">Планы на выходные</string>
+    <string name="sample_text">Суббота — выставка и прогулка по набережной. Воскресенье — дочитать книгу.</string>
+    <string name="section_list">Список</string>
+    <string name="compact_list">Компактный список</string>
+    <string name="compact_list_sub">Больше заметок на экране</string>
+    <string name="show_preview">Показывать начало текста</string>
+    <string name="show_preview_sub">Превью под заголовком</string>
+    <string name="section_data">Данные</string>
+    <string name="backup">Резервная копия всех заметок</string>
+    <string name="backup_sub">Сохранить в файл .json</string>
+    <string name="restore">Восстановить из копии</string>
+    <string name="restore_sub">Добавит заметки из файла .json</string>
+    <string name="section_about">О приложении</string>
+    <string name="version">Версия %1$s (сборка %2$d)</string>
+    <string name="privacy">Конфиденциальность</string>
+    <string name="privacy_sub">Cotes ничего не собирает</string>
+    <string name="privacy_text">У Cotes нет доступа к интернету, аккаунтов, рекламы и аналитики. Заметки хранятся только в закрытой памяти приложения на этом устройстве и не попадают ни в облачные копии, ни в перенос на новый телефон. Они покидают телефон, только когда вы сами делитесь заметкой или сохраняете резервную копию.</string>
+    <string name="ok">Понятно</string>
+    <string name="reset_settings">Сбросить настройки</string>
+    <string name="settings_footer">Заметки хранятся только на этом устройстве.</string>
+
+    <!-- Подсказки для новых пользователей -->
+    <string name="onb_step">%1$d из %2$d</string>
+    <string name="onb_create_title">Первая заметка</string>
+    <string name="onb_create_text">Нажмите сюда, чтобы начать писать.</string>
+    <string name="onb_write_title">Сохраняется само</string>
+    <string name="onb_write_text">Просто пишите — кнопки «Сохранить» нет. Здесь появится «Сохранено».</string>
+    <string name="onb_swipe_title">Свайп по заметке</string>
+    <string name="onb_swipe_text">Вправо — закрепить наверху, влево — удалить.</string>
+    <string name="onb_skip">Пропустить</string>
+    <string name="onb_got_it">Понятно</string>
+    <string name="onb_done">Готово</string>
+</resources>

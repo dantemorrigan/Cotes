@@ -1,7 +1,5 @@
 package io.github.dantemorrigan.cotes.ui
 
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
@@ -33,6 +31,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -40,9 +39,13 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -51,6 +54,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.selected
@@ -61,6 +65,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.pm.PackageInfoCompat
 import io.github.dantemorrigan.cotes.Accent
+import io.github.dantemorrigan.cotes.AppLanguage
 import io.github.dantemorrigan.cotes.AppSettings
 import io.github.dantemorrigan.cotes.R
 import io.github.dantemorrigan.cotes.TextSize
@@ -81,13 +86,12 @@ fun SettingsScreen(
     val version = remember {
         runCatching {
             val info = context.packageManager.getPackageInfo(context.packageName, 0)
-            "${info.versionName} (сборка ${PackageInfoCompat.getLongVersionCode(info)})"
-        }.getOrDefault("—")
+            context.getString(R.string.version, info.versionName, PackageInfoCompat.getLongVersionCode(info).toInt())
+        }.getOrDefault("")
     }
-
-    fun openLink(url: String) {
-        runCatching { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) }
-    }
+    // Язык меняется через AppCompat; Activity пересоздаётся, и экран читает новое значение.
+    val language = remember { AppLanguage.current() }
+    var privacyOpen by rememberSaveable { mutableStateOf(false) }
 
     Surface(modifier.fillMaxSize(), color = colors.background, contentColor = colors.onBackground) {
         Column(Modifier.fillMaxSize()) {
@@ -99,9 +103,9 @@ fun SettingsScreen(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 IconButton(onClick = onBack, modifier = Modifier.testTag("settings-back")) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Назад")
+                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.back))
                 }
-                Text("Настройки", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.settings), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
             }
 
             Column(
@@ -117,25 +121,25 @@ fun SettingsScreen(
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp)
                 ) {
-                    Section("Тема")
+                    Section(stringResource(R.string.section_theme))
                     Card {
                         Segmented(
                             options = ThemeMode.entries,
                             selected = settings.theme,
-                            label = { it.title },
+                            label = { stringResource(it.title) },
                             onSelect = { mode -> onChange { it.copy(theme = mode) } },
                             modifier = Modifier.padding(12.dp),
                         )
                         Divider()
                         SwitchRow(
-                            title = "Чёрный фон",
-                            subtitle = "В тёмной теме — для AMOLED-экранов",
+                            title = stringResource(R.string.pure_black),
+                            subtitle = stringResource(R.string.pure_black_sub),
                             checked = settings.pureBlack,
                             onChecked = { v -> onChange { it.copy(pureBlack = v) } },
                         )
                     }
 
-                    Section("Цвет")
+                    Section(stringResource(R.string.section_color))
                     Card {
                         Row(
                             Modifier
@@ -155,18 +159,37 @@ fun SettingsScreen(
                         if (dynamicColorAvailable) {
                             Divider()
                             SwitchRow(
-                                title = "Цвета обоев",
-                                subtitle = "Material You: акцент подбирается под обои",
+                                title = stringResource(R.string.dynamic_color),
+                                subtitle = stringResource(R.string.dynamic_color_sub),
                                 checked = settings.dynamicColor,
                                 onChecked = { v -> onChange { it.copy(dynamicColor = v) } },
                             )
                         }
                     }
 
-                    Section("Редактор")
+                    Section(stringResource(R.string.section_language))
+                    Card {
+                        Segmented(
+                            options = AppLanguage.entries,
+                            selected = language,
+                            label = {
+                                when (it) {
+                                    AppLanguage.SYSTEM -> stringResource(R.string.language_system)
+                                    AppLanguage.EN -> stringResource(R.string.language_en)
+                                    AppLanguage.RU -> stringResource(R.string.language_ru)
+                                }
+                            },
+                            onSelect = { if (it != language) AppLanguage.set(it) },
+                            modifier = Modifier
+                                .padding(12.dp)
+                                .testTag("language"),
+                        )
+                    }
+
+                    Section(stringResource(R.string.section_editor))
                     Card {
                         Text(
-                            "Размер текста",
+                            stringResource(R.string.text_size),
                             style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier.padding(start = 16.dp, top = 14.dp),
                         )
@@ -187,44 +210,44 @@ fun SettingsScreen(
                                 .padding(16.dp)
                         ) {
                             Text(
-                                "Планы на выходные",
+                                stringResource(R.string.sample_title),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = (settings.textSize.sp + 5).sp,
                             )
                             Spacer(Modifier.height(6.dp))
                             Text(
-                                "Суббота — выставка и прогулка по набережной. Воскресенье — дочитать книгу.",
+                                stringResource(R.string.sample_text),
                                 fontSize = settings.textSize.sp.sp,
                                 lineHeight = settings.textSize.lineHeight.sp,
                             )
                         }
                     }
 
-                    Section("Список")
+                    Section(stringResource(R.string.section_list))
                     Card {
                         SwitchRow(
-                            title = "Компактный список",
-                            subtitle = "Больше заметок на экране",
+                            title = stringResource(R.string.compact_list),
+                            subtitle = stringResource(R.string.compact_list_sub),
                             checked = settings.compactList,
                             onChecked = { v -> onChange { it.copy(compactList = v) } },
                         )
                         Divider()
                         SwitchRow(
-                            title = "Показывать начало текста",
-                            subtitle = "Превью под заголовком",
+                            title = stringResource(R.string.show_preview),
+                            subtitle = stringResource(R.string.show_preview_sub),
                             checked = settings.showPreview,
                             onChecked = { v -> onChange { it.copy(showPreview = v) } },
                         )
                     }
 
-                    Section("Данные")
+                    Section(stringResource(R.string.section_data))
                     Card {
-                        LinkRow("Резервная копия всех заметок", "Сохранить в файл .json", onExport)
+                        LinkRow(stringResource(R.string.backup), stringResource(R.string.backup_sub), onExport)
                         Divider()
-                        LinkRow("Восстановить из копии", "Подходит и копия из веб-версии", onImport)
+                        LinkRow(stringResource(R.string.restore), stringResource(R.string.restore_sub), onImport)
                     }
 
-                    Section("О приложении")
+                    Section(stringResource(R.string.section_about))
                     Card {
                         Row(
                             Modifier
@@ -243,9 +266,9 @@ fun SettingsScreen(
                             }
                             Spacer(Modifier.width(14.dp))
                             Column {
-                                Text("Cotes", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                                Text(stringResource(R.string.app_name), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                                 Text(
-                                    "Версия $version",
+                                    version,
                                     style = MaterialTheme.typography.bodyMedium,
                                     color = colors.onSurfaceVariant,
                                     modifier = Modifier.testTag("version"),
@@ -253,13 +276,11 @@ fun SettingsScreen(
                             }
                         }
                         Divider()
-                        LinkRow("Исходный код", "github.com/dantemorrigan/Cotes") {
-                            openLink("https://github.com/dantemorrigan/Cotes")
-                        }
+                        LinkRow(stringResource(R.string.privacy), stringResource(R.string.privacy_sub)) { privacyOpen = true }
                     }
 
                     Text(
-                        "Сбросить настройки",
+                        stringResource(R.string.reset_settings),
                         color = colors.error,
                         style = MaterialTheme.typography.bodyLarge,
                         textAlign = TextAlign.Center,
@@ -271,7 +292,7 @@ fun SettingsScreen(
                             .padding(14.dp),
                     )
                     Text(
-                        "Заметки хранятся только на этом устройстве.",
+                        stringResource(R.string.settings_footer),
                         style = MaterialTheme.typography.labelMedium,
                         color = colors.onSurfaceVariant,
                         textAlign = TextAlign.Center,
@@ -282,6 +303,17 @@ fun SettingsScreen(
                 }
             }
         }
+    }
+
+    if (privacyOpen) {
+        AlertDialog(
+            onDismissRequest = { privacyOpen = false },
+            title = { Text(stringResource(R.string.privacy)) },
+            text = { Text(stringResource(R.string.privacy_text)) },
+            confirmButton = {
+                TextButton(onClick = { privacyOpen = false }) { Text(stringResource(R.string.ok)) }
+            },
+        )
     }
 }
 
@@ -357,7 +389,7 @@ private fun LinkRow(title: String, subtitle: String, onClick: () -> Unit) {
 private fun <T> Segmented(
     options: List<T>,
     selected: T,
-    label: (T) -> String,
+    label: @Composable (T) -> String,
     onSelect: (T) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -398,6 +430,8 @@ private fun <T> Segmented(
 @Composable
 private fun AccentSwatch(accent: Accent, selected: Boolean, dark: Boolean, onClick: () -> Unit) {
     val color = Color(if (dark) accent.dark else accent.light)
+    val title = stringResource(accent.title)
+    val name = stringResource(R.string.accent_cd, title)
     val checkScale by animateFloatAsState(
         if (selected) 1f else 0f,
         spring(dampingRatio = Spring.DampingRatioMediumBouncy),
@@ -415,7 +449,7 @@ private fun AccentSwatch(accent: Accent, selected: Boolean, dark: Boolean, onCli
             .clickable(role = Role.RadioButton, onClick = onClick)
             .semantics {
                 this.selected = selected
-                contentDescription = "Цвет ${accent.title}"
+                contentDescription = name
             }
             .padding(6.dp),
     ) {
@@ -438,7 +472,7 @@ private fun AccentSwatch(accent: Accent, selected: Boolean, dark: Boolean, onCli
             )
         }
         Text(
-            accent.title,
+            title,
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(top = 4.dp),

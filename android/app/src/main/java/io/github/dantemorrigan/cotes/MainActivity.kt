@@ -3,10 +3,10 @@ package io.github.dantemorrigan.cotes
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
@@ -15,7 +15,9 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.dantemorrigan.cotes.ui.CotesApp
 import io.github.dantemorrigan.cotes.ui.CotesTheme
 
-class MainActivity : ComponentActivity() {
+// AppCompatActivity — ради выбора языка внутри приложения на Android 8–12.
+class MainActivity : AppCompatActivity() {
+    /** Текст новой заметки: из «Поделиться» или пустой — из ярлыка «Новая заметка». */
     private val incoming = mutableStateOf<String?>(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,14 +55,20 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun readShared(intent: Intent?) {
+        if (intent?.action == ACTION_NEW_NOTE) {
+            incoming.value = ""
+            return
+        }
         if (intent?.action != Intent.ACTION_SEND) return
         val text = intent.getStringExtra(Intent.EXTRA_TEXT)?.takeIf { it.isNotBlank() } ?: return
         val subject = intent.getStringExtra(Intent.EXTRA_SUBJECT)
         incoming.value = if (subject.isNullOrBlank() || text.startsWith(subject)) text else "$subject\n\n$text"
     }
 
-    private companion object {
-        val LIGHT_SCRIM = Color.argb(0xe6, 0xFF, 0xFF, 0xFF)
-        val DARK_SCRIM = Color.argb(0x80, 0x1b, 0x1b, 0x1b)
+    companion object {
+        /** Ярлык на иконке приложения (res/xml/shortcuts.xml). */
+        const val ACTION_NEW_NOTE = "io.github.dantemorrigan.cotes.action.NEW_NOTE"
+        private val LIGHT_SCRIM = Color.argb(0xe6, 0xFF, 0xFF, 0xFF)
+        private val DARK_SCRIM = Color.argb(0x80, 0x1b, 0x1b, 0x1b)
     }
 }

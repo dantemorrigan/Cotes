@@ -20,7 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import io.github.dantemorrigan.cotes.Accent
 import io.github.dantemorrigan.cotes.AppSettings
 
-// Фирменные цвета — из replica/design/tokens.json и tokens.dark.json (как у веб-версии).
+// Фирменные цвета Cotes.
 
 private val Light = lightColorScheme(
     primary = Color(0xFF6A3FB5),
