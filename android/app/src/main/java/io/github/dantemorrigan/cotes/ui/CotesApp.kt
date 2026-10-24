@@ -391,13 +391,15 @@ fun CotesApp(
     if (welcome) {
         WelcomeScreen(sync) {
             settingsRepo.setAccountChoiceDone(true)
+            // Заметки пришли из облака — подсказки для новичка уже не нужны.
+            if (repo.notes.value.any { !it.isBlank }) finishOnboarding()
             welcome = false
         }
         return
     }
 
-    // Подсказки — только для тех, кто начинает с нуля (заметки могли прийти и из облака).
-    LaunchedEffect(total > 0) {
+    // Подсказки — только для тех, кто начинает с нуля.
+    LaunchedEffect(Unit) {
         if (!onboardingDone && repo.notes.value.any { !it.isBlank }) finishOnboarding()
     }
 
