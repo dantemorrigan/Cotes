@@ -756,8 +756,6 @@ private fun NoteListPane(
                         countText,
                         style = MaterialTheme.typography.labelMedium,
                         color = colors.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.padding(start = 20.dp, end = 16.dp, top = 6.dp, bottom = 4.dp),
                     )
                 }
