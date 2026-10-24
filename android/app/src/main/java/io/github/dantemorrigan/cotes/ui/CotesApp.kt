@@ -145,6 +145,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
@@ -172,6 +173,7 @@ import io.github.dantemorrigan.cotes.NotesRepository
 import io.github.dantemorrigan.cotes.SettingsRepository
 import io.github.dantemorrigan.cotes.Sound
 import io.github.dantemorrigan.cotes.Sounds
+import io.github.dantemorrigan.cotes.Markdown
 import io.github.dantemorrigan.cotes.R
 import io.github.dantemorrigan.cotes.sync.SignInResult
 import io.github.dantemorrigan.cotes.sync.SyncManager
@@ -1265,6 +1267,20 @@ private fun EditorPane(
         if (note.isBlank) runCatching { titleFocus.requestFocus() }
     }
 
+    val haptics = LocalHapticFeedback.current
+    val markdown = remember(colors, settings.textSize) {
+        MarkdownVisualTransformation(
+            MarkdownColors(
+                accent = colors.primary,
+                faint = colors.onSurfaceVariant.copy(alpha = 0.5f),
+                muted = colors.onSurfaceVariant,
+                codeBackground = colors.surfaceContainerHigh,
+                mark = colors.primary.copy(alpha = 0.22f),
+            ),
+            settings.textSize.sp,
+        )
+    }
+
     // Заметку изменили на другом устройстве, пока она открыта здесь: показываем новую версию,
     // иначе следующая правка записала бы поверх неё старый текст. Свои правки сюда не попадают:
     // они меняют и поле, и заметку одновременно.
@@ -1366,11 +1382,27 @@ private fun EditorPane(
                     Spacer(Modifier.height(12.dp))
                     BasicTextField(
                         value = content,
-                        onValueChange = {
-                            val changed = it.text != content.text
-                            content = it
-                            if (changed) onEdit(title, it.text)
+                        onValueChange = { value ->
+                            var next = value
+                            if (value.text != content.text) {
+                                // Enter в пункте списка продолжает список, на пустом пункте — заканчивает.
+                                if (value.selection.collapsed) {
+                                    Markdown.continueList(content.text, value.text, value.selection.start)?.let { (text, cursor) ->
+                                        next = TextFieldValue(text, TextRange(cursor))
+                                    }
+                                }
+                            } else if (value.selection.collapsed && value.selection != content.selection) {
+                                // Нажали в «[ ]» — отмечаем пункт (или снимаем отметку).
+                                Markdown.checkboxAt(value.text, value.selection.start)?.let { inner ->
+                                    next = value.copy(text = Markdown.toggleCheckbox(value.text, inner))
+                                    haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                                }
+                            }
+                            val changed = next.text != content.text
+                            content = next
+                            if (changed) onEdit(title, next.text)
                         },
+                        visualTransformation = markdown,
                         modifier = Modifier
                             .fillMaxWidth()
                             .heightIn(min = 120.dp)
@@ -1455,6 +1487,11 @@ private fun EditorPane(
                     }
                 }
             }
+            // Курсор стоит в ссылке — её можно открыть (в поле ввода нажатие ставит курсор, а не переходит).
+            val link = remember(content.text, content.selection) {
+                if (content.selection.collapsed) Markdown.linkAt(content.text, content.selection.start) else null
+            }
+            val uriHandler = LocalUriHandler.current
             val countsLine = @Composable {
                 val text = content.text
                 val words = wordCount(text)
@@ -1478,6 +1515,18 @@ private fun EditorPane(
             ) {
                 statusLine(Modifier)
                 countsLine()
+                if (link != null) {
+                    Text(
+                        stringResource(R.string.open_link),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = colors.primary,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(6.dp))
+                            .clickable { runCatching { uriHandler.openUri(link) } }
+                            .testTag("open-link"),
+                    )
+                }
             }
         }
     }

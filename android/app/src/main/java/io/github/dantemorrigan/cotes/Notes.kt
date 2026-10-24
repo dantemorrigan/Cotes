@@ -35,7 +35,8 @@ data class Note(
     /** Заголовок, а если его нет — первая непустая строка текста. */
     val displayTitle: String
         get() = title.trim().ifEmpty {
-            content.lineSequence().map { it.trim() }.firstOrNull { it.isNotEmpty() }.orEmpty()
+            // Первая строка без значков Markdown: «# Покупки» → «Покупки».
+            content.lineSequence().map { Markdown.plainLine(it) }.firstOrNull { it.isNotEmpty() }.orEmpty()
         }
 }
 

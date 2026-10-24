@@ -216,4 +216,5 @@
     <string name="section_sounds">Звуки</string>
     <string name="sounds">Звуки действий</string>
     <string name="sounds_sub">Тихие звуки при создании, закреплении и удалении заметок. В беззвучном режиме телефона молчат.</string>
+    <string name="open_link">Открыть ссылку</string>
 </resources>

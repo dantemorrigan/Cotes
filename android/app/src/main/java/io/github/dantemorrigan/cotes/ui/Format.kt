@@ -7,6 +7,7 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
+import io.github.dantemorrigan.cotes.Markdown
 import io.github.dantemorrigan.cotes.Note
 import io.github.dantemorrigan.cotes.R
 import java.time.Instant
@@ -64,8 +65,8 @@ fun Note.matches(query: String): Boolean =
 
 /** Превью: текст без первой строки (если она служит заголовком), в одну строку, вокруг совпадения. */
 fun Note.preview(query: String): String {
-    var body = content
-    if (title.isBlank()) body = body.trimStart().substringAfter('\n', "")
+    var body = Markdown.plain(content)
+    if (title.isBlank()) body = body.substringAfter('\n', "")
     body = body.replace(Regex("\\s+"), " ").trim()
     if (query.isNotEmpty()) {
         val i = body.indexOf(query, ignoreCase = true)

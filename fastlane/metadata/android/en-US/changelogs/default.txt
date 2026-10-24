@@ -1,4 +1,6 @@
-Cotes 1.1.2
-• Soft sounds for creating, pinning and deleting notes, undo, sign-in and pull-to-refresh sync
-• Typing, opening notes and background sync stay silent; sounds follow your phone’s silent mode
-• Turn them off any time: Settings → Sounds
+Cotes 1.2.0
+• Light Markdown: headings, bold, italic, strikethrough, code, quotes and lists are highlighted right in the editor
+• Checklists: tap the [ ] box to tick an item; Enter continues a list, Enter on an empty item ends it
+• Links: put the cursor in a link and tap “Open link”
+• Notes from Obsidian look neat: [[links]] and callouts are highlighted, and the list shows text without markup
+• Your text stays plain Markdown, so sync, backups and export work as before
