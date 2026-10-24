@@ -318,10 +318,21 @@ fun SettingsScreen(
             onDismissRequest = { importHelpOpen = false },
             title = { Text(stringResource(R.string.import_help)) },
             text = {
-                Text(
-                    stringResource(R.string.import_help_text),
-                    modifier = Modifier.verticalScroll(rememberScrollState()),
-                )
+                Column(
+                    Modifier.verticalScroll(rememberScrollState()),
+                    verticalArrangement = Arrangement.spacedBy(14.dp),
+                ) {
+                    importHelpApps.forEach { (emoji, name, how) ->
+                        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            Text(emoji, fontSize = 22.sp)
+                            Column {
+                                Text(stringResource(name), style = MaterialTheme.typography.titleSmall)
+                                Text(stringResource(how), style = MaterialTheme.typography.bodyMedium)
+                            }
+                        }
+                    }
+                    Text(stringResource(R.string.import_help_footer), style = MaterialTheme.typography.bodySmall)
+                }
             },
             confirmButton = {
                 TextButton(onClick = { importHelpOpen = false; onImport() }) { Text(stringResource(R.string.restore)) }
@@ -506,3 +517,16 @@ private fun AccentSwatch(accent: Accent, selected: Boolean, dark: Boolean, onCli
         )
     }
 }
+
+/** Приложения в окне «Переезд»: эмодзи, название и короткая инструкция по экспорту. */
+private val importHelpApps = listOf(
+        Triple("📝", R.string.import_help_simplenote_name, R.string.import_help_simplenote),
+        Triple("💡", R.string.import_help_keep_name, R.string.import_help_keep),
+        Triple("🐘", R.string.import_help_evernote_name, R.string.import_help_evernote),
+        Triple("🔐", R.string.import_help_sn_name, R.string.import_help_sn),
+        Triple("📓", R.string.import_help_joplin_name, R.string.import_help_joplin),
+        Triple("🐻", R.string.import_help_bear_name, R.string.import_help_bear),
+        Triple("⬛", R.string.import_help_notion_name, R.string.import_help_notion),
+        Triple("💎", R.string.import_help_obsidian_name, R.string.import_help_obsidian),
+        Triple("📄", R.string.import_help_other_name, R.string.import_help_other),
+)

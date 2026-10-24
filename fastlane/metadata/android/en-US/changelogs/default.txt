@@ -1,3 +1,4 @@
 Cotes 1.0.2
 • The hint under the search field is no longer cut off: it wraps onto a second line
 • The status bar in a note (saved date, word and character counts) is no longer cut off
+• The "Moving from another app" guide is corrected and now lists each app with an icon and short export steps
