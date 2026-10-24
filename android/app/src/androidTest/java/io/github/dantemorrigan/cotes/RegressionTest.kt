@@ -86,7 +86,10 @@ class RegressionTest : CotesTest() {
         row("Первая").performTouchInput { swipeRight(startX = left + 10f, endX = right) }
         compose.waitForIdle()
         assertTrue(repo.notes.value.first { it.title == "Первая" }.pinned)
-        compose.onNodeWithContentDescription(s(R.string.pinned)).assertIsDisplayed()
+        // Строка возвращается на место и значок появляется с анимацией.
+        compose.waitUntil(5_000) {
+            runCatching { compose.onNodeWithContentDescription(s(R.string.pinned)).assertIsDisplayed() }.isSuccess
+        }
         shot("07-pinned")
 
         row("Вторая").performTouchInput { swipeLeft(startX = right - 10f, endX = left) }

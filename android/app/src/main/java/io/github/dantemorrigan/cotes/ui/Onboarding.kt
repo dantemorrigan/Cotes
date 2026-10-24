@@ -65,10 +65,15 @@ class CoachAnchors {
     val bounds = mutableStateMapOf<CoachTarget, Rect>()
 }
 
-val LocalCoachAnchors = staticCompositionLocalOf { CoachAnchors() }
+/** null, когда подсказки уже пройдены: тогда положение элементов не отслеживается вовсе. */
+val LocalCoachAnchors = staticCompositionLocalOf<CoachAnchors?> { null }
 
-fun Modifier.coachAnchor(anchors: CoachAnchors, target: CoachTarget): Modifier =
-    onGloballyPositioned { anchors.bounds[target] = it.boundsInRoot() }
+fun Modifier.coachAnchor(anchors: CoachAnchors?, target: CoachTarget): Modifier =
+    if (anchors == null) this
+    else onGloballyPositioned {
+        val bounds = it.boundsInRoot()
+        if (anchors.bounds[target] != bounds) anchors.bounds[target] = bounds
+    }
 
 /**
  * Подсказка-облачко со стрелкой к элементу. [onSkip] — кнопка «Пропустить» рядом с основной. Появляется с небольшой задержкой,

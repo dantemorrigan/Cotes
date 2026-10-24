@@ -291,7 +291,7 @@ fun CotesApp(
         if (writeFailed) message(res.getString(R.string.save_failed))
     }
 
-    CompositionLocalProvider(LocalCoachAnchors provides anchors) {
+    CompositionLocalProvider(LocalCoachAnchors provides anchors.takeUnless { onboardingDone }) {
         // Surface задаёт цвет текста и иконок по умолчанию для своей темы.
         Surface(color = MaterialTheme.colorScheme.background, contentColor = MaterialTheme.colorScheme.onBackground) {
             BoxWithConstraints(Modifier.fillMaxSize()) {
@@ -629,8 +629,8 @@ private fun SwipeableNoteRow(
 ) {
     val colors = MaterialTheme.colorScheme
     val anchors = LocalCoachAnchors.current
-    if (first) {
-        DisposableEffect(Unit) { onDispose { anchors.bounds.remove(CoachTarget.FirstNote) } }
+    if (first && anchors != null) {
+        DisposableEffect(anchors) { onDispose { anchors.bounds.remove(CoachTarget.FirstNote) } }
     }
     val currentDelete by rememberUpdatedState(onDelete)
     val currentPin by rememberUpdatedState(onTogglePin)
@@ -822,7 +822,9 @@ private fun EditorPane(
     val settings = LocalAppSettings.current
     val context = LocalContext.current
     val anchors = LocalCoachAnchors.current
-    DisposableEffect(Unit) { onDispose { anchors.bounds.remove(CoachTarget.SaveStatus) } }
+    if (anchors != null) {
+        DisposableEffect(anchors) { onDispose { anchors.bounds.remove(CoachTarget.SaveStatus) } }
+    }
     var title by rememberSaveable(note.id) { mutableStateOf(note.title) }
     var content by rememberSaveable(note.id, stateSaver = TextFieldValue.Saver) {
         mutableStateOf(TextFieldValue(note.content))
@@ -888,7 +890,13 @@ private fun EditorPane(
                 ) {
                     BasicTextField(
                         value = title,
-                        onValueChange = { title = it; onEdit(it, content.text) },
+                        onValueChange = { value ->
+                            // Заголовок переносится по словам, а Enter переводит к тексту заметки.
+                            val clean = value.replace("\n", "")
+                            title = clean
+                            onEdit(clean, content.text)
+                            if (clean != value) contentFocus.requestFocus()
+                        },
                         modifier = Modifier
                             .fillMaxWidth()
                             .focusRequester(titleFocus)
@@ -897,7 +905,7 @@ private fun EditorPane(
                             color = colors.onSurface,
                             fontWeight = FontWeight.Bold,
                         ),
-                        singleLine = true,
+                        maxLines = 4,
                         cursorBrush = SolidColor(colors.primary),
                         keyboardOptions = KeyboardOptions(
                             capitalization = KeyboardCapitalization.Sentences,
@@ -968,13 +976,13 @@ private fun EditorPane(
             }
 
             HorizontalDivider(color = colors.outlineVariant)
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .coachAnchor(anchors, CoachTarget.SaveStatus)
-                    .padding(horizontal = 20.dp, vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
+            // С крупным системным шрифтом статус и счётчики не помещаются в одну строку.
+            val stacked = LocalDensity.current.fontScale > 1.3f
+            val barModifier = Modifier
+                .fillMaxWidth()
+                .coachAnchor(anchors, CoachTarget.SaveStatus)
+                .padding(horizontal = 20.dp, vertical = 8.dp)
+            val statusLine = @Composable { modifier: Modifier ->
                 val status = when {
                     saveFailed -> SaveStatus.Failed
                     note.isBlank -> SaveStatus.New
@@ -984,7 +992,7 @@ private fun EditorPane(
                 AnimatedContent(
                     targetState = status,
                     transitionSpec = { fadeIn(tween(150)) togetherWith fadeOut(tween(150)) },
-                    modifier = Modifier.weight(1f),
+                    modifier = modifier,
                     label = "status",
                 ) { state ->
                     val text = when (state) {
@@ -1013,6 +1021,8 @@ private fun EditorPane(
                         )
                     }
                 }
+            }
+            val countsLine = @Composable {
                 val text = content.text
                 val words = wordCount(text)
                 Text(
@@ -1025,6 +1035,17 @@ private fun EditorPane(
                     color = colors.onSurfaceVariant,
                     modifier = Modifier.testTag("counts"),
                 )
+            }
+            if (stacked) {
+                Column(barModifier) {
+                    statusLine(Modifier.fillMaxWidth())
+                    countsLine()
+                }
+            } else {
+                Row(barModifier, verticalAlignment = Alignment.CenterVertically) {
+                    statusLine(Modifier.weight(1f))
+                    countsLine()
+                }
             }
         }
     }
