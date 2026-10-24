@@ -52,6 +52,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -83,10 +84,11 @@ fun SettingsScreen(
 ) {
     val colors = MaterialTheme.colorScheme
     val context = LocalContext.current
-    val version = remember {
+    val res = LocalResources.current
+    val version = remember(res) {
         runCatching {
             val info = context.packageManager.getPackageInfo(context.packageName, 0)
-            context.getString(R.string.version, info.versionName, PackageInfoCompat.getLongVersionCode(info).toInt())
+            res.getString(R.string.version, info.versionName, PackageInfoCompat.getLongVersionCode(info).toInt())
         }.getOrDefault("")
     }
     // Язык меняется через AppCompat; Activity пересоздаётся, и экран читает новое значение.

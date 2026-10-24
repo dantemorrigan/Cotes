@@ -107,6 +107,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
@@ -159,6 +160,7 @@ fun CotesApp(
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
+    val res = LocalResources.current
     val haptics = LocalHapticFeedback.current
 
     val q = query.trim()
@@ -200,8 +202,8 @@ fun CotesApp(
         scope.launch {
             snackbar.currentSnackbarData?.dismiss()
             val result = snackbar.showSnackbar(
-                context.getString(R.string.note_deleted),
-                actionLabel = context.getString(R.string.undo),
+                res.getString(R.string.note_deleted),
+                actionLabel = res.getString(R.string.undo),
                 duration = SnackbarDuration.Long,
             )
             if (result == SnackbarResult.ActionPerformed) repo.restore(removed)
@@ -232,8 +234,8 @@ fun CotesApp(
                 }.getOrDefault(false)
             }
             message(
-                if (ok) context.getString(R.string.backup_saved, context.notesCount(total))
-                else context.getString(R.string.backup_failed)
+                if (ok) res.getString(R.string.backup_saved, res.notesCount(total))
+                else res.getString(R.string.backup_failed)
             )
         }
     }
@@ -249,9 +251,9 @@ fun CotesApp(
             val added = text?.let { repo.importJson(it) }
             message(
                 when {
-                    added == null -> context.getString(R.string.import_invalid)
-                    added == 0 -> context.getString(R.string.import_nothing)
-                    else -> context.getString(R.string.import_done, context.notesCount(added))
+                    added == null -> res.getString(R.string.import_invalid)
+                    added == 0 -> res.getString(R.string.import_nothing)
+                    else -> res.getString(R.string.import_done, res.notesCount(added))
                 }
             )
         }
@@ -267,7 +269,7 @@ fun CotesApp(
                     context.contentResolver.openOutputStream(uri)?.use { out -> source.inputStream().use { it.copyTo(out) } } != null
                 }.getOrDefault(false)
             }
-            message(context.getString(if (ok) R.string.damaged_saved else R.string.backup_failed))
+            message(res.getString(if (ok) R.string.damaged_saved else R.string.backup_failed))
         }
     }
 
@@ -286,7 +288,7 @@ fun CotesApp(
     }
 
     LaunchedEffect(writeFailed) {
-        if (writeFailed) message(context.getString(R.string.save_failed))
+        if (writeFailed) message(res.getString(R.string.save_failed))
     }
 
     CompositionLocalProvider(LocalCoachAnchors provides anchors) {
@@ -383,7 +385,7 @@ fun CotesApp(
                             onImport = { importLauncher.launch(arrayOf("application/json", "text/*", "application/octet-stream")) },
                             onReset = {
                                 settingsRepo.reset()
-                                message(context.getString(R.string.settings_reset_done))
+                                message(res.getString(R.string.settings_reset_done))
                                 AppLanguage.set(AppLanguage.SYSTEM)
                             },
                         )

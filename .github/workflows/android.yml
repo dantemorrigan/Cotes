@@ -95,6 +95,7 @@ jobs:
           target: google_apis
           profile: pixel_6
           disable-animations: true
+          emulator-boot-timeout: 900
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
           working-directory: android
           script: ./scripts/regress.sh
@@ -105,11 +106,11 @@ jobs:
         with:
           name: Cotes-regress-${{ github.run_number }}
           path: android/build/regress
-      # Скриншоты — в служебную ветку, чтобы их можно было посмотреть без скачивания артефактов.
-      - name: Publish screenshots to ci/android-screens
+      # Скриншоты и отчёты — в служебную ветку, чтобы их можно было посмотреть без скачивания артефактов.
+      - name: Publish screenshots and reports to ci/android-screens
         if: always()
         run: |
-          [ -d build/regress/shots ] || exit 0
+          [ -d build/regress ] || exit 0
           cd build/regress
           git init -q -b ci/android-screens
           git config user.name "github-actions"

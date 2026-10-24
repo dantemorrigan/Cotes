@@ -1,6 +1,7 @@
 package io.github.dantemorrigan.cotes.ui
 
 import android.content.Context
+import android.content.res.Resources
 import android.text.format.DateFormat
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -54,7 +55,7 @@ fun longDate(context: Context, ts: Long): String {
     }
 }
 
-fun Context.notesCount(n: Int): String = resources.getQuantityString(R.plurals.notes_count, n, n)
+fun Resources.notesCount(n: Int): String = getQuantityString(R.plurals.notes_count, n, n)
 
 fun wordCount(text: String): Int = Regex("\\S+").findAll(text).count()
 

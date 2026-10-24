@@ -67,6 +67,9 @@ android {
     lint {
         abortOnError = true
         checkReleaseBuilds = true
+        // Отчёт целиком — прямо в лог сборки.
+        textReport = true
+        textOutput = file("stdout")
         disable += setOf("GradleDependency", "AndroidGradlePluginVersion", "NewerVersionAvailable", "OldTargetApi")
     }
 }
