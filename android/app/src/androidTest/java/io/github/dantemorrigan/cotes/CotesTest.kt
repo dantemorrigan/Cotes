@@ -43,12 +43,16 @@ abstract class CotesTest {
     /** Подсказки первого запуска мешают большинству сценариев; их проверяет OnboardingTest. */
     protected open val onboardingDone = true
 
+    /** Экран выбора «Google или только здесь» проверяет WelcomeTest. */
+    protected open val accountChoiceDone = true
+
     @Before
     fun baseSetUp() {
         applyLocale(lang)
         repo.resetForTests()
         settingsRepo.reset()
         settingsRepo.setOnboardingDone(onboardingDone)
+        settingsRepo.setAccountChoiceDone(accountChoiceDone)
     }
 
     @After

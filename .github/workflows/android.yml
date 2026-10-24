@@ -41,6 +41,11 @@ jobs:
           ./scripts/check-strings.sh
           ./gradlew --no-daemon testDebugUnitTest lintRelease assembleRelease
           cp app/build/outputs/apk/release/app-release.apk "Cotes-${GITHUB_RUN_NUMBER}.apk"
+      # Отпечаток подписи нужен для OAuth-клиента Android в Google Cloud (вход через Google).
+      - name: Signing certificate fingerprint
+        run: |
+          apksigner="$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)/apksigner"
+          "$apksigner" verify --print-certs "Cotes-${GITHUB_RUN_NUMBER}.apk" | grep -E "SHA-1|SHA-256" | tee -a "$GITHUB_STEP_SUMMARY" || true
       - uses: actions/upload-artifact@v4
         if: always()
         with:

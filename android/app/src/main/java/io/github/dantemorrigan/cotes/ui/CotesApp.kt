@@ -113,7 +113,9 @@ import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Surface
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
@@ -169,6 +171,9 @@ import io.github.dantemorrigan.cotes.Note
 import io.github.dantemorrigan.cotes.NotesRepository
 import io.github.dantemorrigan.cotes.SettingsRepository
 import io.github.dantemorrigan.cotes.R
+import io.github.dantemorrigan.cotes.sync.SignInResult
+import io.github.dantemorrigan.cotes.sync.SyncManager
+import io.github.dantemorrigan.cotes.sync.SyncStatus
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -182,6 +187,7 @@ private val byPinThenRecent = compareByDescending<Note> { it.pinned }.thenByDesc
 fun CotesApp(
     repo: NotesRepository,
     settingsRepo: SettingsRepository,
+    sync: SyncManager,
     incoming: String?,
     onIncomingHandled: () -> Unit,
 ) {
@@ -206,6 +212,14 @@ fun CotesApp(
     val context = LocalContext.current
     val res = LocalResources.current
     val haptics = LocalHapticFeedback.current
+    val syncState by sync.state.collectAsStateWithLifecycle()
+    var refreshing by remember { mutableStateOf(false) }
+    // Выбор «Google или только здесь» — один раз, при самом первом запуске.
+    var welcome by rememberSaveable {
+        mutableStateOf(
+            !settingsRepo.accountChoiceDone.value && !onboardingDone && repo.notes.value.none { !it.isBlank }
+        )
+    }
 
     val q = query.trim()
     val visible = remember(notes, q) { notes.filter { it.matches(q) }.sortedWith(byPinThenRecent) }
@@ -236,6 +250,12 @@ fun CotesApp(
             snackbar.currentSnackbarData?.dismiss()
             snackbar.showSnackbar(text)
         }
+    }
+
+    val signIn = rememberGoogleSignIn(sync) { result ->
+        val account = sync.state.value.account
+        if (result == SignInResult.Success && account != null) message(res.getString(R.string.signed_in, account.email))
+        else res.signInError(result)?.let { message(it) }
     }
 
     fun exitSelection() {
@@ -372,6 +392,16 @@ fun CotesApp(
         }
     }
 
+    if (welcome) {
+        WelcomeScreen(sync) {
+            settingsRepo.setAccountChoiceDone(true)
+            // Вошли в Google — заметки подтягиваются из облака, подсказки для новичка не нужны.
+            if (sync.signedIn || repo.notes.value.any { !it.isBlank }) finishOnboarding()
+            welcome = false
+        }
+        return
+    }
+
     // Подсказки — только для тех, кто начинает с нуля.
     LaunchedEffect(Unit) {
         if (!onboardingDone && repo.notes.value.any { !it.isBlank }) finishOnboarding()
@@ -418,6 +448,21 @@ fun CotesApp(
                         },
                         onCancelSelection = { exitSelection() },
                         onDeleteSelected = { requestDelete(selection.toList()) },
+                        refreshing = refreshing,
+                        syncProgress = syncState.progress,
+                        onRefresh = if (syncState.account != null) ({
+                            if (!refreshing) scope.launch {
+                                refreshing = true
+                                val status = sync.refresh()
+                                refreshing = false
+                                when (status) {
+                                    SyncStatus.Offline -> message(res.getString(R.string.sync_status_offline))
+                                    SyncStatus.NeedsSignIn -> message(res.getString(R.string.sync_status_reconnect))
+                                    SyncStatus.SetupError, SyncStatus.Failed -> message(res.getString(R.string.sync_status_failed))
+                                    else -> Unit
+                                }
+                            }
+                        }) else null,
                         modifier = modifier,
                     )
                 }
@@ -487,11 +532,18 @@ fun CotesApp(
                             onBack = { settingsOpen = false },
                             onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
                             onExportMarkdown = { markdownLauncher.launch("cotes-markdown-${LocalDate.now()}.zip") },
-                        onImport = { importLauncher.launch(arrayOf("*/*")) },
+                            onImport = { importLauncher.launch(arrayOf("*/*")) },
                             onReset = {
                                 settingsRepo.reset()
                                 message(res.getString(R.string.settings_reset_done))
                                 AppLanguage.set(AppLanguage.SYSTEM)
+                            },
+                            syncState = syncState,
+                            signIn = signIn,
+                            onSyncNow = { sync.requestSync() },
+                            onSignOut = {
+                                sync.signOut()
+                                message(res.getString(R.string.signed_out))
                             },
                         )
                     }
@@ -599,6 +651,7 @@ private fun BrandTile(size: Int) {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun NoteListPane(
     notes: List<Note>,
@@ -618,6 +671,9 @@ private fun NoteListPane(
     onSelectAll: () -> Unit,
     onCancelSelection: () -> Unit,
     onDeleteSelected: () -> Unit,
+    refreshing: Boolean,
+    onRefresh: (() -> Unit)?,
+    syncProgress: Float?,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -761,6 +817,17 @@ private fun NoteListPane(
                     )
                 }
 
+                // Первый вход с сотнями заметок: показываем, сколько уже загружено.
+                AnimatedVisibility(syncProgress != null) {
+                    LinearProgressIndicator(
+                        progress = { syncProgress ?: 0f },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 20.dp, vertical = 4.dp)
+                            .testTag("sync-progress"),
+                    )
+                }
+
                 val mode = when {
                     notes.isNotEmpty() -> 0
                     q.isNotEmpty() -> 1
@@ -782,7 +849,9 @@ private fun NoteListPane(
                             onAction = onNew,
                             filled = true,
                         )
-                        else -> LazyColumn(
+                        else -> {
+                          val column = @Composable {
+                        LazyColumn(
                             state = listState,
                             modifier = Modifier
                                 .fillMaxSize()
@@ -810,6 +879,14 @@ private fun NoteListPane(
                                     modifier = Modifier.animateItem(fadeOutSpec = null),
                                 )
                             }
+                        }
+                          }
+                          // Потянуть список вниз — синхронизировать с Google; без входа жеста нет.
+                          if (onRefresh != null) {
+                              PullToRefreshBox(isRefreshing = refreshing, onRefresh = onRefresh, modifier = Modifier.fillMaxSize()) {
+                                  column()
+                              }
+                          } else column()
                         }
                     }
                 }

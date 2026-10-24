@@ -58,6 +58,15 @@ class SettingsRepository private constructor(context: Context) {
         prefs.edit().putBoolean("onboardingDone", done).apply()
     }
 
+    // Выбор «Google или только на устройстве» показываем один раз — при первом запуске.
+    private val _accountChoiceDone = MutableStateFlow(prefs.getBoolean("accountChoiceDone", false))
+    val accountChoiceDone: StateFlow<Boolean> = _accountChoiceDone.asStateFlow()
+
+    fun setAccountChoiceDone(done: Boolean) {
+        _accountChoiceDone.value = done
+        prefs.edit().putBoolean("accountChoiceDone", done).apply()
+    }
+
     fun update(transform: (AppSettings) -> AppSettings) {
         val next = transform(_settings.value)
         _settings.value = next
