@@ -143,7 +143,7 @@
     <string name="import_help_bear_name">Bear</string>
     <string name="import_help_bear">File → Export Notes → Markdown or Text. Pick the files or a .zip of them.</string>
     <string name="import_help_notion_name">Notion</string>
-    <string name="import_help_notion">Settings → General → Export all workspace content → Markdown & CSV. Pick the .zip.</string>
+    <string name="import_help_notion">Settings → General → Export all workspace content → Markdown &amp; CSV. Pick the .zip.</string>
     <string name="import_help_obsidian_name">Obsidian</string>
     <string name="import_help_obsidian">Notes are plain .md files in your vault folder. Pick the files or a .zip of the folder.</string>
     <string name="import_help_other_name">Markor, others</string>

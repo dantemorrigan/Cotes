@@ -151,7 +151,7 @@
     <string name="import_help_bear_name">Bear</string>
     <string name="import_help_bear">File → Export Notes → Markdown или Text. Выберите файлы или .zip с ними.</string>
     <string name="import_help_notion_name">Notion</string>
-    <string name="import_help_notion">Settings → General → Export all workspace content → Markdown & CSV. Выберите .zip.</string>
+    <string name="import_help_notion">Settings → General → Export all workspace content → Markdown &amp; CSV. Выберите .zip.</string>
     <string name="import_help_obsidian_name">Obsidian</string>
     <string name="import_help_obsidian">Заметки — обычные файлы .md в папке хранилища. Выберите файлы или .zip с папкой.</string>
     <string name="import_help_other_name">Markor, others</string>
