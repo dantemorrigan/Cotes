@@ -141,9 +141,10 @@ class DriveApi(private val token: String) {
                     c.outputStream.use { it.write(body) }
                 }
                 val code = c.responseCode
-                if (code == 401) throw AuthExpiredException()
                 if (code !in 200..299) {
+                    // Тело читаем до конца: тогда соединение вернётся в пул и им воспользуется следующий запрос.
                     val text = c.errorStream?.use { it.readBytes().toString(Charsets.UTF_8) }.orEmpty()
+                    if (code == 401) throw AuthExpiredException()
                     val reason = runCatching {
                         JSONObject(text).getJSONObject("error").getJSONArray("errors").getJSONObject(0).optString("reason")
                     }.getOrNull()
@@ -151,7 +152,9 @@ class DriveApi(private val token: String) {
                 }
                 c.inputStream.use { it.readBytes().toString(Charsets.UTF_8) }
             } finally {
-                c.disconnect()
+                // Не disconnect(): он закрывает соединение, и каждая из сотен заметок заново
+                // устанавливала бы TLS — на первой синхронизации это минуты. Без него запросы
+                // идут по уже открытым соединениям.
             }
         }
 

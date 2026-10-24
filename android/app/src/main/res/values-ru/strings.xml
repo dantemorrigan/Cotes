@@ -211,4 +211,5 @@
     <string name="welcome_local_text">Без аккаунта и интернета. Войти можно позже в настройках.</string>
     <string name="welcome_connecting">Подключаемся к Google и загружаем заметки…</string>
     <string name="settings_footer_sync">Заметки синхронизируются с вашим Google Drive.</string>
+    <string name="sync_status_progress">Синхронизация… %1$d%%</string>
 </resources>

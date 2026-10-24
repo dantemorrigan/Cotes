@@ -113,6 +113,7 @@ import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Surface
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
@@ -394,8 +395,8 @@ fun CotesApp(
     if (welcome) {
         WelcomeScreen(sync) {
             settingsRepo.setAccountChoiceDone(true)
-            // Заметки пришли из облака — подсказки для новичка уже не нужны.
-            if (repo.notes.value.any { !it.isBlank }) finishOnboarding()
+            // Вошли в Google — заметки подтягиваются из облака, подсказки для новичка не нужны.
+            if (sync.signedIn || repo.notes.value.any { !it.isBlank }) finishOnboarding()
             welcome = false
         }
         return
@@ -448,6 +449,7 @@ fun CotesApp(
                         onCancelSelection = { exitSelection() },
                         onDeleteSelected = { requestDelete(selection.toList()) },
                         refreshing = refreshing,
+                        syncProgress = syncState.progress,
                         onRefresh = if (syncState.account != null) ({
                             if (!refreshing) scope.launch {
                                 refreshing = true
@@ -671,6 +673,7 @@ private fun NoteListPane(
     onDeleteSelected: () -> Unit,
     refreshing: Boolean,
     onRefresh: (() -> Unit)?,
+    syncProgress: Float?,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -811,6 +814,17 @@ private fun NoteListPane(
                         style = MaterialTheme.typography.labelMedium,
                         color = colors.onSurfaceVariant,
                         modifier = Modifier.padding(start = 20.dp, end = 16.dp, top = 6.dp, bottom = 4.dp),
+                    )
+                }
+
+                // Первый вход с сотнями заметок: показываем, сколько уже загружено.
+                AnimatedVisibility(syncProgress != null) {
+                    LinearProgressIndicator(
+                        progress = { syncProgress ?: 0f },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 20.dp, vertical = 4.dp)
+                            .testTag("sync-progress"),
                     )
                 }
 

@@ -203,4 +203,5 @@
     <string name="welcome_local_text">No account, no internet. You can sign in later in Settings.</string>
     <string name="welcome_connecting">Connecting to Google and loading your notes…</string>
     <string name="settings_footer_sync">Notes sync with your Google Drive.</string>
+    <string name="sync_status_progress">Syncing… %1$d%%</string>
 </resources>

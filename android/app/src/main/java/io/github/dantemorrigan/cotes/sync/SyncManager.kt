@@ -70,6 +70,8 @@ data class SyncState(
     val account: SyncAccount? = null,
     val status: SyncStatus = SyncStatus.Idle,
     val lastSync: Long = 0L,
+    /** Доля выполненной работы 0..1, пока идёт большая синхронизация (первый вход); иначе null. */
+    val progress: Float? = null,
 )
 
 /** Итог входа — для экрана, с которого входили. */
@@ -170,12 +172,9 @@ class SyncManager private constructor(private val context: Context, private val 
             .remove("lastSync")
             .apply()
         _state.value = SyncState(SyncAccount(email, profile.name.ifEmpty { email }, avatar), SyncStatus.Idle, 0L)
-        return when (sync(token)) {
-            SyncStatus.Synced -> SignInResult.Success
-            SyncStatus.Offline -> SignInResult.Offline
-            SyncStatus.SetupError -> SignInResult.SetupError
-            else -> SignInResult.Success
-        }
+        // Заметки догружаются в фоне и появляются в списке по мере поступления: вход не ждёт сотен запросов.
+        scope.launch { sync(token) }
+        return SignInResult.Success
     }
 
     /** Выход: заметки остаются на устройстве, облако не трогаем. */
@@ -233,7 +232,7 @@ class SyncManager private constructor(private val context: Context, private val 
         val now = System.currentTimeMillis()
         if (status == SyncStatus.Synced) prefs.edit().putLong("lastSync", now).apply()
         _state.update {
-            it.copy(status = status, lastSync = if (status == SyncStatus.Synced) now else it.lastSync)
+            it.copy(status = status, lastSync = if (status == SyncStatus.Synced) now else it.lastSync, progress = null)
         }
         return status
     }
@@ -254,6 +253,10 @@ class SyncManager private constructor(private val context: Context, private val 
         val limit = Semaphore(PARALLEL)
         var firstError: Exception? = null
 
+        // Для большой работы (первый вход) показываем ход выполнения.
+        val total = plan.upload.size + plan.uploadDeleted.size + plan.download.size + plan.conflicts.size
+        var done = 0
+
         suspend fun step(block: suspend () -> Unit) {
             limit.withPermit {
                 try {
@@ -261,9 +264,17 @@ class SyncManager private constructor(private val context: Context, private val 
                 } catch (e: Exception) {
                     lock.withLock { if (firstError == null) firstError = e }
                 }
+                lock.withLock {
+                    done++
+                    if (total >= PROGRESS_FROM) _state.update { it.copy(progress = done.toFloat() / total) }
+                    // Скачанные заметки сразу кладём в список, не дожидаясь остальных.
+                    if (incoming.size >= APPLY_BATCH) {
+                        repo.applySync(incoming.toList(), emptyMap(), emptyList(), seen)
+                        incoming.clear()
+                    }
+                }
             }
         }
-
         val jobs = ArrayList<Deferred<Unit>>()
         plan.upload.forEach { (note, r) ->
             jobs += async {
@@ -408,7 +419,9 @@ class SyncManager private constructor(private val context: Context, private val 
     companion object {
         private const val WORK_NAME = "cotes-sync"
         private const val CHANGE_DELAY_MS = 2_500L
-        private const val PARALLEL = 4
+        private const val PARALLEL = 8
+        private const val PROGRESS_FROM = 12
+        private const val APPLY_BATCH = 20
         private const val MIN_REFRESH_MS = 700L
         private const val FORGET_DELETED_MS = 90L * 24 * 60 * 60 * 1000
 

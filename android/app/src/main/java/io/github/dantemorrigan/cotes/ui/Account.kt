@@ -303,7 +303,8 @@ private fun syncStatusText(state: SyncState): String {
         DateUtils.formatDateTime(context, it, DateUtils.FORMAT_SHOW_TIME or DateUtils.FORMAT_SHOW_DATE or DateUtils.FORMAT_ABBREV_MONTH)
     }
     return when (state.status) {
-        SyncStatus.Syncing -> stringResource(R.string.sync_status_syncing)
+        SyncStatus.Syncing -> state.progress?.let { stringResource(R.string.sync_status_progress, (it * 100).toInt()) }
+            ?: stringResource(R.string.sync_status_syncing)
         SyncStatus.Offline -> stringResource(R.string.sync_status_offline)
         SyncStatus.NeedsSignIn -> stringResource(R.string.sync_status_reconnect)
         SyncStatus.SetupError -> stringResource(R.string.sign_in_setup_error)
