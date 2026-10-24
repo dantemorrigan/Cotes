@@ -156,12 +156,14 @@ class RegressionTest : CotesTest() {
         seed(*(1..30).map { "Заметка $it" to "текст $it" }.toTypedArray())
         launch()
         shot("16a-fab-start")
+        // Развёрнутая кнопка заметно шире своей высоты, свёрнутая — почти круг.
         val expanded = {
-            runCatching { compose.onNodeWithText(s(R.string.fab_new)).assertIsDisplayed() }.isSuccess
+            val b = compose.onNodeWithTag("fab").fetchSemanticsNode().boundsInRoot
+            b.width > b.height * 1.5f
         }
         compose.waitUntil(5_000) { expanded() }
         compose.onNodeWithTag("note-list").performTouchInput { swipeUp(startY = bottom - 50f, endY = top + 50f, durationMillis = 600) }
-        compose.waitUntil(3_000) { compose.onAllNodesWithText(s(R.string.fab_new)).fetchSemanticsNodes().isEmpty() }
+        compose.waitUntil(3_000) { !expanded() }
         shot("16-fab-collapsed")
         compose.waitUntil(5_000) { expanded() }
     }
