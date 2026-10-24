@@ -178,17 +178,22 @@ class NotesRepository internal constructor(notesFile: File) {
     }
 
     /** Возвращает число добавленных заметок или null, если файл не подошёл. */
-    fun importJson(text: String): Int? {
-        val incoming = NotesJson.decode(text) ?: return null
+    fun importJson(text: String): Int? = NotesJson.decode(text)?.let { importNotes(it) }
+
+    /**
+     * Добавляет заметки, которых ещё нет: заметка с тем же заголовком и текстом пропускается,
+     * поэтому повторный импорт того же файла ничего не дублирует.
+     */
+    fun importNotes(incoming: List<Note>): Int {
         var added = 0
         _notes.update { current ->
-            val byId = current.associateBy { it.id }.toMutableMap()
+            added = 0
+            val ids = current.mapTo(HashSet()) { it.id }
+            val texts = current.mapTo(HashSet()) { it.title.trim() to it.content.trim() }
             val result = current.toMutableList()
             incoming.filterNot { it.isBlank }.forEach { n ->
-                val same = byId[n.id]
-                if (same != null && same.title == n.title && same.content == n.content) return@forEach
-                val note = if (same != null) n.copy(id = newNoteId()) else n
-                byId[note.id] = note
+                if (!texts.add(n.title.trim() to n.content.trim())) return@forEach
+                val note = if (!ids.add(n.id)) n.copy(id = newNoteId().also { ids.add(it) }) else n
                 result += note
                 added++
             }

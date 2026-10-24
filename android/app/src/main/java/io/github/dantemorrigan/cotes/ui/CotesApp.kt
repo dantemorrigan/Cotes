@@ -1,6 +1,10 @@
 package io.github.dantemorrigan.cotes.ui
 
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
+import android.provider.DocumentsContract
+import android.provider.OpenableColumns
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -125,6 +129,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.dantemorrigan.cotes.AppLanguage
+import io.github.dantemorrigan.cotes.ImportResult
+import io.github.dantemorrigan.cotes.ImportSource
+import io.github.dantemorrigan.cotes.NoteExport
+import io.github.dantemorrigan.cotes.NoteImport
 import io.github.dantemorrigan.cotes.Note
 import io.github.dantemorrigan.cotes.NotesRepository
 import io.github.dantemorrigan.cotes.SettingsRepository
@@ -240,21 +248,45 @@ fun CotesApp(
         }
     }
 
-    val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        if (uri == null) return@rememberLauncherForActivityResult
+    // Импорт: можно выбрать сразу несколько файлов — копии Cotes, экспорт других приложений, zip.
+    val importLauncher = rememberLauncherForActivityResult(ActivityResultContracts.OpenMultipleDocuments()) { uris ->
+        if (uris.isEmpty()) return@rememberLauncherForActivityResult
         scope.launch {
-            val text = withContext(Dispatchers.IO) {
-                runCatching {
-                    context.contentResolver.openInputStream(uri)?.use { it.readBytes().toString(Charsets.UTF_8) }
-                }.getOrNull()
+            val result = withContext(Dispatchers.IO) {
+                uris.fold(ImportResult.Empty) { acc, uri -> acc + readImport(context, uri) }
             }
-            val added = text?.let { repo.importJson(it) }
+            val added = if (result.notes.isEmpty()) null else repo.importNotes(result.notes)
+            val from = result.sources.sorted().joinToString(", ") { source ->
+                when (source) {
+                    ImportSource.Text -> res.getString(R.string.import_source_text)
+                    ImportSource.Json -> res.getString(R.string.import_source_json)
+                    ImportSource.GoogleKeep -> "Google Keep"
+                    ImportSource.StandardNotes -> "Standard Notes"
+                    else -> source.name
+                }
+            }
             message(
                 when {
                     added == null -> res.getString(R.string.import_invalid)
                     added == 0 -> res.getString(R.string.import_nothing)
-                    else -> res.getString(R.string.import_done, res.notesCount(added))
+                    else -> res.getString(R.string.import_done, res.notesCount(added), from)
                 }
+            )
+        }
+    }
+
+    val markdownLauncher = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/zip")) { uri ->
+        if (uri == null) return@rememberLauncherForActivityResult
+        scope.launch {
+            val list = repo.notes.value.filterNot { it.isBlank }
+            val ok = withContext(Dispatchers.IO) {
+                runCatching {
+                    context.contentResolver.openOutputStream(uri)?.use { NoteExport.markdownZip(list, it) } != null
+                }.getOrDefault(false)
+            }
+            message(
+                if (ok) res.getString(R.string.export_md_done, res.notesCount(list.size))
+                else res.getString(R.string.backup_failed)
             )
         }
     }
@@ -382,7 +414,8 @@ fun CotesApp(
                             onChange = { settingsRepo.update(it) },
                             onBack = { settingsOpen = false },
                             onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
-                            onImport = { importLauncher.launch(arrayOf("application/json", "text/*", "application/octet-stream")) },
+                            onExportMarkdown = { markdownLauncher.launch("cotes-markdown-${LocalDate.now()}.zip") },
+                        onImport = { importLauncher.launch(arrayOf("*/*")) },
                             onReset = {
                                 settingsRepo.reset()
                                 message(res.getString(R.string.settings_reset_done))
@@ -1053,3 +1086,19 @@ private fun EditorPane(
         }
     }
 }
+
+/** Читает выбранный файл для импорта: имя и время изменения — от системы, если она их знает. */
+private fun readImport(context: Context, uri: Uri): ImportResult = runCatching {
+    var name = uri.lastPathSegment.orEmpty()
+    var modified: Long? = null
+    context.contentResolver.query(uri, null, null, null, null)?.use { c ->
+        if (c.moveToFirst()) {
+            c.getColumnIndex(OpenableColumns.DISPLAY_NAME).takeIf { it >= 0 }
+                ?.let { c.getString(it) }?.let { name = it }
+            c.getColumnIndex(DocumentsContract.Document.COLUMN_LAST_MODIFIED).takeIf { it >= 0 }
+                ?.let { if (!c.isNull(it)) c.getLong(it) else null }?.takeIf { it > 0 }?.let { modified = it }
+        }
+    }
+    val bytes = context.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: return@runCatching ImportResult.Empty
+    NoteImport.fromFile(name, bytes, modified)
+}.getOrDefault(ImportResult.Empty)

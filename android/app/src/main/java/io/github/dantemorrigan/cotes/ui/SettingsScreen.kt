@@ -78,6 +78,7 @@ fun SettingsScreen(
     onChange: ((AppSettings) -> AppSettings) -> Unit,
     onBack: () -> Unit,
     onExport: () -> Unit,
+    onExportMarkdown: () -> Unit,
     onImport: () -> Unit,
     onReset: () -> Unit,
     modifier: Modifier = Modifier,
@@ -94,6 +95,7 @@ fun SettingsScreen(
     // Язык меняется через AppCompat; Activity пересоздаётся, и экран читает новое значение.
     val language = remember { AppLanguage.current() }
     var privacyOpen by rememberSaveable { mutableStateOf(false) }
+    var importHelpOpen by rememberSaveable { mutableStateOf(false) }
 
     Surface(modifier.fillMaxSize(), color = colors.background, contentColor = colors.onBackground) {
         Column(Modifier.fillMaxSize()) {
@@ -244,9 +246,13 @@ fun SettingsScreen(
 
                     Section(stringResource(R.string.section_data))
                     Card {
+                        LinkRow(stringResource(R.string.restore), stringResource(R.string.restore_sub), onImport)
+                        Divider()
+                        LinkRow(stringResource(R.string.import_help), stringResource(R.string.import_help_sub)) { importHelpOpen = true }
+                        Divider()
                         LinkRow(stringResource(R.string.backup), stringResource(R.string.backup_sub), onExport)
                         Divider()
-                        LinkRow(stringResource(R.string.restore), stringResource(R.string.restore_sub), onImport)
+                        LinkRow(stringResource(R.string.export_md), stringResource(R.string.export_md_sub), onExportMarkdown)
                     }
 
                     Section(stringResource(R.string.section_about))
@@ -305,6 +311,25 @@ fun SettingsScreen(
                 }
             }
         }
+    }
+
+    if (importHelpOpen) {
+        AlertDialog(
+            onDismissRequest = { importHelpOpen = false },
+            title = { Text(stringResource(R.string.import_help)) },
+            text = {
+                Text(
+                    stringResource(R.string.import_help_text),
+                    modifier = Modifier.verticalScroll(rememberScrollState()),
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = { importHelpOpen = false; onImport() }) { Text(stringResource(R.string.restore)) }
+            },
+            dismissButton = {
+                TextButton(onClick = { importHelpOpen = false }) { Text(stringResource(R.string.ok)) }
+            },
+        )
     }
 
     if (privacyOpen) {

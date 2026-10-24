@@ -19,6 +19,8 @@ Cotes is a calm, minimal notes app. Open it and start writing — that's it.
 • English and Russian, switchable right in the app.
 
 <b>Your data, your files</b>
+• Move in from Simplenote, Google Keep, Evernote, Standard Notes, Obsidian, Joplin and other apps: pick their export files or .zip — duplicates and trashed notes are skipped.
+• Export to Markdown (.zip, a file per note) to take your notes anywhere.
 • Back up all notes to a single .json file and restore them on any phone.
 
 Works on Android 8.0 and newer, on phones and tablets (list and note side by side).
