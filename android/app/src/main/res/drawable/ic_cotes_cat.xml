@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Иконка Cotes (assets/images/logo.svg) в формате Android -->
+<!-- Иконка Cotes (docs/brand/logo.svg) в формате Android -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="46dp" android:height="57dp"
     android:viewportWidth="46" android:viewportHeight="57">

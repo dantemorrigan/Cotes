@@ -1,2 +1,5 @@
-replica/screens/
-replica/clone-screens/
+build/
+.gradle/
+local.properties
+*.p12
+*.jks

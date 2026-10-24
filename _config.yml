@@ -1,6 +1,0 @@
-# GitHub Pages (Deploy from a branch): публикуем только само приложение
-exclude:
-  - replica/
-  - README.md
-  - docs/
-  - android/
