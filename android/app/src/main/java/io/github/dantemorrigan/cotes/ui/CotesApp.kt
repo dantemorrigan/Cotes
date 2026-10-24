@@ -646,8 +646,11 @@ private fun SwipeableNoteRow(
         when (state.currentValue) {
             SwipeToDismissBoxValue.EndToStart -> currentDelete()
             SwipeToDismissBoxValue.StartToEnd -> {
+                // Сначала строка возвращается на место, потом заметка уезжает наверх:
+                // иначе перестановка в списке прерывает анимацию и строка остаётся за краем.
+                runCatching { state.reset() }
+                if (state.currentValue != SwipeToDismissBoxValue.Settled) state.snapTo(SwipeToDismissBoxValue.Settled)
                 currentPin()
-                state.reset()
             }
             SwipeToDismissBoxValue.Settled -> Unit
         }
