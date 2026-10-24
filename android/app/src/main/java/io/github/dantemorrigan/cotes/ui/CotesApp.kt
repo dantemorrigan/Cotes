@@ -114,6 +114,7 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Surface
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.VerticalDivider
@@ -171,6 +172,7 @@ import io.github.dantemorrigan.cotes.SettingsRepository
 import io.github.dantemorrigan.cotes.R
 import io.github.dantemorrigan.cotes.sync.SignInResult
 import io.github.dantemorrigan.cotes.sync.SyncManager
+import io.github.dantemorrigan.cotes.sync.SyncStatus
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -210,6 +212,7 @@ fun CotesApp(
     val res = LocalResources.current
     val haptics = LocalHapticFeedback.current
     val syncState by sync.state.collectAsStateWithLifecycle()
+    var refreshing by remember { mutableStateOf(false) }
     // Выбор «Google или только здесь» — один раз, при самом первом запуске.
     var welcome by rememberSaveable {
         mutableStateOf(
@@ -444,6 +447,20 @@ fun CotesApp(
                         },
                         onCancelSelection = { exitSelection() },
                         onDeleteSelected = { requestDelete(selection.toList()) },
+                        refreshing = refreshing,
+                        onRefresh = if (syncState.account != null) ({
+                            if (!refreshing) scope.launch {
+                                refreshing = true
+                                val status = sync.refresh()
+                                refreshing = false
+                                when (status) {
+                                    SyncStatus.Offline -> message(res.getString(R.string.sync_status_offline))
+                                    SyncStatus.NeedsSignIn -> message(res.getString(R.string.sync_status_reconnect))
+                                    SyncStatus.SetupError, SyncStatus.Failed -> message(res.getString(R.string.sync_status_failed))
+                                    else -> Unit
+                                }
+                            }
+                        }) else null,
                         modifier = modifier,
                     )
                 }
@@ -632,6 +649,7 @@ private fun BrandTile(size: Int) {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun NoteListPane(
     notes: List<Note>,
@@ -651,6 +669,8 @@ private fun NoteListPane(
     onSelectAll: () -> Unit,
     onCancelSelection: () -> Unit,
     onDeleteSelected: () -> Unit,
+    refreshing: Boolean,
+    onRefresh: (() -> Unit)?,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -815,7 +835,9 @@ private fun NoteListPane(
                             onAction = onNew,
                             filled = true,
                         )
-                        else -> LazyColumn(
+                        else -> {
+                          val column = @Composable {
+                        LazyColumn(
                             state = listState,
                             modifier = Modifier
                                 .fillMaxSize()
@@ -843,6 +865,14 @@ private fun NoteListPane(
                                     modifier = Modifier.animateItem(fadeOutSpec = null),
                                 )
                             }
+                        }
+                          }
+                          // Потянуть список вниз — синхронизировать с Google; без входа жеста нет.
+                          if (onRefresh != null) {
+                              PullToRefreshBox(isRefreshing = refreshing, onRefresh = onRefresh, modifier = Modifier.fillMaxSize()) {
+                                  column()
+                              }
+                          } else column()
                         }
                     }
                 }

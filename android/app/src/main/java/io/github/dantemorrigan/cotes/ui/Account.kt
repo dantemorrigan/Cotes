@@ -70,6 +70,11 @@ import io.github.dantemorrigan.cotes.sync.SyncState
 import io.github.dantemorrigan.cotes.sync.SyncStatus
 import kotlinx.coroutines.launch
 
+private val GoogleSurface = Color.White
+private val GoogleBorder = Color(0xFF747775)
+private val GoogleText = Color(0xFF1F1F1F)
+private val GoogleTextSecondary = Color(0xFF444746)
+
 /** Запуск входа в Google: [start] — выбрать аккаунт и войти, [reconnect] — вернуть отозванный доступ. */
 class GoogleSignIn(val start: () -> Unit, val reconnect: () -> Unit, val busy: Boolean)
 
@@ -246,6 +251,7 @@ fun AccountSection(
                 enabled = googleAvailable && !signIn.busy,
                 busy = signIn.busy,
                 onClick = signIn.start,
+                googleLogo = true,
                 modifier = Modifier.testTag("sign-in"),
             )
         } else {
@@ -316,6 +322,7 @@ private fun ActionRow(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     warning: Boolean = false,
+    googleLogo: Boolean = false,
 ) {
     val colors = MaterialTheme.colorScheme
     Row(
@@ -325,6 +332,10 @@ private fun ActionRow(
             .padding(horizontal = 16.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        if (googleLogo) {
+            Image(painterResource(R.drawable.ic_google), contentDescription = null, modifier = Modifier.size(24.dp))
+            Spacer(Modifier.width(14.dp))
+        }
         Column(Modifier.weight(1f)) {
             Text(
                 title,
@@ -402,7 +413,7 @@ fun WelcomeScreen(sync: SyncManager, onDone: () -> Unit) {
                 Spacer(Modifier.height(28.dp))
 
                 ChoiceCard(
-                    emoji = "☁️",
+                    icon = { Image(painterResource(R.drawable.ic_google), contentDescription = null, modifier = Modifier.size(28.dp)) },
                     title = stringResource(R.string.welcome_google),
                     text = stringResource(if (googleAvailable) R.string.welcome_google_text else R.string.sign_in_no_play),
                     primary = true,
@@ -413,7 +424,7 @@ fun WelcomeScreen(sync: SyncManager, onDone: () -> Unit) {
                 )
                 Spacer(Modifier.height(12.dp))
                 ChoiceCard(
-                    emoji = "📱",
+                    icon = { Text("📱", fontSize = 28.sp) },
                     title = stringResource(R.string.welcome_local),
                     text = stringResource(R.string.welcome_local_text),
                     primary = false,
@@ -450,7 +461,7 @@ fun WelcomeScreen(sync: SyncManager, onDone: () -> Unit) {
 
 @Composable
 private fun ChoiceCard(
-    emoji: String,
+    icon: @Composable () -> Unit,
     title: String,
     text: String,
     primary: Boolean,
@@ -465,26 +476,27 @@ private fun ChoiceCard(
         modifier
             .fillMaxWidth()
             .clip(shape)
-            .background(if (primary) colors.primaryContainer else colors.surfaceContainerLow)
-            .border(1.dp, if (primary) Color.Transparent else colors.outlineVariant, shape)
+            // Кнопка Google — светлая в любой теме, как требуют правила бренда Google.
+            .background(if (primary) GoogleSurface else colors.surfaceContainerLow)
+            .border(1.dp, if (primary) GoogleBorder else colors.outlineVariant, shape)
             .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
             .padding(18.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Text(emoji, fontSize = 28.sp)
+        icon()
         Spacer(Modifier.width(16.dp))
         Column(Modifier.weight(1f)) {
             Text(
                 title,
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = if (primary) colors.onPrimaryContainer else colors.onSurface,
+                color = if (primary) GoogleText else colors.onSurface,
             )
             Spacer(Modifier.height(2.dp))
             Text(
                 text,
                 style = MaterialTheme.typography.bodySmall,
-                color = if (primary) colors.onPrimaryContainer.copy(alpha = 0.8f) else colors.onSurfaceVariant,
+                color = if (primary) GoogleTextSecondary else colors.onSurfaceVariant,
             )
         }
         if (busy) {

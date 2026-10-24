@@ -22,6 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -29,6 +30,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
@@ -113,6 +115,21 @@ class SyncManager private constructor(private val context: Context, private val 
                     if (signedIn && SyncMerge.hasLocalChanges(notes, deleted, readBase())) requestSync()
                 }
         }
+    }
+
+    /**
+     * Обновление по жесту «потянуть»: ждёт конца синхронизации (своей или уже идущей) и отдаёт итог.
+     * Идёт в области менеджера: если экран закроют, синхронизация не оборвётся.
+     */
+    suspend fun refresh(): SyncStatus {
+        if (!signedIn) return SyncStatus.Idle
+        val started = System.currentTimeMillis()
+        var status = scope.async { sync() }.await()
+        if (status == SyncStatus.Syncing) status = state.first { it.status != SyncStatus.Syncing }.status
+        // Индикатор не должен мигнуть и пропасть, даже если облако ответило мгновенно.
+        val left = MIN_REFRESH_MS - (System.currentTimeMillis() - started)
+        if (left > 0) delay(left)
+        return status
     }
 
     /** Синхронизировать в фоне; повторный вызов во время синхронизации запустит ещё один проход. */
@@ -392,6 +409,7 @@ class SyncManager private constructor(private val context: Context, private val 
         private const val WORK_NAME = "cotes-sync"
         private const val CHANGE_DELAY_MS = 2_500L
         private const val PARALLEL = 4
+        private const val MIN_REFRESH_MS = 700L
         private const val FORGET_DELETED_MS = 90L * 24 * 60 * 60 * 1000
 
         @Volatile
