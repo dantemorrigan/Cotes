@@ -1,6 +1,4 @@
-Cotes 1.0.1
-• Swipes are harder to trigger by accident: a note stretches and only acts after a deliberate pull, with a clear label and a vibration
-• Deleting a note now asks for confirmation (with Undo after)
-• Select several notes (hold a note or tap Select) and delete them at once
-• The New button folds while you scroll down and unfolds at rest
-• The settings gear turns when tapped
+Cotes 1.0.2
+• The hint under the search field is no longer cut off: it wraps onto a second line
+• The status bar in a note (saved date, word and character counts) is no longer cut off
+• The "Moving from another app" guide is corrected and now lists each app with an icon and short export steps
