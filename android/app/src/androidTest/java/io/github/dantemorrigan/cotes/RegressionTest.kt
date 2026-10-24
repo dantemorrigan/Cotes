@@ -155,11 +155,15 @@ class RegressionTest : CotesTest() {
     fun fab_collapsesWhileScrollingDown_andExpandsAtRest() {
         seed(*(1..30).map { "Заметка $it" to "текст $it" }.toTypedArray())
         launch()
-        compose.onNodeWithText(s(R.string.fab_new)).assertIsDisplayed()
+        shot("16a-fab-start")
+        val expanded = {
+            runCatching { compose.onNodeWithText(s(R.string.fab_new)).assertIsDisplayed() }.isSuccess
+        }
+        compose.waitUntil(5_000) { expanded() }
         compose.onNodeWithTag("note-list").performTouchInput { swipeUp(startY = bottom - 50f, endY = top + 50f, durationMillis = 600) }
         compose.waitUntil(3_000) { compose.onAllNodesWithText(s(R.string.fab_new)).fetchSemanticsNodes().isEmpty() }
         shot("16-fab-collapsed")
-        compose.waitUntil(5_000) { compose.onAllNodesWithText(s(R.string.fab_new)).fetchSemanticsNodes().isNotEmpty() }
+        compose.waitUntil(5_000) { expanded() }
     }
 
     @Test
