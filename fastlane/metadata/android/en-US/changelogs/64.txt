@@ -1,0 +1,8 @@
+Cotes 1.0
+• English and Russian, with a language switch in Settings
+• Quick tips for your first note
+• Notes stay on the device only: no cloud backup or device transfer
+• A damaged notes file is never overwritten — you can save a copy
+• "New note" shortcut on the app icon
+• Updated for Android 16
+Note: 1.0 is signed with a new key. Save a backup in the old version, uninstall it, install 1.0 and restore.
