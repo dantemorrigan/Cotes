@@ -62,6 +62,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.github.dantemorrigan.cotes.R
+import io.github.dantemorrigan.cotes.Sound
+import io.github.dantemorrigan.cotes.Sounds
 import io.github.dantemorrigan.cotes.sync.GoogleAuth
 import io.github.dantemorrigan.cotes.sync.SignInResult
 import io.github.dantemorrigan.cotes.sync.SyncAccount
@@ -371,7 +373,10 @@ fun WelcomeScreen(sync: SyncManager, onDone: () -> Unit) {
     val signIn = rememberGoogleSignIn(sync) { result ->
         when {
             result == null -> Unit
-            sync.signedIn -> onDone()
+            sync.signedIn -> {
+                Sounds.get(context).play(Sound.SignedIn)
+                onDone()
+            }
             else -> error = res.signInError(result)
         }
     }

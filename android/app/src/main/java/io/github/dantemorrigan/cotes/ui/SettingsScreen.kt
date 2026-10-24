@@ -69,6 +69,8 @@ import io.github.dantemorrigan.cotes.Accent
 import io.github.dantemorrigan.cotes.AppLanguage
 import io.github.dantemorrigan.cotes.AppSettings
 import io.github.dantemorrigan.cotes.R
+import io.github.dantemorrigan.cotes.Sound
+import io.github.dantemorrigan.cotes.Sounds
 import io.github.dantemorrigan.cotes.TextSize
 import io.github.dantemorrigan.cotes.ThemeMode
 import io.github.dantemorrigan.cotes.sync.SyncState
@@ -248,6 +250,20 @@ fun SettingsScreen(
                             subtitle = stringResource(R.string.show_preview_sub),
                             checked = settings.showPreview,
                             onChecked = { v -> onChange { it.copy(showPreview = v) } },
+                        )
+                    }
+
+                    Section(stringResource(R.string.section_sounds))
+                    Card {
+                        SwitchRow(
+                            title = stringResource(R.string.sounds),
+                            subtitle = stringResource(R.string.sounds_sub),
+                            checked = settings.sounds,
+                            onChecked = { v ->
+                                onChange { it.copy(sounds = v) }
+                                // Включили — сразу слышно, как это звучит.
+                                if (v) Sounds.get(context).play(Sound.Pin)
+                            },
                         )
                     }
 

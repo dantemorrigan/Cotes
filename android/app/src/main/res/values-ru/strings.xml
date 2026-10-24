@@ -213,4 +213,7 @@
     <string name="settings_footer_sync">Заметки синхронизируются с вашим Google Drive.</string>
     <string name="sync_status_progress">Синхронизация… %1$d%%</string>
     <string name="sync_expired">Доступ к Google истёк</string>
+    <string name="section_sounds">Звуки</string>
+    <string name="sounds">Звуки действий</string>
+    <string name="sounds_sub">Тихие звуки при создании, закреплении и удалении заметок. В беззвучном режиме телефона молчат.</string>
 </resources>

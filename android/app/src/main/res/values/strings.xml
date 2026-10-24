@@ -205,4 +205,7 @@
     <string name="settings_footer_sync">Notes sync with your Google Drive.</string>
     <string name="sync_status_progress">Syncing… %1$d%%</string>
     <string name="sync_expired">Google access has expired</string>
+    <string name="section_sounds">Sounds</string>
+    <string name="sounds">Action sounds</string>
+    <string name="sounds_sub">Soft sounds when you create, pin or delete notes. Silent when your phone is.</string>
 </resources>

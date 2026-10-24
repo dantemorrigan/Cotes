@@ -170,6 +170,8 @@ import io.github.dantemorrigan.cotes.NoteImport
 import io.github.dantemorrigan.cotes.Note
 import io.github.dantemorrigan.cotes.NotesRepository
 import io.github.dantemorrigan.cotes.SettingsRepository
+import io.github.dantemorrigan.cotes.Sound
+import io.github.dantemorrigan.cotes.Sounds
 import io.github.dantemorrigan.cotes.R
 import io.github.dantemorrigan.cotes.sync.SignInResult
 import io.github.dantemorrigan.cotes.sync.SyncManager
@@ -213,6 +215,7 @@ fun CotesApp(
     val res = LocalResources.current
     val haptics = LocalHapticFeedback.current
     val syncState by sync.state.collectAsStateWithLifecycle()
+    val sounds = remember { Sounds.get(context) }
     var refreshing by remember { mutableStateOf(false) }
     // Выбор «Google или только здесь» — один раз, при самом первом запуске.
     var welcome by rememberSaveable {
@@ -239,9 +242,10 @@ fun CotesApp(
         if (!onboardingDone) settingsRepo.setOnboardingDone(true)
     }
 
-    fun newNote() {
+    fun newNote(sound: Boolean = true) {
         val current = repo.find(selectedId)
         if (current != null && current.isBlank) return
+        if (sound) sounds.play(Sound.Create)
         open(repo.create().id)
     }
 
@@ -254,8 +258,12 @@ fun CotesApp(
 
     val signIn = rememberGoogleSignIn(sync) { result ->
         val account = sync.state.value.account
-        if (result == SignInResult.Success && account != null) message(res.getString(R.string.signed_in, account.email))
-        else res.signInError(result)?.let { message(it) }
+        if (result == SignInResult.Success && account != null) {
+            sounds.play(Sound.SignedIn)
+            message(res.getString(R.string.signed_in, account.email))
+        } else {
+            res.signInError(result)?.let { message(it) }
+        }
     }
 
     fun exitSelection() {
@@ -270,6 +278,7 @@ fun CotesApp(
         val real = removed.filterNot { it.isBlank }
         if (real.isEmpty()) return
         haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+        sounds.play(Sound.Delete)
         scope.launch {
             snackbar.currentSnackbarData?.dismiss()
             val result = snackbar.showSnackbar(
@@ -278,7 +287,10 @@ fun CotesApp(
                 actionLabel = res.getString(R.string.undo),
                 duration = SnackbarDuration.Long,
             )
-            if (result == SnackbarResult.ActionPerformed) repo.restoreAll(real)
+            if (result == SnackbarResult.ActionPerformed) {
+                repo.restoreAll(real)
+                sounds.play(Sound.Restore)
+            }
         }
     }
 
@@ -298,6 +310,7 @@ fun CotesApp(
 
     fun togglePin(id: String) {
         haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+        sounds.play(Sound.Pin)
         repo.togglePin(id)
     }
 
@@ -387,7 +400,7 @@ fun CotesApp(
     // пустой текст — это ярлык «Новая заметка».
     LaunchedEffect(incoming) {
         if (incoming != null) {
-            if (incoming.isEmpty()) newNote() else open(repo.create(incoming).id)
+            if (incoming.isEmpty()) newNote(sound = false) else open(repo.create(incoming).id)
             onIncomingHandled()
         }
     }
@@ -456,6 +469,7 @@ fun CotesApp(
                                 val status = sync.refresh()
                                 refreshing = false
                                 when (status) {
+                                    SyncStatus.Synced -> sounds.play(Sound.SyncDone)
                                     SyncStatus.Offline -> message(res.getString(R.string.sync_status_offline))
                                     SyncStatus.NeedsSignIn -> scope.launch {
                                         snackbar.currentSnackbarData?.dismiss()
@@ -550,6 +564,7 @@ fun CotesApp(
                             onSyncNow = { sync.requestSync() },
                             onSignOut = {
                                 sync.signOut()
+                                sounds.play(Sound.SignOut)
                                 message(res.getString(R.string.signed_out))
                             },
                         )

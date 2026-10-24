@@ -36,6 +36,7 @@ data class AppSettings(
     val textSize: TextSize = TextSize.M,
     val compactList: Boolean = false,
     val showPreview: Boolean = true,
+    val sounds: Boolean = true,
 ) {
     fun isDark(systemDark: Boolean): Boolean = when (theme) {
         ThemeMode.SYSTEM -> systemDark
@@ -85,6 +86,7 @@ class SettingsRepository private constructor(context: Context) {
             textSize = enumOr(prefs.getString("textSize", null), d.textSize),
             compactList = prefs.getBoolean("compactList", d.compactList),
             showPreview = prefs.getBoolean("showPreview", d.showPreview),
+            sounds = prefs.getBoolean("sounds", d.sounds),
         )
     }
 
@@ -98,6 +100,7 @@ class SettingsRepository private constructor(context: Context) {
             .remove("editorFont")
             .putBoolean("compactList", s.compactList)
             .putBoolean("showPreview", s.showPreview)
+            .putBoolean("sounds", s.sounds)
             .apply()
     }
 
