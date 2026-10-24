@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Заметки не уходят никуда: ни в облачный бэкап, ни при переносе на новый телефон.
-         Перенос — только через резервную копию в файл. -->
+    <!-- Только для синхронизации с Google Drive после входа; без входа приложение в сеть не ходит. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Системный бэкап выключен: заметки уходят с устройства только в Google Drive
+         пользователя после входа в Google или в файл резервной копии. -->
     <application
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"

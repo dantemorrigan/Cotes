@@ -169,6 +169,8 @@ import io.github.dantemorrigan.cotes.Note
 import io.github.dantemorrigan.cotes.NotesRepository
 import io.github.dantemorrigan.cotes.SettingsRepository
 import io.github.dantemorrigan.cotes.R
+import io.github.dantemorrigan.cotes.sync.SignInResult
+import io.github.dantemorrigan.cotes.sync.SyncManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -182,6 +184,7 @@ private val byPinThenRecent = compareByDescending<Note> { it.pinned }.thenByDesc
 fun CotesApp(
     repo: NotesRepository,
     settingsRepo: SettingsRepository,
+    sync: SyncManager,
     incoming: String?,
     onIncomingHandled: () -> Unit,
 ) {
@@ -206,6 +209,13 @@ fun CotesApp(
     val context = LocalContext.current
     val res = LocalResources.current
     val haptics = LocalHapticFeedback.current
+    val syncState by sync.state.collectAsStateWithLifecycle()
+    // Выбор «Google или только здесь» — один раз, при самом первом запуске.
+    var welcome by rememberSaveable {
+        mutableStateOf(
+            !settingsRepo.accountChoiceDone.value && !onboardingDone && repo.notes.value.none { !it.isBlank }
+        )
+    }
 
     val q = query.trim()
     val visible = remember(notes, q) { notes.filter { it.matches(q) }.sortedWith(byPinThenRecent) }
@@ -236,6 +246,12 @@ fun CotesApp(
             snackbar.currentSnackbarData?.dismiss()
             snackbar.showSnackbar(text)
         }
+    }
+
+    val signIn = rememberGoogleSignIn(sync) { result ->
+        val account = sync.state.value.account
+        if (result == SignInResult.Success && account != null) message(res.getString(R.string.signed_in, account.email))
+        else res.signInError(result)?.let { message(it) }
     }
 
     fun exitSelection() {
@@ -372,8 +388,16 @@ fun CotesApp(
         }
     }
 
-    // Подсказки — только для тех, кто начинает с нуля.
-    LaunchedEffect(Unit) {
+    if (welcome) {
+        WelcomeScreen(sync) {
+            settingsRepo.setAccountChoiceDone(true)
+            welcome = false
+        }
+        return
+    }
+
+    // Подсказки — только для тех, кто начинает с нуля (заметки могли прийти и из облака).
+    LaunchedEffect(total > 0) {
         if (!onboardingDone && repo.notes.value.any { !it.isBlank }) finishOnboarding()
     }
 
@@ -487,11 +511,18 @@ fun CotesApp(
                             onBack = { settingsOpen = false },
                             onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
                             onExportMarkdown = { markdownLauncher.launch("cotes-markdown-${LocalDate.now()}.zip") },
-                        onImport = { importLauncher.launch(arrayOf("*/*")) },
+                            onImport = { importLauncher.launch(arrayOf("*/*")) },
                             onReset = {
                                 settingsRepo.reset()
                                 message(res.getString(R.string.settings_reset_done))
                                 AppLanguage.set(AppLanguage.SYSTEM)
+                            },
+                            syncState = syncState,
+                            signIn = signIn,
+                            onSyncNow = { sync.requestSync() },
+                            onSignOut = {
+                                sync.signOut()
+                                message(res.getString(R.string.signed_out))
                             },
                         )
                     }

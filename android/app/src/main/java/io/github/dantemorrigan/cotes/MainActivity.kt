@@ -12,6 +12,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import io.github.dantemorrigan.cotes.sync.SyncManager
 import io.github.dantemorrigan.cotes.ui.CotesApp
 import io.github.dantemorrigan.cotes.ui.CotesTheme
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) readShared(intent)
         val repo = NotesRepository.get(this)
         val settingsRepo = SettingsRepository.get(this)
+        val sync = SyncManager.get(this)
         setContent {
             val settings by settingsRepo.settings.collectAsStateWithLifecycle()
             val dark = settings.isDark(isSystemInDarkTheme())
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 onDispose {}
             }
             CotesTheme(settings, dark) {
-                CotesApp(repo, settingsRepo, incoming.value, onIncomingHandled = { incoming.value = null })
+                CotesApp(repo, settingsRepo, sync, incoming.value, onIncomingHandled = { incoming.value = null })
             }
         }
     }
@@ -49,9 +51,16 @@ class MainActivity : AppCompatActivity() {
         readShared(intent)
     }
 
+    override fun onStart() {
+        super.onStart()
+        // Подтянуть то, что изменилось на других устройствах.
+        SyncManager.get(this).requestSync()
+    }
+
     override fun onStop() {
         super.onStop()
         NotesRepository.get(this).flush()
+        SyncManager.get(this).scheduleBackgroundSync()
     }
 
     private fun readShared(intent: Intent?) {

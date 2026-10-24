@@ -2,7 +2,7 @@
 
 **Cotes** — минималистичные заметки для Android, которые хранятся только на вашем телефоне. Никаких подписок, аккаунтов и отправки данных на чужие серверы. Открыл — и пишешь.
 
-_Cotes is a minimal notes app for Android that keeps your notes on your phone only — no accounts, no internet, no tracking. Available in English and Russian._
+_Cotes is a minimal notes app for Android that keeps your notes on your phone — or, if you sign in with Google, syncs them through your own Google Drive. No tracking. Available in English and Russian._
 
 <p>
   <img src="docs/screenshots/android-light-list.png" width="200" alt="Список заметок">
@@ -37,7 +37,8 @@ _Cotes is a minimal notes app for Android that keeps your notes on your phone on
 - 👋 **Подсказки при первом запуске** — три коротких шага, только для новых пользователей.
 - ⚙️ **Оформление:** системная, светлая или тёмная тема, чёрный фон для AMOLED, пять цветов акцента или цвета обоев (Material You), размер текста, компактный список.
 - 📐 **Планшеты и альбомная ориентация:** список и заметка рядом.
-- 🔒 **Приватность:** нет разрешения на интернет; заметки не попадают ни в облачный бэкап, ни в перенос на новый телефон. Подробно — в [PRIVACY.md](PRIVACY.md).
+- ☁️ **Синхронизация (по желанию):** вход через Google — заметки хранятся в скрытой папке приложения в вашем Google Drive и появляются на всех ваших Android-устройствах.
+- 🔒 **Приватность:** без входа приложение не выходит в интернет; заметки не попадают ни в облачный бэкап Android, ни в перенос на новый телефон, а разработчику — никогда. Подробно — в [PRIVACY.md](PRIVACY.md).
 - 🛟 **Надёжность:** если файл заметок повреждён, Cotes не перезаписывает его, а предлагает сохранить копию.
 
 # 🛠 Для разработчиков

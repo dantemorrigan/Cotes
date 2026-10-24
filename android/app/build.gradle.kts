@@ -5,7 +5,7 @@ plugins {
 
 // versionCode — число коммитов: растёт с каждой сборкой из main и одинаково для тега и ветки.
 // versionName — из тега vX.Y.Z при релизе (или COTES_VERSION_NAME от релизного workflow), иначе X.Y.Z-dev.N.
-val baseVersion = "1.0.2"
+val baseVersion = "1.1.0"
 val commitCount: Int = runCatching {
     providers.exec { commandLine("git", "rev-list", "--count", "HEAD") }
         .standardOutput.asText.get().trim().toInt()
@@ -83,6 +83,11 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.13.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.11.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.11.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.11.0")
+    // Вход в Google и доступ к скрытой папке приложения в Drive.
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+    // Отправка изменений, когда приложение уже в фоне.
+    implementation("androidx.work:work-runtime-ktx:2.10.0")
     // Ставит готовые профили Compose при установке: интерфейс плавный с первого запуска.
     implementation("androidx.profileinstaller:profileinstaller:1.4.1")
 

@@ -71,6 +71,7 @@ import io.github.dantemorrigan.cotes.AppSettings
 import io.github.dantemorrigan.cotes.R
 import io.github.dantemorrigan.cotes.TextSize
 import io.github.dantemorrigan.cotes.ThemeMode
+import io.github.dantemorrigan.cotes.sync.SyncState
 
 @Composable
 fun SettingsScreen(
@@ -81,6 +82,10 @@ fun SettingsScreen(
     onExportMarkdown: () -> Unit,
     onImport: () -> Unit,
     onReset: () -> Unit,
+    syncState: SyncState,
+    signIn: GoogleSignIn,
+    onSyncNow: () -> Unit,
+    onSignOut: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
@@ -125,6 +130,8 @@ fun SettingsScreen(
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp)
                 ) {
+                    AccountSection(syncState, signIn, onSyncNow, onSignOut)
+
                     Section(stringResource(R.string.section_theme))
                     Card {
                         Segmented(
@@ -300,7 +307,7 @@ fun SettingsScreen(
                             .padding(14.dp),
                     )
                     Text(
-                        stringResource(R.string.settings_footer),
+                        stringResource(if (syncState.account != null) R.string.settings_footer_sync else R.string.settings_footer),
                         style = MaterialTheme.typography.labelMedium,
                         color = colors.onSurfaceVariant,
                         textAlign = TextAlign.Center,
@@ -358,7 +365,7 @@ fun SettingsScreen(
 private fun Color.lum(): Float = 0.2126f * red + 0.7152f * green + 0.0722f * blue
 
 @Composable
-private fun Section(title: String) {
+internal fun Section(title: String) {
     Text(
         title,
         style = MaterialTheme.typography.labelLarge,
@@ -368,7 +375,7 @@ private fun Section(title: String) {
 }
 
 @Composable
-private fun Card(content: @Composable ColumnScope.() -> Unit) {
+internal fun Card(content: @Composable ColumnScope.() -> Unit) {
     Column(
         Modifier
             .fillMaxWidth()
@@ -379,7 +386,7 @@ private fun Card(content: @Composable ColumnScope.() -> Unit) {
 }
 
 @Composable
-private fun Divider() {
+internal fun Divider() {
     HorizontalDivider(Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.outlineVariant)
 }
 
@@ -402,7 +409,7 @@ private fun SwitchRow(title: String, subtitle: String, checked: Boolean, onCheck
 }
 
 @Composable
-private fun LinkRow(title: String, subtitle: String, onClick: () -> Unit) {
+internal fun LinkRow(title: String, subtitle: String, onClick: () -> Unit) {
     Row(
         Modifier
             .fillMaxWidth()

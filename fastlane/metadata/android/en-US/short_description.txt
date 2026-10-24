@@ -1,1 +1,1 @@
-Simple private notes: no accounts, no internet, stored only on your phone.
+Simple private notes on your phone, with optional sync via your Google Drive.

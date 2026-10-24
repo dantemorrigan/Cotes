@@ -1,7 +1,8 @@
 Cotes is a calm, minimal notes app. Open it and start writing — that's it.
 
 <b>Private by design</b>
-• No internet permission, no accounts, no ads, no analytics.
+• Optional sync: sign in with Google and your notes appear on all your Android devices, kept in a hidden folder in your own Google Drive.
+• No ads, no analytics, no accounts of its own. Without signing in, the app never goes online.
 • Notes live only in the app's private storage on your phone.
 • Nothing goes to cloud backups or device-to-device transfers — your notes leave the phone only when you share them or save a backup file yourself.
 

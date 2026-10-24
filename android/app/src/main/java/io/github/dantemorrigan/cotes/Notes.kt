@@ -27,6 +27,8 @@ data class Note(
     val created: Long,
     val updated: Long = created,
     val pinned: Boolean = false,
+    /** Время любого изменения, включая закрепление: по нему синхронизация решает, чья версия новее. */
+    val changed: Long = updated,
 ) {
     val isBlank: Boolean get() = title.isBlank() && content.isBlank()
 
@@ -42,29 +44,42 @@ fun newNoteId(): String =
 
 /**
  * Формат файла заметок и резервной копии:
- * { app, version, exported, notes: [{ id, title, content, created, updated, pinned }] }.
+ * { app, version, exported, notes: [{ id, title, content, created, updated, pinned, changed }], deleted: { id: время } }.
+ * deleted — следы удалённых заметок для синхронизации, только в файле приложения.
  * Читается и голый массив заметок (старые копии).
  */
 object NotesJson {
-    fun encode(notes: List<Note>): String {
+    fun encode(notes: List<Note>, deleted: Map<String, Long> = emptyMap()): String {
         val arr = JSONArray()
-        notes.forEach { n ->
-            arr.put(
-                JSONObject()
-                    .put("id", n.id)
-                    .put("title", n.title)
-                    .put("content", n.content)
-                    .put("created", n.created)
-                    .put("updated", n.updated)
-                    .put("pinned", n.pinned)
-            )
-        }
-        return JSONObject()
+        notes.forEach { arr.put(noteToJson(it)) }
+        val root = JSONObject()
             .put("app", "Cotes")
             .put("version", 1)
             .put("exported", Instant.now().toString())
             .put("notes", arr)
-            .toString(2)
+        if (deleted.isNotEmpty()) {
+            val d = JSONObject()
+            deleted.toSortedMap().forEach { (id, at) -> d.put(id, at) }
+            root.put("deleted", d)
+        }
+        return root.toString(2)
+    }
+
+    fun noteToJson(n: Note): JSONObject = JSONObject()
+        .put("id", n.id)
+        .put("title", n.title)
+        .put("content", n.content)
+        .put("created", n.created)
+        .put("updated", n.updated)
+        .put("pinned", n.pinned)
+        .put("changed", n.changed)
+
+    /** Следы удалённых заметок из файла приложения; у резервных копий их нет. */
+    fun decodeDeleted(text: String): Map<String, Long> {
+        val d = runCatching { JSONObject(text.trim()).optJSONObject("deleted") }.getOrNull() ?: return emptyMap()
+        val out = HashMap<String, Long>()
+        d.keys().forEach { id -> d.optLong(id, 0L).takeIf { it > 0 }?.let { out[id] = it } }
+        return out
     }
 
     /** null — если это не похоже на заметки Cotes. */
@@ -89,13 +104,15 @@ object NotesJson {
             val created = o.optLong("created", 0L).takeIf { it > 0 } ?: fallback
             val id = (o.opt("id") as? String)?.takeIf { it.isNotEmpty() && seen.add(it) }
                 ?: newNoteId().also { seen.add(it) }
+            val updated = o.optLong("updated", 0L).takeIf { it > 0 } ?: created
             out += Note(
                 id = id,
                 title = o.opt("title") as? String ?: "",
                 content = o.opt("content") as? String ?: "",
                 created = created,
-                updated = o.optLong("updated", 0L).takeIf { it > 0 } ?: created,
+                updated = updated,
                 pinned = o.optBoolean("pinned", false),
+                changed = o.optLong("changed", 0L).takeIf { it > 0 } ?: updated,
             )
         }
         return out
@@ -121,8 +138,20 @@ class NotesRepository internal constructor(notesFile: File) {
     /** Отложенная копия испорченного файла заметок, если она появилась при этом запуске. */
     val damaged: StateFlow<File?> = _damaged.asStateFlow()
 
-    private val _notes = MutableStateFlow(load())
-    val notes: StateFlow<List<Note>> = _notes.asStateFlow()
+    private val _notes: MutableStateFlow<List<Note>>
+    val notes: StateFlow<List<Note>>
+    private val _deleted: MutableStateFlow<Map<String, Long>>
+
+    /** Следы удалённых заметок: id → время удаления. Нужны, чтобы удаление дошло до других устройств. */
+    val deleted: StateFlow<Map<String, Long>>
+
+    init {
+        val (loadedNotes, loadedDeleted) = load()
+        _notes = MutableStateFlow(loadedNotes)
+        notes = _notes.asStateFlow()
+        _deleted = MutableStateFlow(loadedDeleted)
+        deleted = _deleted.asStateFlow()
+    }
     private val _saving = MutableStateFlow(false)
 
     /** true, пока последнее изменение ещё не записано в файл. */
@@ -145,20 +174,25 @@ class NotesRepository internal constructor(notesFile: File) {
     fun edit(id: String, title: String, content: String) {
         _notes.update { list ->
             list.map {
-                if (it.id == id) it.copy(title = title, content = content, updated = System.currentTimeMillis()) else it
+                if (it.id == id) {
+                    val now = System.currentTimeMillis()
+                    it.copy(title = title, content = content, updated = now, changed = now)
+                } else it
             }
         }
         scheduleSave()
     }
 
     fun togglePin(id: String) {
-        _notes.update { list -> list.map { if (it.id == id) it.copy(pinned = !it.pinned) else it } }
+        val now = System.currentTimeMillis()
+        _notes.update { list -> list.map { if (it.id == id) it.copy(pinned = !it.pinned, changed = now) else it } }
         saveNow()
     }
 
     fun delete(id: String): Note? {
         val note = find(id) ?: return null
         _notes.update { list -> list.filterNot { it.id == id } }
+        markDeleted(listOf(note))
         saveNow()
         return note
     }
@@ -171,14 +205,19 @@ class NotesRepository internal constructor(notesFile: File) {
         val removed = _notes.value.filter { it.id in set }
         if (removed.isEmpty()) return removed
         _notes.update { list -> list.filterNot { it.id in set } }
+        markDeleted(removed)
         saveNow()
         return removed
     }
 
+    /** «Отменить» удаление: заметка возвращается и считается изменённой сейчас — чтобы вернулась и в облаке. */
     fun restoreAll(notes: List<Note>) {
         if (notes.isEmpty()) return
-        val ids = notes.mapTo(HashSet()) { it.id }
-        _notes.update { list -> list.filterNot { it.id in ids } + notes }
+        val now = System.currentTimeMillis()
+        val restored = notes.map { it.copy(changed = now) }
+        val ids = restored.mapTo(HashSet()) { it.id }
+        _notes.update { list -> list.filterNot { it.id in ids } + restored }
+        _deleted.update { it - ids }
         saveNow()
     }
 
@@ -187,8 +226,71 @@ class NotesRepository internal constructor(notesFile: File) {
         val note = find(id) ?: return
         if (note.isBlank) {
             _notes.update { list -> list.filterNot { it.id == note.id } }
+            // Заметку, которая была с текстом и опустела, удаляем и на других устройствах.
+            if (note.changed != note.created) markDeleted(listOf(note))
             saveNow()
         }
+    }
+
+    private fun markDeleted(notes: List<Note>) {
+        val real = notes.filterNot { it.isBlank && it.changed == it.created }
+        if (real.isEmpty()) return
+        val now = System.currentTimeMillis()
+        _deleted.update { map -> map + real.associate { it.id to now } }
+    }
+
+    /**
+     * Применяет результат синхронизации. Каждое изменение применяется, только если заметка
+     * не менялась здесь с момента, когда синхронизация её прочитала: правки во время обмена
+     * с облаком не теряются, а уйдут при следующей синхронизации.
+     *
+     * [incoming] — заметки из облака, [removed] — удалённые в облаке (id → время удаления),
+     * [added] — новые заметки (копии при конфликте), [seen] — время изменения каждой заметки
+     * на момент чтения (null — заметки здесь не было).
+     */
+    fun applySync(
+        incoming: List<Note>,
+        removed: Map<String, Long>,
+        added: List<Note>,
+        seen: Map<String, Long?>,
+    ) {
+        if (incoming.isEmpty() && removed.isEmpty() && added.isEmpty()) return
+        var changed = false
+        _notes.update { list ->
+            val byId = LinkedHashMap<String, Note>()
+            list.forEach { byId[it.id] = it }
+            fun untouched(id: String) = byId[id]?.changed == seen[id]
+            incoming.forEach { n ->
+                if (untouched(n.id)) {
+                    byId[n.id] = n
+                    changed = true
+                }
+            }
+            removed.keys.forEach { id ->
+                if (untouched(id) && byId.remove(id) != null) changed = true
+            }
+            added.forEach { n ->
+                if (n.id !in byId) {
+                    byId[n.id] = n
+                    changed = true
+                }
+            }
+            byId.values.toList()
+        }
+        _deleted.update { map ->
+            val next = map.toMutableMap()
+            incoming.forEach { next.remove(it.id) }
+            removed.forEach { (id, at) -> if (_notes.value.none { it.id == id }) next[id] = maxOf(at, next[id] ?: 0L) }
+            next
+        }
+        if (changed || removed.isNotEmpty()) saveNow()
+    }
+
+    /** Забывает старые следы удалений: к этому времени их уже получили все устройства. */
+    fun forgetDeleted(ids: Collection<String>) {
+        if (ids.isEmpty()) return
+        _deleted.update { it - ids.toSet() }
+        saveNow()
     }
 
     /** Возвращает число добавленных заметок или null, если файл не подошёл. */
@@ -205,15 +307,20 @@ class NotesRepository internal constructor(notesFile: File) {
             val ids = current.mapTo(HashSet()) { it.id }
             val texts = current.mapTo(HashSet()) { it.title.trim() to it.content.trim() }
             val result = current.toMutableList()
+            val now = System.currentTimeMillis()
             incoming.filterNot { it.isBlank }.forEach { n ->
                 if (!texts.add(n.title.trim() to n.content.trim())) return@forEach
                 val note = if (!ids.add(n.id)) n.copy(id = newNoteId().also { ids.add(it) }) else n
-                result += note
+                result += note.copy(changed = now)
                 added++
             }
             result
         }
-        if (added > 0) saveNow()
+        if (added > 0) {
+            val ids = _notes.value.mapTo(HashSet()) { it.id }
+            _deleted.update { map -> map.filterKeys { it !in ids } }
+            saveNow()
+        }
         return added
     }
 
@@ -229,6 +336,7 @@ class NotesRepository internal constructor(notesFile: File) {
     fun resetForTests() {
         pendingSave?.cancel()
         _notes.value = emptyList()
+        _deleted.value = emptyMap()
         write()
     }
 
@@ -247,19 +355,24 @@ class NotesRepository internal constructor(notesFile: File) {
         pendingSave = scope.launch { write() }
     }
 
-    private fun load(): List<Note> {
+    private fun load(): Pair<List<Note>, Map<String, Long>> {
+        val empty = emptyList<Note>() to emptyMap<String, Long>()
         val bytes = try {
             file.readFully()
         } catch (e: FileNotFoundException) {
-            return emptyList()
+            return empty
         } catch (e: IOException) {
             setAsideDamaged()
-            return emptyList()
+            return empty
         }
-        if (bytes.isEmpty()) return emptyList()
-        val notes = NotesJson.decode(bytes.toString(Charsets.UTF_8))
-        if (notes == null) setAsideDamaged()
-        return notes.orEmpty()
+        if (bytes.isEmpty()) return empty
+        val text = bytes.toString(Charsets.UTF_8)
+        val notes = NotesJson.decode(text)
+        if (notes == null) {
+            setAsideDamaged()
+            return empty
+        }
+        return notes to NotesJson.decodeDeleted(text)
     }
 
     private fun setAsideDamaged() {
@@ -271,7 +384,7 @@ class NotesRepository internal constructor(notesFile: File) {
     @Synchronized
     private fun write() {
         val ok = !writesBlocked && try {
-            val json = NotesJson.encode(_notes.value.filterNot { it.isBlank })
+            val json = NotesJson.encode(_notes.value.filterNot { it.isBlank }, _deleted.value)
             val out = file.startWrite()
             try {
                 out.write(json.toByteArray(Charsets.UTF_8))
