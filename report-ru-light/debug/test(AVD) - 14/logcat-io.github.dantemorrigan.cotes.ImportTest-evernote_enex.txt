@@ -1,0 +1,5 @@
+10-24 14:25:20.658  8106  8172 I TestRunner: started: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)
+10-24 14:25:20.659  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:20.664  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:20.666  8106  8172 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10196; state: ENABLED
+10-24 14:25:20.673  8106  8172 I TestRunner: finished: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)

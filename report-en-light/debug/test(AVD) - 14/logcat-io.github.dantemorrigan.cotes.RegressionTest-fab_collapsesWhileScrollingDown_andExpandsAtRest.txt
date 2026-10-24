@@ -1,0 +1,157 @@
+10-24 14:23:24.209  5263  5340 I TestRunner: started: fab_collapsesWhileScrollingDown_andExpandsAtRest(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:23:24.213  5263  5340 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@e116e56]
+10-24 14:23:24.218   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:24.315   524  2244 I ImeTracker: com.android.settings:9a2264d4: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:24.315   524  2244 I ImeTracker: com.android.settings:9a2264d4: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:23:24.329  1762  6172 I A       : Scheduled one-off task for batch; batchId=2 taskId=-1000008 corpora=[1004,1008,1014,1015]
+10-24 14:23:24.329  1762  6172 I A       : Pending callbacks: 1
+10-24 14:23:24.330  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:24.333  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:24.333  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:24.333  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:24.335  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:24.341   336   336 I netd    : tetherGetStats() -> {[]} <0.31ms>
+10-24 14:23:24.358  5519  5519 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@e6f8c7d
+10-24 14:23:24.364   524  2244 W InputManager-JNI: Input channel object 'e79d4c3 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:24.405  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@8b46c3c
+10-24 14:23:24.406   524  2250 W InputManager-JNI: Input channel object '41a11a4 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:23:24.410   336   336 I netd    : bandwidthSetGlobalAlert(2097152) <0.15ms>
+10-24 14:23:24.554  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.559  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.560  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.587   524   534 I system_server: NativeAlloc concurrent copying GC freed 414722(15MB) AllocSpace objects, 21(484KB) LOS objects, 48% free, 25MB/49MB, paused 55us,58us total 190.101ms
+10-24 14:23:24.622  5263  5340 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:23:24.632  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{1cc2bcd V.E...... ......ID 0,0-0,0}
+10-24 14:23:24.632  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:23:24.632  4549  4579 D SplashScreenView: Branding: view: android.view.View{6d54c82 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:23:24.649   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:24.656  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@33ff5f4 in: PRE_ON_CREATE
+10-24 14:23:24.657  5263  5263 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:23:24.666  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@33ff5f4 in: CREATED
+10-24 14:23:24.670  5263  5263 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@33ff5f4
+10-24 14:23:24.671  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@33ff5f4 in: STARTED
+10-24 14:23:24.672  5263  5263 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@33ff5f4
+10-24 14:23:24.680  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@33ff5f4 in: RESUMED
+10-24 14:23:24.680  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.686  5263  5263 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@33ff5f4
+10-24 14:23:24.818  5263  5263 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:23:25.010   524   542 W ziparchive: Unable to open '/data/app/~~u7kzBF0CbKYtm-96xGnIfg==/io.github.dantemorrigan.cotes-QzGP7PyrwIe2jmw7bLWFuA==/base.dm': No such file or directory
+10-24 14:23:25.011   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +384ms
+10-24 14:23:25.019   524  2250 W InputManager-JNI: Input channel object '99876da Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:23:25.028   524  2250 I ImeTracker: io.github.dantemorrigan.cotes:95be44a7: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:25.028   524  2250 I ImeTracker: io.github.dantemorrigan.cotes:95be44a7: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:23:25.030  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:25.031  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:25.032  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:25.032  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:25.032  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:25.067  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.068  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.069  4549  4582 D EGL_emulation: app_time_stats: avg=196.07ms min=6.34ms max=456.89ms count=6
+10-24 14:23:25.075  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.180  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.568  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.568  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.575  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.579  6782  6782 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:23:25.581  1630  5303 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:23:25.583  6782  6782 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:23:25.595   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:23:25.596  6782  6785 I Gralloc4: mapper 4.x is not supported
+10-24 14:23:25.601  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 153 [CONTEXT service_id=218 ]
+10-24 14:23:25.603  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 153 [CONTEXT service_id=218 ]
+10-24 14:23:25.681  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:25.706   524  2967 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:23:25.708   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:23:25.708  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:25.710  1630  2334 W ExifInterface: Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.
+10-24 14:23:25.710  1630  2334 W ExifInterface: java.io.EOFException
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.media.ExifInterface$ByteOrderedDataInputStream.readShort(ExifInterface.java:5044)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.media.ExifInterface.readByteOrder(ExifInterface.java:3995)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.media.ExifInterface.parseTiffHeaders(ExifInterface.java:4015)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.media.ExifInterface.getRawAttributes(ExifInterface.java:2974)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.media.ExifInterface.loadAttributes(ExifInterface.java:2023)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1640)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1591)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItemImage(ModernMediaScanner.java:1357)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItem(ModernMediaScanner.java:1019)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.-$$Nest$smscanItem(ModernMediaScanner.java:0)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:820)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:319)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:435)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:398)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:387)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanFile(ModernMediaScanner.java:261)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaProvider.scanFile(MediaProvider.java:1943)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaService.onScanFile(MediaService.java:225)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:85)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:23:25.710  1630  2334 W ExifInterface: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:23:25.712  1630  2334 D OpenGLRenderer: --- Failed to create image decoder with message 'unimplemented'
+10-24 14:23:25.713  1630  2334 D OpenGLRenderer: --- Failed to create image decoder with message 'unimplemented'
+10-24 14:23:25.713  1630  2334 W ModernMediaScanner: Trouble scanning /storage/emulated/0/cotes-shots/en-light-16a-fab-start.png: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.lang.String.equalsIgnoreCase(java.lang.String)' on a null object reference
+10-24 14:23:25.717  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:25.739  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 153 [CONTEXT service_id=218 ]
+10-24 14:23:25.741  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 153 [CONTEXT service_id=218 ]
+10-24 14:23:26.069  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.069  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.076  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.182  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.481  6793  6793 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:23:26.482  1630  1933 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:23:26.484  6793  6793 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:23:26.496   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:23:26.496  6793  6796 I Gralloc4: mapper 4.x is not supported
+10-24 14:23:26.523  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 154 [CONTEXT service_id=218 ]
+10-24 14:23:26.525  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 154 [CONTEXT service_id=218 ]
+10-24 14:23:26.571  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.571  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.577  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.618   524  2967 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:23:26.620   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:23:26.621  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:26.634  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:26.642  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 154 [CONTEXT service_id=218 ]
+10-24 14:23:26.643  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 4 uptime_millis: 4 exec_start_elapsed_seconds: 154 [CONTEXT service_id=218 ]
+10-24 14:23:26.682  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:26.697   342  5472 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 2285888
+10-24 14:23:27.071  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.072  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.077  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.183  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.342  5731  5731 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.tapandpay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:23:27.352  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 14:23:27.474  5731  5731 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.phenotype.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:23:27.570  4549  4549 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-24 14:23:27.572  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.573  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.577  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.587  5263  5366 D EGL_emulation: app_time_stats: avg=427.33ms min=22.57ms max=1595.60ms count=6
+10-24 14:23:27.622  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{57dcea9 V.E...... ......ID 0,0-0,0}
+10-24 14:23:27.622  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:23:27.622  4549  4579 D SplashScreenView: Branding: view: android.view.View{b3eac2e G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:23:27.625  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@33ff5f4 in: PAUSED
+10-24 14:23:27.625  5263  5263 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@33ff5f4
+10-24 14:23:27.649   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:27.685  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:27.697  5519  5538 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:23:27.752   336   336 I netd    : setProcSysNet(4, 2, wlan0, retrans_time_ms, 750) <0.14ms>
+10-24 14:23:27.753   336   336 I netd    : setProcSysNet(4, 2, wlan0, ucast_solicit, 10) <0.04ms>
+10-24 14:23:27.753   336   336 I netd    : setProcSysNet(6, 2, wlan0, retrans_time_ms, 750) <0.04ms>
+10-24 14:23:27.753   336   336 I netd    : setProcSysNet(6, 2, wlan0, ucast_solicit, 10) <0.01ms>
+10-24 14:23:27.867   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:27.903  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@33ff5f4 in: STOPPED
+10-24 14:23:27.903  5263  5263 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@33ff5f4
+10-24 14:23:27.937  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@62b4553
+10-24 14:23:27.938  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@33ff5f4 in: DESTROYED
+10-24 14:23:27.938  5263  5263 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:23:27.978   524  2250 W InputManager-JNI: Input channel object '652633d io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:27.984  5263  5340 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@e116e56]
+10-24 14:23:27.993  5263  5340 I TestRunner: finished: fab_collapsesWhileScrollingDown_andExpandsAtRest(io.github.dantemorrigan.cotes.RegressionTest)

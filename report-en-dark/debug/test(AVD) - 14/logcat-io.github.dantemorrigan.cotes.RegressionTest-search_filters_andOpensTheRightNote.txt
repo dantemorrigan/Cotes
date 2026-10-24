@@ -1,0 +1,304 @@
+10-24 14:24:20.599  7194  7244 I TestRunner: started: search_filters_andOpensTheRightNote(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:24:20.611  7194  7244 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@4c28ac]
+10-24 14:24:20.631   524  2382 I ImeTracker: com.android.settings:3b9291de: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:24:20.631   524  2382 I ImeTracker: com.android.settings:3b9291de: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:20.647  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:20.650  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@91d4e11
+10-24 14:24:20.652  7320  7320 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@7596bbf
+10-24 14:24:20.652  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:20.652  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:24:20.652  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:20.660  7194  7244 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:24:20.661  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:20.744   524  2243 W InputManager-JNI: Input channel object 'c5a47c1 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:24:20.748   524  2289 W InputManager-JNI: Input channel object 'b9fbb9f io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:24:20.748  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{31c7e0 V.E...... ......ID 0,0-0,0}
+10-24 14:24:20.748  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:24:20.748  4549  4579 D SplashScreenView: Branding: view: android.view.View{7588a99 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:24:20.756   402   622 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:20.790  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@bf8a2c8 in: PRE_ON_CREATE
+10-24 14:24:20.790  7194  7194 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:24:20.806  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@bf8a2c8 in: CREATED
+10-24 14:24:20.806  7194  7194 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@bf8a2c8
+10-24 14:24:20.809  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@bf8a2c8 in: STARTED
+10-24 14:24:20.809  7194  7194 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@bf8a2c8
+10-24 14:24:20.836  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@bf8a2c8 in: RESUMED
+10-24 14:24:20.836  7194  7194 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@bf8a2c8
+10-24 14:24:20.895  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:20.896  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:20.904  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:20.942  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:20.943  7194  7194 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:24:21.074  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.079  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.079  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.158   524   542 W ziparchive: Unable to open '/data/app/~~LUMJExYogSS1jTL1flUPcg==/io.github.dantemorrigan.cotes-oRYe5vxx8NYljbuEWM8W_g==/base.dm': No such file or directory
+10-24 14:24:21.159   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +492ms
+10-24 14:24:21.173   524  1898 I ImeTracker: io.github.dantemorrigan.cotes:46a837bb: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:24:21.173   524  1898 I ImeTracker: io.github.dantemorrigan.cotes:46a837bb: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:21.176  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:21.180   524  1898 W InputManager-JNI: Input channel object 'a56c014 Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:24:21.180  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:21.181  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:24:21.181  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:21.181  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:21.396  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.396  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.404  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.443  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.580  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.581  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.581  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.727  7488  7488 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:24:21.728  1630  1933 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:24:21.730  7488  7488 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:24:21.738   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:24:21.738  7488  7491 I Gralloc4: mapper 4.x is not supported
+10-24 14:24:21.777  5731  7285 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 209 [CONTEXT service_id=218 ]
+10-24 14:24:21.782  5731  7454 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 35 uptime_millis: 35 exec_start_elapsed_seconds: 209 [CONTEXT service_id=218 ]
+10-24 14:24:21.853   524  2467 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:24:21.855   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:24:21.855  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:24:21.857  4549  4549 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-24 14:24:21.860  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:24:21.877  5731  7285 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 209 [CONTEXT service_id=218 ]
+10-24 14:24:21.881  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 209 [CONTEXT service_id=218 ]
+10-24 14:24:21.897  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.897  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.903  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.944  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:21.984  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:21.984  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:21.985  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:444709a4: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT_BY_INSETS_API
+10-24 14:24:21.985  7194  7194 D InsetsController: show(ime(), fromIme=false)
+10-24 14:24:21.985  7194  7194 D InputMethodManager: showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{74651a4 VFED..... .F....ID 0,0-1080,2400 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT_BY_INSETS_API
+10-24 14:24:21.987  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[mParcelledData.dataSize=404]}, false)
+10-24 14:24:21.987  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:21.988  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:21.989  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[mParcelledData.dataSize=404]}, true)
+10-24 14:24:21.989  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:21.991  7194  7194 I AssistStructure: Flattened final assist data: 876 bytes, containing 1 windows, 5 views
+10-24 14:24:21.995  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:21.995  1562  1562 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-24 14:24:21.997  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1995 onStartInputView(EditorInfo{inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}]}, false)
+10-24 14:24:21.998  5731  5731 W AutofillChimeraService: Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+10-24 14:24:21.999  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:21.999  1562  1562 W ModuleManager: ModuleManager.loadModule():450 Module erj is not available
+10-24 14:24:22.010  1587  1587 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:1155529646
+10-24 14:24:22.006  1562  1624 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:24:22.040  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:713d8ef: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+10-24 14:24:22.041  7194  7194 D InputMethodManager: showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{74651a4 VFED..... .F....ID 0,0-1080,2400 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+10-24 14:24:22.042  1562  1562 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-24 14:24:22.043  1562  1562 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], IncognitoMode = false, DeviceLocked = false
+10-24 14:24:22.043  1562  1562 I Delight5Facilitator: Delight5Facilitator.initializeForIme():777 initializeForIme() : Locale = [en_US], layout = qwerty
+10-24 14:24:22.044  1562  1562 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+10-24 14:24:22.044  1562  1562 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+10-24 14:24:22.044  1562  6133 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():205 maybeScheduleAutoPackDownloadForFallback()
+10-24 14:24:22.044  1562  6133 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():195 maybeScheduleAutoPackDownload() for language tag en-US
+10-24 14:24:22.045  1562  1562 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1003 inline flag updated to:false
+10-24 14:24:22.046  1562  1562 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-24 14:24:22.049  1562  1562 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+10-24 14:24:22.049  1562  1562 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:24:22.049  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = HEADER, shownType = SHOW_OPTIONAL
+10-24 14:24:22.049  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+10-24 14:24:22.050  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = BODY, shownType = SHOW_MANDATORY
+10-24 14:24:22.050  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+10-24 14:24:22.050  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = FLOATING_CANDIDATES, shownType = HIDE
+10-24 14:24:22.050  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = false
+10-24 14:24:22.050  1562  1562 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+10-24 14:24:22.050  1562  1562 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:24:22.068  1562  1562 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:24:22.069  1562  1562 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-24 14:24:22.069  1562  1562 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 14:24:22.069  1562  1562 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+10-24 14:24:22.069  1562  1562 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 14:24:22.070  1562  1562 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+10-24 14:24:22.070  1562  1562 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-24 14:24:22.071  1562  1562 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():383 No private IME option set to start voice input.
+10-24 14:24:22.075  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:24:22.075  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:24:22.076  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:24:22.081  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.081  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.082  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.143  1562  1562 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 14:24:22.143  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():457 setKeyboardLayout()
+10-24 14:24:22.155  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:24:22.155  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:24:22.159  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:24:22.221  7194  7194 D InsetsController: show(ime(), fromIme=true)
+10-24 14:24:22.224  7194  7194 D InsetsController: show(ime(), fromIme=true)
+10-24 14:24:22.224  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:713d8ef: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+10-24 14:24:22.268  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:444709a4: onShown
+10-24 14:24:22.282  7194  7264 D EGL_emulation: app_time_stats: avg=160.50ms min=25.31ms max=707.87ms count=7
+10-24 14:24:22.399  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.400  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.404  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.428  1562  1562 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-24 14:24:22.445  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.583  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.583  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.583  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.793  7499  7499 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:24:22.794  1630  2448 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:24:22.796  7499  7499 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:24:22.804   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:24:22.804  7499  7502 I Gralloc4: mapper 4.x is not supported
+10-24 14:24:22.846  5731  7285 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 210 [CONTEXT service_id=218 ]
+10-24 14:24:22.856  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 22 uptime_millis: 21 exec_start_elapsed_seconds: 210 [CONTEXT service_id=218 ]
+10-24 14:24:22.865  5731  7285 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService started execution. cause:5 exec_start_elapsed_seconds: 210 [CONTEXT service_id=218 ]
+10-24 14:24:22.900  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.900  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.905  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.924  3084  3084 W binder:3084_A: type=1400 audit(0.0:78): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:24:22.931  3084  7503 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+10-24 14:24:22.933  3084  7503 W libc    : Access denied finding property "service.adb.tls.port"
+10-24 14:24:22.935   524  2382 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:24:22.928  3084  3084 W binder:3084_A: type=1400 audit(0.0:79): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:24:22.936   336  7509 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:24:22.938  3084  7503 D TrafficStats: tagSocket(103) with statsTag=0x1809, statsUid=-1
+10-24 14:24:22.938   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:24:22.938  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:24:22.945  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:24:22.951  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:22.964  5731  5761 W GmsUrlRequestImpl: Content-Type header is overwritten.
+10-24 14:24:22.970   336  7510 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:24:22.972   336  7512 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:24:22.972   336  7512 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919bce0e0b0
+10-24 14:24:22.972   336  7512 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+10-24 14:24:22.972   336  7511 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:24:22.973   336  7511 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce03a50
+10-24 14:24:22.973   336  7511 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+10-24 14:24:22.973  5731  7454 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 210 [CONTEXT service_id=218 ]
+10-24 14:24:22.974  5731  6055 D TrafficStats: tagSocket(79) with statsTag=0x401, statsUid=10131
+10-24 14:24:22.976  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 210 [CONTEXT service_id=218 ]
+10-24 14:24:22.980   398  7071 D audioserver: FGS Logger Transaction failed
+10-24 14:24:22.980   398  7071 D audioserver: -129
+10-24 14:24:22.985  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:e3c2fdd1: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT_BY_INSETS_API
+10-24 14:24:22.985  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:daa30e75: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT_BY_INSETS_API
+10-24 14:24:22.986  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2241 
+10-24 14:24:22.987  1562  1562 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-24 14:24:22.988  1562  1562 I InputBundle: InputBundle.consumeEvent():923 Skip consuming an event as keyboard status is 0
+10-24 14:24:22.989  1562  1562 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-24 14:24:22.989  1562  1562 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+10-24 14:24:22.990  1562  1562 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+10-24 14:24:22.990  1562  1624 W ModuleManager: ModuleManager.loadModule():450 Module jjj is not available
+10-24 14:24:22.993  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, true)
+10-24 14:24:22.993  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:22.998  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:22.998  1562  1562 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-24 14:24:23.030   398   497 D AudioFlinger: mixer(0x78bd29474930) throttle end: throttle time(33)
+10-24 14:24:23.083  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.085  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.085  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.142   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:24:23.142   398   497 D audioserver: -129
+10-24 14:24:23.174  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:d6f9ea5a: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT_BY_INSETS_API
+10-24 14:24:23.174   524  2243 I ImeTracker: io.github.dantemorrigan.cotes:d6f9ea5a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:23.175  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:e3c2fdd1: onHidden
+10-24 14:24:23.188  7194  7194 I ImeTracker: io.github.dantemorrigan.cotes:daa30e75: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+10-24 14:24:23.224  7194  7216 W System  : A resource failed to call release. 
+10-24 14:24:23.400  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.400  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.406  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.452  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.583  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.584  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.586  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.692  7517  7517 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:24:23.693  1630  5303 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:24:23.695  7517  7517 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:24:23.705   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:24:23.708  7517  7520 I Gralloc4: mapper 4.x is not supported
+10-24 14:24:23.715  5731  7454 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 211 [CONTEXT service_id=218 ]
+10-24 14:24:23.730  5731  7454 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 5 uptime_millis: 5 exec_start_elapsed_seconds: 211 [CONTEXT service_id=218 ]
+10-24 14:24:23.754  5731  5761 W GLSUser : [AppCertManager] Exception while requesting key: 
+10-24 14:24:23.754  5731  5761 W GLSUser : java.util.concurrent.ExecutionException: avvw: Parse Proto Exception.
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dlnv.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at oub.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at otz.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at otu.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at otx.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at lzq.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:24:23.754  5731  5761 W GLSUser : Caused by: avvw: Parse Proto Exception.
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at avxk.onSucceeded(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at jf.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at ie.run(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):4)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	... 6 more
+10-24 14:24:23.754  5731  5761 W GLSUser : Caused by: dzfz: Protocol message contained an invalid tag (zero).
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzdb.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):13)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzha.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):47)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzha.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):45)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzfd.A(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzex.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzcx.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzcx.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at dzcx.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at avwn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:24:23.754  5731  5761 W GLSUser : 	... 9 more
+10-24 14:24:23.773  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService finished executing. cause:5 result: 3 elapsed_millis: 896 uptime_millis: 896 exec_start_elapsed_seconds: 210 [CONTEXT service_id=218 ]
+10-24 14:24:23.824   524   897 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:24:23.826   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:24:23.827  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:24:23.831  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:24:23.865  5731  7454 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 211 [CONTEXT service_id=218 ]
+10-24 14:24:23.868  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 14 uptime_millis: 14 exec_start_elapsed_seconds: 211 [CONTEXT service_id=218 ]
+10-24 14:24:23.872  7194  7194 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@7880b1b
+10-24 14:24:23.902  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.902  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.906  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.942  7194  7264 D EGL_emulation: app_time_stats: avg=411.81ms min=30.99ms max=755.49ms count=4
+10-24 14:24:23.957  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:23.988  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{b1eb640 V.E...... ......ID 0,0-0,0}
+10-24 14:24:23.988  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:24:23.988  4549  4579 D SplashScreenView: Branding: view: android.view.View{d1b4979 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:24:23.992  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@bf8a2c8 in: PAUSED
+10-24 14:24:23.992  7194  7194 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@bf8a2c8
+10-24 14:24:23.999   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:24.101  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.102  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.102  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.112  4549  4582 D EGL_emulation: app_time_stats: avg=777.50ms min=36.22ms max=3465.09ms count=5
+10-24 14:24:24.177  7320  7338 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:24:24.203  4549  4582 D EGL_emulation: app_time_stats: avg=1982.70ms min=534.62ms max=3430.79ms count=2
+10-24 14:24:24.211  4549  4556 I ndroid.systemui: NativeAlloc concurrent copying GC freed 163118(6760KB) AllocSpace objects, 2(40KB) LOS objects, 50% free, 15MB/30MB, paused 43us,39us total 147.595ms
+10-24 14:24:24.349   524   542 W ziparchive: Unable to open '/data/app/~~8ray0uE06TRDv9ShNDz9eA==/io.github.dantemorrigan.cotes.test-O0P54q_A9vzAIH7hplnCFg==/base.dm': No such file or directory
+10-24 14:24:24.350   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +363ms
+10-24 14:24:24.366   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:24.419  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.420  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.420  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.463  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.475  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@bf8a2c8 in: STOPPED
+10-24 14:24:24.475  7194  7194 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@bf8a2c8
+10-24 14:24:24.524  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@69db23b
+10-24 14:24:24.528  7194  7194 D AutofillManager: onActivityFinishing(): calling cancelLocked()
+10-24 14:24:24.546   524  2293 W InputManager-JNI: Input channel object '8a1dfc7 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:24:24.549  7194  7194 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@fab6837
+10-24 14:24:24.574  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@bf8a2c8 in: DESTROYED
+10-24 14:24:24.574  7194  7194 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:24:24.578   524  1898 I ImeTracker: com.android.settings:4b51595f: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:24:24.578   524  1898 I ImeTracker: com.android.settings:4b51595f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:24.579  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:24.582  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:24.582  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:24:24.582  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:24.588  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:24.602  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.603  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.603  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:24.608   524   897 W InputManager-JNI: Input channel object '2effbb9 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:24:24.609  7320  7320 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@f0b32a8
+10-24 14:24:24.687   524  2382 W InputManager-JNI: Input channel object '26a4ad5 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:24:24.707  7194  7244 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@4c28ac]
+10-24 14:24:24.714  7194  7244 I TestRunner: finished: search_filters_andOpensTheRightNote(io.github.dantemorrigan.cotes.RegressionTest)

@@ -1,0 +1,33 @@
+10-24 14:23:36.547  5263  5340 I TestRunner: started: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)
+10-24 14:23:36.626   524  2968 I ImeTracker: com.android.settings:747db09c: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:36.631  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2241 
+10-24 14:23:36.633  1562  1562 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-24 14:23:36.634  1562  1562 I InputBundle: InputBundle.consumeEvent():923 Skip consuming an event as keyboard status is 0
+10-24 14:23:36.638  1562  1562 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-24 14:23:36.638  1562  1562 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+10-24 14:23:36.638  1562  1562 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+10-24 14:23:36.688  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@f7c0129
+10-24 14:23:36.667  1562  1624 W ModuleManager: ModuleManager.loadModule():450 Module jjj is not available
+10-24 14:23:36.718  1562  1624 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():447 No input action collection in this session, skip logging.
+10-24 14:23:36.723  4549  4549 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-24 14:23:36.729  4549  4582 D EGL_emulation: app_time_stats: avg=935.60ms min=556.77ms max=1314.43ms count=2
+10-24 14:23:36.735   524  2166 W InputManager-JNI: Input channel object 'fb5e149 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:23:36.739  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:36.740  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:36.740  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:36.740  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:36.740  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:36.743   524  2873 I ImeTracker: com.android.settings:747db09c: onFailed at PHASE_WM_HAS_IME_INSETS_CONTROL_TARGET
+10-24 14:23:36.743  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:36.744  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:36.744  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:36.893  5519  5519 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@f66aa9
+10-24 14:23:36.935   524   899 W InputManager-JNI: Input channel object 'f67e62d io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:37.031  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:37.043  5263  5275 I emorrigan.cotes: Background young concurrent copying GC freed 196036(7182KB) AllocSpace objects, 5(128KB) LOS objects, 1% free, 20MB/20MB, paused 24us,18us total 375.858ms
+10-24 14:23:37.062  5263  5277 W System  : A resource failed to call release. 
+10-24 14:23:37.244  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:37.244  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:37.244  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:37.532  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:37.552  5263  5340 I TestRunner: finished: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)

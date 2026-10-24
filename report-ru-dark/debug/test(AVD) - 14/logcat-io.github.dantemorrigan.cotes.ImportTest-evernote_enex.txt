@@ -1,0 +1,8 @@
+10-24 14:26:48.359  9031  9093 I TestRunner: started: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)
+10-24 14:26:48.366  5731  5731 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.scheduler.ACTION_PROXY_SCHEDULE dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:26:48.372  9031  9093 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10198; state: ENABLED
+10-24 14:26:48.375  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:26:48.375  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:26:48.375  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:26:48.376  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:26:48.383  9031  9093 I TestRunner: finished: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)

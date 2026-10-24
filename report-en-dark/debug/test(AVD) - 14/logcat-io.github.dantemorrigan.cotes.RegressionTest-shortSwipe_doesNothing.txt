@@ -1,0 +1,89 @@
+10-24 14:24:58.464  7194  7244 I TestRunner: started: shortSwipe_doesNothing(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:24:58.477  7194  7244 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@18ba8f4]
+10-24 14:24:58.507  7194  7244 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:24:58.518  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{98c89e2 V.E...... ......ID 0,0-0,0}
+10-24 14:24:58.518  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:24:58.518  4549  4579 D SplashScreenView: Branding: view: android.view.View{9a5c173 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:24:58.521  2880  4134 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor$WorkerThreadHandler.handleMessage:221 executing task com.android.voicemail.impl.ActivationTask@e60e04d [CONTEXT enable_persistent_logger=true ]
+10-24 14:24:58.523  2880  2880 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_ACTIVATION_STARTED
+10-24 14:24:58.566   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:58.592  7320  7320 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@b637d0
+10-24 14:24:58.604  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8d35c42 in: PRE_ON_CREATE
+10-24 14:24:58.605  7194  7194 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:24:58.617  2880  4134 I DialerPreOMigrationHandler: com.android.voicemail.impl.PreOMigrationHandler.migrate:76 ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} already migrated [CONTEXT enable_persistent_logger=true ]
+10-24 14:24:58.624  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:58.628  2880  4134 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.isCarrierAppInstalled:637 carrier app not installed in this device [CONTEXT ratelimit_period="1 MINUTES [skipped: 4]" ]
+10-24 14:24:58.628  2880  4134 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-24 14:24:58.628  2880  4134 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-24 14:24:58.635  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8d35c42 in: CREATED
+10-24 14:24:58.635  7194  7194 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8d35c42
+10-24 14:24:58.637  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8d35c42 in: STARTED
+10-24 14:24:58.637  7194  7194 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8d35c42
+10-24 14:24:58.638  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8d35c42 in: RESUMED
+10-24 14:24:58.638  7194  7194 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8d35c42
+10-24 14:24:58.644   524  2288 W InputManager-JNI: Input channel object 'e140cef io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:24:58.707  2880  7823 I DialerRestVoicemailEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.rest.RestVoicemailEnabledFn.isEnabled:51 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 23]" ]
+10-24 14:24:58.707  2880  7823 I DialerCvvmEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.omtp.protocol.cvvm.CvvmEnabledFn.isEnabled:37 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 11]" ]
+10-24 14:24:58.743   524   534 I system_server: NativeAlloc concurrent copying GC freed 347200(11MB) AllocSpace objects, 12(240KB) LOS objects, 48% free, 25MB/49MB, paused 66us,58us total 455.504ms
+10-24 14:24:58.862  7194  7194 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:24:58.865  2880  7823 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:24:58.865  2880  7823 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-24 14:24:58.868  2880  4134 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:292 VVM content provider configured - vvm_type_cvvm PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-24 14:24:58.868  2880  4134 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.updateVoicemailsWithIccId:477 conversion disabled [CONTEXT enable_persistent_logger=true ]
+10-24 14:24:58.869  2880  4134 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.handleEvent:527 OmtpEvent:CONFIG_ACTIVATING PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-24 14:24:58.870  2880  4134 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-24 14:24:58.880  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:58.881  2880  4134 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-24 14:24:58.910  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:58.911  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:58.915  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:58.915  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:58.928  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:58.951  2880  7823 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:24:58.952  2880  7823 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-24 14:24:58.956  2880  4134 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:339 sending an activation request [CONTEXT enable_persistent_logger=true ]
+10-24 14:24:58.963  1032  1378 D SmsNumberUtils: enter filterDestAddr. destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-24 14:24:58.963  1032  1378 D SmsNumberUtils: destAddr is not formatted.
+10-24 14:24:58.964  1032  1378 D SmsNumberUtils: leave filterDestAddr, new destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-24 14:24:59.007   524   542 W ziparchive: Unable to open '/data/app/~~LUMJExYogSS1jTL1flUPcg==/io.github.dantemorrigan.cotes-oRYe5vxx8NYljbuEWM8W_g==/base.dm': No such file or directory
+10-24 14:24:59.007   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +496ms
+10-24 14:24:59.011  2880  4134 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:46 Impression: CVVM_SEND_VVM_SMS
+10-24 14:24:59.023   524  2965 I ImeTracker: io.github.dantemorrigan.cotes:69903dc6: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:24:59.025   524  2965 I ImeTracker: io.github.dantemorrigan.cotes:69903dc6: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:59.026  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:59.030  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:59.030  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:24:59.030  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:59.031  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:59.037   524  2291 W InputManager-JNI: Input channel object '20e62db Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:24:59.130  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.381  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.411  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.412  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.416  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.416  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.428  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.504  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{c92a389 V.E...... ......ID 0,0-0,0}
+10-24 14:24:59.504  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:24:59.504  4549  4579 D SplashScreenView: Branding: view: android.view.View{d398f8e G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:24:59.506  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8d35c42 in: PAUSED
+10-24 14:24:59.506  7194  7194 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8d35c42
+10-24 14:24:59.516   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:59.529  2880  2880 I DialerStatusSmsFetcher: com.android.voicemail.impl.sms.StatusSmsFetcher.onReceive:106 Request SMS successfully sent [CONTEXT enable_persistent_logger=true ]
+10-24 14:24:59.592  7320  7338 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:24:59.627  4549  4582 D EGL_emulation: app_time_stats: avg=376.62ms min=4.36ms max=1136.73ms count=4
+10-24 14:24:59.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:59.769   524   542 W ziparchive: Unable to open '/data/app/~~8ray0uE06TRDv9ShNDz9eA==/io.github.dantemorrigan.cotes.test-O0P54q_A9vzAIH7hplnCFg==/base.dm': No such file or directory
+10-24 14:24:59.772   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +266ms
+10-24 14:24:59.785   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:59.796  4549  4582 D EGL_emulation: app_time_stats: avg=768.09ms min=549.71ms max=986.47ms count=2
+10-24 14:24:59.801  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@6ecffa8
+10-24 14:24:59.813  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8d35c42 in: STOPPED
+10-24 14:24:59.814  7194  7194 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8d35c42
+10-24 14:24:59.858  7194  7194 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@14677f9
+10-24 14:24:59.859  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8d35c42 in: DESTROYED
+10-24 14:24:59.860  7194  7194 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:24:59.903   524  2250 W InputManager-JNI: Input channel object '8cd97dd Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:24:59.905   524  2250 W InputManager-JNI: Input channel object 'ae9b08d io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:24:59.910  7194  7244 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@18ba8f4]
+10-24 14:24:59.912  7194  7244 I TestRunner: finished: shortSwipe_doesNothing(io.github.dantemorrigan.cotes.RegressionTest)

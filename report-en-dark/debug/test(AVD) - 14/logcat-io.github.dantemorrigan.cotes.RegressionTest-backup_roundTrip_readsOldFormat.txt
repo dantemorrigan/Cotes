@@ -1,0 +1,15 @@
+10-24 14:24:32.577  7194  7244 I TestRunner: started: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:24:32.622  4549  4582 D EGL_emulation: app_time_stats: avg=1019.58ms min=274.61ms max=1764.56ms count=2
+10-24 14:24:32.627  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:32.628   524  2440 I ImeTracker: com.android.settings:88b7b8ee: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:24:32.628  7194  7244 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@5dbbc35]
+10-24 14:24:32.628   524  2440 I ImeTracker: com.android.settings:88b7b8ee: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:32.643  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:32.643  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:32.643  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:24:32.643  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:32.643  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:32.699  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@56dbeab
+10-24 14:24:32.701   524  2382 W InputManager-JNI: Input channel object 'ab8227f Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:24:32.704  7194  7244 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@5dbbc35]
+10-24 14:24:32.714  7194  7244 I TestRunner: finished: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)

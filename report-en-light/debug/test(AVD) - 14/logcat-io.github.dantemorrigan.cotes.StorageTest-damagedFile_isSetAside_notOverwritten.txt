@@ -1,0 +1,3 @@
+10-24 14:23:36.522  5263  5340 I TestRunner: started: damagedFile_isSetAside_notOverwritten(io.github.dantemorrigan.cotes.StorageTest)
+10-24 14:23:36.530  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:36.546  5263  5340 I TestRunner: finished: damagedFile_isSetAside_notOverwritten(io.github.dantemorrigan.cotes.StorageTest)

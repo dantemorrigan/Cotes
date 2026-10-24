@@ -1,0 +1,157 @@
+10-24 14:23:33.170  5263  5340 I TestRunner: started: shortSwipe_doesNothing(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:23:33.178  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:33.180  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:33.230  5792  5916 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 14:23:33.230  5792  5916 I Icing   : Indexing done com.google.android.gms-apps
+10-24 14:23:33.199  5263  5340 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@b58fa88]
+10-24 14:23:33.258  5263  5340 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:23:33.272  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{230af36 V.E...... ......ID 0,0-0,0}
+10-24 14:23:33.272  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:23:33.272  4549  4579 D SplashScreenView: Branding: view: android.view.View{de13e37 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:23:33.294  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@889aef6 in: PRE_ON_CREATE
+10-24 14:23:33.295  5263  5263 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:23:33.304   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:33.313  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@889aef6 in: CREATED
+10-24 14:23:33.317  5263  5263 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@889aef6
+10-24 14:23:33.360  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@889aef6 in: STARTED
+10-24 14:23:33.360  5263  5263 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@889aef6
+10-24 14:23:33.381  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@889aef6 in: RESUMED
+10-24 14:23:33.382  5263  5263 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@889aef6
+10-24 14:23:33.395  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:33.397  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService started execution. cause:5 exec_start_elapsed_seconds: 160 [CONTEXT service_id=218 ]
+10-24 14:23:33.404  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService finished executing. cause:5 result: 1 elapsed_millis: 21 uptime_millis: 21 exec_start_elapsed_seconds: 160 [CONTEXT service_id=218 ]
+10-24 14:23:33.408  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.409  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 34 uptime_millis: 33 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.458  5263  5263 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:23:33.557  5731  6836 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:7 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.558  5792  5916 W Pay     : Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+10-24 14:23:33.558  5792  5916 E Pay     : [Migration operation] Active tapandpay account not found! [CONTEXT service_id=198 ]
+10-24 14:23:33.559  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:23:33.561  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 14:23:33.561  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 14:23:33.569  5731  6836 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:7 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.572  5731  5837 I NetworkScheduler: ignoring stale queue check message
+10-24 14:23:33.572  5792  5916 I Pay     : Migration already completed. [CONTEXT service_id=198 ]
+10-24 14:23:33.574  5731  6836 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:7 result: 1 elapsed_millis: 16 uptime_millis: 16 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.575  5792  5916 I Pay     : Migration already completed. [CONTEXT service_id=198 ]
+10-24 14:23:33.575  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:23:33.575  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:23:33.575  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:23:33.575  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:23:33.575  5792  5916 I Pay     : [SeTosMigration] walletJpEligibility is not enabled [CONTEXT service_id=198 ]
+10-24 14:23:33.576  5792  5916 I Pay     : Wallet install state NOT_INSTALLED [CONTEXT service_id=198 ]
+10-24 14:23:33.577  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:23:33.596  5731  6836 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:7 result: 1 elapsed_millis: 85 uptime_millis: 85 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.606  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:33.665  4340  4432 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+10-24 14:23:33.680  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:33.680  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:33.684  5792  5911 I Pay     : Device does not support HCE. [CONTEXT service_id=198 ]
+10-24 14:23:33.697   524   542 W ziparchive: Unable to open '/data/app/~~u7kzBF0CbKYtm-96xGnIfg==/io.github.dantemorrigan.cotes-QzGP7PyrwIe2jmw7bLWFuA==/base.dm': No such file or directory
+10-24 14:23:33.697   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +435ms
+10-24 14:23:33.705   524   538 I ImeTracker: io.github.dantemorrigan.cotes:4f0fbf47: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:33.705   524   538 I ImeTracker: io.github.dantemorrigan.cotes:4f0fbf47: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:23:33.713  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:33.720  5731  6836 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.725   524  2514 W InputManager-JNI: Input channel object '885908 Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:23:33.726  5731  6836 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 2 elapsed_millis: 83 uptime_millis: 83 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.782  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:33.783  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:33.783  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:33.786  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:33.789  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.791  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.798  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 61 uptime_millis: 61 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.810  5792  5916 W Pay     : Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+10-24 14:23:33.820  5792  5916 W Pay     : No account found on the task or the device. Notification task will not be rescheduled. [CONTEXT service_id=198 ]
+10-24 14:23:33.828  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 2 elapsed_millis: 66 uptime_millis: 66 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.892  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.893  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 35 uptime_millis: 34 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.898  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:33.924  5792  5916 I ChimeraConfigurator: Starting update, reason: 1 urgentFeatures: 
+10-24 14:23:33.935  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.chimera.container.ConfigService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.964  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.udc.service.UdcContextInitService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:33.969  5792  5916 I GmsDebugLogger: [73] 1801
+10-24 14:23:33.972  5792  5916 W ZappDownloader: No successful module downloads for requested features [].
+10-24 14:23:33.973  5792  5916 I GmsDebugLogger: [30] [VisionOcrDynamite.integ:231602402100000],[VisionBarcode.optional:231818100800],[TfliteDynamiteDynamite.integ:264010405100800],[MlkitOcrCommon.optional:231818100800],[MapsCoreDynamite.integ:231112103100800],[MlkitBarcodeUi.optional:231818100000]
+10-24 14:23:34.005  5792  5916 I ChimeraConfigService: Scheduling checkin for one-off execution between [3300,43201] seconds from now (1792851814005) [CONTEXT service_id=264 ]
+10-24 14:23:34.012  5792  5916 I ChimeraConfigService: Scheduling checkin every 43201 seconds, with flex of 21600 seconds [CONTEXT service_id=264 ]
+10-24 14:23:34.025  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.chimera.container.ConfigService finished executing. cause:5 result: 2 elapsed_millis: 114 uptime_millis: 114 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:34.045  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.udc.service.UdcContextInitService finished executing. cause:5 result: 1 elapsed_millis: 67 uptime_millis: 67 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:34.058  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:34.059  5731  6836 V NFC     : this device does not have NFC support
+10-24 14:23:34.059  5731  6836 W TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+10-24 14:23:34.059  5731  6836 W TapAndPay: java.lang.NullPointerException: NfcAdapter is null
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at android.nfc.cardemulation.CardEmulation.getInstance(CardEmulation.java:152)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at cdoy.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at com.google.android.gms.tapandpay.hce.task.TapAndPayAidRegistrationTaskOperation.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskChimeraService.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at avzs.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:34.059  5731  6836 W TapAndPay: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:23:34.062  5731  6836 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:5 result: 3 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 161 [CONTEXT service_id=218 ]
+10-24 14:23:34.106  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:34.181  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:34.182  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:34.288  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{a6407e9 V.E...... ......ID 0,0-0,0}
+10-24 14:23:34.288  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:23:34.288  4549  4579 D SplashScreenView: Branding: view: android.view.View{e368c6e G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:23:34.292  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@889aef6 in: PAUSED
+10-24 14:23:34.292  5263  5263 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@889aef6
+10-24 14:23:34.299   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:34.390  5519  5538 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:23:34.412  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:34.520  1032  1032 D CarrierSvcBindHelper: onPackageModified: com.google.android.contacts
+10-24 14:23:34.521  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:23:34.521  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:23:34.530  4549  4556 I ndroid.systemui: NativeAlloc concurrent copying GC freed 79044(3891KB) AllocSpace objects, 2(40KB) LOS objects, 49% free, 14MB/29MB, paused 50us,41us total 182.125ms
+10-24 14:23:34.551  1032  1032 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 14:23:34.559   832   856 I PermissionControllerServiceImpl: Updating user sensitive for uid 10154
+10-24 14:23:34.561  4549  4549 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 14:23:34.562   995  1002 I rkstack.process: Background concurrent copying GC freed 41541(2610KB) AllocSpace objects, 20(400KB) LOS objects, 49% free, 2745KB/5491KB, paused 28us,11us total 196.324ms
+10-24 14:23:34.562   524   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 14:23:34.564   524   542 W ziparchive: Unable to open '/data/app/~~zJXpz5RSVvl9-D4A9J55hw==/io.github.dantemorrigan.cotes.test-1_8UILJpFC8oUT7RbPVemw==/base.dm': No such file or directory
+10-24 14:23:34.571   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +278ms
+10-24 14:23:34.575  4549  4581 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 14:23:34.582   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:34.586  4549  4581 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 14:23:34.590  4549  4581 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 14:23:34.590  4549  4581 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 14:23:34.591  4549  4581 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 14:23:34.591  4549  4581 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 14:23:34.594  4549  4581 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 14:23:34.608  4549  4581 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 14:23:34.609  4549  4581 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 14:23:34.610  4549  4581 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 14:23:34.611  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:34.613  4549  4581 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 14:23:34.623  1032  1349 D ImsResolver: maybeAddedImsService, packageName: com.google.android.contacts
+10-24 14:23:34.659  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@889aef6 in: STOPPED
+10-24 14:23:34.659  5263  5263 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@889aef6
+10-24 14:23:34.663  4549  4582 D EGL_emulation: app_time_stats: avg=221.84ms min=24.77ms max=787.76ms count=8
+10-24 14:23:34.667   524  2968 I ImeTracker: com.android.settings:72637302: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:34.667   524  2968 I ImeTracker: com.android.settings:72637302: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:23:34.675   524   552 E system_server: No package ID 7f found for resource ID 0x7f080107.
+10-24 14:23:34.675   524   552 E system_server: No package ID 7f found for resource ID 0x7f150560.
+10-24 14:23:34.697  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@abdfa3d
+10-24 14:23:34.699  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@889aef6 in: DESTROYED
+10-24 14:23:34.699  5263  5263 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:23:34.732  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:34.732  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:34.774  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:34.774  1632  1632 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.contacts.
+10-24 14:23:34.777  1632  2887 I AiAiEcho: AppIndexer Package:[com.google.android.contacts] UserProfile:[0] Enabled:[true].
+10-24 14:23:34.777  1632  2887 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.contacts], userId:[0], reason:[package is updated.].
+10-24 14:23:34.777  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:34.777  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:34.777  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:34.778  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:34.780   524  2726 W InputManager-JNI: Input channel object 'd2f089b io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:34.817   342  5472 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 2549184
+10-24 14:23:34.818  5263  5340 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@b58fa88]
+10-24 14:23:34.820  5263  5340 I TestRunner: finished: shortSwipe_doesNothing(io.github.dantemorrigan.cotes.RegressionTest)

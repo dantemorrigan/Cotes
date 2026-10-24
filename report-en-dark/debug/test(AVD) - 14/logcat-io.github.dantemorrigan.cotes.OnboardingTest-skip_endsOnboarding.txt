@@ -1,0 +1,81 @@
+10-24 14:24:09.045  7194  7244 I TestRunner: started: skip_endsOnboarding(io.github.dantemorrigan.cotes.OnboardingTest)
+10-24 14:24:09.049  7194  7244 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@1dcfac1]
+10-24 14:24:09.063  7194  7244 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:24:09.079  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{b7dc1d6 V.E...... ......ID 0,0-0,0}
+10-24 14:24:09.079  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:24:09.079  4549  4579 D SplashScreenView: Branding: view: android.view.View{71eec57 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:24:09.142  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@c8562d8 in: PRE_ON_CREATE
+10-24 14:24:09.142  7194  7194 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:24:09.151   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:09.191  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@c8562d8 in: CREATED
+10-24 14:24:09.192  7194  7194 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@c8562d8
+10-24 14:24:09.196  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@c8562d8 in: STARTED
+10-24 14:24:09.197  7194  7194 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@c8562d8
+10-24 14:24:09.197  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@c8562d8 in: RESUMED
+10-24 14:24:09.198  7194  7194 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@c8562d8
+10-24 14:24:09.209  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.209  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.209  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.209  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.322  7194  7194 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:24:09.367  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.455  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.473   524   542 W ziparchive: Unable to open '/data/app/~~LUMJExYogSS1jTL1flUPcg==/io.github.dantemorrigan.cotes-oRYe5vxx8NYljbuEWM8W_g==/base.dm': No such file or directory
+10-24 14:24:09.474   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +407ms
+10-24 14:24:09.478  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.495   524   898 I ImeTracker: io.github.dantemorrigan.cotes:2096389d: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:24:09.495   524   898 I ImeTracker: io.github.dantemorrigan.cotes:2096389d: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:09.496   524   921 W InputManager-JNI: Input channel object 'ac5380e Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:24:09.497  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:09.499  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:09.499  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:24:09.499  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:09.499  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:24:09.709  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.709  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.709  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.710  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.868  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.956  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:09.979  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.156   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:24:10.156   398  3320 D audioserver: -129
+10-24 14:24:10.210  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.211  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.211  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.214  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@c8562d8 in: PAUSED
+10-24 14:24:10.214  7194  7194 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@c8562d8
+10-24 14:24:10.226  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{7e8750d V.E...... ......ID 0,0-0,0}
+10-24 14:24:10.226  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:24:10.226  4549  4579 D SplashScreenView: Branding: view: android.view.View{6b1fcc2 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:24:10.233   398   497 D AudioFlinger: mixer(0x78bd29474930) throttle end: throttle time(33)
+10-24 14:24:10.235   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:10.241  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.325   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:24:10.325   398   497 D audioserver: -129
+10-24 14:24:10.421  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.465  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.487  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.490  7320  7338 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:24:10.512  4549  4582 D EGL_emulation: app_time_stats: avg=1154.19ms min=38.98ms max=2269.39ms count=2
+10-24 14:24:10.544  4549  4549 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-24 14:24:10.585  4549  4582 D EGL_emulation: app_time_stats: avg=810.53ms min=32.02ms max=2322.27ms count=3
+10-24 14:24:10.699   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:24:10.723  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@c8562d8 in: STOPPED
+10-24 14:24:10.723  7194  7194 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@c8562d8
+10-24 14:24:10.750  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.753  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.754  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.755  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:24:10.765  7194  7194 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@4ec6787
+10-24 14:24:10.766  7194  7194 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@c8562d8 in: DESTROYED
+10-24 14:24:10.766  7194  7194 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:24:10.810   524   898 I ImeTracker: com.android.settings:192bfdfb: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:24:10.810   524   898 I ImeTracker: com.android.settings:192bfdfb: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:24:10.810   524  2243 W InputManager-JNI: Input channel object '9535827 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:24:10.814  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:24:10.814  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:24:10.814  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:24:10.814  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:24:10.824  7194  7244 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@1dcfac1]
+10-24 14:24:10.827  7194  7244 I TestRunner: finished: skip_endsOnboarding(io.github.dantemorrigan.cotes.OnboardingTest)

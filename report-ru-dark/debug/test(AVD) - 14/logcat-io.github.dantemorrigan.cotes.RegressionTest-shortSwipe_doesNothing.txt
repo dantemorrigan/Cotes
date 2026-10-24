@@ -1,0 +1,127 @@
+10-24 14:27:54.214  9031  9093 I TestRunner: started: shortSwipe_doesNothing(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:27:54.223   524   921 W InputManager-JNI: Input channel object '3c2f2cb io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:27:54.251  9031  9093 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@86eda89]
+10-24 14:27:54.305  1509  1520 D StrictMode: StrictMode policy violation: android.os.strictmode.SqliteObjectLeakedViolation: Finalizing a Cursor that has not been deactivated or closed. database = /data/user/0/com.android.providers.contacts/databases/contacts2.db, table = raw_contacts, query = SELECT contacts_view._id AS _id, contacts_view.display_name AS display_name, contacts_view.photo_thumb_uri AS photo_thumb_uri, data1 AS number, data2 AS type, data3 AS label, contacts_view.lookup AS lookup FROM raw_contacts JOIN view_contacts as contacts_view ON (contacts_view._id = raw_contacts.contact_id) JOIN (SELECT data_id,normalized_number FROM phone_lookup WHERE (phone_lookup.min_match = '7654321')) AS lookup ON lookup.data_id=data._id JOIN data ON data.raw_contact_id=raw_contacts._id WHERE (PHONE_NUMBERS_EQUAL(data.data1, '+15551234567', 0, 7)) ORDER BY  length(lookup.normalized_number) DESC
+10-24 14:27:54.305  1509  1520 D StrictMode: 	at android.os.StrictMode.onSqliteObjectLeaked(StrictMode.java:2222)
+10-24 14:27:54.305  1509  1520 D StrictMode: 	at android.database.sqlite.SQLiteCursor.finalize(SQLiteCursor.java:282)
+10-24 14:27:54.305  1509  1520 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:339)
+10-24 14:27:54.305  1509  1520 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.processReference(Daemons.java:324)
+10-24 14:27:54.305  1509  1520 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:300)
+10-24 14:27:54.305  1509  1520 D StrictMode: 	at java.lang.Daemons$Daemon.run(Daemons.java:145)
+10-24 14:27:54.305  1509  1520 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:27:54.324  1509  1520 D StrictMode: StrictMode policy violation: android.os.strictmode.LeakedClosableViolation: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.os.StrictMode$AndroidCloseGuardReporter.report(StrictMode.java:1994)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at dalvik.system.CloseGuard.warnIfOpen(CloseGuard.java:336)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.AbstractCursor.finalize(AbstractCursor.java:531)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.sqlite.SQLiteCursor.finalize(SQLiteCursor.java:291)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:339)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.processReference(Daemons.java:324)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at java.lang.Daemons$FinalizerDaemon.runInternal(Daemons.java:300)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at java.lang.Daemons$Daemon.run(Daemons.java:145)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:27:54.324  1509  1520 D StrictMode: Caused by: java.lang.Throwable: Explicit termination method 'AbstractCursor.close' not called
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.AbstractCursor.<init>(AbstractCursor.java:227)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.AbstractWindowedCursor.<init>(AbstractWindowedCursor.java:39)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.sqlite.SQLiteCursor.<init>(SQLiteCursor.java:98)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.sqlite.SQLiteDirectCursorDriver.query(SQLiteDirectCursorDriver.java:52)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.sqlite.SQLiteDatabase.rawQueryWithFactory(SQLiteDatabase.java:1714)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.database.sqlite.SQLiteQueryBuilder.query(SQLiteQueryBuilder.java:592)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.doQuery(ContactsProvider2.java:7543)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryLocal(ContactsProvider2.java:7249)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryCorpLookupIfNecessary(ContactsProvider2.java:7728)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryLookupEnterprise(ContactsProvider2.java:7867)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryPhoneLookupEnterprise(ContactsProvider2.java:7838)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryLocal(ContactsProvider2.java:7172)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryDirectoryIfNecessary(ContactsProvider2.java:5883)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.queryInternal(ContactsProvider2.java:5728)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at com.android.providers.contacts.ContactsProvider2.query(ContactsProvider2.java:5673)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.content.ContentProvider.query(ContentProvider.java:1692)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.content.ContentProvider$Transport.query(ContentProvider.java:292)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.content.ContentProviderNative.onTransact(ContentProviderNative.java:107)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+10-24 14:27:54.324  1509  1520 D StrictMode: 	at android.os.Binder.execTransact(Binder.java:1275)
+10-24 14:27:54.352  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.357  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.358  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.358  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.361  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.364  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.378   524   534 I system_server: NativeAlloc concurrent copying GC freed 334239(11MB) AllocSpace objects, 13(256KB) LOS objects, 48% free, 25MB/49MB, paused 68us,62us total 386.343ms
+10-24 14:27:54.386  9031  9093 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:27:54.393  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{761a5ce V.E...... ......ID 0,0-0,0}
+10-24 14:27:54.393  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:27:54.393  4549  4579 D SplashScreenView: Branding: view: android.view.View{6c8cef G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:27:54.416   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:27:54.463  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b81159f in: PRE_ON_CREATE
+10-24 14:27:54.469  9031  9031 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:27:54.496  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b81159f in: CREATED
+10-24 14:27:54.496  9031  9031 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b81159f
+10-24 14:27:54.498  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b81159f in: STARTED
+10-24 14:27:54.498  9031  9031 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b81159f
+10-24 14:27:54.544  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b81159f in: RESUMED
+10-24 14:27:54.544  9031  9031 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b81159f
+10-24 14:27:54.611  9031  9031 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:27:54.618  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.630  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.630  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.632  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.632  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.697   524   542 W ziparchive: Unable to open '/data/app/~~FCA5ZTZ21z_cJTWH4RH0-g==/io.github.dantemorrigan.cotes-mxAq-GYsty-D_loUSUtWow==/base.dm': No such file or directory
+10-24 14:27:54.700   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +297ms
+10-24 14:27:54.706   524   899 I ImeTracker: io.github.dantemorrigan.cotes:a8ff094e: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:27:54.706   524   899 I ImeTracker: io.github.dantemorrigan.cotes:a8ff094e: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:27:54.707  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:27:54.709  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:27:54.709  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:27:54.709  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:27:54.710  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:27:54.739   524  2467 W InputManager-JNI: Input channel object 'b4ab8aa Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:27:54.869  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.894  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.895  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.895  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.895  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:54.895  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.118  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.131  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.132  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.132  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.132  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.133  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.134  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.288  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{355f648 V.E...... ......ID 0,0-0,0}
+10-24 14:27:55.288  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:27:55.288  4549  4579 D SplashScreenView: Branding: view: android.view.View{53fce1 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:27:55.292  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b81159f in: PAUSED
+10-24 14:27:55.292  9031  9031 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b81159f
+10-24 14:27:55.299   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:27:55.363  9165  9183 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:27:55.372  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.399  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.409  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.410  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.410  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.430  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.449  4549  4582 D EGL_emulation: app_time_stats: avg=396.13ms min=7.15ms max=1286.62ms count=4
+10-24 14:27:55.618  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.632  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.633  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:55.666   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:27:55.731  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b81159f in: STOPPED
+10-24 14:27:55.731  9031  9031 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b81159f
+10-24 14:27:55.788  9031  9031 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@d7b9b25
+10-24 14:27:55.790  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b81159f in: DESTROYED
+10-24 14:27:55.790  9031  9031 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:27:55.797   524   921 W InputManager-JNI: Input channel object '1cfe77c io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:27:55.874  4549  4582 D EGL_emulation: app_time_stats: avg=875.12ms min=247.78ms max=1502.46ms count=2
+10-24 14:27:55.874  9031  9093 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@86eda89]
+10-24 14:27:55.878   524  2250 I ImeTracker: com.android.settings:755a1c3c: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:27:55.879  9031  9093 I TestRunner: finished: shortSwipe_doesNothing(io.github.dantemorrigan.cotes.RegressionTest)

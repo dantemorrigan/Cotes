@@ -1,0 +1,280 @@
+10-24 14:25:34.877  8106  8172 I TestRunner: started: existingNotes_noTips(io.github.dantemorrigan.cotes.OnboardingTest)
+10-24 14:25:34.880  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:34.890  4549  4582 D EGL_emulation: app_time_stats: avg=1400.79ms min=1400.79ms max=1400.79ms count=1
+10-24 14:25:34.951  8106  8172 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@5acb1f4]
+10-24 14:25:34.977  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.014  8246  8246 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@bfd3c93
+10-24 14:25:35.019   524   900 W InputManager-JNI: Input channel object 'a4a4ef7 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:25:35.065  8106  8172 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:25:35.077  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+10-24 14:25:35.086   524  2382 D ConnectivityService: requestNetwork for uid/pid:10132/1762 activeRequest: null callbackRequest: 159 [NetworkRequest [ REQUEST id=159, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10132 RequestorUid: 10132 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-24 14:25:35.097  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.098   336   336 I netd    : networkSetPermissionForNetwork(101, 0) <0.98ms>
+10-24 14:25:35.104  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{ddba0bf V.E...... ......ID 0,0-0,0}
+10-24 14:25:35.104  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:25:35.104  4549  4579 D SplashScreenView: Branding: view: android.view.View{437d38c G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:25:35.141  8106  8106 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9517a90 in: PRE_ON_CREATE
+10-24 14:25:35.142  8106  8106 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:25:35.150   524   763 D ConnectivityService: NetReassign [159 : null → 101] [c 1] [a 20] [i 43]
+10-24 14:25:35.150   524   763 D ConnectivityService: reportNetworkConnectivity(100, false) by 10132
+10-24 14:25:35.153   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:25:35.154   995  1902 D NetworkMonitor/100: Forcing reevaluation for UID 10132. Dns signal count: 0
+10-24 14:25:35.158   995  8351 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:25:35.160   995  8350 D TrafficStats: tagSocket(108) with statsTag=0xffffff81, statsUid=-1
+10-24 14:25:35.186  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.198   995  8351 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:25:35.200   995  8350 D TrafficStats: tagSocket(108) with statsTag=0xffffff81, statsUid=-1
+10-24 14:25:35.211   336  8352 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:25:35.211   336  8352 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0e7f0
+10-24 14:25:35.211   336  8353 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:25:35.217  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.227   336  8355 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:25:35.229  8106  8106 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9517a90 in: CREATED
+10-24 14:25:35.230  8106  8106 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9517a90
+10-24 14:25:35.231  8106  8106 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9517a90 in: STARTED
+10-24 14:25:35.231  8106  8106 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9517a90
+10-24 14:25:35.233  8106  8106 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9517a90 in: RESUMED
+10-24 14:25:35.233  8106  8106 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9517a90
+10-24 14:25:35.238   336  8353 I resolv  : res_nsend: used send_dg 256 terrno: 0
+10-24 14:25:35.238   336  8354 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:25:35.238   336  8354 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0f510
+10-24 14:25:35.239   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.240   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.240   995  8351 D NetworkMonitor/100: PROBE_DNS connectivitycheck.gstatic.com 81ms OK 142.251.150.120,2001:4860:4826:7800::
+10-24 14:25:35.241   336  8355 I resolv  : res_nsend: used send_dg 160 terrno: 0
+10-24 14:25:35.243   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.244   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.245   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.245   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.245   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.245   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.246   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.246   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.246   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.248   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.261   336  8356 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-24 14:25:35.285  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.286  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.286  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.287  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.287  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.288   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.289   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.289   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.289   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.289   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.289   336  8357 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:25:35.289   336  8358 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:25:35.289   336  8358 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0f510
+10-24 14:25:35.290   336  8358 I resolv  : doQuery: rcode=0, ancount=1, return value=63
+10-24 14:25:35.290   336  8357 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0e7f0
+10-24 14:25:35.290   336  8357 I resolv  : doQuery: rcode=0, ancount=1, return value=75
+10-24 14:25:35.290   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:25:35.290   995  8350 D NetworkMonitor/100: PROBE_DNS www.google.com 130ms OK 142.251.157.119,142.251.152.119,142.251.151.119,142.251.153.119,142.251.155.119,142.251.156.119,142.251.154.119,142.251.150.119,2001:4860:482c:7700::,2001:4860:4829:7700::,2001:4860:4828:7700::,2001:4860:482b:7700::,2001:4860:4826:7700::,2001:4860:482a:7700::,2001:4860:482d:7700::,2001:4860:4827:7700::
+10-24 14:25:35.293   336  8359 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-24 14:25:35.294   336  8361 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:25:35.294   336  8361 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a3ce06070
+10-24 14:25:35.294   336  8361 I resolv  : doQuery: rcode=0, ancount=8, return value=160
+10-24 14:25:35.294   336  8360 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:25:35.294   336  8360 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce04f50
+10-24 14:25:35.294   336  8360 I resolv  : doQuery: rcode=0, ancount=8, return value=256
+10-24 14:25:35.295   995  8350 D TrafficStats: tagSocket(75) with statsTag=0xffffff81, statsUid=-1
+10-24 14:25:35.332   995  8351 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:25:35.391  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.493  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.518  8106  8106 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:25:35.599  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.641   524   542 W ziparchive: Unable to open '/data/app/~~keekDZWvFmcC_XRufrkvkw==/io.github.dantemorrigan.cotes-3N4fdhO4zao0ckq2phmpnw==/base.dm': No such file or directory
+10-24 14:25:35.642   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +570ms
+10-24 14:25:35.658   524  2293 I ImeTracker: io.github.dantemorrigan.cotes:259bcf85: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:25:35.660   524  2293 I ImeTracker: io.github.dantemorrigan.cotes:259bcf85: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:25:35.663   524  2243 W InputManager-JNI: Input channel object '9bddcd5 Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:25:35.664  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:25:35.665  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:25:35.665  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:25:35.665  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:25:35.669  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:25:35.690  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.710   995  8351 D NetworkMonitor/100: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=469ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sat, 24 Oct 2026 14:25:35 GMT], X-Android-Received-Millis=[1792851935709], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792851935491]}
+10-24 14:25:35.718  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.769   995  8350 D NetworkMonitor/100: PROBE_HTTPS https://www.google.com/generate_204 time=479ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sat, 24 Oct 2026 14:25:35 GMT], X-Android-Received-Millis=[1792851935753], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792851935728]}
+10-24 14:25:35.770   995  8349 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=611ms
+10-24 14:25:35.775   524   763 D ConnectivityService: [100 WIFI] validation passed
+10-24 14:25:35.788  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.789  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.792  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.795  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.795  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.892  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:35.994  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.106  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.191  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.219  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.288  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.290  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.292  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.295  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.296  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.393  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.494  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.585  1762  2939 W A       : [Download] response code: 400
+10-24 14:25:36.607  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.671  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{fc40516 V.E...... ......ID 0,0-0,0}
+10-24 14:25:36.671  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:25:36.671  4549  4579 D SplashScreenView: Branding: view: android.view.View{5070e97 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:25:36.675  8106  8106 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9517a90 in: PAUSED
+10-24 14:25:36.676  8106  8106 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9517a90
+10-24 14:25:36.682   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:25:36.696  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.720  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.757  8106  8192 D EGL_emulation: app_time_stats: avg=373.38ms min=71.62ms max=950.78ms count=3
+10-24 14:25:36.762  8246  8264 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:25:36.789  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.791  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.792  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.798  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.800  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.893  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:36.961  8106  8106 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9517a90 in: STOPPED
+10-24 14:25:36.961  8106  8106 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9517a90
+10-24 14:25:36.966   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:25:36.996  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:37.024  1630  1776 D PickerSyncController: syncAllMedia
+10-24 14:25:37.026  1630  1776 D PickerSyncController: syncAllMediaFromProvider() LOCAL, auth=com.android.providers.media.photopicker, retry=true
+10-24 14:25:37.026  8106  8106 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@8687fec
+10-24 14:25:37.027  1630  1776 D PickerSyncController: getSyncRequestParams() LOCAL, auth=com.android.providers.media.photopicker
+10-24 14:25:37.030  8106  8106 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9517a90 in: DESTROYED
+10-24 14:25:37.030  8106  8106 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:25:37.030  1630  1776 D PickerSyncController:    Latest ID/Gen=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary/301
+10-24 14:25:37.030  1630  1776 D PickerSyncController:    Cached ID/Gen=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary/280
+10-24 14:25:37.030  1630  1776 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_INCREMENTAL, gen=280, latest=Bundle[{last_media_sync_generation=301, media_collection_id=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary}]}
+10-24 14:25:37.030  1630  1776 I PickerSyncController: Executing SyncAdd. isLocal: true. authority: com.android.providers.media.photopicker
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Failed to insert picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=0 date_taken_ms=1792851923000 duration_ms=0 sync_generation=293 mime_type=image/png width=0 is_favorite=0 local_id=1000000082 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: android.database.sqlite.SQLiteConstraintException: CHECK constraint failed: size_bytes > 0 (code 275 SQLITE_CONSTRAINT_CHECK)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.DatabaseUtils.executeInsert(DatabaseUtils.java:199)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:629)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.insertMedia(PickerDbFacade.java:476)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.upsertMedia(PickerDbFacade.java:490)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.executeInternal(PickerDbFacade.java:450)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$DbWriteOperation.execute(PickerDbFacade.java:335)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executePagedSync(PickerSyncController.java:987)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executeSyncAdd(PickerSyncController.java:719)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromProvider(PickerSyncController.java:643)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromLocalProvider(PickerSyncController.java:213)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMedia(PickerSyncController.java:197)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Retrying failed insert as update. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=0 date_taken_ms=1792851923000 duration_ms=0 sync_generation=293 mime_type=image/png width=0 is_favorite=0 local_id=1000000082 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Failed to update picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=0 date_taken_ms=1792851923000 duration_ms=0 sync_generation=293 mime_type=image/png width=0 is_favorite=0 local_id=1000000082 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Failed to insert picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=0 date_taken_ms=1792851923000 duration_ms=0 sync_generation=293 mime_type=image/png width=0 is_favorite=0 local_id=1000000082 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: android.database.sqlite.SQLiteConstraintException: CHECK constraint failed: size_bytes > 0 (code 275 SQLITE_CONSTRAINT_CHECK)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.DatabaseUtils.executeInsert(DatabaseUtils.java:199)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:629)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.insertMedia(PickerDbFacade.java:476)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.upsertMedia(PickerDbFacade.java:490)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.executeInternal(PickerDbFacade.java:467)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$DbWriteOperation.execute(PickerDbFacade.java:335)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executePagedSync(PickerSyncController.java:987)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executeSyncAdd(PickerSyncController.java:719)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromProvider(PickerSyncController.java:643)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromLocalProvider(PickerSyncController.java:213)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMedia(PickerSyncController.java:197)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Retrying failed insert as update. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=0 date_taken_ms=1792851923000 duration_ms=0 sync_generation=293 mime_type=image/png width=0 is_favorite=0 local_id=1000000082 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Failed to update picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=0 date_taken_ms=1792851923000 duration_ms=0 sync_generation=293 mime_type=image/png width=0 is_favorite=0 local_id=1000000082 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Failed to insert picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851922000 duration_ms=0 sync_generation=289 mime_type=image/png width=1080 is_favorite=0 local_id=1000000081 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: android.database.sqlite.SQLiteConstraintException: CHECK constraint failed: size_bytes > 0 (code 275 SQLITE_CONSTRAINT_CHECK)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.DatabaseUtils.executeInsert(DatabaseUtils.java:199)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:629)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.insertMedia(PickerDbFacade.java:476)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.upsertMedia(PickerDbFacade.java:490)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.executeInternal(PickerDbFacade.java:450)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$DbWriteOperation.execute(PickerDbFacade.java:335)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executePagedSync(PickerSyncController.java:987)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executeSyncAdd(PickerSyncController.java:719)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromProvider(PickerSyncController.java:643)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromLocalProvider(PickerSyncController.java:213)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMedia(PickerSyncController.java:197)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Retrying failed insert as update. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851922000 duration_ms=0 sync_generation=289 mime_type=image/png width=1080 is_favorite=0 local_id=1000000081 is_visible=1
+10-24 14:25:37.038  1630  1776 V PickerDbFacade: Failed to update picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851922000 duration_ms=0 sync_generation=289 mime_type=image/png width=1080 is_favorite=0 local_id=1000000081 is_visible=1
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: Failed to insert picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851922000 duration_ms=0 sync_generation=289 mime_type=image/png width=1080 is_favorite=0 local_id=1000000081 is_visible=1
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: android.database.sqlite.SQLiteConstraintException: CHECK constraint failed: size_bytes > 0 (code 275 SQLITE_CONSTRAINT_CHECK)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.database.DatabaseUtils.executeInsert(DatabaseUtils.java:199)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:629)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.insertMedia(PickerDbFacade.java:476)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.upsertMedia(PickerDbFacade.java:490)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.executeInternal(PickerDbFacade.java:467)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$DbWriteOperation.execute(PickerDbFacade.java:335)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executePagedSync(PickerSyncController.java:987)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executeSyncAdd(PickerSyncController.java:719)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromProvider(PickerSyncController.java:643)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromLocalProvider(PickerSyncController.java:213)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMedia(PickerSyncController.java:197)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: Retrying failed insert as update. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851922000 duration_ms=0 sync_generation=289 mime_type=image/png width=1080 is_favorite=0 local_id=1000000081 is_visible=1
+10-24 14:25:37.039  1630  1776 V PickerDbFacade: Failed to update picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851922000 duration_ms=0 sync_generation=289 mime_type=image/png width=1080 is_favorite=0 local_id=1000000081 is_visible=1
+10-24 14:25:37.039  1630  1776 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=280}]. Result count: 2. Cursor count: 4
+10-24 14:25:37.041  1630  1776 I PickerSyncController: Executing SyncRemove. isLocal: true. authority: com.android.providers.media.photopicker
+10-24 14:25:37.041  1630  1776 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=280}]. Result count: 0. Cursor count: 0
+10-24 14:25:37.041  1630  1776 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-24 14:25:37.041  1630  1776 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-24 14:25:37.041  1630  1776 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-24 14:25:37.041  1630  1776 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-24 14:25:37.042  1630  1776 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-24 14:25:37.042  1630  1776 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-24 14:25:37.042  1630  1776 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-24 14:25:37.042  1630  1776 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-24 14:25:37.042  1630  1776 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-24 14:25:37.042  1630  1776 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-24 14:25:37.047  4549  4582 D EGL_emulation: app_time_stats: avg=265.25ms min=12.56ms max=1258.86ms count=8
+10-24 14:25:37.074   524  2243 I ImeTracker: com.android.settings:1be061c0: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:25:37.074   524  2243 I ImeTracker: com.android.settings:1be061c0: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:25:37.078  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:25:37.078   524   900 W InputManager-JNI: Input channel object '5eddc90 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:25:37.087  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:25:37.088  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:25:37.088  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:25:37.089  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:25:37.110  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:37.146  4549  4582 D EGL_emulation: app_time_stats: avg=1127.94ms min=660.87ms max=1595.02ms count=2
+10-24 14:25:37.149  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@ab59e69
+10-24 14:25:37.185   524   900 W InputManager-JNI: Input channel object '586db8f Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:25:37.192  8106  8172 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@5acb1f4]
+10-24 14:25:37.200  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:37.201  8106  8172 I TestRunner: finished: existingNotes_noTips(io.github.dantemorrigan.cotes.OnboardingTest)

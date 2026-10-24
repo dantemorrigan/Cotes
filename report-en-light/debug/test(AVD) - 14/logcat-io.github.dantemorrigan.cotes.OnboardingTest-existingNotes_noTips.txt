@@ -1,0 +1,424 @@
+10-24 14:22:32.482  5263  5340 I TestRunner: started: existingNotes_noTips(io.github.dantemorrigan.cotes.OnboardingTest)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: DiscoveryNearbyMessagesManager failed to background subscribe [CONTEXT service_id=265 ]
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: java.util.concurrent.TimeoutException: Timed out waiting for Task
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at cfsz.o(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at bbhk.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):25)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at bbhe.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at dtjy.handleMessage(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at avye.ll(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at avye.dispatchMessage(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:22:32.498  5731  5982 I NearbyDiscovery: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:22:32.525  4549  4582 D EGL_emulation: app_time_stats: avg=428.30ms min=6.59ms max=1640.92ms count=5
+10-24 14:22:32.542  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@b1914f
+10-24 14:22:32.544   524  2243 W InputManager-JNI: Input channel object 'cb0a75a Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:22:32.548   524  2467 I ImeTracker: com.android.settings:193cd3ba: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:22:32.553   524  2467 I ImeTracker: com.android.settings:193cd3ba: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:22:32.561  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:22:32.569  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:22:32.570  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:22:32.570  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:32.570  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:32.580  5263  5340 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@ed0b4ff]
+10-24 14:22:32.649  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:32.659  5519  5519 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@258fc85
+10-24 14:22:32.661   524  2166 W InputManager-JNI: Input channel object '538fb4f io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:22:32.691  5731  5902 I Nearby  : [MBleClient] Start ble scanning from NearbyDirect:BluetoothAdapterWrapper, context tag = nearby_messages [CONTEXT service_id=49 ]
+10-24 14:22:32.692  5731  5902 I Nearby  : [MBleClient] M hardware scan: 1 clients, scanMode= LOW_LATENCY, filters size = 5 [CONTEXT service_id=49 ]
+10-24 14:22:32.692  5731  5902 D BluetoothAdapter: isLeEnabled(): ON
+10-24 14:22:32.693  1019  1393 D BtGatt.GattService: registerScanner() - UUID=d96f26f8-c02f-45dd-8392-ab7af3ba4947
+10-24 14:22:32.694  1019  1393 I bt_stack: [INFO:le_scanning_manager.cc(155)] RegisterScanner in shim layer
+10-24 14:22:32.694  1019  1261 D BtGatt.GattService: onScannerRegistered() - UUID=d96f26f8-c02f-45dd-8392-ab7af3ba4947, scannerId=2, status=0
+10-24 14:22:32.695  5731  6028 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=2 mScannerId=0
+10-24 14:22:32.695  1019  1393 D BtGatt.GattService: start scan with filters
+10-24 14:22:32.696  1019  1393 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=224, mManufacturerData=[0, 0, 0], mManufacturerDataMask=[0, 0, -1], mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000fef3-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000feaa-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000fea0-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=76, mManufacturerData=[2, 21], mManufacturerDataMask=[-1, -1], mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null]])
+10-24 14:22:32.697  1019  1393 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats com.google.uid.shared:10131]]
+10-24 14:22:32.697  1019  1393 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-24 14:22:32.697  1019  1393 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-24 14:22:32.698  1019  1316 D BtGatt.ScanManager: handling starting scan
+10-24 14:22:32.698  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(268)] ScanFilterEnable in shim layer
+10-24 14:22:32.700  1019  1261 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=2, status=0, action=1
+10-24 14:22:32.700  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.718  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:32.719  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:32.721  5792  5883 I ChimeraConfigurator: Detected pending changes for urgent request: [tflite_dynamite]. Pending module sets: container:2318189190800,tflite_dynamite:2627305025100800+tflite_dynamite
+10-24 14:22:32.741  5792  5883 I GmsDebugLogger: [73] 1801
+10-24 14:22:32.746  5792  5883 W ZappDownloader: No successful module downloads for requested features [tflite_dynamite].
+10-24 14:22:32.750  5792  5883 I GmsDebugLogger: [30] [TfliteDynamiteDynamite.integ:262730502100800]
+10-24 14:22:32.756  5792  5883 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-24 14:22:32.757  5792  5883 I GmsDebugLogger: [83] 1 [tflite_dynamite]
+10-24 14:22:32.788  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:32.793  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:32.793  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.795  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:32.797  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:32.801  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:32.804  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:32.808  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.809  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:32.814  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:32.815  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.818  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:32.818  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:32.818  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:32.818  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:32.819  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.819  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:32.820  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:32.820  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.821  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:32.821  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:32.822  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:32.823  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:32.824  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.824  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:32.833  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:32.833  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.834  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:32.834  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:32.834  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:32.834  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.834  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:32.834  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:32.834  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.834  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:32.834  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:32.834  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:32.834  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:32.834  1019  1316 D BtGatt.ScanManager: start gattClientScanNative from startRegularScan()
+10-24 14:22:32.834  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-24 14:22:32.835  4549  4582 D EGL_emulation: app_time_stats: avg=2391.28ms min=2391.28ms max=2391.28ms count=1
+10-24 14:22:32.837  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-24 14:22:32.837  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-24 14:22:32.837  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-24 14:22:32.839  5263  5340 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:22:32.865  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{966efca V.E...... ......ID 0,0-0,0}
+10-24 14:22:32.865  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:22:32.865  4549  4579 D SplashScreenView: Branding: view: android.view.View{e1fd53b G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:22:32.903   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:22:32.973  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:32.993  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:32.995  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+10-24 14:22:32.995  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-24 14:22:32.995  1019  1316 D BtGatt.ScanManager: Start gattClientScanNative with old scanMode -1 new scanMode 2 ( in MS: 100 / 100, in scan unit: 160 / 160 ) [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats com.google.uid.shared:10131]]
+10-24 14:22:32.995  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(346)] SetScanParameters in shim layer
+10-24 14:22:32.995  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-24 14:22:32.995  1019  1316 D BtGatt.ScanManager: apply scan timeout (300000)to scannerId 2
+10-24 14:22:33.000  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-24 14:22:33.000  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-24 14:22:33.000  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-24 14:22:33.000  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-24 14:22:33.000  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-24 14:22:33.005  1019  1261 D BtGatt.GattService: onScanParamSetupCompleted : 0
+10-24 14:22:33.006  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@192ba6 in: PRE_ON_CREATE
+10-24 14:22:33.006  5263  5263 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:22:33.012  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:33.094   524  2099 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=3 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 207ms
+10-24 14:22:33.097  4941  4964 W equicksearchbox: Long monitor contention with owner main (4941) at boolean com.google.android.gms.common.internal.ai.handleMessage(android.os.Message)(PG:14) waiters=0 in boolean com.google.android.gms.common.internal.aj.b(com.google.android.gms.common.internal.af, android.content.ServiceConnection, java.lang.String, java.util.concurrent.Executor) for 194ms
+10-24 14:22:33.099  1724  2350 W s.youtube.music: Long monitor contention with owner main (1724) at boolean pyh.handleMessage(android.os.Message)(PG:15) waiters=0 in boolean pyi.b(pye, android.content.ServiceConnection, java.lang.String, java.util.concurrent.Executor) for 202ms
+10-24 14:22:33.106  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@192ba6 in: CREATED
+10-24 14:22:33.106  5263  5263 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@192ba6
+10-24 14:22:33.109  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@192ba6 in: STARTED
+10-24 14:22:33.109  5263  5263 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@192ba6
+10-24 14:22:33.112  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@192ba6 in: RESUMED
+10-24 14:22:33.114  5263  5263 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@192ba6
+10-24 14:22:33.151  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.152   524  2382 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=5 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 263ms
+10-24 14:22:33.154   524   595 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=6 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 265ms
+10-24 14:22:33.157   524  2244 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=9 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 268ms
+10-24 14:22:33.158   524  2968 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=10 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 269ms
+10-24 14:22:33.158   524  2291 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=13 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 258ms
+10-24 14:22:33.159   524  2243 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=14 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 256ms
+10-24 14:22:33.159   524  2166 W system_server: Long monitor contention with owner CachedAppOptimizerThread (611) at void com.android.server.am.CachedAppOptimizer$FreezeHandler.handleMessage(android.os.Message)(CachedAppOptimizer.java:2144) waiters=15 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 257ms
+10-24 14:22:33.161  2880  3061 W .android.dialer: Long monitor contention with owner main (2880) at boolean njd.handleMessage(android.os.Message)(PG:20) waiters=0 in boolean noe.b(nod, android.content.ServiceConnection, java.lang.String) for 268ms
+10-24 14:22:33.177  1562  2078 W putmethod.latin: Long monitor contention with owner main (1562) at boolean fti.handleMessage(android.os.Message)(PG:20) waiters=0 in boolean ftg.d(ftf, android.content.ServiceConnection) for 189ms
+10-24 14:22:33.244  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.244  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.249  1509  1509 V ContactsProvider: Scheduled notifyChange started.
+10-24 14:22:33.290  3084  5730 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+10-24 14:22:33.290  3084  5730 W libc    : Access denied finding property "service.adb.tls.port"
+10-24 14:22:33.294   336  6040 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:22:33.295  3084  5730 D TrafficStats: tagSocket(124) with statsTag=0x1809, statsUid=-1
+10-24 14:22:33.297  3084  5730 D TrafficStats: tagSocket(124) with statsTag=0x1809, statsUid=-1
+10-24 14:22:33.297  1019  1019 D BluetoothPbapService:  onChange on contact uri 
+10-24 14:22:33.298  3084  5730 D TrafficStats: tagSocket(124) with statsTag=0x1809, statsUid=-1
+10-24 14:22:33.288  3084  3084 W binder:3084_8: type=1400 audit(0.0:47): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:22:33.288  3084  3084 W binder:3084_8: type=1400 audit(0.0:48): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:22:33.414  3084  5730 W SystemServiceRegistry: No service published for: persistent_data_block
+10-24 14:22:33.459  5263  5263 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:22:33.460  1019  6041 D BluetoothPbapUtils: primaryVersionCounter = 0, secondaryVersionCounter=0
+10-24 14:22:33.466  5731  5956 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-24 14:22:33.466  5731  5956 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at cadb.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-24 14:22:33.466  5731  5956 I SemanticLocation: 	... 14 more
+10-24 14:22:33.478  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.646   524   542 W ziparchive: Unable to open '/data/app/~~u7kzBF0CbKYtm-96xGnIfg==/io.github.dantemorrigan.cotes-QzGP7PyrwIe2jmw7bLWFuA==/base.dm': No such file or directory
+10-24 14:22:33.663  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.666   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +797ms
+10-24 14:22:33.675  1630  1776 D PickerSyncController: syncAllMedia
+10-24 14:22:33.691   524   900 I ImeTracker: io.github.dantemorrigan.cotes:7993fa14: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:22:33.692   524   900 I ImeTracker: io.github.dantemorrigan.cotes:7993fa14: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:22:33.699   524  2099 W InputManager-JNI: Input channel object 'c8ad9ff Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:22:33.711  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:22:33.712  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:22:33.712  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:22:33.712  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:33.712  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:33.748  1630  1776 D PickerSyncController: syncAllMediaFromProvider() LOCAL, auth=com.android.providers.media.photopicker, retry=true
+10-24 14:22:33.748  1630  1776 D PickerSyncController: getSyncRequestParams() LOCAL, auth=com.android.providers.media.photopicker
+10-24 14:22:33.782  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.790  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.800  5731  5763 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService started execution. cause:9 exec_start_elapsed_seconds: 101 [CONTEXT service_id=218 ]
+10-24 14:22:33.800  5731  5763 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.phenotype.service.sync.PhenotypeConfigurator started execution. cause:9 exec_start_elapsed_seconds: 101 [CONTEXT service_id=218 ]
+10-24 14:22:33.830  4549  4582 D EGL_emulation: app_time_stats: avg=326.14ms min=61.98ms max=566.95ms count=4
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: DiscoveryNearbyMessagesManager failed to background subscribe [CONTEXT service_id=265 ]
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: java.util.concurrent.TimeoutException: Timed out waiting for Task
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at cfsz.o(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at bbhk.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):25)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at bbhe.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at dtjy.handleMessage(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at avye.ll(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at avye.dispatchMessage(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:22:33.851  5731  5982 I NearbyDiscovery: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:22:33.856  5731  5982 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-24 14:22:33.888  1630  1776 D PickerSyncController:    Latest ID/Gen=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary/21
+10-24 14:22:33.893  1630  1776 D PickerSyncController:    Cached ID/Gen=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary/21
+10-24 14:22:33.893  1630  1776 D PickerSyncController:    RESULT=SyncRequestParams{type=NONE, gen=0, latest=null}
+10-24 14:22:33.893  1630  1776 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-24 14:22:33.893  1630  1776 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-24 14:22:33.893  1630  1776 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-24 14:22:33.893  1630  1776 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-24 14:22:33.893  1630  1776 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-24 14:22:33.893  1630  1776 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-24 14:22:33.893  1630  1776 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-24 14:22:33.893  1630  1776 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-24 14:22:33.893  1630  1776 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-24 14:22:33.893  1630  1776 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-24 14:22:33.906  5731  5982 I NearbyDiscovery: DiscoveryController, showNotification, itemSize=0 [CONTEXT service_id=265 ]
+10-24 14:22:33.906  5731  5982 I NearbyDiscovery: Show notifications: 0 total, no changes since last shown, no-op. [CONTEXT service_id=265 ]
+10-24 14:22:33.907  5731  5763 I NearbyShared: FastPairSlice: enableBindServiceForDiscoveryItem called, isBind = false
+10-24 14:22:33.910  5792  5810 I FastPair: ServiceBindHelper.onSlicePinned, slice already pinned, uri = content://com.google.android.gms.nearby.fastpair/method_bind_service_for_discovery_item?is_bind=false
+10-24 14:22:33.916  5731  5785 I DynamiteModule: Considering local module com.google.android.gms.cronet_dynamite:0 and remote module com.google.android.gms.cronet_dynamite:2411
+10-24 14:22:33.919  5731  5785 I DynamiteModule: Selected remote version of com.google.android.gms.cronet_dynamite, version >= 2411
+10-24 14:22:33.922  5731  5785 W ziparchive: Unable to open '/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.dm': No such file or directory
+10-24 14:22:33.935  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService finished executing. cause:9 result: 1 elapsed_millis: 228 uptime_millis: 228 exec_start_elapsed_seconds: 101 [CONTEXT service_id=218 ]
+10-24 14:22:33.949  5731  5785 D nativeloader: Configuring clns-10 for other apk . target_sdk_version=33, uses_libraries=ALL, library_path=/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk!/lib/x86_64:/data/user_de/0/com.google.android.gms/app_chimera/m/00000001/CronetDynamite.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+10-24 14:22:33.958   524  2099 D ConnectivityService: requestNetwork for uid/pid:10131/5731 activeRequest: null callbackRequest: 151 [NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-24 14:22:33.959   524   763 D ConnectivityService: NetReassign [152 : null → 100] [c 0] [a 1] [i 0]
+10-24 14:22:33.960   524   756 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+10-24 14:22:33.960   524   756 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+10-24 14:22:33.960   524   756 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+10-24 14:22:33.960   524   756 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=152, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10131 RequestorUid: 10131 RequestorPkg: com.google.android.gms UnderlyingNetworks: Null] ]
+10-24 14:22:33.963   524   763 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+10-24 14:22:33.968  5731  5785 I cr_CronetLibraryLoader: Cronet version: 113.0.5672.51, arch: x86_64
+10-24 14:22:33.975  5731  5785 I cujd    : Network metric disabled. Skip initializing network monitor.
+10-24 14:22:33.978  5731  5785 W GmsUrlRequestImpl: Content-Type header is overwritten.
+10-24 14:22:33.985  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:33.985   336  6057 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:22:33.986   336  6058 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:22:33.986   336  6058 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce03a50
+10-24 14:22:33.986   336  6058 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+10-24 14:22:33.990   336  6059 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:22:33.990   336  6059 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919bce0e0b0
+10-24 14:22:33.990   336  6059 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+10-24 14:22:33.991  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:33.993  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:33.994  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:33.995  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:33.996  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:33.997  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:33.998  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:33.999  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:34.000  5731  6055 D TrafficStats: tagSocket(190) with statsTag=0x401, statsUid=10131
+10-24 14:22:34.163  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:34.231   524   763 D ConnectivityService: reportNetworkConnectivity(100, false) by 10132
+10-24 14:22:34.232   995  1902 D NetworkMonitor/100: Forcing reevaluation for UID 10132. Dns signal count: 0
+10-24 14:22:34.237   995  6064 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:22:34.238   995  6064 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:22:34.239   995  6063 D TrafficStats: tagSocket(75) with statsTag=0xffffff81, statsUid=-1
+10-24 14:22:34.242   995  6063 D TrafficStats: tagSocket(75) with statsTag=0xffffff81, statsUid=-1
+10-24 14:22:34.242   336  6065 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:22:34.242   336  6065 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0e7f0
+10-24 14:22:34.244   336  6066 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:22:34.244   336  6066 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0f510
+10-24 14:22:34.245   336  6067 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:22:34.245   336  6067 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce04f50
+10-24 14:22:34.246   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.246   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.247   336  6068 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:22:34.247   336  6068 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a3ce06070
+10-24 14:22:34.247   995  6064 D NetworkMonitor/100: PROBE_DNS connectivitycheck.gstatic.com 10ms OK 142.251.150.120,2001:4860:4826:7800::
+10-24 14:22:34.248   336  6069 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-24 14:22:34.248   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.248   336  6070 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:22:34.248   336  6070 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0e7f0
+10-24 14:22:34.249   336  6070 I resolv  : doQuery: rcode=0, ancount=1, return value=75
+10-24 14:22:34.249   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.249   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.250   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.250   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.250   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.251   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.251   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.251   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.251   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.252   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.252   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.252   336  6071 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:22:34.252   336  6071 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0f510
+10-24 14:22:34.252   336  6071 I resolv  : doQuery: rcode=0, ancount=1, return value=63
+10-24 14:22:34.253   995  6064 D TrafficStats: tagSocket(75) with statsTag=0xffffff81, statsUid=-1
+10-24 14:22:34.254   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.254   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.255   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.255   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:22:34.256   995  6063 D NetworkMonitor/100: PROBE_DNS www.google.com 16ms OK 142.251.151.119,142.251.156.119,142.251.155.119,142.251.153.119,142.251.150.119,142.251.152.119,142.251.157.119,142.251.154.119,2001:4860:482a:7700::,2001:4860:4829:7700::,2001:4860:482b:7700::,2001:4860:4827:7700::,2001:4860:482d:7700::,2001:4860:4828:7700::,2001:4860:4826:7700::,2001:4860:482c:7700::
+10-24 14:22:34.256  5731  5785 W GLSUser : [AppCertManager] Exception while requesting key: 
+10-24 14:22:34.256  5731  5785 W GLSUser : java.util.concurrent.ExecutionException: avvw: Parse Proto Exception.
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dlnv.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at oub.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at otz.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at otv.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at otx.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at otx.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at abxk.r(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at abxw.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at abxw.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at cyeg.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):27)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at czpd.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:34.256  5731  5785 W GLSUser : Caused by: avvw: Parse Proto Exception.
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at avxk.onSucceeded(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at jf.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at ie.run(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):4)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	... 6 more
+10-24 14:22:34.256  5731  5785 W GLSUser : Caused by: dzfz: Protocol message contained an invalid tag (zero).
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzdb.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):13)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzha.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):47)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzha.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):45)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzfd.A(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzex.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzcx.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzcx.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at dzcx.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at avwn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:22:34.256  5731  5785 W GLSUser : 	... 9 more
+10-24 14:22:34.257  5731  5785 W GLSUser : [DeviceKeyStore] Cannot load key: Device key file not found.
+10-24 14:22:34.259   336  6072 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-24 14:22:34.260   336  6076 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:22:34.260   336  6076 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a3ce06070
+10-24 14:22:34.260   336  6076 I resolv  : doQuery: rcode=0, ancount=8, return value=160
+10-24 14:22:34.265   336  6075 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:22:34.265   336  6075 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce04f50
+10-24 14:22:34.265   336  6075 I resolv  : doQuery: rcode=0, ancount=8, return value=256
+10-24 14:22:34.265   995  6063 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:22:34.271   336  6077 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:22:34.272   336  6078 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:22:34.272   336  6078 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce06d10
+10-24 14:22:34.272   336  6078 I resolv  : doQuery: rcode=0, ancount=8, return value=269
+10-24 14:22:34.275   336  6079 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:22:34.275   336  6079 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919bce0c530
+10-24 14:22:34.275   336  6079 I resolv  : doQuery: rcode=0, ancount=8, return value=173
+10-24 14:22:34.278  5731  5763 D TrafficStats: tagSocket(191) with statsTag=0x34000609, statsUid=10125
+10-24 14:22:34.284  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:34.291  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:34.292   995  6064 D NetworkMonitor/100: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=43ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sat, 24 Oct 2026 14:22:34 GMT], X-Android-Received-Millis=[1792851754291], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792851754279]}
+10-24 14:22:34.295  5731  5763 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+10-24 14:22:34.295  5731  5763 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:34.295  5731  5763 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.309   995  6063 D NetworkMonitor/100: PROBE_HTTPS https://www.google.com/generate_204 time=53ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sat, 24 Oct 2026 14:22:34 GMT], X-Android-Received-Millis=[1792851754309], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792851754295]}
+10-24 14:22:34.311   995  6062 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=75ms
+10-24 14:22:34.313   524   763 D ConnectivityService: [100 WIFI] validation passed
+10-24 14:22:34.317   524   534 I system_server: Background concurrent copying GC freed 1220648(26MB) AllocSpace objects, 8(212KB) LOS objects, 47% free, 26MB/50MB, paused 696us,47us total 105.153ms
+10-24 14:22:34.322  5731  5763 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+10-24 14:22:34.322  5731  5763 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:34.323  5731  5763 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: Voilatile gRPC failure INVALID_ARGUMENT: Application credential header not valid. Please fix the client to pass a valid application credential header. [CONTEXT service_id=6 ]
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: enms: INVALID_ARGUMENT: Application credential header not valid. Please fix the client to pass a valid application credential header.
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at enmr.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at abxw.u(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at abxw.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):17)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at abxw.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at cyeg.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):27)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at czpd.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:34.360  5731  5785 W GlsClientGrpc: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:34.485  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:34.662   342  5472 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 501568
+10-24 14:22:34.664  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:34.772  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{f1c6cd0 V.E...... ......ID 0,0-0,0}
+10-24 14:22:34.772  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:22:34.772  4549  4579 D SplashScreenView: Branding: view: android.view.View{121e4c9 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:22:34.775  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@192ba6 in: PAUSED
+10-24 14:22:34.775  5263  5263 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@192ba6
+10-24 14:22:34.783   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:22:34.795  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:34.797  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:34.843  5263  5366 D EGL_emulation: app_time_stats: avg=404.17ms min=110.83ms max=946.23ms count=3
+10-24 14:22:34.988  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:35.003  5519  5538 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:22:35.058  4549  4556 I ndroid.systemui: NativeAlloc concurrent copying GC freed 162003(7469KB) AllocSpace objects, 1(20KB) LOS objects, 49% free, 14MB/29MB, paused 67us,76us total 117.283ms
+10-24 14:22:35.177  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:35.242   524   542 W ziparchive: Unable to open '/data/app/~~zJXpz5RSVvl9-D4A9J55hw==/io.github.dantemorrigan.cotes.test-1_8UILJpFC8oUT7RbPVemw==/base.dm': No such file or directory
+10-24 14:22:35.245   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +473ms
+10-24 14:22:35.266   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:22:35.307  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@192ba6 in: STOPPED
+10-24 14:22:35.308  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:35.308  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:35.308  5263  5263 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@192ba6
+10-24 14:22:35.372  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@1955ead
+10-24 14:22:35.372  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@192ba6 in: DESTROYED
+10-24 14:22:35.373  5263  5263 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:22:35.384   524  2968 W InputManager-JNI: Input channel object '344e532 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:22:35.459  4549  4582 D EGL_emulation: app_time_stats: avg=536.53ms min=27.26ms max=1552.53ms count=3
+10-24 14:22:35.478   524   598 I ImeTracker: com.android.settings:29015b0a: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:22:35.481   524   598 I ImeTracker: com.android.settings:29015b0a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:22:35.512  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:22:35.521  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:35.522  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@892f30b
+10-24 14:22:35.531  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:22:35.532  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:22:35.532  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:35.541  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:35.545  5263  5340 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@ed0b4ff]
+10-24 14:22:35.548  5263  5340 I TestRunner: finished: existingNotes_noTips(io.github.dantemorrigan.cotes.OnboardingTest)

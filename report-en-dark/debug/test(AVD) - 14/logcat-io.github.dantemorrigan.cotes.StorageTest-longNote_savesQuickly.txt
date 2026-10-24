@@ -1,0 +1,10 @@
+10-24 14:25:01.722  7194  7244 I TestRunner: started: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)
+10-24 14:25:01.801  7194  7216 W System  : A resource failed to call release. 
+10-24 14:25:01.980  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:01.982  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:01.983  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:01.983  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:02.014  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:02.024  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:02.141  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:02.361  7194  7244 I TestRunner: finished: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)

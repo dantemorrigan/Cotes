@@ -1,0 +1,29 @@
+10-24 14:23:04.332  5263  5340 I TestRunner: started: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:23:04.340  5519  5519 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@7c768
+10-24 14:23:04.345  5731  6281 W ChimeraUtils: Module com.google.android.gms.tapandpay missing resource null(0)
+10-24 14:23:04.345  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d6b7991
+10-24 14:23:04.346   524  2293 W InputManager-JNI: Input channel object '40267f0 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:23:04.348   524  2250 W InputManager-JNI: Input channel object 'ef9fa98 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:04.384  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:04.387  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:04.389  5731  5731 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.presencemanager.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:23:04.390  5731  5731 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.presencemanager.service.INTERNAL_IDENTITY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:23:04.412  5792  6219 I Checkin : [AndroidCheckinProtoModule] Checkin reason type: 9 attempt count: 1.
+10-24 14:23:04.429  5263  5340 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@b274a13]
+10-24 14:23:04.438  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 292 uptime_millis: 292 exec_start_elapsed_seconds: 132 [CONTEXT service_id=218 ]
+10-24 14:23:04.445  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:04.451  5792  5918 E Pay     : [SeTosMigration] payCapabilities gating flag: enabled [CONTEXT service_id=198 ]
+10-24 14:23:04.451  5792  5918 E Pay     : [SeTosMigration] payCapabilities RoW use_wallet: true, use_wallet_jp: false [CONTEXT service_id=198 ]
+10-24 14:23:04.459   336  6542 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:23:04.459   336  6543 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:23:04.460   336  6543 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce03a50
+10-24 14:23:04.460   336  6543 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+10-24 14:23:04.460   336  6544 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:23:04.460   336  6544 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919bce0e0b0
+10-24 14:23:04.460   336  6544 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+10-24 14:23:04.465  5792  6219 D TrafficStats: tagSocket(123) with statsTag=0x30000408, statsUid=-1
+10-24 14:23:04.489  5792  6219 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+10-24 14:23:04.491  5792  6219 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:23:04.491  5792  6219 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:04.504  5263  5340 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@b274a13]
+10-24 14:23:04.505  5263  5340 I TestRunner: finished: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)

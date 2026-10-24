@@ -1,0 +1,7 @@
+10-24 14:25:57.452  8106  8172 I TestRunner: started: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:25:57.463  8106  8172 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@a906e27]
+10-24 14:25:57.512  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:57.515  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:57.515  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:25:57.525  8106  8172 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@a906e27]
+10-24 14:25:57.527  8106  8172 I TestRunner: finished: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)

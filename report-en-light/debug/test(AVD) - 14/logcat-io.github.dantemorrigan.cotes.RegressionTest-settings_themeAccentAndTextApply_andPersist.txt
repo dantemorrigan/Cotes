@@ -1,0 +1,597 @@
+10-24 14:23:16.048  5263  5340 I TestRunner: started: settings_themeAccentAndTextApply_andPersist(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:23:16.050  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:16.052  4549  4582 D EGL_emulation: app_time_stats: avg=526.67ms min=7.47ms max=1347.97ms count=4
+10-24 14:23:16.069  5263  5340 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@99d8c73]
+10-24 14:23:16.083  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:16.097  5519  5519 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@ef2b35e
+10-24 14:23:16.127   524  1380 W InputManager-JNI: Input channel object '43bd51b io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:16.130   524  2250 W InputManager-JNI: Input channel object 'f89565d Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:23:16.205  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@aa36e39
+10-24 14:23:16.252  4549  4582 D EGL_emulation: app_time_stats: avg=1100.47ms min=725.64ms max=1475.29ms count=2
+10-24 14:23:16.281  5263  5340 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:23:16.296  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{104f1fe V.E...... ......ID 0,0-0,0}
+10-24 14:23:16.296  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:23:16.296  4549  4579 D SplashScreenView: Branding: view: android.view.View{94a9d5f G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:23:16.332   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:16.339  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@d1a37bf in: PRE_ON_CREATE
+10-24 14:23:16.340  5263  5263 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:23:16.365  5731  6282 I GMS_MM_Logger: Memory Metric Logging not allowed. Stopping.
+10-24 14:23:16.370  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@d1a37bf in: CREATED
+10-24 14:23:16.370  5263  5263 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@d1a37bf
+10-24 14:23:16.376  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@d1a37bf in: STARTED
+10-24 14:23:16.377  5263  5263 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@d1a37bf
+10-24 14:23:16.383  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@d1a37bf in: RESUMED
+10-24 14:23:16.383  5263  5263 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@d1a37bf
+10-24 14:23:16.489  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:16.495  5263  5263 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:23:16.498  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:16.515  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:16.589  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:16.600   524   542 W ziparchive: Unable to open '/data/app/~~u7kzBF0CbKYtm-96xGnIfg==/io.github.dantemorrigan.cotes-QzGP7PyrwIe2jmw7bLWFuA==/base.dm': No such file or directory
+10-24 14:23:16.601   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +311ms
+10-24 14:23:16.618   524  1380 I ImeTracker: io.github.dantemorrigan.cotes:3f6b4239: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:16.619   524  1380 I ImeTracker: io.github.dantemorrigan.cotes:3f6b4239: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:23:16.633  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:16.635  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:16.635  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:16.635  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:16.636  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:16.694   524  2288 W InputManager-JNI: Input channel object '54618f4 Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:23:16.846   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:16.846   398  3320 D audioserver: -129
+10-24 14:23:16.873   398   497 D AudioFlinger: mixer(0x78bd29474930) throttle end: throttle time(4)
+10-24 14:23:16.989  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:16.999  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.024  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.051   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:17.052   398   497 D audioserver: -129
+10-24 14:23:17.092  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.490  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.498  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.525  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.548  6682  6682 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:23:17.549  1630  5498 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:23:17.551  6682  6682 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:23:17.562   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:23:17.563  6682  6685 I Gralloc4: mapper 4.x is not supported
+10-24 14:23:17.574  1509  1509 V ContactsProvider: Scheduled notifyChange started.
+10-24 14:23:17.592  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.609  1019  1019 D BluetoothPbapService:  onChange on contact uri 
+10-24 14:23:17.623  1019  6687 D BluetoothPbapUtils: primaryVersionCounter = 0, secondaryVersionCounter=0
+10-24 14:23:17.623  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 145 [CONTEXT service_id=218 ]
+10-24 14:23:17.623  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService started execution. cause:9 exec_start_elapsed_seconds: 145 [CONTEXT service_id=218 ]
+10-24 14:23:17.625  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 52 uptime_millis: 52 exec_start_elapsed_seconds: 145 [CONTEXT service_id=218 ]
+10-24 14:23:17.630  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService finished executing. cause:9 result: 1 elapsed_millis: 9 uptime_millis: 9 exec_start_elapsed_seconds: 145 [CONTEXT service_id=218 ]
+10-24 14:23:17.688   524  2967 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:23:17.691   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:23:17.692  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:17.697  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:17.718  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 145 [CONTEXT service_id=218 ]
+10-24 14:23:17.721  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 9 uptime_millis: 9 exec_start_elapsed_seconds: 145 [CONTEXT service_id=218 ]
+10-24 14:23:17.725   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:17.725   398  3320 D audioserver: -129
+10-24 14:23:17.747  5263  5366 D EGL_emulation: app_time_stats: avg=143.16ms min=10.35ms max=675.11ms count=8
+10-24 14:23:17.958   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:17.958   398   497 D audioserver: -129
+10-24 14:23:17.992  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:17.999  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.026  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.060  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.api.phone.service.SmsRetrieverApiService.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 14:23:18.093  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.178  1562  1624 I ProtoXDBBufferWrapper: ProtoXDBBufferWrapper.flushToStorage():153 Flushed 12 data item(s) to storage.
+10-24 14:23:18.466  4549  4549 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-24 14:23:18.493  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.499  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.527  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.594  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.619  5263  5263 I Choreographer: Skipped 44 frames!  The application may be doing too much work on its main thread.
+10-24 14:23:18.630  5263  5263 E FrameTracker: force finish cuj, time out: J<IME_INSETS_ANIMATION::1@1@io.github.dantemorrigan.cotes>
+10-24 14:23:18.635  4549  4582 D EGL_emulation: app_time_stats: avg=312.93ms min=12.47ms max=1805.93ms count=8
+10-24 14:23:18.688   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:18.688   398  3320 D audioserver: -129
+10-24 14:23:18.690  5263  6509 I OpenGLRenderer: Davey! duration=785ms; Flags=0, FrameTimelineVsyncId=30030, IntendedVsync=145762232698, Vsync=146495566002, InputEventId=0, HandleInputStart=146499369415, AnimationStart=146499372008, PerformTraversalsStart=146499373370, DrawStart=146501962151, FrameDeadline=145778899364, FrameInterval=146498982117, FrameStartTime=16666666, SyncQueued=146510321656, SyncStart=146510381425, IssueDrawCommandsStart=146510556306, SwapBuffers=146518264139, FrameCompleted=146547930496, DequeueBufferDuration=2564, QueueBufferDuration=166007, GpuCompleted=146547930496, SwapBuffersCompleted=146546997515, DisplayPresentTime=0, CommandSubmissionCompleted=146518264139, 
+10-24 14:23:18.768  4549  4582 D EGL_emulation: app_time_stats: avg=1257.58ms min=312.05ms max=2203.11ms count=2
+10-24 14:23:18.932   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:18.932   398   497 D audioserver: -129
+10-24 14:23:18.994  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:18.999  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:19.028  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:19.095  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:19.216  5263  5366 D EGL_emulation: app_time_stats: avg=244.63ms min=22.40ms max=817.13ms count=6
+10-24 14:23:19.256   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:19.256   398  3320 D audioserver: -129
+10-24 14:23:19.476   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:19.477   398   497 D audioserver: -129
+10-24 14:23:19.495  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:19.500  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:19.529  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:19.596  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:19.849  6695  6695 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:23:19.850  1630  1954 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:23:19.852  6695  6695 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:23:19.857   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:23:19.858  6695  6698 I Gralloc4: mapper 4.x is not supported
+10-24 14:23:19.893  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.checkin.CheckinService started execution. cause:9 exec_start_elapsed_seconds: 147 [CONTEXT service_id=218 ]
+10-24 14:23:19.894  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.checkin.CheckinService finished executing. cause:9 result: 1 elapsed_millis: 6 uptime_millis: 6 exec_start_elapsed_seconds: 147 [CONTEXT service_id=218 ]
+10-24 14:23:19.898  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 147 [CONTEXT service_id=218 ]
+10-24 14:23:19.899  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 14 uptime_millis: 14 exec_start_elapsed_seconds: 147 [CONTEXT service_id=218 ]
+10-24 14:23:19.973   524  2288 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:23:19.976   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:23:19.977  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:19.988  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:19.996  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.002  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.005  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 147 [CONTEXT service_id=218 ]
+10-24 14:23:20.006  5263  5263 W emorrigan.cotes: Accessing hidden method Landroid/view/ViewTreeObserver;->dispatchOnScrollChanged()V (unsupported, reflection, allowed)
+10-24 14:23:20.011  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 13 uptime_millis: 13 exec_start_elapsed_seconds: 147 [CONTEXT service_id=218 ]
+10-24 14:23:20.029  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.072   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:20.072   398  3320 D audioserver: -129
+10-24 14:23:20.099  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.251  5263  5366 D EGL_emulation: app_time_stats: avg=101.79ms min=22.69ms max=625.36ms count=10
+10-24 14:23:20.293   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:20.293   398   497 D audioserver: -129
+10-24 14:23:20.380  4549  4549 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-24 14:23:20.424   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:20.424   398  3320 D audioserver: -129
+10-24 14:23:20.496  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.504  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.530  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.609  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:23:20.610  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:23:20.611  4549  4549 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 14:23:20.611  1032  1032 D CarrierSvcBindHelper: onPackageModified: com.google.android.contacts
+10-24 14:23:20.612  1032  1032 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 14:23:20.621  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:20.621  1032  1349 D ImsResolver: maybeAddedImsService, packageName: com.google.android.contacts
+10-24 14:23:20.641  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.cryptauth.cryptauthservice.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+10-24 14:23:20.654   524  2382 I ImeTracker: io.github.dantemorrigan.cotes:6f743c1f: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:20.656   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:20.657   398   497 D audioserver: -129
+10-24 14:23:20.658   524  2382 I ImeTracker: io.github.dantemorrigan.cotes:6f743c1f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:23:20.663   524   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 14:23:20.670  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:20.671  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:20.672  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:20.672  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:20.675  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:20.698  4549  4581 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 14:23:20.716  4549  4581 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 14:23:20.717  4549  4581 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 14:23:20.721  4549  4581 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 14:23:20.721  4549  4581 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 14:23:20.725  4549  4581 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 14:23:20.725  4549  4581 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 14:23:20.725  4549  4581 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 14:23:20.725  4549  4581 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 14:23:20.725  4549  4581 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 14:23:20.726  4549  4581 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 14:23:20.729   524   552 E system_server: No package ID 7f found for resource ID 0x7f080107.
+10-24 14:23:20.729   524   552 E system_server: No package ID 7f found for resource ID 0x7f150560.
+10-24 14:23:20.731  1632  1632 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.contacts.
+10-24 14:23:20.765   832  2644 I PermissionControllerServiceImpl: Updating user sensitive for uid 10154
+10-24 14:23:20.802  1632  3244 I AiAiEcho: AppIndexer Package:[com.google.android.contacts] UserProfile:[0] Enabled:[true].
+10-24 14:23:20.803  1632  3244 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.contacts], userId:[0], reason:[package is updated.].
+10-24 14:23:20.998  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.004  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.031  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.108  4340  4473 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of bdxy@f5a5669
+10-24 14:23:21.120  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.125  5731  5761 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:23:21.126  5731  6094 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 14:23:21.128  5731  5761 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:23:21.130  5731  6721 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 14:23:21.130  5792  5908 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=AppsCorpus serviceId=36
+10-24 14:23:21.138  5792  5851 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.gms componentName=null serviceId=30
+10-24 14:23:21.142  5792  5918 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+10-24 14:23:21.146  5792  5918 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+10-24 14:23:21.147  5792  5918 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 14:23:21.149  5792  5918 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms
+10-24 14:23:21.151  5792  5918 I Icing   : Indexing done com.google.android.gms-apps
+10-24 14:23:21.151  5792  5918 I Icing   : Indexing done com.google.android.gms-internal.3p:MobileApplication
+10-24 14:23:21.283  6725  6725 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:23:21.284  1630  1933 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:23:21.286  6725  6725 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:23:21.300   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:23:21.301  6725  6728 I Gralloc4: mapper 4.x is not supported
+10-24 14:23:21.308  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 14:23:21.324  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 17 uptime_millis: 17 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 14:23:21.334  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService started execution. cause:5 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 14:23:21.380  3084  3147 W DG      : [flow devicekey] DroidGuardRunner.newVmProcessForFastSignalCollection(): Fast program not found [CONTEXT service_id=25 ]
+10-24 14:23:21.385   336  6732 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:23:21.386   336  6736 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:23:21.386   336  6736 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce03190
+10-24 14:23:21.386   336  6736 I resolv  : doQuery: rcode=0, ancount=8, return value=260
+10-24 14:23:21.386   336  6737 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:23:21.386   336  6737 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919bce0ced0
+10-24 14:23:21.386   336  6737 I resolv  : doQuery: rcode=0, ancount=8, return value=164
+10-24 14:23:21.387  3084  3561 D TrafficStats: tagSocket(103) with statsTag=0x1803, statsUid=10131
+10-24 14:23:21.420   524   885 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:23:21.422   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:23:21.422  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:21.429  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:21.443  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 14:23:21.445  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 14:23:21.458   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:21.458   398  3320 D audioserver: -129
+10-24 14:23:21.468  4549  4549 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-24 14:23:21.506  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3f62695
+10-24 14:23:21.507  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@d0e643a
+10-24 14:23:21.510  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.510  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.513   524   885 W InputManager-JNI: Input channel object '3ecd1f io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:21.527   524  2965 I RemoteProvisionSysSvc: getRegistration(android.hardware.security.keymint.IRemotelyProvisionedComponent/default)
+10-24 14:23:21.533  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.539   398   497 D AudioFlinger: mixer(0x78bd29474930) throttle end: throttle time(4)
+10-24 14:23:21.576  5263  5366 D EGL_emulation: app_time_stats: avg=144.42ms min=24.66ms max=875.59ms count=9
+10-24 14:23:21.579   524   524 I RegistrationProxy: onServiceConnected: com.android.rkpdapp.service.RemoteProvisioningService
+10-24 14:23:21.581   524   885 I ImeTracker: io.github.dantemorrigan.cotes:e04817e2: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:23:21.581   524   885 I ImeTracker: io.github.dantemorrigan.cotes:e04817e2: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:23:21.585  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:23:21.586   524  2965 I RegistrationProxy: IGetRegistrationCallback.onSuccess
+10-24 14:23:21.588  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:23:21.588  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:23:21.588  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:23:21.588  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:23:21.590   524  1898 I RemoteProvisionSysSvc: Fetching key 10131 for client 156565541
+10-24 14:23:21.590   524  1898 I RegistrationProxy: getKeyAsync operation started with callback 14321146
+10-24 14:23:21.590  3741  3829 I RkpdRegistrationBinder: Key requested for : android.hardware.security.keymint.IRemotelyProvisionedComponent/default, clientUid: 1017, keyId: 10131, callback: 741786
+10-24 14:23:21.591  3741  3829 I RkpdRegistrationBinder: Key successfully assigned to client
+10-24 14:23:21.591   524   524 I RemoteProvisionSysSvc: Successfully fetched key for client 156565541
+10-24 14:23:21.622  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:21.675   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:21.676   398   497 D audioserver: -129
+10-24 14:23:21.758   336  6744 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:23:21.758  3084  3147 D TrafficStats: tagSocket(104) with statsTag=0x1809, statsUid=-1
+10-24 14:23:21.759  3084  3147 D TrafficStats: tagSocket(104) with statsTag=0x1809, statsUid=-1
+10-24 14:23:21.760  3084  3147 D TrafficStats: tagSocket(104) with statsTag=0x1809, statsUid=-1
+10-24 14:23:21.782  3084  3147 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+10-24 14:23:21.782  3084  3147 W libc    : Access denied finding property "service.adb.tls.port"
+10-24 14:23:21.780  3084  3084 W binder:3084_3: type=1400 audit(0.0:57): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:23:21.780  3084  3084 W binder:3084_3: type=1400 audit(0.0:58): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:23:21.861  3084  3147 W SystemServiceRegistry: No service published for: persistent_data_block
+10-24 14:23:21.875  5731  5761 W GmsUrlRequestImpl: Content-Type header is overwritten.
+10-24 14:23:21.876  5731  6055 D TrafficStats: tagSocket(252) with statsTag=0x401, statsUid=10131
+10-24 14:23:21.918  5731  5761 W GLSUser : [AppCertManager] Exception while requesting key: 
+10-24 14:23:21.918  5731  5761 W GLSUser : java.util.concurrent.ExecutionException: avvw: Parse Proto Exception.
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dlnv.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at oub.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at otz.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at otu.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at otx.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at lzq.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:23:21.918  5731  5761 W GLSUser : Caused by: avvw: Parse Proto Exception.
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at avxk.onSucceeded(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at jf.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at ie.run(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):4)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	... 6 more
+10-24 14:23:21.918  5731  5761 W GLSUser : Caused by: dzfz: Protocol message contained an invalid tag (zero).
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzdb.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):13)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzha.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):47)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzha.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):45)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzfd.A(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzex.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzcx.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzcx.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at dzcx.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at avwn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:23:21.918  5731  5761 W GLSUser : 	... 9 more
+10-24 14:23:21.922  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService finished executing. cause:5 result: 3 elapsed_millis: 589 uptime_millis: 589 exec_start_elapsed_seconds: 149 [CONTEXT service_id=218 ]
+10-24 14:23:22.012  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.012  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.034  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.122  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.131  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.firebase.dynamiclinks.service.START pkg=com.google.android.gms }
+10-24 14:23:22.211  6748  6748 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:23:22.213  1630  1954 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:23:22.215  6748  6748 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:23:22.227   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:23:22.227  6748  6751 I Gralloc4: mapper 4.x is not supported
+10-24 14:23:22.245  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:22.247  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 15 uptime_millis: 15 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:22.339   524  2965 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:23:22.342   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:23:22.343  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:22.352  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:22.353  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.constellation.service.START pkg=com.google.android.gms }
+10-24 14:23:22.365  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:22.372   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:22.372   398  3320 D audioserver: -129
+10-24 14:23:22.373  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 12 uptime_millis: 12 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:22.398  1762  2125 W A       : Batch timed out; batchId=1 taskId=-1000006
+10-24 14:23:22.446   398   497 D AudioFlinger: mixer(0x78bd29474930) throttle end: throttle time(4)
+10-24 14:23:22.463  1762  2158 I A       : NGA Sync: MDD Task: MDD.CHARGING.PERIODIC.TASK done.
+10-24 14:23:22.463  1762  2158 I A       : NGA Sync: isNgaSyncEnabled: false; enableFileGroupPopulator: false; requiresMddAssets: false
+10-24 14:23:22.464  1762  2102 I A       : Refresh account policy.
+10-24 14:23:22.464  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:23:22.464  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:23:22.472  1762  6173 D t       : Starting download: https://www.gstatic.com/assistant/appintegration/models/1/662c5aa4617258c027708e2bb9323ead.binarypb
+10-24 14:23:22.473  1762  6173 V t       : Is http uri, downloading (uri: https://www.gstatic.com/assistant/appintegration/models/1/662c5aa4617258c027708e2bb9323ead.binarypb)
+10-24 14:23:22.473  1762  6178 D t       : Starting download: https://www.gstatic.com/assistant/appintegration/models/1/05a8f7c516a3ad6c26cc4161a3dd6ac6.binarypb
+10-24 14:23:22.473  1762  6178 V t       : Is http uri, downloading (uri: https://www.gstatic.com/assistant/appintegration/models/1/05a8f7c516a3ad6c26cc4161a3dd6ac6.binarypb)
+10-24 14:23:22.496  1762  6173 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719614
+10-24 14:23:22.498  1762  6178 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719615
+10-24 14:23:22.499  1762  6174 D t       : Starting download: https://dl.google.com/assistant/nga/1/4bce3720332aff95260f75ee29bbe97bd379e868.mddz
+10-24 14:23:22.499  1762  6174 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/4bce3720332aff95260f75ee29bbe97bd379e868.mddz)
+10-24 14:23:22.502  1762  6178 D t       : Starting download: https://dl.google.com/assistant/nga/1/17d453d07f334b7d810f8e6e05dbd6001dc45eea.mddz
+10-24 14:23:22.502  1762  6178 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/17d453d07f334b7d810f8e6e05dbd6001dc45eea.mddz)
+10-24 14:23:22.512  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.514  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.534  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.604   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:22.604   398   497 D audioserver: -129
+10-24 14:23:22.623  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:22.942  6759  6759 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:23:22.943  1630  2448 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:23:22.944  6759  6759 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:23:22.952   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:23:22.952  6759  6762 I Gralloc4: mapper 4.x is not supported
+10-24 14:23:22.975  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:22.977  5731  6470 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 15 uptime_millis: 15 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:23.013  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.014  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.035  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.053  1762  6174 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719617_1d48ae4b292cd15bc945ae5ddedb9565d268f7e2
+10-24 14:23:23.068   524  2244 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:23:23.072   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:23:23.073  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:23.075  1630  2334 W ExifInterface: Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.
+10-24 14:23:23.075  1630  2334 W ExifInterface: java.io.EOFException
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.media.ExifInterface$ByteOrderedDataInputStream.readShort(ExifInterface.java:5044)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.media.ExifInterface.readByteOrder(ExifInterface.java:3995)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.media.ExifInterface.parseTiffHeaders(ExifInterface.java:4015)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.media.ExifInterface.getRawAttributes(ExifInterface.java:2974)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.media.ExifInterface.loadAttributes(ExifInterface.java:2023)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1640)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1591)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItemImage(ModernMediaScanner.java:1357)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItem(ModernMediaScanner.java:1019)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.-$$Nest$smscanItem(ModernMediaScanner.java:0)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:820)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:319)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:435)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:398)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:387)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanFile(ModernMediaScanner.java:261)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaProvider.scanFile(MediaProvider.java:1943)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaService.onScanFile(MediaService.java:225)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:85)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:23:23.075  1630  2334 W ExifInterface: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:23:23.075  1630  2334 D OpenGLRenderer: --- Failed to create image decoder with message 'unimplemented'
+10-24 14:23:23.076  1630  2334 D OpenGLRenderer: --- Failed to create image decoder with message 'unimplemented'
+10-24 14:23:23.076  1630  2334 W ModernMediaScanner: Trouble scanning /storage/emulated/0/cotes-shots/en-light-13-editor-xl.png: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.lang.String.equalsIgnoreCase(java.lang.String)' on a null object reference
+10-24 14:23:23.085  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:23:23.109   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:23.109   398  3320 D audioserver: -129
+10-24 14:23:23.121  5263  5366 D EGL_emulation: app_time_stats: avg=386.28ms min=67.51ms max=751.26ms count=4
+10-24 14:23:23.127  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.130  5731  6280 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:23.153  5731  5785 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 19 uptime_millis: 19 exec_start_elapsed_seconds: 150 [CONTEXT service_id=218 ]
+10-24 14:23:23.193  1762  6178 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719618_a64a3f98d26fa7e7180cd6d29bf44fced216fc32
+10-24 14:23:23.194  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3f62695
+10-24 14:23:23.203  1762  6173 D t       : Starting download: https://dl.google.com/assistant/nga/1/c11ffd9ddd4f0c6433a5cb07a437812b735fa547.mddz
+10-24 14:23:23.203  1762  6173 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/c11ffd9ddd4f0c6433a5cb07a437812b735fa547.mddz)
+10-24 14:23:23.203  1762  6174 D t       : Starting download: https://dl.google.com/assistant/nga/1/1658155c551c182a9c9cbdff0bc6cd4293920bc3.mddz
+10-24 14:23:23.203  1762  6174 V t       : Is http uri, downloading (uri: https://dl.google.com/assistant/nga/1/1658155c551c182a9c9cbdff0bc6cd4293920bc3.mddz)
+10-24 14:23:23.228  1762  6173 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719619_5e9da2701f510020f2592c1e5b468922569445d7
+10-24 14:23:23.248  1762  6178 D t       : Starting download: https://www.gstatic.com/federated_assistant/policy_config_federated_hotword-v610555528.binarypb
+10-24 14:23:23.248  1762  6178 V t       : Is http uri, downloading (uri: https://www.gstatic.com/federated_assistant/policy_config_federated_hotword-v610555528.binarypb)
+10-24 14:23:23.264  1762  6178 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719616
+10-24 14:23:23.276  1762  6174 E MDD     : DownloadProgressMonitor: Can't find file group for uri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719620_b56351a773b9354cf1ebcacf86f309b6489173ac
+10-24 14:23:23.302  1762  6172 E SingleDataFileGroupPop: Failed to add file group 
+10-24 14:23:23.302  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.303  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.303  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.303  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.303  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.303  1762  6172 E d       : RuntimeException while executing runnable cb{com.google.apps.tiktok.tracing.ej@7cbafa6} with executor MoreExecutors.directExecutor()
+10-24 14:23:23.303  1762  6172 E d       : java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.ae.b' on a null object reference in method 'void com.google.android.libraries.mdi.download.h.bq.gH(java.lang.Object)'
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.h.bq.gH(PG:2)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.apps.tiktok.tracing.ej.gH(PG:2)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.cb.run(PG:7)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.d.i(PG:1)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.d.iq(PG:5)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.ci.t(PG:1)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.h.bu.b(PG:26)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.gs.p(PG:3)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.gf.apply(Unknown Source:4)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.apps.tiktok.tracing.eo.apply(PG:2)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.h.e(PG:2)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.j.run(PG:9)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.common.util.concurrent.do.run(PG:4)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.android.libraries.i.ae.run(PG:1)
+10-24 14:23:23.303  1762  6172 E d       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:23:23.303  1762  6172 E d       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.android.libraries.i.i.run(PG:2)
+10-24 14:23:23.303  1762  6172 E d       : 	at com.google.android.libraries.i.p.run(PG:4)
+10-24 14:23:23.303  1762  6172 E d       : 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:23:23.303  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.303  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.303  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.304  1762  6172 I A       : Download file group for language pack: en-US
+10-24 14:23:23.304  1762  6172 W A       : Locale en-US is not compatible, please check manifest exists
+10-24 14:23:23.304  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.304  1762  6178 I A       : Starting new batch; batchId=2 corpus=1004
+10-24 14:23:23.304  1762  6173 I A       : Joining existing batch; batchId=2 corpus=1008
+10-24 14:23:23.304  1762  6176 I A       : Joining existing batch; batchId=2 corpus=1014
+10-24 14:23:23.304  1762  2273 I A       : Joining existing batch; batchId=2 corpus=1015
+10-24 14:23:23.304  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.305  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.305  1762  6172 I A       : Merging legacy hotword config map with new proto.
+10-24 14:23:23.305  1762  6172 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.305  1762  6172 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 14:23:23.305  1762  6172 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 14:23:23.305  1762  6172 I A       : Skipping. Expected model: 2 Found: 1
+10-24 14:23:23.305  1762  6172 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.305  1762  6172 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 14:23:23.305  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.306  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.306  1762  6172 I A       : Merging legacy hotword config map with new proto.
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I A       : Skipping. Expected model: 2 Found: 1
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 14:23:23.306  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.306  1762  6172 I A       : Merging legacy hotword config map with new proto.
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I A       : Skipping. Expected model: 2 Found: 1
+10-24 14:23:23.306  1762  6172 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.306  1762  6172 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 14:23:23.308  1762  6172 D PhFileGroupPop: Added file groups assistant_appintegration_appactions_config
+10-24 14:23:23.308  1762  6172 D PhFileGroupPop: Added file groups fedass_policy_config_group
+10-24 14:23:23.309  1762  6172 D PhFileGroupPop: Added file groups tapas_cortex
+10-24 14:23:23.312  1762  2095 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719613]
+10-24 14:23:23.313  1762  2095 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 14:23:23.313  1762  2095 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719613]
+10-24 14:23:23.314  1762  2095 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 14:23:23.314  1762  2095 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719613]
+10-24 14:23:23.314  1762  2095 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 14:23:23.332  1762  6172 E SingleDataFileGroupPop: Failed to add file group 
+10-24 14:23:23.341  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.341  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.341  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.341  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.341  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.345  1762  6172 E d       : RuntimeException while executing runnable cb{com.google.apps.tiktok.tracing.ej@16a3dfb} with executor MoreExecutors.directExecutor()
+10-24 14:23:23.345  1762  6172 E d       : java.lang.NullPointerException: Attempt to read from field 'java.lang.String com.google.android.libraries.mdi.download.ae.b' on a null object reference in method 'void com.google.android.libraries.mdi.download.h.bq.gH(java.lang.Object)'
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.h.bq.gH(PG:2)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.apps.tiktok.tracing.ej.gH(PG:2)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.cb.run(PG:7)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.d.i(PG:1)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.d.iq(PG:5)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.ci.t(PG:1)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.h.bu.b(PG:26)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.gs.p(PG:3)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.android.libraries.mdi.download.gf.apply(Unknown Source:4)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.apps.tiktok.tracing.eo.apply(PG:2)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.h.e(PG:2)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.j.run(PG:9)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.common.util.concurrent.do.run(PG:4)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.android.libraries.i.ae.run(PG:1)
+10-24 14:23:23.345  1762  6172 E d       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:23:23.345  1762  6172 E d       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.android.libraries.i.i.run(PG:2)
+10-24 14:23:23.345  1762  6172 E d       : 	at com.google.android.libraries.i.p.run(PG:4)
+10-24 14:23:23.345  1762  6172 E d       : 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:23:23.345  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.345  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.345  1762  6172 E PhFileGroupPop: Failed to add file group 
+10-24 14:23:23.345  1762  6172 I A       : Download file group for language pack: en-US
+10-24 14:23:23.345  1762  6172 W A       : Locale en-US is not compatible, please check manifest exists
+10-24 14:23:23.345  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.345  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.346  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.346  1762  6172 I A       : Merging legacy hotword config map with new proto.
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I A       : Skipping. Expected model: 2 Found: 1
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 14:23:23.346  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.346  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.346  1762  6172 I A       : Merging legacy hotword config map with new proto.
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I A       : Skipping. Expected model: 2 Found: 1
+10-24 14:23:23.346  1762  6172 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.346  1762  6172 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 14:23:23.346  1762  6172 I A       : Using proto config with mendel
+10-24 14:23:23.346  1762  6172 I A       : Merging legacy hotword config map with new proto.
+10-24 14:23:23.347  1762  2273 I A       : Joining existing batch; batchId=2 corpus=1008
+10-24 14:23:23.347  1762  6172 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.347  1762  6172 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-24 14:23:23.347  1762  6172 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-24 14:23:23.347  1762  6172 I A       : Skipping. Expected model: 2 Found: 1
+10-24 14:23:23.347  1762  6172 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-24 14:23:23.347  1762  6172 I HotwordModelPopulator: #updateHotwordFileGroup group name: hotword_model_en-US_okhey, raw locale: en-US, locale: en-US
+10-24 14:23:23.347  1762  6176 I A       : Joining existing batch; batchId=2 corpus=1014
+10-24 14:23:23.347  1762  6173 I A       : Joining existing batch; batchId=2 corpus=1015
+10-24 14:23:23.347  1762  6172 D PhFileGroupPop: Added file groups assistant_appintegration_appactions_config
+10-24 14:23:23.347  1762  6172 D PhFileGroupPop: Added file groups fedass_policy_config_group
+10-24 14:23:23.348  1762  6172 D PhFileGroupPop: Added file groups tapas_cortex
+10-24 14:23:23.348  1762  6174 I A       : Joining existing batch; batchId=2 corpus=1004
+10-24 14:23:23.349  1762  2095 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719613]
+10-24 14:23:23.349  1762  2095 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 14:23:23.360  1762  2081 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719613]
+10-24 14:23:23.361  1762  2081 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 14:23:23.361  1762  2081 I MicroModelsUtil: #getHotwordModelFromMobstore [mobstoreUri: android://com.google.android.googlequicksearchbox/files/datadownload/shared/public/datadownloadfile_1792851719613]
+10-24 14:23:23.362  1762  2081 I HotwordModelPopulator: Updated file group for locale 'hotword_model_en-US_okhey' from location: https://www.gstatic.com/android-search/hotword/x_google/975058821313279e27b2c3f04de0beef/hotword.data. Download already finished.
+10-24 14:23:23.488   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:23.488   398   497 D audioserver: -129
+10-24 14:23:23.517  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.518  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.538  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.605   398  3320 D audioserver: FGS Logger Transaction failed
+10-24 14:23:23.605   398  3320 D audioserver: -129
+10-24 14:23:23.621  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@d1a37bf in: PAUSED
+10-24 14:23:23.621  5263  5263 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@d1a37bf
+10-24 14:23:23.622  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@3f62695
+10-24 14:23:23.630  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:23.644  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@d1a37bf in: STOPPED
+10-24 14:23:23.644  5263  5263 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@d1a37bf
+10-24 14:23:23.667  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@82fe245
+10-24 14:23:23.668  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@d1a37bf in: DESTROYED
+10-24 14:23:23.668  5263  5263 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:23:23.672   524  2967 W InputManager-JNI: Input channel object '3784dde io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:23.677  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8e10b8f in: PRE_ON_CREATE
+10-24 14:23:23.677  5263  5263 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was DESTROYED
+10-24 14:23:23.686  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8e10b8f in: CREATED
+10-24 14:23:23.687  5263  5263 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8e10b8f
+10-24 14:23:23.688  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8e10b8f in: STARTED
+10-24 14:23:23.688  5263  5263 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8e10b8f
+10-24 14:23:23.689  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8e10b8f in: RESUMED
+10-24 14:23:23.689  5263  5263 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8e10b8f
+10-24 14:23:23.734  5263  5263 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:23:23.805  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.mdd.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+10-24 14:23:23.828   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:23:23.828   398   497 D audioserver: -129
+10-24 14:23:23.847  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{72227d3 V.E...... ......ID 0,0-0,0}
+10-24 14:23:23.847  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:23:23.847  4549  4579 D SplashScreenView: Branding: view: android.view.View{1df6f10 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:23:23.851  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8e10b8f in: PAUSED
+10-24 14:23:23.851  5263  5263 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8e10b8f
+10-24 14:23:23.861  4549  4582 D EGL_emulation: app_time_stats: avg=2610.96ms min=27.72ms max=5194.20ms count=2
+10-24 14:23:23.866   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:23:23.951  4549  4582 D EGL_emulation: app_time_stats: avg=5182.85ms min=5182.85ms max=5182.85ms count=1
+10-24 14:23:23.998  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@168f67c
+10-24 14:23:24.009  5519  5538 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:23:24.026  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.029  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.030  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8e10b8f in: STOPPED
+10-24 14:23:24.031  5263  5263 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@8e10b8f
+10-24 14:23:24.039  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.078  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@acfb3aa
+10-24 14:23:24.078  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@8e10b8f in: DESTROYED
+10-24 14:23:24.079  5263  5263 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:23:24.178  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:23:24.191   524   542 W ziparchive: Unable to open '/data/app/~~zJXpz5RSVvl9-D4A9J55hw==/io.github.dantemorrigan.cotes.test-1_8UILJpFC8oUT7RbPVemw==/base.dm': No such file or directory
+10-24 14:23:24.192   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +348ms
+10-24 14:23:24.193   524  2291 W InputManager-JNI: Input channel object '59cdf47 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:23:24.204  5263  5340 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@99d8c73]
+10-24 14:23:24.206  5263  5340 I TestRunner: finished: settings_themeAccentAndTextApply_andPersist(io.github.dantemorrigan.cotes.RegressionTest)

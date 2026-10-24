@@ -1,0 +1,6 @@
+10-24 14:22:10.709  5263  5340 I TestRunner: started: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)
+10-24 14:22:10.736  1473  3607 I Icing   : Indexing done com.google.android.gms-apps
+10-24 14:22:10.738  1425  3052 W BpBinder: Large outgoing transaction of 329596 bytes, interface descriptor , code 4
+10-24 14:22:10.764  1762  2102 W A       : Can't format flag AndroidGsaVelourJars__velour_birthdaydoodle_jar__name to integer.
+10-24 14:22:10.764  5263  5340 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10192; state: ENABLED
+10-24 14:22:10.774  5263  5340 I TestRunner: finished: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)

@@ -1,0 +1,6 @@
+10-24 14:27:57.419  9031  9093 I TestRunner: started: damagedFile_isSetAside_notOverwritten(io.github.dantemorrigan.cotes.StorageTest)
+10-24 14:27:57.473   524   542 W ziparchive: Unable to open '/data/app/~~v3J3-yTZhdgzCSvGdxnpNQ==/io.github.dantemorrigan.cotes.test-Q7dcubWBYbP9XhAEXkwA6Q==/base.dm': No such file or directory
+10-24 14:27:57.474   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +585ms
+10-24 14:27:57.492  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d08770
+10-24 14:27:57.493   524  1381 W InputManager-JNI: Input channel object 'b2819 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:27:57.495  9031  9093 I TestRunner: finished: damagedFile_isSetAside_notOverwritten(io.github.dantemorrigan.cotes.StorageTest)

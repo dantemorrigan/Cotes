@@ -1,0 +1,2 @@
+10-24 14:23:36.435  5263  5340 I TestRunner: started: missingOrEmptyFile_isJustEmpty(io.github.dantemorrigan.cotes.StorageTest)
+10-24 14:23:36.507  5263  5340 I TestRunner: finished: missingOrEmptyFile_isJustEmpty(io.github.dantemorrigan.cotes.StorageTest)

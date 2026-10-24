@@ -1,0 +1,7 @@
+10-24 14:22:10.778  5263  5340 I TestRunner: started: repeatedImport_addsNothing(io.github.dantemorrigan.cotes.ImportTest)
+10-24 14:22:10.786  4941  4941 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.search.audio.device#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+10-24 14:22:10.789  4941  4941 I PhenotypeBackgroundRecv: Skipping com.google.android.apps.search.smartsetup#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+10-24 14:22:10.793  4941  4941 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.assistant.ampactions#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+10-24 14:22:10.796  4941  4941 I PhenotypeBackgroundRecv: Skipping com.google.android.libraries.search.device#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+10-24 14:22:10.798  4941  4941 I PhenotypeBackgroundRecv: Skipping com.google.android.apps.search.pronunciationlearning#com.google.android.googlequicksearchbox which doesn't use ProcessStable flags.
+10-24 14:22:10.811  5263  5340 I TestRunner: finished: repeatedImport_addsNothing(io.github.dantemorrigan.cotes.ImportTest)

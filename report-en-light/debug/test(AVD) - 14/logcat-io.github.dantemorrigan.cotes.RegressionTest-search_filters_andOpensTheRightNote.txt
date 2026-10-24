@@ -1,0 +1,1052 @@
+10-24 14:22:46.963  5263  5340 I TestRunner: started: search_filters_andOpensTheRightNote(io.github.dantemorrigan.cotes.RegressionTest)
+10-24 14:22:46.965  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:46.973  5263  5340 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@fc3d7c0]
+10-24 14:22:46.973  5792  5887 I NnApiDriverManager: Registering application with GPU 'Android Emulator OpenGL ES Translator (Google SwiftShader)' by 'Google (Google Inc.)' [CONTEXT service_id=301 ]
+10-24 14:22:46.987  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:46.992   524  2291 W InputManager-JNI: Input channel object '5e42e0c io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:22:47.013  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.chimera.container.moduleinstall.ModuleInstallService.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 14:22:47.059  5731  5731 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.tapandpay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:22:47.059  5731  5731 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.tapandpay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:22:47.061  2880  4134 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor$WorkerThreadHandler.handleMessage:221 executing task com.android.voicemail.impl.ActivationTask@df1a13c [CONTEXT enable_persistent_logger=true ]
+10-24 14:22:47.062  2880  2880 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_ACTIVATION_STARTED
+10-24 14:22:47.064  2880  4134 I DialerPreOMigrationHandler: com.android.voicemail.impl.PreOMigrationHandler.migrate:76 ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} already migrated [CONTEXT enable_persistent_logger=true ]
+10-24 14:22:47.015  1630  1776 D PickerSyncController:    Latest ID/Gen=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary/37
+10-24 14:22:47.071  1630  1776 D PickerSyncController:    Cached ID/Gen=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary/21
+10-24 14:22:47.071  1630  1776 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_INCREMENTAL, gen=21, latest=Bundle[{last_media_sync_generation=37, media_collection_id=1407:8913a35e-1740-4773-881f-37bc6b52d79a:external_primary}]}
+10-24 14:22:47.071  1630  1776 I PickerSyncController: Executing SyncAdd. isLocal: true. authority: com.android.providers.media.photopicker
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: Failed to insert picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851761000 duration_ms=0 sync_generation=37 mime_type=image/png width=1080 is_favorite=0 local_id=1000000025 is_visible=1
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: android.database.sqlite.SQLiteConstraintException: CHECK constraint failed: size_bytes > 0 (code 275 SQLITE_CONSTRAINT_CHECK)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.DatabaseUtils.executeInsert(DatabaseUtils.java:199)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:629)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.insertMedia(PickerDbFacade.java:476)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.upsertMedia(PickerDbFacade.java:490)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.executeInternal(PickerDbFacade.java:450)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$DbWriteOperation.execute(PickerDbFacade.java:335)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executePagedSync(PickerSyncController.java:987)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executeSyncAdd(PickerSyncController.java:719)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromProvider(PickerSyncController.java:643)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromLocalProvider(PickerSyncController.java:213)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMedia(PickerSyncController.java:197)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: Retrying failed insert as update. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851761000 duration_ms=0 sync_generation=37 mime_type=image/png width=1080 is_favorite=0 local_id=1000000025 is_visible=1
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: Failed to update picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851761000 duration_ms=0 sync_generation=37 mime_type=image/png width=1080 is_favorite=0 local_id=1000000025 is_visible=1
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: Failed to insert picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851761000 duration_ms=0 sync_generation=37 mime_type=image/png width=1080 is_favorite=0 local_id=1000000025 is_visible=1
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: android.database.sqlite.SQLiteConstraintException: CHECK constraint failed: size_bytes > 0 (code 275 SQLITE_CONSTRAINT_CHECK)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.DatabaseUtils.executeInsert(DatabaseUtils.java:199)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.database.sqlite.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:629)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.insertMedia(PickerDbFacade.java:476)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.upsertMedia(PickerDbFacade.java:490)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$AddMediaOperation.executeInternal(PickerDbFacade.java:467)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.data.PickerDbFacade$DbWriteOperation.execute(PickerDbFacade.java:335)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executePagedSync(PickerSyncController.java:987)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.executeSyncAdd(PickerSyncController.java:719)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromProvider(PickerSyncController.java:643)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMediaFromLocalProvider(PickerSyncController.java:213)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController.syncAllMedia(PickerSyncController.java:197)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at com.android.providers.media.photopicker.PickerSyncController$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:0)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.Looper.loop(Looper.java:294)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: Retrying failed insert as update. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851761000 duration_ms=0 sync_generation=37 mime_type=image/png width=1080 is_favorite=0 local_id=1000000025 is_visible=1
+10-24 14:22:47.072  1630  1776 V PickerDbFacade: Failed to update picker db media. ContentValues: standard_mime_type_extension=0 size_bytes=0 orientation=0 height=2400 date_taken_ms=1792851761000 duration_ms=0 sync_generation=37 mime_type=image/png width=1080 is_favorite=0 local_id=1000000025 is_visible=1
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=21}]. Result count: 2. Cursor count: 3
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Executing SyncRemove. isLocal: true. authority: com.android.providers.media.photopicker
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=21}]. Result count: 0. Cursor count: 0
+10-24 14:22:47.073  1630  1776 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-24 14:22:47.073  1630  1776 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-24 14:22:47.073  1630  1776 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-24 14:22:47.073  1630  1776 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-24 14:22:47.073  1630  1776 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-24 14:22:47.073  1630  1776 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-24 14:22:47.096  5792  5804 I gle.android.gms: Background concurrent copying GC freed 125881(5507KB) AllocSpace objects, 52(1648KB) LOS objects, 49% free, 9984KB/19MB, paused 54us,20us total 755.404ms
+10-24 14:22:47.121  5792  6211 I gle.android.gms: WaitForGcToComplete blocked ClassLinker on Background for 376.586ms
+10-24 14:22:47.127  2880  4134 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.isCarrierAppInstalled:637 carrier app not installed in this device [CONTEXT ratelimit_period="1 MINUTES [skipped: 4]" ]
+10-24 14:22:47.127  2880  4134 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-24 14:22:47.136  2880  4134 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-24 14:22:47.139  4549  4582 D EGL_emulation: app_time_stats: avg=5678.01ms min=455.37ms max=10900.64ms count=2
+10-24 14:22:47.164  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.202  5792  6211 I CheckinUtil: Classify the device as Phone. [CONTEXT service_id=130 ]
+10-24 14:22:47.203  2880  3358 I DialerRestVoicemailEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.rest.RestVoicemailEnabledFn.isEnabled:51 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 35]" ]
+10-24 14:22:47.203  2880  3358 I DialerCvvmEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.omtp.protocol.cvvm.CvvmEnabledFn.isEnabled:37 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 17]" ]
+10-24 14:22:47.223  5263  5340 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:22:47.234  5731  5761 I TapAndPay: Disabling TapAndPay HCE service [CONTEXT service_id=79 ]
+10-24 14:22:47.246  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{5ebe393 V.E...... ......ID 0,0-0,0}
+10-24 14:22:47.246  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:22:47.246  4549  4579 D SplashScreenView: Branding: view: android.view.View{b78dfd0 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:22:47.274   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:22:47.336  5731  5902 I Nearby  : [MBleClient] Start ble scanning from NearbyDirect:BluetoothAdapterWrapper, context tag = nearby_messages [CONTEXT service_id=49 ]
+10-24 14:22:47.384  5731  5902 D BluetoothAdapter: isLeEnabled(): ON
+10-24 14:22:47.394  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9f3ec1c in: PRE_ON_CREATE
+10-24 14:22:47.394  5263  5263 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:22:47.417  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.475  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.475  1019  4563 D BtGatt.GattService: stopScan() - queue size =2
+10-24 14:22:47.489  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.495  1019  4563 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-24 14:22:47.496  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9f3ec1c in: CREATED
+10-24 14:22:47.496  5263  5263 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9f3ec1c
+10-24 14:22:47.496  1019  4563 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-24 14:22:47.496  1019  1316 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp -1 scanModeUsed -1 [appScanStats com.google.uid.shared:10131]]
+10-24 14:22:47.496  1019  1316 D BtGatt.ScanManager: stop gattClientScanNative
+10-24 14:22:47.498  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-24 14:22:47.498  1019  1316 W bt_shim_scanner: packages/modules/Bluetooth/system/main/shim/le_scanning_manager.cc:190 Scan: Invalid state: start:0, current scan state: 0
+10-24 14:22:47.498  1019  1316 W BtGatt.ScanManager: There is no scan radio to stop
+10-24 14:22:47.498  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-24 14:22:47.498  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9f3ec1c in: STARTED
+10-24 14:22:47.498  5263  5263 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9f3ec1c
+10-24 14:22:47.500  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9f3ec1c in: RESUMED
+10-24 14:22:47.501  5263  5263 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9f3ec1c
+10-24 14:22:47.511  1019  4563 D BtGatt.GattService: unregisterScanner() - scannerId=2
+10-24 14:22:47.512  1019  4563 I bt_stack: [INFO:le_scanning_manager.cc(162)] Unregister in shim layer, scanner_id:2
+10-24 14:22:47.512  5731  5902 I Nearby  : [MBleClient] M hardware scan: 1 clients, scanMode= LOW_LATENCY, filters size = 5 [CONTEXT service_id=49 ]
+10-24 14:22:47.512  5731  5902 D BluetoothAdapter: isLeEnabled(): ON
+10-24 14:22:47.515  1019  4563 D BtGatt.GattService: registerScanner() - UUID=4e9ba020-cc59-4d0f-8fe1-767d24546088
+10-24 14:22:47.521  1019  4563 I bt_stack: [INFO:le_scanning_manager.cc(155)] RegisterScanner in shim layer
+10-24 14:22:47.521  1019  1261 D BtGatt.GattService: onScannerRegistered() - UUID=4e9ba020-cc59-4d0f-8fe1-767d24546088, scannerId=2, status=0
+10-24 14:22:47.521  5731  6236 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=2 mScannerId=0
+10-24 14:22:47.522  1019  4563 D BtGatt.GattService: start scan with filters
+10-24 14:22:47.524  1019  4563 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=224, mManufacturerData=[0, 0, 0], mManufacturerDataMask=[0, 0, -1], mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000fef3-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000feaa-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=0000fea0-0000-1000-8000-00805f9b34fb, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=-1, mManufacturerData=null, mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null], BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=76, mManufacturerData=[2, 21], mManufacturerDataMask=[-1, -1], mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null]])
+10-24 14:22:47.528  5731  5737 I .gms.persistent: Background concurrent copying GC freed 308677(13MB) AllocSpace objects, 19(3416KB) LOS objects, 49% free, 15MB/30MB, paused 43us,25us total 426.211ms
+10-24 14:22:47.552  1019  4563 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats com.google.uid.shared:10131]]
+10-24 14:22:47.552  1019  4563 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-24 14:22:47.554  1019  4563 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-24 14:22:47.554  1019  1316 D BtGatt.ScanManager: handling starting scan
+10-24 14:22:47.554  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(268)] ScanFilterEnable in shim layer
+10-24 14:22:47.556  1019  1261 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=2, status=0, action=1
+10-24 14:22:47.558  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.558  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:47.558  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:47.558  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.558  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:47.558  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:47.559  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:47.563  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.564  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:47.565  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:47.566  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:47.566  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.566  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:47.566  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:47.566  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:47.569  5792  6224 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: vision.ocr:-1
+10-24 14:22:47.576  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:47.576  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.577  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:47.580  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:47.582  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:47.582  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.582  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:47.582  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:47.582  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:47.582  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.582  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:47.589  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:47.589  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.589  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:47.589  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:47.590  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:47.591  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.592  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:47.593  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-24 14:22:47.593  1019  1261 D BtGatt.GattService: onScanFilterConfig() - clientIf=2, action = 0 status = 0, filterType=0, availableSpace=0
+10-24 14:22:47.593  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.593  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-24 14:22:47.593  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-24 14:22:47.596  1019  1261 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=2, status=0, action=0, availableSpace=0
+10-24 14:22:47.596  1019  1261 D BtGatt.ScanManager: callback done for scannerId - 2 status - 0
+10-24 14:22:47.596  1019  1316 D BtGatt.ScanManager: start gattClientScanNative from startRegularScan()
+10-24 14:22:47.596  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-24 14:22:47.596  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-24 14:22:47.596  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-24 14:22:47.596  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-24 14:22:47.596  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+10-24 14:22:47.597  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-24 14:22:47.597  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-24 14:22:47.597  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-24 14:22:47.597  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-24 14:22:47.599  1019  1316 D BtGatt.ScanManager: Start gattClientScanNative with old scanMode -1 new scanMode 2 ( in MS: 100 / 100, in scan unit: 160 / 160 ) [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats com.google.uid.shared:10131]]
+10-24 14:22:47.599  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(346)] SetScanParameters in shim layer
+10-24 14:22:47.599  1019  1261 D BtGatt.GattService: onScanParamSetupCompleted : 0
+10-24 14:22:47.599  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-24 14:22:47.599  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-24 14:22:47.599  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-24 14:22:47.599  1019  1232 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-24 14:22:47.599  1019  1316 D BtGatt.ScanManager: apply scan timeout (300000)to scannerId 2
+10-24 14:22:47.600  5792  5887 W Pay     : Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+10-24 14:22:47.600  5792  5887 W Pay     : [eMoney txn sync] exiting without init: active tapandpay account not found! [CONTEXT service_id=198 ]
+10-24 14:22:47.610  5792  5887 I Pay     : Requested check of feature migrations. [CONTEXT service_id=198 ]
+10-24 14:22:47.614  5792  5887 I Pay     : Requested immediate check to see whether to show pay module downloading complete notification. [CONTEXT service_id=198 ]
+10-24 14:22:47.616  5792  5887 W Pay     : Mdl not supported. Not triggering periodic MSO refresh task. [CONTEXT service_id=198 ]
+10-24 14:22:47.639  2880  3358 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:22:47.639  2880  3358 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-24 14:22:47.664  2880  4134 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:292 VVM content provider configured - vvm_type_cvvm PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-24 14:22:47.664  2880  4134 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.updateVoicemailsWithIccId:477 conversion disabled [CONTEXT enable_persistent_logger=true ]
+10-24 14:22:47.666  2880  4134 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.handleEvent:527 OmtpEvent:CONFIG_ACTIVATING PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-24 14:22:47.667  2880  4134 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-24 14:22:47.668  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.674  5731  5761 I TapAndPay: Disabling TapAndPay HCE service [CONTEXT service_id=79 ]
+10-24 14:22:47.675  2880  4134 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-24 14:22:47.687  5792  5887 W Pay     : Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+10-24 14:22:47.687  5792  5887 W Pay     : [eMoney card recovery task] exiting without init: active tapandpay account not found! [CONTEXT service_id=198 ]
+10-24 14:22:47.692  5792  6224 I ChimeraConfigurator: Detected pending changes for urgent request: [vision.ocr]. Pending module sets: container:2318189190800+mlkit.ocr.common,tflite_dynamite:2627305025100800+tflite_dynamite,vision_ocr:2316024025100000+vision.ocr
+10-24 14:22:47.723  5263  5263 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:22:47.742  5792  6224 I GmsDebugLogger: [73] 1801
+10-24 14:22:47.754  5792  6222 W PeoplePU: getComponentEnabledSetting failed.
+10-24 14:22:47.754  5792  6222 W PeoplePU: java.lang.IllegalArgumentException: Unknown component: ComponentInfo{com.google.android.syncadapters.contacts/com.google.android.syncadapters.contacts.ProxyGalProvider}
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3061)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at android.os.Parcel.createException(Parcel.java:3041)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at android.os.Parcel.readException(Parcel.java:3024)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at android.os.Parcel.readException(Parcel.java:2966)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at android.content.pm.IPackageManager$Stub$Proxy.getComponentEnabledSetting(IPackageManager.java:6034)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at android.app.ApplicationPackageManager.getComponentEnabledSetting(ApplicationPackageManager.java:3097)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at bvox.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at buru.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at com.google.android.gms.people.api.init.PeopleModuleInitIntentOperation.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at zdm.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at zhv.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at hjm.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at hjl.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):11)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:47.754  5792  6222 W PeoplePU: Caused by: android.os.RemoteException: Remote stack trace:
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at com.android.server.pm.ComputerEngine.getComponentEnabledSettingInternal(ComputerEngine.java:5159)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at com.android.server.pm.ComputerEngine.getComponentEnabledSetting(ComputerEngine.java:5141)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at com.android.server.pm.IPackageManagerBase.getComponentEnabledSetting(IPackageManagerBase.java:388)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at android.content.pm.IPackageManager$Stub.onTransact(IPackageManager.java:3012)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 	at com.android.server.pm.PackageManagerService$IPackageManagerImpl.onTransact(PackageManagerService.java:6334)
+10-24 14:22:47.754  5792  6222 W PeoplePU: 
+10-24 14:22:47.775  5792  6224 W ZappDownloader: No successful module downloads for requested features [vision.ocr].
+10-24 14:22:47.782  5792  6224 I GmsDebugLogger: [30] [VisionOcrDynamite.integ:231602402100000],[TfliteDynamiteDynamite.integ:262730502100800],[MlkitOcrCommon.optional:231818100800]
+10-24 14:22:47.788  5792  6222 I PeopleGalProvider: Gal directories started.
+10-24 14:22:47.790  5792  6222 I PeopleGalProvider: Method 1 completed.
+10-24 14:22:47.790  5792  6222 I PeopleGalProvider: Method 1 finished successfully.
+10-24 14:22:47.793  1019  1019 D BluetoothPbapService:  onChange on contact uri 
+10-24 14:22:47.796  5792  5810 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10131; state: ENABLED
+10-24 14:22:47.798  1509  3277 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10086; state: ENABLED
+10-24 14:22:47.801  5792  6222 I GalProviderController: setting component enabled=1 for com.google.android.gms.people.service.galprovider.PeopleGalProvider
+10-24 14:22:47.806  5792  6222 I GalProviderController: Setting component enabled succeeds.
+10-24 14:22:47.811  5792  6222 I PeopleGalProvider: Gal directories started.
+10-24 14:22:47.812  5792  6222 I PeopleGalProvider: Method 1 completed.
+10-24 14:22:47.813  5792  6222 I PeopleGalProvider: Method 1 finished successfully.
+10-24 14:22:47.815  5792  6224 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-24 14:22:47.816  5792  6224 I GmsDebugLogger: [83] 1 [vision.ocr]
+10-24 14:22:47.821  5792  6222 I DeletedNullContactsCleanup: Scheduling the service.
+10-24 14:22:47.829  5792  6222 I BackupAndSyncValidation: Scheduling the service.
+10-24 14:22:47.830  5792  6216 W Vision  : Request for optional module download of ocr failed. Request again.
+10-24 14:22:47.833  5792  6216 W Vision  : Would have logged:
+10-24 14:22:47.833  5792  6216 W Vision  : # dsae@37884fe7
+10-24 14:22:47.834  5792  6216 I Vision  : Schedule retrying download ocr at 115713 with backoff 20 seconds
+10-24 14:22:47.842  1019  6317 D BluetoothPbapUtils: primaryVersionCounter = 0, secondaryVersionCounter=0
+10-24 14:22:47.850  5792  6222 I PeopleInitIntentOp: Not initializing debuggability [CONTEXT service_id=5 ]
+10-24 14:22:47.856  5792  5887 W ChimeraUtils: Module com.google.android.gms.phonesky_recovery missing resource null(0)
+10-24 14:22:47.890  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:47.890  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:47.905  5792  6211 I Checkin : [AndroidCheckinProtoModule] Checkin reason type: 1 attempt count: 1.
+10-24 14:22:47.916  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:47.937  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.937  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:47.937  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:47.952  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:47.962  2880  3358 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:22:47.962  2880  3358 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-24 14:22:47.982   524   542 W ziparchive: Unable to open '/data/app/~~u7kzBF0CbKYtm-96xGnIfg==/io.github.dantemorrigan.cotes-QzGP7PyrwIe2jmw7bLWFuA==/base.dm': No such file or directory
+10-24 14:22:47.986   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +755ms
+10-24 14:22:47.992  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.997  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:47.999   524  2166 I ImeTracker: io.github.dantemorrigan.cotes:1ac16b7a: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:22:48.008   524  2166 I ImeTracker: io.github.dantemorrigan.cotes:1ac16b7a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:22:48.011  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:22:48.038  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:22:48.039  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:22:48.039  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:48.067  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:48.074   524  2382 W InputManager-JNI: Input channel object 'ae5f40c Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:22:48.105  1032  1032 D CarrierSvcBindHelper: onPackageModified: com.google.android.gms
+10-24 14:22:48.105  1032  1032 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 14:22:48.145  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:22:48.145  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:22:48.155  4549  4582 D EGL_emulation: app_time_stats: avg=366.67ms min=29.01ms max=684.52ms count=4
+10-24 14:22:48.157  5792  6224 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: mlkit.barcode.ui:0
+10-24 14:22:48.169  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:48.169  4549  4549 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 14:22:48.178   832  4829 I PermissionControllerServiceImpl: Updating user sensitive for uid 10131
+10-24 14:22:48.200  2880  4134 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:339 sending an activation request [CONTEXT enable_persistent_logger=true ]
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: Retrieving snapshot for com.google.android.gms.playlog.uploader failed
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: java.util.concurrent.TimeoutException: Timed out waiting for Task
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at cfsz.o(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at bwch.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at bwch.j(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at bwch.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at bwch.j(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at bwch.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at com.google.android.gms.clearcut.init.ClearcutInitChimeraIntentService.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at zdm.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at com.google.android.gms.clearcut.init.DefaultPriorityClearcutInitChimeraIntentService.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at zhv.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at hjm.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at hjl.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):11)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:48.215  5792  6212 E PhenotypeFlagCommitter: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:48.222  1632  1632 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.gms.
+10-24 14:22:48.223   524   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 14:22:48.227  1632  2887 I AiAiEcho: AppIndexer Package:[com.google.android.gms] UserProfile:[0] Enabled:[true].
+10-24 14:22:48.227  1632  2887 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.gms], userId:[0], reason:[package is updated.].
+10-24 14:22:48.235  4549  4581 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 14:22:48.299  4549  4581 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 14:22:48.299  4549  4581 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 14:22:48.299  4549  4581 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 14:22:48.299  4549  4581 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 14:22:48.299  4549  4581 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 14:22:48.300  4549  4581 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 14:22:48.300  4549  4581 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 14:22:48.300  4549  4581 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 14:22:48.300  4549  4581 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 14:22:48.301  4549  4581 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 14:22:48.304  5731  5837 W .gms.persistent: Long monitor contention with owner lowpool[6] (5840) at void bytb.n(byps, byps, int)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6) waiters=0 in int bytb.l(bysm, aphn) for 341ms
+10-24 14:22:48.317  1032  2041 D SmsNumberUtils: enter filterDestAddr. destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-24 14:22:48.323  1032  2041 D SmsNumberUtils: destAddr is not formatted.
+10-24 14:22:48.323  1032  2041 D SmsNumberUtils: leave filterDestAddr, new destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-24 14:22:48.348  5792  6224 I ChimeraConfigurator: Detected pending changes for urgent request: [mlkit.barcode.ui]. Pending module sets: container:2318189190800+mlkit.barcode.ui+vision.barcode,tflite_dynamite:2627305025100800+tflite_dynamite
+10-24 14:22:48.354  1032  1349 D ImsResolver: maybeAddedImsService, packageName: com.google.android.gms
+10-24 14:22:48.372  5792  6222 I GmsSyncPolicyEngine: Periodic sync 1 disabled by policy, cancelled.
+10-24 14:22:48.374  5792  6224 I GmsDebugLogger: [73] 1801
+10-24 14:22:48.375  5792  6222 I GmsSyncPolicyEngine: Periodic sync 2 disabled by policy, cancelled.
+10-24 14:22:48.376  5792  6224 W ZappDownloader: No successful module downloads for requested features [mlkit.barcode.ui].
+10-24 14:22:48.376  5792  6224 I GmsDebugLogger: [30] [VisionBarcode.optional:231818100800],[TfliteDynamiteDynamite.integ:262730502100800],[MlkitBarcodeUi.optional:231818100000]
+10-24 14:22:48.391  5792  6222 I GmsSyncPolicyEngine: Periodic sync 3 disabled by policy, cancelled.
+10-24 14:22:48.394  5792  6224 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-24 14:22:48.395  5792  6224 I GmsDebugLogger: [83] 1 [mlkit.barcode.ui]
+10-24 14:22:48.402  2880  4134 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:46 Impression: CVVM_SEND_VVM_SMS
+10-24 14:22:48.437  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:48.438  5792  5887 I AlarmManager: setExactAndAllowWhileIdle [name: RemindersNSREFRESH_TIME_REMINDERS_ALARM type: 0 triggerAtMillis: 1792886400000]
+10-24 14:22:48.467  5792  6216 V SmartDevice: [ModuleInitializer] ModuleInitializer got intent Intent { act=android.intent.action.BOOT_COMPLETED flg=0x89000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) } with flag 2
+10-24 14:22:48.469  5792  6216 W ChimeraUtils: Module com.google.android.gms.smartdevice missing resource null(0)
+10-24 14:22:48.485  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-24 14:22:48.486  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.487  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-24 14:22:48.487  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.488  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.492  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpInferenceService.PulpInference is scheduled to run EVERY_7_DAYS [CONTEXT service_id=173 ]
+10-24 14:22:48.494   336   336 I netd    : tetherGetStats() -> {[]} <0.39ms>
+10-24 14:22:48.506   336   336 I netd    : bandwidthSetGlobalAlert(2097152) <0.11ms>
+10-24 14:22:48.515  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:48.516  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:48.521  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddDownloadScheduleService.PulpMddRefreshDownloadTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.525  5792  6216 D SmartDevice: [ModuleInitializer] Module init - scheduling buffered logs cleanup task
+10-24 14:22:48.526  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddMaintenanceService.PulpMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.530  5792  6216 I SmartDevice: [CleanBufferedLogsService] Periodic task upload_buffered_logs_periodic scheduled!
+10-24 14:22:48.537  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedScheduleService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.538  5792  6212 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-24 14:22:48.539  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.539  5792  6212 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-24 14:22:48.541  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.543  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.549  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.556  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.570  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.historicalbusyness.HistoricalBusynessProcessingService.HistoricalBusyness is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.570  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.570  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.570  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddMaintenanceService.RegionMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-24 14:22:48.570  5792  6212 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddDownloadScheduleService.RegionMddRefreshDownloadTask is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-24 14:22:48.578  5792  6322 I TelephonySpamInit: On boot completed TelephonySpam module initialized [CONTEXT service_id=150 ]
+10-24 14:22:48.581  5792  6322 I TelephonySpamInit: onModuleUpdated TelephonySpam module initialized [CONTEXT service_id=150 ]
+10-24 14:22:48.582  5792  6322 I SpamListSync: scheduleSyncTasks [CONTEXT service_id=150 ]
+10-24 14:22:48.589  4340  4462 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of bdxy@f5a5669
+10-24 14:22:48.588  5792  6322 I SpamListSync: schedulePeriodicTask [CONTEXT service_id=150 ]
+10-24 14:22:48.592  5792  5810 I PeopleGalProvider: Gal directories started.
+10-24 14:22:48.593  5792  5810 I PeopleGalProvider: Method 1 completed.
+10-24 14:22:48.594  5792  5810 I PeopleGalProvider: Method 1 finished successfully.
+10-24 14:22:48.594  5792  6216 I ThreadNetworkModuleInit: Initializing runtime states: 2 [CONTEXT service_id=305 ]
+10-24 14:22:48.597  5731  6123 I TapAndPay: Disabling TapAndPay HCE service [CONTEXT service_id=79 ]
+10-24 14:22:48.615  5731  5948 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 14:22:48.625  5731  6330 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 14:22:48.627  5792  6216 I ThreadNetworkModuleInit: Enabled component com.google.android.gms.threadnetwork.ui.ShareCredentialsActivity [CONTEXT service_id=305 ]
+10-24 14:22:48.628  5792  6216 I ThreadBrSynchronizer: Scheduled periodic Border Router sync task: PeriodicBrSync [CONTEXT service_id=305 ]
+10-24 14:22:48.641  5792  6216 I TrustedTime: Skip initializing when trusted time feature disabled. [CONTEXT service_id=326 ]
+10-24 14:22:48.661  1986  6206 D DownloadManager: [13] Finished with status SUCCESS
+10-24 14:22:48.664  5792  6216 W ActiveUnlock: Tried to set empty triggers [CONTEXT service_id=327 ]
+10-24 14:22:48.669  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:48.671  5792  6216 W ChimeraUtils: Module com.google.android.gms.activeunlock_primary missing resource null(0)
+10-24 14:22:48.666  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.checkin.CheckinService started execution. cause:7 exec_start_elapsed_seconds: 115 [CONTEXT service_id=218 ]
+10-24 14:22:48.680  5731  5785 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-24 14:22:48.680  5731  5785 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at bzxd.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at cadn.j(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at cadn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):36)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at cadn.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):17)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at cacs.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):68)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-24 14:22:48.680  5731  5785 I SemanticLocation: 	... 22 more
+10-24 14:22:48.681  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.checkin.CheckinService finished executing. cause:7 result: 3 elapsed_millis: 115 uptime_millis: 115 exec_start_elapsed_seconds: 115 [CONTEXT service_id=218 ]
+10-24 14:22:48.684   336  6333 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:22:48.685   336  6334 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:22:48.685   336  6335 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:22:48.685   336  6335 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919bce0e0b0
+10-24 14:22:48.685   336  6335 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+10-24 14:22:48.686   336  6334 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce03a50
+10-24 14:22:48.686   336  6334 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+10-24 14:22:48.690  1762  6173 W BlobLobber: Not processing download id 13, not a BlobLobber blob
+10-24 14:22:48.690  1762  6173 W BlobLobber: Notification for download id 13 which we didn't know or failed
+10-24 14:22:48.690  5792  5917 I Icing   : updateResources: need to parse arkh{com.google.android.gms}
+10-24 14:22:48.692  5792  6211 D TrafficStats: tagSocket(110) with statsTag=0x30000408, statsUid=-1
+10-24 14:22:48.694  1762  1762 I BgTaskExecutorImpl: Starting NONEXCLUSIVE background task ZIP_DOWNLOAD_PROCESSOR.
+10-24 14:22:48.697  1762  2095 I ModelDnldProcssHelpr: #handleDownloadComplete, downloadId=13
+10-24 14:22:48.697  1762  2095 E ModelDnldProcssHelpr: pending download info for pending_hotword_model_download_info is null
+10-24 14:22:48.697  1762  2095 E ModelDnldProcssHelpr: pending download info for pending_xgoogle_hotword_model_download_info is null
+10-24 14:22:48.706   336  2003 W resolv  : SSL_connect ssl error =5, mark 0xf0064: Connection refused
+10-24 14:22:48.709   336  2003 W resolv  : TLS Handshake failed
+10-24 14:22:48.709   336  2003 W resolv  : query failed
+10-24 14:22:48.709   336  2003 W resolv  : validateDnsTlsServer returned 0 for 10.0.2.3
+10-24 14:22:48.710   336  2003 W resolv  : Validation failed
+10-24 14:22:48.714  5792  5887 I SystemUpdate: [Control,UpdateReminderDialogControl] Received action: android.intent.action.BOOT_COMPLETED
+10-24 14:22:48.715  5792  6322 I SpamListSync: scheduleOneTimeTask [CONTEXT service_id=150 ]
+10-24 14:22:48.746  5792  6216 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: vision.ocr:-1
+10-24 14:22:48.767  6339  6339 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:22:48.771  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:22:48.771  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:22:48.771  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:22:48.771  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:22:48.773  1630  2448 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:22:48.774  6339  6339 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:22:48.778  5792  5887 I Wear_Controller: Wearable module requires a companion app to be installed.
+10-24 14:22:48.778  5792  5887 I Wear_Controller: onStartup - Wear is not available on this device.
+10-24 14:22:48.787   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:22:48.787  6339  6344 I Gralloc4: mapper 4.x is not supported
+10-24 14:22:48.832  5792  6211 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+10-24 14:22:48.833  5792  6211 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+10-24 14:22:48.833  5792  6211 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+10-24 14:22:48.835  5792  6216 I ChimeraConfigurator: Detected pending changes for urgent request: [vision.ocr]. Pending module sets: container:2318189190800+mlkit.ocr.common,tflite_dynamite:2627305025100800+tflite_dynamite,vision_ocr:2316024025100000+vision.ocr
+10-24 14:22:48.867  1762  2102 I ZipDownloadProcessorTsk: cacheDestination: /data/user/0/com.google.android.googlequicksearchbox/app_g3_models/en-US.zip
+10-24 14:22:48.873  5792  6216 I GmsDebugLogger: [73] 1801
+10-24 14:22:48.875  5792  6216 W ZappDownloader: No successful module downloads for requested features [vision.ocr].
+10-24 14:22:48.875  5792  6216 I GmsDebugLogger: [30] [VisionOcrDynamite.integ:231602402100000],[TfliteDynamiteDynamite.integ:262730502100800],[MlkitOcrCommon.optional:231818100800]
+10-24 14:22:48.878  4340  4437 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+10-24 14:22:48.893  5792  6216 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-24 14:22:48.893  5792  6216 I GmsDebugLogger: [83] 1 [vision.ocr]
+10-24 14:22:48.895  5792  6211 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+10-24 14:22:48.895  5792  6211 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.895  5792  6211 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.905  2880  2880 I DialerStatusSmsFetcher: com.android.voicemail.impl.sms.StatusSmsFetcher.onReceive:106 Request SMS successfully sent [CONTEXT enable_persistent_logger=true ]
+10-24 14:22:48.907  5792  6224 W Vision  : Request for optional module download of ocr failed. Request again.
+10-24 14:22:48.907  5792  6224 W Vision  : Would have logged:
+10-24 14:22:48.907  5792  6224 W Vision  : # dsae@44f943d5
+10-24 14:22:48.907  5792  6224 I Vision  : Schedule retrying download ocr at 116787 with backoff 10 seconds
+10-24 14:22:48.912  5792  6216 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: tflite_dynamite:-1
+10-24 14:22:48.932   524  2166 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:22:48.939  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:48.942  5792  6211 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+10-24 14:22:48.942  5792  6211 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:48.942  5792  6211 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.957  5792  5804 I gle.android.gms: Background young concurrent copying GC freed 210188(7143KB) AllocSpace objects, 45(1708KB) LOS objects, 21% free, 15MB/19MB, paused 1.907ms,14us total 276.223ms
+10-24 14:22:48.958  5731  5785 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-24 14:22:48.958  5731  5785 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at cadb.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-24 14:22:48.958  5731  5785 I SemanticLocation: 	... 14 more
+10-24 14:22:48.972   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:22:48.995  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:22:48.995  5792  6216 I ChimeraConfigurator: Detected pending changes for urgent request: [tflite_dynamite]. Pending module sets: container:2318189190800,tflite_dynamite:2627305025100800+tflite_dynamite
+10-24 14:22:49.006  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:22:49.015  5731  6278 W SystemServiceRegistry: No service published for: contexthub
+10-24 14:22:49.023  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:49.024  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:49.026  5792  6216 I GmsDebugLogger: [73] 1801
+10-24 14:22:49.029  5792  6216 W ZappDownloader: No successful module downloads for requested features [tflite_dynamite].
+10-24 14:22:49.029  5792  6216 I GmsDebugLogger: [30] [TfliteDynamiteDynamite.integ:262730502100800]
+10-24 14:22:49.035  5792  6216 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-24 14:22:49.035  5792  6216 I GmsDebugLogger: [83] 1 [tflite_dynamite]
+10-24 14:22:49.052  5731  5776 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction init
+10-24 14:22:49.058  5731  5776 I GCoreUlr: WorldUpdater:init: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-24 14:22:49.063  5731  5776 I GCoreUlr: Unbound from all signal providers.
+10-24 14:22:49.085  5731  5731 I GCoreUlr: Unbound from all signal providers.
+10-24 14:22:49.085  5731  5731 I GCoreUlr: Stopping handler for UlrDispSvcFast
+10-24 14:22:49.103  5731  5731 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.presencemanager.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:22:49.103  5731  5731 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.presencemanager.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:22:49.106  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:22:49.107  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:22:49.107  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[mParcelledData.dataSize=404]}, false)
+10-24 14:22:49.107  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:49.108  5731  5731 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.presencemanager.service.INTERNAL_IDENTITY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:22:49.108  5731  5731 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.presencemanager.service.INTERNAL_IDENTITY dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:22:49.108  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:49.112  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[mParcelledData.dataSize=404]}, true)
+10-24 14:22:49.112  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:49.114  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:49.114  1562  1562 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-24 14:22:49.115  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:904b41fa: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT_BY_INSETS_API
+10-24 14:22:49.115  5263  5263 D InsetsController: show(ime(), fromIme=false)
+10-24 14:22:49.117  5263  5263 D InputMethodManager: showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{de0a938 VFED..... .F....ID 0,0-1080,2400 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT_BY_INSETS_API
+10-24 14:22:49.119  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1995 onStartInputView(EditorInfo{inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}]}, false)
+10-24 14:22:49.119  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:49.120  1562  1562 W ModuleManager: ModuleManager.loadModule():450 Module erj is not available
+10-24 14:22:49.120  1562  1624 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:22:49.136  5263  5263 I AssistStructure: Flattened final assist data: 876 bytes, containing 1 windows, 5 views
+10-24 14:22:49.144  5731  5731 W AutofillChimeraService: Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+10-24 14:22:49.147  1587  1587 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:1412723554
+10-24 14:22:49.148  5731  6028 I IPCThreadState: oneway function results for code 1 on binder at 0x740d1c75fc80 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+10-24 14:22:49.175  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:49.188  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:3d30f1cd: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+10-24 14:22:49.188  5263  5263 D InputMethodManager: showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{de0a938 VFED..... .F....ID 0,0-1080,2400 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+10-24 14:22:49.209  5731  5837 W .gms.persistent: Long monitor contention with owner lowpool[6] (5840) at void bytb.n(byps, byps, int)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6) waiters=0 in int bytb.l(bysm, aphn) for 115ms
+10-24 14:22:49.211  5792  6211 I Checkin : [CheckinRequestProcessor] updateCheckinIdTokenFileFromResponse, Reading existing AID
+10-24 14:22:49.233  5792  6211 I Checkin : [CheckinRequestProcessor] Default Task : Checkin Succeeded: https://android.googleapis.com/checkin (fragment #1).
+10-24 14:22:49.259  1562  1562 W InputConnectionWrapper: InputConnectionWrapper.recordDuration():1451 IPC IC_GET_SURROUNDING_TEXT took 139 ms
+10-24 14:22:49.261  5792  6219 I AccountSeedingPrefetchI: AccountSeedingPrefetchInit intent operation started. [CONTEXT service_id=42 ]
+10-24 14:22:49.263  5263  5366 D EGL_emulation: app_time_stats: avg=321.97ms min=126.54ms max=863.25ms count=4
+10-24 14:22:49.290  1562  1562 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-24 14:22:49.290  1562  1562 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=0x8001(Normal) imeOptions=0x2000003 privateImeOptions=null actionName=SEARCH actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], IncognitoMode = false, DeviceLocked = false
+10-24 14:22:49.291  1562  1562 I Delight5Facilitator: Delight5Facilitator.initializeForIme():777 initializeForIme() : Locale = [en_US], layout = qwerty
+10-24 14:22:49.291  1562  1562 I Delight5Facilitator: Delight5Facilitator.resetDecoder():954 resetDecoder() : Locale = [en_US]
+10-24 14:22:49.291  1562  1562 I Delight5Decoder: Delight5DecoderWrapper.createOrResetDecoder():341 Decoder reset
+10-24 14:22:49.305  5792  6211 I Checkin : [CheckinOperation] Checkin Operation finished with result: SUCCESS finish time: 117184.
+10-24 14:22:49.354   524   534 I system_server: Background young concurrent copying GC freed 873132(22MB) AllocSpace objects, 13(324KB) LOS objects, 37% free, 31MB/49MB, paused 465us,47us total 133.813ms
+10-24 14:22:49.371  1562  1562 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+10-24 14:22:49.371  1562  1562 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+10-24 14:22:49.371  1562  1562 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1003 inline flag updated to:false
+10-24 14:22:49.373  1562  2097 I MainLanguageModelLoader: MainLanguageModelLoader.call():145 Running LM loader for [en_US]
+10-24 14:22:49.373  1562  2097 I DelightDataFileManagerLanguageModelProvider: DelightDataFileManagerLanguageModelProvider.fetchLanguageModel():73 find data en-840 delight
+10-24 14:22:49.373  1562  6133 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():205 maybeScheduleAutoPackDownloadForFallback()
+10-24 14:22:49.373  1562  6133 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():195 maybeScheduleAutoPackDownload() for language tag en-US
+10-24 14:22:49.374  1562  1562 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-24 14:22:49.377  1562  2097 I LmManager: LmManager.asyncUpdateEnabledLanguageModels():90 asyncUpdateEnabledLanguageModels()
+10-24 14:22:49.377  1562  2097 I SuperDelight: SuperDelightManager.initializeDelightSuperpacks():340 initializeDelightSuperpacks()
+10-24 14:22:49.377  1562  2097 I SuperDelight: SuperDelightManager.getDelightMetadataUriAndVersion():1011 getDelightMetadataUriAndVersion(): Phenotype : 2023020919 : https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json
+10-24 14:22:49.382  1562  1626 I SuperDelight: SuperDelightManager.initializeBundledDelightSuperpacks():376 initializeBundledDelightSuperpacks()
+10-24 14:22:49.384  1562  1562 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+10-24 14:22:49.384  1562  1562 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:22:49.384  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = HEADER, shownType = SHOW_OPTIONAL
+10-24 14:22:49.384  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+10-24 14:22:49.384  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = BODY, shownType = SHOW_MANDATORY
+10-24 14:22:49.384  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+10-24 14:22:49.384  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = FLOATING_CANDIDATES, shownType = HIDE
+10-24 14:22:49.384  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = false
+10-24 14:22:49.384  1562  1562 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+10-24 14:22:49.385  1562  1562 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:22:49.388  1562  2097 I SuperDelight: SuperDelightAppsSuperpacksManager.initializeDelightAppsSuperpacks():92 initializeDelightAppsSuperpacks()
+10-24 14:22:49.388  1562  2097 I SuperDelight: SuperDelightManager.initializeOverridesSuperpacks():402 initializeOverridesSuperpacks()
+10-24 14:22:49.388  1562  2097 I DelightDataFileManagerLanguageModelProvider: DelightDataFileManagerLanguageModelProvider.fetchLanguageModel():73 find data en-US delight
+10-24 14:22:49.393  1562  2075 I SP      : Registering bundled_delight.2022101700, url: null, constraints: *:*:*:*, flags: *, requested: 2022101700, current: 2022101700
+10-24 14:22:49.395  5731  5737 I .gms.persistent: Background young concurrent copying GC freed 262404(13MB) AllocSpace objects, 8(288KB) LOS objects, 35% free, 19MB/30MB, paused 683us,17us total 124.897ms
+10-24 14:22:49.409  1562  1562 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-24 14:22:49.410  1562  1562 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-24 14:22:49.410  1562  1562 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 14:22:49.410  1562  1626 I SuperDelight: SuperDelightManager.lambda$registerAndUpgradeSuperpacks$5():476 SuperDelightManager#registerAndUpgradeSuperpacks(delight): current 2023020919, required 2023020919
+10-24 14:22:49.410  1562  1626 I SuperDelight: SuperDelightManager.lambda$syncOverridesLanguageModels$14():689 SuperDelightManager#syncOverridesLanguageModels(): Superpack delight_overrides not found or negative version provided
+10-24 14:22:49.410  1562  1562 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+10-24 14:22:49.411  1562  1562 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 14:22:49.411  1562  1562 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+10-24 14:22:49.411  1562  1562 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-24 14:22:49.413  1562  1562 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():383 No private IME option set to start voice input.
+10-24 14:22:49.435  1562  1626 I SuperDelight: SuperDelightManager.initializeBundledDelightSuperpacks():376 initializeBundledDelightSuperpacks()
+10-24 14:22:49.435  1562  2097 I LmManager: LmManager.asyncUpdateEnabledLanguageModels():90 asyncUpdateEnabledLanguageModels()
+10-24 14:22:49.435  1562  2097 I SuperDelight: SuperDelightManager.initializeDelightSuperpacks():340 initializeDelightSuperpacks()
+10-24 14:22:49.435  1562  2097 I SuperDelight: SuperDelightManager.getDelightMetadataUriAndVersion():1011 getDelightMetadataUriAndVersion(): Phenotype : 2023020919 : https://www.gstatic.com/android/keyboard/dictionarypack/Omei-normal/metadata.json
+10-24 14:22:49.435  1562  2097 I SuperDelight: SuperDelightAppsSuperpacksManager.initializeDelightAppsSuperpacks():92 initializeDelightAppsSuperpacks()
+10-24 14:22:49.435  1562  2097 I SuperDelight: SuperDelightManager.initializeOverridesSuperpacks():402 initializeOverridesSuperpacks()
+10-24 14:22:49.436  1562  2097 I MainLanguageModelLoader: MainLanguageModelLoader.updateLmAvailableState():392 updateLmAvailableState(): locale? en_US prevState? AVAILABLE
+10-24 14:22:49.436  1562  2097 I MainLanguageModelLoader: MainLanguageModelLoader.updateLmAvailableState():428 updateLmAvailableState(): locale? en_US newState? AVAILABLE
+10-24 14:22:49.436  1562  2097 I Delight5Facilitator: BlocklistLoader.call():37 Running blocklist loader
+10-24 14:22:49.436  1562  2097 I Delight5Facilitator: ContactsLanguageModelLoader.call():35 Running contacts language model loader
+10-24 14:22:49.436  1562  2097 I Delight5Facilitator: ContactsLanguageModelLoader.call():47 Contacts language model is unloaded: preferences=false, deviceLocked=false
+10-24 14:22:49.436  1562  2097 I Delight5Facilitator: PersonalLanguageModelLoader.call():44 Running personal language model loader
+10-24 14:22:49.436  1562  2097 I Delight5Facilitator: UserHistoryLanguageModelLoader.call():82 Running user history language model loader
+10-24 14:22:49.437  1562  1626 I SuperDelight: SuperDelightManager.lambda$syncDownloadableLanguageModels$8():568 SuperDelightManager#syncDownloadableLanguageModels(delight): [OnDevice] Syncing for version 2023020919
+10-24 14:22:49.437  1562  1626 I SuperDelight: SuperDelightManager$2.onSuccess():635 delight_overrides sync success, adding to data file manager
+10-24 14:22:49.437  1562  1625 I SuperDelight: SuperDelightManager.lambda$registerAndUpgradeSuperpacks$5():476 SuperDelightManager#registerAndUpgradeSuperpacks(delight): current 2023020919, required 2023020919
+10-24 14:22:49.437  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():649 loadLanguageModel() : 1, version [2022102600]
+10-24 14:22:49.439  1562  1625 I SuperDelight: SuperDelightManager.lambda$syncOverridesLanguageModels$14():689 SuperDelightManager#syncOverridesLanguageModels(): Superpack delight_overrides not found or negative version provided
+10-24 14:22:49.439  1562  2075 I SP      : Registering bundled_delight.2022101700, url: null, constraints: *:*:*:*, flags: *, requested: 2022101700, current: 2022101700
+10-24 14:22:49.439  1562  1625 I SuperDelight: SuperDelightManager.lambda$syncBundledLanguageModels$16():774 SuperDelightManager#syncBundledLanguageModels(): Syncing for version 2022101700
+10-24 14:22:49.440  1562  1625 I SuperDelight: SuperDelightManager.lambda$syncDownloadableLanguageModels$8():568 SuperDelightManager#syncDownloadableLanguageModels(delight): [OnDevice] Syncing for version 2023020919
+10-24 14:22:49.440  1562  1625 I SuperDelight: SuperDelightManager$2.onSuccess():635 delight_overrides sync success, adding to data file manager
+10-24 14:22:49.440  1562  1626 I SuperDelight: SuperDelightManager.lambda$syncBundledLanguageModels$16():774 SuperDelightManager#syncBundledLanguageModels(): Syncing for version 2022101700
+10-24 14:22:49.440  1562  2075 I SuperDelight: SuperDelightBundledSlicingStrategy.getSlices():39 BundledSlicing#getSlices() : Locale = [en_US]
+10-24 14:22:49.440  1562  2075 I SuperDelight: SuperDelightBundledSlicingStrategy.getSlices():65 BundledSlicing#getSlices(): result {slices=[bundled_delight:main_en_us_2022051700_2], last batch=true, sync metadata=false}
+10-24 14:22:49.440  1562  2075 I SP      : Syncing bundled_delight (2022101700) with slices: [main_en_us_2022051700_2], metadata: false
+10-24 14:22:49.440  1562  2075 I SuperDelight: SuperDelightDownloadSlicingStrategy.getSlices():68 DownloadSlicing#getSlices() : Locale = [en_US]
+10-24 14:22:49.442  1562  2075 I SuperDelight: SuperDelightDownloadSlicingStrategy.getSlices():125 DownloadSlicing#getSlices(): result {slices=[{delight:main_en_840_2022102600_1, m:*:*:*, fg}], last batch=true, sync metadata=false}
+10-24 14:22:49.442  1562  2075 I SP      : Syncing delight (2023020919) with slices: [{main_en_840_2022102600_1, m:*:*:*, fg}], metadata: false
+10-24 14:22:49.443  1562  2097 I EmojiShortcutsLoader: EmojiShortcutsLoader.getEmojiShortcuts():117 Reading en_US emoji shortcuts
+10-24 14:22:49.452  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:49.457  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:49.457  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:49.461  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:49.472  1562  2097 I EmojiShortcutsLoader: EmojiShortcutsLoader.getEmojiShortcuts():134 Read en_US emoji shortcuts successfully.
+10-24 14:22:49.478  1562  2097 I EmojiShortcutsLoader: EmojiShortcutsLoader.call():63 1 emoji shortcut maps loaded.
+10-24 14:22:49.482  5263  5263 D InsetsController: show(ime(), fromIme=true)
+10-24 14:22:49.489  1562  2097 I EmojiShortcutsLoader: EmojiShortcutsLoader.call():72 Finished loading emoji shortcuts
+10-24 14:22:49.489  1562  2097 I Delight5Facilitator: EmailLanguageModelLoader.call():30 Running email language model loader
+10-24 14:22:49.489  1562  2097 I Delight5Facilitator: KeyCorrectionTfliteModelLoader.call():29 Running Key Correction Tflite Model loader
+10-24 14:22:49.491  1562  2097 I Delight5Facilitator: RankingModelLoader.call():28 Running Ranking Model loader
+10-24 14:22:49.492  1562  1562 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-24 14:22:49.508  5263  5263 D InsetsController: show(ime(), fromIme=true)
+10-24 14:22:49.508  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:3d30f1cd: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+10-24 14:22:49.519  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:904b41fa: onShown
+10-24 14:22:49.525  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:49.532  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:49.535  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:49.535  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:49.536  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-24 14:22:49.570  1562  2422 E native  : E0000 00:00:1792851769.570395    2422 scoped-file.cc:106] open() failed for /data/user/0/com.google.android.inputmethod.latin/files/personal/adapt_state.en.dat: No such file or directory [2]
+10-24 14:22:49.570  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():671 Loaded main LM 1.en
+10-24 14:22:49.573  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():649 loadLanguageModel() : 7, version [n/a]
+10-24 14:22:49.574  1562  2422 I native  : I0000 00:00:1792851769.574046    2422 blocklist-assembly.cc:121] LoadBlocklist en
+10-24 14:22:49.574  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():690 Loaded dynamic LM 7.en
+10-24 14:22:49.574  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():649 loadLanguageModel() : 4, version [n/a]
+10-24 14:22:49.574  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():690 Loaded dynamic LM 4.en
+10-24 14:22:49.574  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():649 loadLanguageModel() : 3, version [n/a]
+10-24 14:22:49.574  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():690 Loaded dynamic LM 3.en
+10-24 14:22:49.585  1032  1032 D CarrierSvcBindHelper: onPackageModified: com.google.android.gms
+10-24 14:22:49.585  1032  1032 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 14:22:49.586  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:22:49.586  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:22:49.590   832   972 I PermissionControllerServiceImpl: Updating user sensitive for uid 10131
+10-24 14:22:49.600   524   613 I RoleService: Granting default roles...
+10-24 14:22:49.619  4549  4549 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 14:22:49.626  1032  1349 D ImsResolver: maybeAddedImsService, packageName: com.google.android.gms
+10-24 14:22:49.633   832  1012 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+10-24 14:22:49.634   832  1012 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+10-24 14:22:49.634   832  1012 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+10-24 14:22:49.638   832  1012 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+10-24 14:22:49.644  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():649 loadLanguageModel() : 29, version [n/a]
+10-24 14:22:49.644  1562  2422 W Delight5Decoder: Delight5DecoderWrapper.getTimerTypeForLoadLanguageModule():800 Cannot find timer type for loading language model 29
+10-24 14:22:49.644  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.loadLanguageModel():690 Loaded dynamic LM 29.en
+10-24 14:22:49.644  1562  2422 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():457 setKeyboardLayout()
+10-24 14:22:49.649   336   336 I netd    : tetherGetStats() -> {[]} <0.33ms>
+10-24 14:22:49.650   524   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 14:22:49.671   336   336 I netd    : bandwidthSetGlobalAlert(2097152) <0.12ms>
+10-24 14:22:49.674   336   336 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.52ms>
+10-24 14:22:49.674   336   336 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.32ms>
+10-24 14:22:49.676  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:49.685  1562  2075 I SuperDelight: SuperDelightDownloadSlicingStrategy.getSlices():68 DownloadSlicing#getSlices() : Locale = [en_US]
+10-24 14:22:49.691  1562  1562 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-24 14:22:49.691  4549  4581 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 14:22:49.692  4549  4581 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 14:22:49.692  4549  4581 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 14:22:49.692  4549  4581 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 14:22:49.694  4549  4581 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 14:22:49.696  4549  4581 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 14:22:49.697  1562  2075 I SuperDelight: SuperDelightDownloadSlicingStrategy.getSlices():125 DownloadSlicing#getSlices(): result {slices=[{delight:main_en_840_2022102600_1, m:*:*:*, fg}], last batch=true, sync metadata=false}
+10-24 14:22:49.697  1562  2075 I SP      : Syncing delight (2023020919) with slices: [{main_en_840_2022102600_1, m:*:*:*, fg}], metadata: false
+10-24 14:22:49.698  1562  2075 I SuperDelight: SuperDelightBundledSlicingStrategy.getSlices():39 BundledSlicing#getSlices() : Locale = [en_US]
+10-24 14:22:49.698  1562  2075 I SuperDelight: SuperDelightBundledSlicingStrategy.getSlices():65 BundledSlicing#getSlices(): result {slices=[bundled_delight:main_en_us_2022051700_2], last batch=true, sync metadata=false}
+10-24 14:22:49.698  1562  2075 I SP      : Syncing bundled_delight (2022101700) with slices: [main_en_us_2022051700_2], metadata: false
+10-24 14:22:49.699  4549  4581 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 14:22:49.702  4549  4581 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 14:22:49.704  4549  4581 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 14:22:49.706  4549  4581 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 14:22:49.708  4549  4581 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 14:22:49.711  1562  2097 I CrankEngineLocales: CrankEngineLocales.getLocaleToUseForCrankEngine():66 Using locale en_US for emoji prediction
+10-24 14:22:49.711  1562  2097 I CrankEngineLocales: CrankEngineLocales.getLocaleToUseForCrankEngine():66 Using locale en_US for emoji prediction
+10-24 14:22:49.711  1562  2097 I CrankEngineLocales: CrankEngineLocales.getLocaleToUseForCrankEngine():66 Using locale en_US for emoji prediction
+10-24 14:22:49.722  1632  1632 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.gms.
+10-24 14:22:49.723  1632  3244 I AiAiEcho: AppIndexer Package:[com.google.android.gms] UserProfile:[0] Enabled:[true].
+10-24 14:22:49.723  1632  3244 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.gms], userId:[0], reason:[package is updated.].
+10-24 14:22:49.757  1562  2075 I SP      : GC for 'delight' (10) with ttl of 0 ms took 0 ms (0/0/0)
+10-24 14:22:49.757  1562  1625 I AbstractSyncResultCallback: AbstractSyncResultCallback.onFailure():36 onFailure(): delight.sync cancelled; expected if new request supersedes pending one.
+10-24 14:22:49.757  1562  2075 I SP      : GC for 'bundled_delight' (10) with ttl of 0 ms took 0 ms (0/0/0)
+10-24 14:22:49.757  1562  2075 I LmManager: LmManager$1.onFailure():81 Bundled delight sync failed
+10-24 14:22:49.757  1562  2075 I LmManager: java.util.concurrent.CancellationException: Task was cancelled.
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mrp.s(PG:3)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mrp.get(PG:4)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mgr.Q(PG:1)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mfu.V(PG:2)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mtg.run(PG:4)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at msq.execute(PG:1)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mrp.q(PG:1)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mrp.k(PG:12)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mrp.p(PG:5)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at msm.c(PG:2)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mso.e(PG:2)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at mtr.run(PG:8)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at hbs.run(PG:2)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:49.757  1562  2075 I LmManager: 	at hbf.run(PG:2)
+10-24 14:22:49.758  1562  2075 I AbstractSyncResultCallback: AbstractSyncResultCallback.onFailure():36 onFailure(): delight.sync cancelled; expected if new request supersedes pending one.
+10-24 14:22:49.758  1562  2075 I AbstractSyncResultCallback: AbstractSyncResultCallback.onFailure():36 onFailure(): bundled_delight.sync cancelled; expected if new request supersedes pending one.
+10-24 14:22:49.758  1562  2097 I CrankEngineLocales: CrankEngineLocales.getLocaleToUseForCrankEngine():66 Using locale en_US for emoji prediction
+10-24 14:22:49.758  1562  2097 I CrankEngineLocales: CrankEngineLocales.getLocaleToUseForCrankEngine():66 Using locale en_US for emoji prediction
+10-24 14:22:49.758  1562  1625 I SuperDelight: SuperDelightManager$2.onSuccess():635 delight sync success, adding to data file manager
+10-24 14:22:49.759  1562  1625 I DataFileManager: DataFileManager.addDataWithoutNotify():162 data en-840 already exists
+10-24 14:22:49.759  1562  1625 I DataFileManager: DataFileManager.addDataWithoutNotify():162 data en-US already exists
+10-24 14:22:49.759  1562  1625 I SuperDelight: SuperDelightManager$2.onSuccess():635 bundled_delight sync success, adding to data file manager
+10-24 14:22:49.759  1562  1625 I DataFileManager: DataFileManager.addDataWithoutNotify():162 data en-US already exists
+10-24 14:22:49.834  1562  2075 I SuperDelight: SuperDelightMergingStrategy.merge():55 SuperDelightMergingStrategy#merge(): selected[[main_en_840_2022102600_1, main_en_us_2022101700_1]] synced[[main_en_840_2022102600_1]]
+10-24 14:22:49.834  1562  2075 I SP      : Sync for delight succeeded in 392 ms: no changes
+10-24 14:22:49.834  1562  2075 I SP      : Sync for bundled_delight succeeded in 149 ms: no changes
+10-24 14:22:49.838  1562  2097 I CrankEngineLocales: CrankEngineLocales.getLocaleToUseForCrankEngine():66 Using locale en_US for emoji prediction
+10-24 14:22:49.839  1562  2075 I SP      : GC for 'delight' (10) with ttl of 0 ms took 0 ms (0/0/0)
+10-24 14:22:49.840  1562  2075 I SP      : GC for 'bundled_delight' (10) with ttl of 0 ms took 0 ms (0/0/0)
+10-24 14:22:49.840  1562  2075 I LmManager: LmManager$1.onSuccess():76 Bundled delight sync success
+10-24 14:22:49.846  1562  1625 I SuperDelight: SuperDelightManager$2.onSuccess():635 delight sync success, adding to data file manager
+10-24 14:22:49.846  1562  1625 I DataFileManager: DataFileManager.addDataWithoutNotify():162 data en-840 already exists
+10-24 14:22:49.846  1562  1625 I DataFileManager: DataFileManager.addDataWithoutNotify():162 data en-US already exists
+10-24 14:22:49.846  1562  1625 I SuperDelight: SuperDelightManager$2.onSuccess():635 bundled_delight sync success, adding to data file manager
+10-24 14:22:49.846  1562  1625 I DataFileManager: DataFileManager.addDataWithoutNotify():162 data en-US already exists
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: 2023012316_en[7]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: 2023012316_en[7]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022051700_2[12]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022101700_1[16]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_840_2022102600_1[12]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022051700_2[12]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022101700_1[16]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_840_2022102600_1[12]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: 2023012316_en[7]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: 2023012316_en[7]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: tflite-nwp-be541314788c7304827a9710c3ac4edb[5]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: tflite-nwp-be541314788c7304827a9710c3ac4edb[5]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: tflite-nwp-be541314788c7304827a9710c3ac4edb[5]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: tflite-nwp-be541314788c7304827a9710c3ac4edb[5]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022101700_1[16]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_840_2022102600_1[12]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022051700_2[12]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022101700_1[16]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_840_2022102600_1[12]
+10-24 14:22:49.884  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: 2023011913_en[2]
+10-24 14:22:49.885  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: 2023011913_en[2]
+10-24 14:22:49.885  1562  1572 W SP      : File ref is being finalized but wasn't closed, file: main_en_us_2022051700_2[12]
+10-24 14:22:49.890  1562  2097 I CrankEngineLocales: CrankEngineLocales.getLocaleToUseForCrankEngine():66 Using locale en_US for emoji prediction
+10-24 14:22:49.907  6367  6367 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:22:49.909  5263  5263 E FrameTracker: force finish cuj, time out: J<IME_INSETS_ANIMATION::0@1@io.github.dantemorrigan.cotes>
+10-24 14:22:49.910  1630  5303 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:22:49.922  1562  1569 I putmethod.latin: Compiler allocated 4199KB to compile void nqm.h(java.lang.Object, nqv, nol)
+10-24 14:22:49.926  6367  6367 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:22:49.943   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:22:49.943  6367  6370 I Gralloc4: mapper 4.x is not supported
+10-24 14:22:49.964  5792  5917 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 14:22:50.013  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.020  5792  5917 I Icing   : Indexing done com.google.android.gms-apps
+10-24 14:22:50.029  5731  5840 W .gms.persistent: Long monitor contention with owner netscheduler-queue-handler (5837) at void bysh.d(avza, android.net.Uri, int)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9) waiters=0 in void bysh.b(byps, byps, int) for 102ms
+10-24 14:22:50.030  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.038  5731  5737 I .gms.persistent: Background concurrent copying GC freed 312248(15MB) AllocSpace objects, 0(0B) LOS objects, 49% free, 15MB/31MB, paused 22us,19us total 214.950ms
+10-24 14:22:50.072  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ads.social.GcmSchedulerWakeupService started execution. cause:5 exec_start_elapsed_seconds: 116 [CONTEXT service_id=218 ]
+10-24 14:22:50.073  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.115  5792  5815 I PeopleGalProvider: Gal directories started.
+10-24 14:22:50.115  5792  5815 I PeopleGalProvider: Method 1 completed.
+10-24 14:22:50.115  5792  5815 I PeopleGalProvider: Method 1 finished successfully.
+10-24 14:22:50.122   524  2873 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:22:50.135   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:22:50.138  5731  6331 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 14:22:50.139  5731  6123 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 14:22:50.150  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ads.social.GcmSchedulerWakeupService finished executing. cause:5 result: 1 elapsed_millis: 137 uptime_millis: 137 exec_start_elapsed_seconds: 116 [CONTEXT service_id=218 ]
+10-24 14:22:50.161  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:22:50.181  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.216  5792  5916 I Icing   : updateResources: need to parse arkh{com.google.android.gms}
+10-24 14:22:50.246   398  4645 D audioserver: FGS Logger Transaction failed
+10-24 14:22:50.248   398  4645 D audioserver: -129
+10-24 14:22:50.256  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:54f5c8d5: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT_BY_INSETS_API
+10-24 14:22:50.257  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:158c4fc3: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT_BY_INSETS_API
+10-24 14:22:50.258  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2241 
+10-24 14:22:50.259  1562  1562 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-24 14:22:50.262  1562  1562 I InputBundle: InputBundle.consumeEvent():923 Skip consuming an event as keyboard status is 0
+10-24 14:22:50.266  1562  1562 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-24 14:22:50.267  1562  1562 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+10-24 14:22:50.267  1562  1562 E native  : E0000 00:00:1792851770.267628    1562 key-correction-manager.cc:322] User feature cache is not ready for key correction!
+10-24 14:22:50.268  1562  1562 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+10-24 14:22:50.294  1562  1624 W ModuleManager: ModuleManager.loadModule():450 Module jjj is not available
+10-24 14:22:50.318   398   497 D AudioFlinger: mixer(0x78bd29474930) throttle end: throttle time(32)
+10-24 14:22:50.335  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, true)
+10-24 14:22:50.335  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:50.345  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:50.346  1562  1562 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-24 14:22:50.362  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:22:50.396  5263  5366 D EGL_emulation: app_time_stats: avg=188.85ms min=27.58ms max=602.69ms count=6
+10-24 14:22:50.428   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:22:50.428   398   497 D audioserver: -129
+10-24 14:22:50.461  4549  4549 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-24 14:22:50.473  5731  5837 W .gms.persistent: Long monitor contention with owner lowpool[6] (5840) at void bysy.a(bypy, int, dhap)(:com.google.android.gms@231818047@23.18.18 (190800-535401451):24) waiters=0 in int bytb.l(bysm, aphn) for 322ms
+10-24 14:22:50.506  5731  5776 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService started execution. cause:9 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.513  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.530  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.575  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.576  1762  2055 I A       : #handleLocale  en-US
+10-24 14:22:50.579  1762  2055 I A       : available language pack of en-US is version 1001
+10-24 14:22:50.583  5731  5776 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService finished executing. cause:9 result: 1 elapsed_millis: 99 uptime_millis: 99 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.602  1986  2007 V DownloadManager: Deleting /storage/emulated/0/Android/data/com.google.android.googlequicksearchbox/files/download_cache/soda-en-US-v1001.zip via provider delete
+10-24 14:22:50.610  1630  1658 I MediaProvider: Scanned external_primary due to REASON_DEMAND, found 0 items in 4ms, 0 inserts 0 updates 0 deletes
+10-24 14:22:50.611  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:158c4fc3: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+10-24 14:22:50.615  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:205f0768: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT_BY_INSETS_API
+10-24 14:22:50.616   524  2166 I ImeTracker: io.github.dantemorrigan.cotes:205f0768: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:22:50.617  5263  5263 I ImeTracker: io.github.dantemorrigan.cotes:54f5c8d5: onHidden
+10-24 14:22:50.623  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:22:50.623  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:22:50.623  1762  2241 W SearchServiceCore: Abort, client detached.
+10-24 14:22:50.625  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.635  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService finished executing. cause:5 result: 3 elapsed_millis: 21 uptime_millis: 21 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.674  5731  5776 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gass.chimera.SchedulePeriodicTasksService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.680  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gass.chimera.SchedulePeriodicTasksService finished executing. cause:5 result: 1 elapsed_millis: 32 uptime_millis: 32 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.682  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:50.702  5731  5776 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gass.chimera.SchedulePeriodicTasksService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.710  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.gass.chimera.SchedulePeriodicTasksService finished executing. cause:5 result: 1 elapsed_millis: 13 uptime_millis: 13 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.722  5731  6273 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:22:50.724  5731  6273 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:22:50.731  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.735  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 13 uptime_millis: 13 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.737  1632  3058 I IPCThreadState: oneway function results for code 2 on binder at 0x740d1c76a870 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-24 14:22:50.767  5731  5761 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:22:50.770  5731  5761 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:22:50.771  5731  5761 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:22:50.786   524  2166 I RemoteProvisionSysSvc: getRegistration(android.hardware.security.keymint.IRemotelyProvisionedComponent/default)
+10-24 14:22:50.788   524   524 I RegistrationProxy: onServiceConnected: com.android.rkpdapp.service.RemoteProvisioningService
+10-24 14:22:50.790   524  2244 I RegistrationProxy: IGetRegistrationCallback.onSuccess
+10-24 14:22:50.791   524  2166 I RemoteProvisionSysSvc: Fetching key 10131 for client 217910197
+10-24 14:22:50.791   524  2166 I RegistrationProxy: getKeyAsync operation started with callback 72176202
+10-24 14:22:50.791  3741  3829 I RkpdRegistrationBinder: Key requested for : android.hardware.security.keymint.IRemotelyProvisionedComponent/default, clientUid: 1017, keyId: 10131, callback: 254362253
+10-24 14:22:50.791  3741  3829 I RkpdRegistrationBinder: Key successfully assigned to client
+10-24 14:22:50.792   524   524 I RemoteProvisionSysSvc: Successfully fetched key for client 217910197
+10-24 14:22:50.808   832  4829 I PermissionControllerServiceImpl: Updating user sensitive for uid 10154
+10-24 14:22:50.816  1032  1032 D CarrierSvcBindHelper: onPackageModified: com.google.android.contacts
+10-24 14:22:50.816  1032  1032 D CarrierSvcBindHelper: No carrier app for: 0
+10-24 14:22:50.817   524   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-24 14:22:50.823  4549  4581 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-24 14:22:50.824  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.828  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:22:50.828  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-24 14:22:50.831   524   552 E system_server: No package ID 7f found for resource ID 0x7f080107.
+10-24 14:22:50.831   524   552 E system_server: No package ID 7f found for resource ID 0x7f150560.
+10-24 14:22:50.834  4549  4549 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-24 14:22:50.845  4549  4581 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-24 14:22:50.846  1032  1349 D ImsResolver: maybeAddedImsService, packageName: com.google.android.contacts
+10-24 14:22:50.846  4549  4581 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-24 14:22:50.846  4549  4581 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-24 14:22:50.846  4549  4581 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-24 14:22:50.846  4549  4581 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-24 14:22:50.847  4549  4581 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-24 14:22:50.850  5731  6273 I TapAndPay: Disabling TapAndPay HCE service [CONTEXT service_id=79 ]
+10-24 14:22:50.853  4549  4581 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-24 14:22:50.854  1632  1632 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.contacts.
+10-24 14:22:50.855  1632  3224 I AiAiEcho: AppIndexer Package:[com.google.android.contacts] UserProfile:[0] Enabled:[true].
+10-24 14:22:50.855  1632  3224 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.contacts], userId:[0], reason:[package is updated.].
+10-24 14:22:50.859  4549  4581 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-24 14:22:50.859  4549  4581 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-24 14:22:50.859  4549  4581 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-24 14:22:50.860  5731  5755 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-24 14:22:50.861  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 64 uptime_millis: 64 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.883  5731  6273 I TapAndPay: Disabling TapAndPay HCE service [CONTEXT service_id=79 ]
+10-24 14:22:50.884  5792  5916 W Pay     : Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+10-24 14:22:50.884  5792  5916 E Pay     : [Migration operation] Active tapandpay account not found! [CONTEXT service_id=198 ]
+10-24 14:22:50.884  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.887  5792  5792 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 14:22:50.887  5792  5792 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.pay.service.BIND dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-24 14:22:50.895  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:22:50.899  5792  5916 I Pay     : Migration already completed. [CONTEXT service_id=198 ]
+10-24 14:22:50.901  5792  5916 I Pay     : Migration already completed. [CONTEXT service_id=198 ]
+10-24 14:22:50.901  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:22:50.901  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:22:50.902  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:22:50.902  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:22:50.903  5792  5916 I Pay     : [SeTosMigration] walletJpEligibility is not enabled [CONTEXT service_id=198 ]
+10-24 14:22:50.906  5792  5916 I Pay     : Wallet install state NOT_INSTALLED [CONTEXT service_id=198 ]
+10-24 14:22:50.907  5792  5916 I Pay     : Migration flag not enabled. [CONTEXT service_id=198 ]
+10-24 14:22:50.908  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 31 uptime_millis: 31 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.921  5263  5263 E FrameTracker: force finish cuj, time out: J<IME_INSETS_ANIMATION::1@1@io.github.dantemorrigan.cotes>
+10-24 14:22:50.925  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.934  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 18 uptime_millis: 18 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.954  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.954  5792  5916 I Pay     : Device does not support HCE. [CONTEXT service_id=198 ]
+10-24 14:22:50.956  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 2 elapsed_millis: 9 uptime_millis: 9 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.973  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.974  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 11 uptime_millis: 11 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.990  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:50.991  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 9 uptime_millis: 9 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:51.005  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:51.005  3084  5730 W SystemServiceRegistry: No service published for: persistent_data_block
+10-24 14:22:51.006  5731  6273 I TapAndPay: Disabling TapAndPay HCE service [CONTEXT service_id=79 ]
+10-24 14:22:51.007  5792  6102 W Pay     : Active account was null, notification task will be cancelled. [CONTEXT service_id=198 ]
+10-24 14:22:51.007  5792  6102 W Pay     : No account found on the task or the device. Notification task will not be rescheduled. [CONTEXT service_id=198 ]
+10-24 14:22:51.009  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.pay.gcmtask.PayGcmTaskService finished executing. cause:5 result: 2 elapsed_millis: 9 uptime_millis: 9 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:51.014  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.030  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.031  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.udc.service.UdcContextInitService started execution. cause:5 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:51.058  3084  5730 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+10-24 14:22:51.058  3084  5730 W libc    : Access denied finding property "service.adb.tls.port"
+10-24 14:22:51.056  3084  3084 W binder:3084_8: type=1400 audit(0.0:51): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:22:51.056  3084  3084 W binder:3084_8: type=1400 audit(0.0:52): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-24 14:22:51.074  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.udc.service.UdcContextInitService finished executing. cause:5 result: 1 elapsed_millis: 49 uptime_millis: 49 exec_start_elapsed_seconds: 118 [CONTEXT service_id=218 ]
+10-24 14:22:51.076  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.080   336  6385 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:22:51.081  3084  5730 D TrafficStats: tagSocket(121) with statsTag=0x1809, statsUid=-1
+10-24 14:22:51.082  3084  5730 D TrafficStats: tagSocket(121) with statsTag=0x1809, statsUid=-1
+10-24 14:22:51.083  3084  5730 D TrafficStats: tagSocket(121) with statsTag=0x1809, statsUid=-1
+10-24 14:22:51.100   336  6386 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-24 14:22:51.100   336  6389 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:22:51.101   336  6389 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919bce0ced0
+10-24 14:22:51.101   336  6389 I resolv  : doQuery: rcode=0, ancount=8, return value=164
+10-24 14:22:51.102   336  6388 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:22:51.102   336  6388 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce03190
+10-24 14:22:51.102   336  6388 I resolv  : doQuery: rcode=0, ancount=8, return value=260
+10-24 14:22:51.102  5792  5916 D TrafficStats: tagSocket(113) with statsTag=0x30003000, statsUid=-1
+10-24 14:22:51.121  5792  5916 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+10-24 14:22:51.121  5792  5916 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:51.121  5792  5916 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:51.161  6392  6392 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-24 14:22:51.163  1630  5303 W MediaProvider: isAppCloneUserPair for user 0: false
+10-24 14:22:51.178  6392  6392 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-24 14:22:51.182  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.190   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-24 14:22:51.190  6392  6395 I Gralloc4: mapper 4.x is not supported
+10-24 14:22:51.306  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 119 [CONTEXT service_id=218 ]
+10-24 14:22:51.315   524  2244 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-24 14:22:51.328  5731  6123 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-24 14:22:51.328  1630  2334 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:22:51.331  5731  5776 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 61 uptime_millis: 61 exec_start_elapsed_seconds: 119 [CONTEXT service_id=218 ]
+10-24 14:22:51.331   524   542 I ActivityManager: Broadcast completed: result=0
+10-24 14:22:51.334  1630  2334 W ExifInterface: Invalid image: ExifInterface got an unsupported image format file(ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.
+10-24 14:22:51.334  1630  2334 W ExifInterface: java.io.EOFException
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.media.ExifInterface$ByteOrderedDataInputStream.readShort(ExifInterface.java:5044)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.media.ExifInterface.readByteOrder(ExifInterface.java:3995)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.media.ExifInterface.parseTiffHeaders(ExifInterface.java:4015)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.media.ExifInterface.getRawAttributes(ExifInterface.java:2974)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.media.ExifInterface.loadAttributes(ExifInterface.java:2023)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1640)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.media.ExifInterface.<init>(ExifInterface.java:1591)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItemImage(ModernMediaScanner.java:1357)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanItem(ModernMediaScanner.java:1019)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.-$$Nest$smscanItem(ModernMediaScanner.java:0)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:820)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:319)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:435)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:398)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:387)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.scan.ModernMediaScanner.scanFile(ModernMediaScanner.java:261)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaProvider.scanFile(MediaProvider.java:1943)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaService.onScanFile(MediaService.java:225)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:85)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-24 14:22:51.334  1630  2334 W ExifInterface: 	at java.lang.Thread.run(Thread.java:1012)
+10-24 14:22:51.334  1630  2334 D OpenGLRenderer: --- Failed to create image decoder with message 'unimplemented'
+10-24 14:22:51.335  1630  2334 D OpenGLRenderer: --- Failed to create image decoder with message 'unimplemented'
+10-24 14:22:51.335  1630  2334 W ModernMediaScanner: Trouble scanning /storage/emulated/0/cotes-shots/en-light-06-editor-existing.png: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.lang.String.equalsIgnoreCase(java.lang.String)' on a null object reference
+10-24 14:22:51.350  1630  2334 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-24 14:22:51.362  5731  6123 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-24 14:22:51.382  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@54b34e0
+10-24 14:22:51.405  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 119 [CONTEXT service_id=218 ]
+10-24 14:22:51.408  5731  5840 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 17 uptime_millis: 17 exec_start_elapsed_seconds: 119 [CONTEXT service_id=218 ]
+10-24 14:22:51.452  5792  5911 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-24 14:22:51.467  5792  5911 I Icing   : Indexing done com.google.android.gms-apps
+10-24 14:22:51.470  5263  5366 D EGL_emulation: app_time_stats: avg=536.58ms min=245.64ms max=827.51ms count=2
+10-24 14:22:51.515  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.524  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{4e81065 V.E...... ......ID 0,0-0,0}
+10-24 14:22:51.524  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:22:51.524  4549  4579 D SplashScreenView: Branding: view: android.view.View{eebf13a G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:22:51.531  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9f3ec1c in: PAUSED
+10-24 14:22:51.531  5263  5263 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9f3ec1c
+10-24 14:22:51.533   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:22:51.549  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.581  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.647  5519  5538 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:22:51.669  5792  5916 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+10-24 14:22:51.669  5792  5916 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-24 14:22:51.669  5792  5916 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-24 14:22:51.682  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:51.933   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:22:51.941   524   542 W ziparchive: Unable to open '/data/app/~~zJXpz5RSVvl9-D4A9J55hw==/io.github.dantemorrigan.cotes.test-1_8UILJpFC8oUT7RbPVemw==/base.dm': No such file or directory
+10-24 14:22:51.944   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +395ms
+10-24 14:22:51.962  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@6f73f4
+10-24 14:22:51.970   524   898 W InputManager-JNI: Input channel object 'a6d7677 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:22:51.976  5731  6276 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:1 exec_start_elapsed_seconds: 119 [CONTEXT service_id=218 ]
+10-24 14:22:52.056  5731  6282 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:1 result: 2 elapsed_millis: 114 uptime_millis: 114 exec_start_elapsed_seconds: 119 [CONTEXT service_id=218 ]
+10-24 14:22:52.062  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:52.062  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:52.064  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9f3ec1c in: STOPPED
+10-24 14:22:52.065  5263  5263 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@9f3ec1c
+10-24 14:22:52.084  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:52.108  5263  5263 D AutofillManager: onActivityFinishing(): calling cancelLocked()
+10-24 14:22:52.109  5263  5263 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@ae8d19b
+10-24 14:22:52.109  5263  5263 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@9f3ec1c in: DESTROYED
+10-24 14:22:52.110  5263  5263 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:22:52.114   524   898 W InputManager-JNI: Input channel object '384f8be io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:22:52.121   524  2440 I ImeTracker: com.android.settings:33ac4641: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:22:52.121   524  2440 I ImeTracker: com.android.settings:33ac4641: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:22:52.122  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:22:52.140  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:22:52.140  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-24 14:22:52.140  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:22:52.140  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:22:52.145  5519  5519 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@14066bc
+10-24 14:22:52.163  5792  5792 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+10-24 14:22:52.183  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:22:52.183   524   898 W InputManager-JNI: Input channel object 'a10aa7c io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:22:52.191  5731  5731 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.icing.LIGHTWEIGHT_INDEX_SERVICE dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-24 14:22:52.254  5263  5340 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@fc3d7c0]
+10-24 14:22:52.256  5263  5340 I TestRunner: finished: search_filters_andOpensTheRightNote(io.github.dantemorrigan.cotes.RegressionTest)

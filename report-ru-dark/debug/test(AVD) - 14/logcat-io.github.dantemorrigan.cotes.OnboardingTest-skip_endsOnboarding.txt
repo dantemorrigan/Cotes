@@ -1,0 +1,164 @@
+10-24 14:27:00.574  9031  9093 I TestRunner: started: skip_endsOnboarding(io.github.dantemorrigan.cotes.OnboardingTest)
+10-24 14:27:00.576   524  2250 W InputManager-JNI: Input channel object 'e795aac io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:27:00.578  4549  4578 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d158a96
+10-24 14:27:00.578   524  2726 W InputManager-JNI: Input channel object '4a32d6f Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-24 14:27:00.582  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.592  9031  9093 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@a42e54]
+10-24 14:27:00.624  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.630  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.635  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.646  4549  4582 D EGL_emulation: app_time_stats: avg=257.92ms min=26.41ms max=904.76ms count=4
+10-24 14:27:00.649  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.650  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.651  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.657  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.699  4549  4556 I ndroid.systemui: NativeAlloc concurrent copying GC freed 258740(12MB) AllocSpace objects, 1(20KB) LOS objects, 49% free, 16MB/32MB, paused 43us,36us total 325.514ms
+10-24 14:27:00.703  9031  9093 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-24 14:27:00.718  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{3349b6a V.E...... ......ID 0,0-0,0}
+10-24 14:27:00.718  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:27:00.718  4549  4579 D SplashScreenView: Branding: view: android.view.View{2bca85b G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:27:00.743  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@961aa97 in: PRE_ON_CREATE
+10-24 14:27:00.743  9031  9031 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-24 14:27:00.753  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@961aa97 in: CREATED
+10-24 14:27:00.753  9031  9031 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@961aa97
+10-24 14:27:00.754  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@961aa97 in: STARTED
+10-24 14:27:00.755  9031  9031 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@961aa97
+10-24 14:27:00.755  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@961aa97 in: RESUMED
+10-24 14:27:00.756  9031  9031 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@961aa97
+10-24 14:27:00.767   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:27:00.805  4549  4582 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-24 14:27:00.835  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.929  9031  9031 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-24 14:27:00.975  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.976  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.976  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:00.976  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.108  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.124  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.144  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.146  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.157  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.157  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.157  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.157  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.164   524   542 W ziparchive: Unable to open '/data/app/~~FCA5ZTZ21z_cJTWH4RH0-g==/io.github.dantemorrigan.cotes-mxAq-GYsty-D_loUSUtWow==/base.dm': No such file or directory
+10-24 14:27:01.169   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +457ms
+10-24 14:27:01.180   524  2967 I ImeTracker: io.github.dantemorrigan.cotes:500b78c1: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-24 14:27:01.181   524  2967 I ImeTracker: io.github.dantemorrigan.cotes:500b78c1: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-24 14:27:01.186  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-24 14:27:01.187  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-24 14:27:01.187  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-24 14:27:01.187  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-24 14:27:01.188  1562  1562 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-24 14:27:01.189   524  1381 W InputManager-JNI: Input channel object '236ead3 Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-24 14:27:01.335  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.476  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.476  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.476  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.478  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.609  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.625  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.644  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.646  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.658  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.658  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.658  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.658  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.736  5731  5958 V NativeCrypto: Read error: ssl=0x740c2c6ecb98: I/O error during system call, Connection reset by peer
+10-24 14:27:01.738  5731  9144 V NativeCrypto: SSL shutdown failed: ssl=0x740c2c6ecb98: I/O error during system call, Broken pipe
+10-24 14:27:01.738  5731  9144 E WakeLock: GCM_HB_ALARM release without a matched acquire!
+10-24 14:27:01.738  5731  9144 W WakeLock: GCM_HB_ALARM counter does not exist
+10-24 14:27:01.739   524   763 D ConnectivityService: reportNetworkConnectivity(100, false) by 10131
+10-24 14:27:01.739   995  1902 D NetworkMonitor/100: Forcing reevaluation for UID 10131. Dns signal count: 0
+10-24 14:27:01.740  5731  9144 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_CONN_ALARM type: 2 triggerAtMillis: 372471]
+10-24 14:27:01.741  5731  9144 W WakeLock: GCM_CONN_ALARM counter does not exist
+10-24 14:27:01.741   995  9261 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:27:01.741   995  9262 D TrafficStats: tagSocket(108) with statsTag=0xffffff81, statsUid=-1
+10-24 14:27:01.742   995  9262 D TrafficStats: tagSocket(108) with statsTag=0xffffff81, statsUid=-1
+10-24 14:27:01.742   995  9261 D TrafficStats: tagSocket(75) with statsTag=0xffffff81, statsUid=-1
+10-24 14:27:01.743   336  9263 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:27:01.743   336  9264 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:27:01.743   336  9264 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce04f50
+10-24 14:27:01.745   336  9266 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:27:01.746   336  9266 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a3ce06070
+10-24 14:27:01.746   336  9265 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-24 14:27:01.750   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.750   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.751   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.751   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.751   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.752   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.752   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.752   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.753   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.754   336  9265 I resolv  : res_nsend: used send_dg 63 terrno: 0
+10-24 14:27:01.755   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.756   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.756   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.756   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.757   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.757   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.757   995   995 D TrafficStats: tagSocket(75) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.758   995  9261 D NetworkMonitor/100: PROBE_DNS www.google.com 16ms OK 142.251.157.119,142.251.152.119,142.251.151.119,142.251.153.119,142.251.155.119,142.251.156.119,142.251.154.119,142.251.150.119,2001:4860:482c:7700::,2001:4860:4829:7700::,2001:4860:4828:7700::,2001:4860:482b:7700::,2001:4860:4826:7700::,2001:4860:482a:7700::,2001:4860:482d:7700::,2001:4860:4827:7700::
+10-24 14:27:01.759   336  9267 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-24 14:27:01.759   336  9268 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:27:01.759   336  9268 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a0ce04f50
+10-24 14:27:01.759   336  9268 I resolv  : doQuery: rcode=0, ancount=8, return value=256
+10-24 14:27:01.759   336  9269 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:27:01.759   336  9269 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x791a3ce06070
+10-24 14:27:01.759   336  9269 I resolv  : doQuery: rcode=0, ancount=8, return value=160
+10-24 14:27:01.761   995  9261 D TrafficStats: tagSocket(75) with statsTag=0xffffff81, statsUid=-1
+10-24 14:27:01.764   336  9263 I resolv  : res_nsend: used send_dg 75 terrno: 0
+10-24 14:27:01.764   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.765   995   995 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-24 14:27:01.765   995  9262 D NetworkMonitor/100: PROBE_DNS connectivitycheck.gstatic.com 23ms OK 142.251.150.120,2001:4860:4826:7800::
+10-24 14:27:01.768   336  9270 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-24 14:27:01.768   336  9271 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-24 14:27:01.768   336  9271 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0e7f0
+10-24 14:27:01.768   336  9271 I resolv  : doQuery: rcode=0, ancount=1, return value=75
+10-24 14:27:01.769   336  9272 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-24 14:27:01.769   336  9272 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7919dce0f510
+10-24 14:27:01.769   336  9272 I resolv  : doQuery: rcode=0, ancount=1, return value=63
+10-24 14:27:01.770   995  9262 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-24 14:27:01.801   995  9262 D NetworkMonitor/100: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=36ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sat, 24 Oct 2026 14:27:01 GMT], X-Android-Received-Millis=[1792852021801], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792852021788]}
+10-24 14:27:01.805   995  9261 D NetworkMonitor/100: PROBE_HTTPS https://www.google.com/generate_204 time=47ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Sat, 24 Oct 2026 14:27:01 GMT], X-Android-Received-Millis=[1792852021805], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792852021791]}
+10-24 14:27:01.805   995  9260 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=65ms
+10-24 14:27:01.808   524   763 D ConnectivityService: [100 WIFI] validation passed
+10-24 14:27:01.836  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.875   398  4645 D audioserver: FGS Logger Transaction failed
+10-24 14:27:01.875   398  4645 D audioserver: -129
+10-24 14:27:01.939   398   497 D AudioFlinger: mixer(0x78bd29474930) throttle end: throttle time(33)
+10-24 14:27:01.962  4549  4579 D SplashScreenView: Build android.window.SplashScreenView{f2ed596 V.E...... ......ID 0,0-0,0}
+10-24 14:27:01.962  4549  4579 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-24 14:27:01.962  4549  4579 D SplashScreenView: Branding: view: android.view.View{408d517 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-24 14:27:01.977  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@961aa97 in: PAUSED
+10-24 14:27:01.977  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.977  9031  9031 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@961aa97
+10-24 14:27:01.978  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.978  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:01.978  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.018   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-24 14:27:02.061   398   497 D audioserver: FGS Logger Transaction failed
+10-24 14:27:02.061   398   497 D audioserver: -129
+10-24 14:27:02.110  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.129  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.145  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.151  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.161  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.161  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.161  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.162  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.211  4549  4582 D EGL_emulation: app_time_stats: avg=642.08ms min=17.91ms max=1715.74ms count=4
+10-24 14:27:02.227  4549  4582 D EGL_emulation: app_time_stats: avg=1581.00ms min=1581.00ms max=1581.00ms count=1
+10-24 14:27:02.237  9165  9183 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-24 14:27:02.281  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@961aa97 in: STOPPED
+10-24 14:27:02.281  9031  9031 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@961aa97
+10-24 14:27:02.337  1033  1033 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-24 14:27:02.346  9031  9031 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@87c2dd
+10-24 14:27:02.346  9031  9031 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@961aa97 in: DESTROYED
+10-24 14:27:02.347  9031  9031 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-24 14:27:02.396   524  2967 W InputManager-JNI: Input channel object '552230e io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-24 14:27:02.411   524   542 W ziparchive: Unable to open '/data/app/~~v3J3-yTZhdgzCSvGdxnpNQ==/io.github.dantemorrigan.cotes.test-Q7dcubWBYbP9XhAEXkwA6Q==/base.dm': No such file or directory
+10-24 14:27:02.410  9031  9093 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@a42e54]
+10-24 14:27:02.412   524   542 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +494ms
+10-24 14:27:02.426  9031  9093 I TestRunner: finished: skip_endsOnboarding(io.github.dantemorrigan.cotes.OnboardingTest)
