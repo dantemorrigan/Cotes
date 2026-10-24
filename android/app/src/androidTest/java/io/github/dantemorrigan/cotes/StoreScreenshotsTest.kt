@@ -43,11 +43,12 @@ class StoreScreenshotsTest : CotesTest() {
         shot("store-2-editor")
         compose.onNodeWithTag("back").performClick()
 
-        compose.onNodeWithTag("search").performTextInput(if (ru) "книг" else "book")
-        shot("store-3-search")
-        compose.onNodeWithContentDescription(s(R.string.clear_search)).performClick()
-
+        // Настройки — до поиска, чтобы на снимке не было клавиатуры.
         compose.onNodeWithContentDescription(s(R.string.settings)).performClick()
         shot("store-4-settings")
+        systemBack()
+
+        compose.onNodeWithTag("search").performTextInput(if (ru) "книг" else "book")
+        shot("store-3-search")
     }
 }
