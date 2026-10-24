@@ -64,6 +64,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -139,7 +141,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalResources
@@ -1127,6 +1128,7 @@ private fun EmptyPane(onNew: () -> Unit, modifier: Modifier = Modifier) {
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun EditorPane(
     note: Note,
@@ -1298,8 +1300,6 @@ private fun EditorPane(
             }
 
             HorizontalDivider(color = colors.outlineVariant)
-            // С крупным системным шрифтом статус и счётчики не помещаются в одну строку.
-            val stacked = LocalDensity.current.fontScale > 1.3f
             val barModifier = Modifier
                 .fillMaxWidth()
                 .coachAnchor(anchors, CoachTarget.SaveStatus)
@@ -1338,8 +1338,6 @@ private fun EditorPane(
                             text,
                             style = MaterialTheme.typography.labelSmall,
                             color = if (state == SaveStatus.Failed) colors.error else colors.onSurfaceVariant,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
                         )
                     }
                 }
@@ -1358,16 +1356,15 @@ private fun EditorPane(
                     modifier = Modifier.testTag("counts"),
                 )
             }
-            if (stacked) {
-                Column(barModifier) {
-                    statusLine(Modifier.fillMaxWidth())
-                    countsLine()
-                }
-            } else {
-                Row(barModifier, verticalAlignment = Alignment.CenterVertically) {
-                    statusLine(Modifier.weight(1f))
-                    countsLine()
-                }
+            // Статус и счётчики стоят в одной строке, а если не помещаются (узкий экран, крупный шрифт) —
+            // счётчики переходят на следующую; текст нигде не обрезается.
+            FlowRow(
+                barModifier,
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                verticalArrangement = Arrangement.spacedBy(2.dp),
+            ) {
+                statusLine(Modifier)
+                countsLine()
             }
         }
     }
