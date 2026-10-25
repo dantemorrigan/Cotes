@@ -1,8 +1,10 @@
 package io.github.dantemorrigan.cotes.ui
 
+import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
-import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -12,10 +14,12 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import io.github.dantemorrigan.cotes.Accent
 import io.github.dantemorrigan.cotes.AppSettings
@@ -124,36 +128,6 @@ private fun accentScheme(accent: Accent, dark: Boolean, pureBlack: Boolean): Col
     )
 }
 
-/** Плавная смена темы и акцента: основные цвета перетекают, а не переключаются. */
-@Composable
-private fun ColorScheme.animated(): ColorScheme {
-    val spec = tween<Color>(durationMillis = 350)
-
-    @Composable
-    fun a(c: Color): Color = animateColorAsState(c, spec, label = "scheme").value
-
-    return copy(
-        primary = a(primary),
-        onPrimary = a(onPrimary),
-        primaryContainer = a(primaryContainer),
-        onPrimaryContainer = a(onPrimaryContainer),
-        secondaryContainer = a(secondaryContainer),
-        onSecondaryContainer = a(onSecondaryContainer),
-        background = a(background),
-        onBackground = a(onBackground),
-        surface = a(surface),
-        onSurface = a(onSurface),
-        surfaceVariant = a(surfaceVariant),
-        onSurfaceVariant = a(onSurfaceVariant),
-        surfaceContainerLow = a(surfaceContainerLow),
-        surfaceContainer = a(surfaceContainer),
-        surfaceContainerHigh = a(surfaceContainerHigh),
-        surfaceContainerHighest = a(surfaceContainerHighest),
-        outline = a(outline),
-        outlineVariant = a(outlineVariant),
-    )
-}
-
 @Immutable
 data class CotesExtraColors(val mark: Color)
 
@@ -177,6 +151,17 @@ fun CotesTheme(settings: AppSettings, dark: Boolean, content: @Composable () -> 
         LocalCotesColors provides CotesExtraColors(mark = if (dark) Color(0xFF1D5552) else Color(0xFFA0F0ED)),
         LocalAppSettings provides settings,
     ) {
-        MaterialTheme(colorScheme = scheme.animated(), content = content)
+        MaterialTheme(colorScheme = scheme, content = content)
     }
+    // Окно под интерфейсом — того же цвета, что и тема приложения (не системы): без светлых вспышек
+    // за статус-баром и при смене темы.
+    val window = context.findActivity()?.window
+    val windowColor = scheme.background.toArgb()
+    SideEffect { window?.setBackgroundDrawable(ColorDrawable(windowColor)) }
+}
+
+private tailrec fun Context.findActivity(): Activity? = when (this) {
+    is Activity -> this
+    is ContextWrapper -> baseContext.findActivity()
+    else -> null
 }

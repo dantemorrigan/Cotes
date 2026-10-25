@@ -5,7 +5,7 @@ plugins {
 
 // versionCode — число коммитов: растёт с каждой сборкой из main и одинаково для тега и ветки.
 // versionName — из тега vX.Y.Z при релизе (или COTES_VERSION_NAME от релизного workflow), иначе X.Y.Z-dev.N.
-val baseVersion = "1.2.3"
+val baseVersion = "1.2.4"
 val commitCount: Int = runCatching {
     providers.exec { commandLine("git", "rev-list", "--count", "HEAD") }
         .standardOutput.asText.get().trim().toInt()
