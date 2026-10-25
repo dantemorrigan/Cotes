@@ -73,7 +73,9 @@ class MarkdownVisualTransformation(
             val scale = when (level) { 1 -> 1.45f; 2 -> 1.3f; 3 -> 1.15f; else -> 1.05f }
             val size = baseSp * scale
             b.addStyle(SpanStyle(fontSize = size.sp, fontWeight = FontWeight.Bold), start, end)
-            if (end > start) b.addStyle(ParagraphStyle(lineHeight = (size * 1.35f).sp), start, end)
+            // Абзацный стиль захватывает и перевод строки: иначе Compose считает его отдельным
+            // пустым абзацем, и после каждого заголовка появляется лишняя строка.
+            if (end > start) b.addStyle(ParagraphStyle(lineHeight = (size * 1.35f).sp), start, minOf(end + 1, b.length))
             b.addStyle(faint, start, start + m.range.last + 1)
             inline(b, line, start, m.range.last + 1)
             return

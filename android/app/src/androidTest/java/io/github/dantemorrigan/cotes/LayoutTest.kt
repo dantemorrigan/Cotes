@@ -43,7 +43,7 @@ class LayoutTest : CotesTest() {
         Thread.sleep(1_500)
         compose.waitForIdle()
         compose.onNodeWithTag("note-list").assertIsDisplayed()
-        compose.onNodeWithTag("content").assertIsDisplayed()
+        compose.onNodeWithTag("note-view").assertIsDisplayed()
         shot("32-landscape")
         scenario.onActivity { it.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED }
     }
@@ -54,7 +54,7 @@ class LayoutTest : CotesTest() {
         seed("Длинная" to text)
         launch()
         compose.onNodeWithText("Длинная").performClick()
-        compose.onNodeWithTag("content").assertIsDisplayed()
+        compose.onNodeWithTag("note-view").assertIsDisplayed()
         compose.onNodeWithTag("counts").assertIsDisplayed()
         shot("33-long-note")
     }

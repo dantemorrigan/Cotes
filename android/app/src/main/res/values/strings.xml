@@ -209,4 +209,6 @@
     <string name="sounds">Action sounds</string>
     <string name="sounds_sub">Soft sounds when you create, pin or delete notes. Silent when your phone is.</string>
     <string name="open_link">Open link</string>
+    <string name="edit_note">Edit</string>
+    <string name="done_editing">Done</string>
 </resources>

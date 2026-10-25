@@ -1,5 +1,6 @@
 package io.github.dantemorrigan.cotes
 
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
@@ -19,6 +20,7 @@ class MarkdownUiTest : CotesTest() {
         seed("Покупки" to "- [ ] хлеб")
         launch()
         row("Покупки").performClick()
+        compose.onNodeWithTag("edit-toggle").performClick()
         val field = compose.onNodeWithTag("content")
         field.performTextInputSelection(TextRange(10))
         field.performTextInput("\n")
@@ -41,8 +43,17 @@ class MarkdownUiTest : CotesTest() {
         launch()
         shot("42-markdown-list")
         row("Планы на неделю").performClick()
+        // Чтение: оформленный текст без значков разметки.
+        compose.onNodeWithTag("note-view").assert(hasText("Важно: позвонить маме", substring = true))
+        compose.onNodeWithTag("note-view").assert(hasText("Взять зарядку", substring = true))
+        compose.onNodeWithTag("note-view").assert(hasText("**", substring = true).not())
+        shot("44-markdown-view")
+        // Правка: разметка видна.
+        compose.onNodeWithTag("edit-toggle").performClick()
         compose.onNodeWithTag("content").assertExists()
         shot("43-markdown-editor")
+        compose.onNodeWithTag("edit-toggle").performClick()
+        compose.onNodeWithTag("note-view").assertExists()
         assertEquals(text, repo.notes.value.single().content)
     }
 }

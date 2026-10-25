@@ -1,6 +1,4 @@
-Cotes 1.2.0
-• Light Markdown: headings, bold, italic, strikethrough, code, quotes and lists are highlighted right in the editor
-• Checklists: tap the [ ] box to tick an item; Enter continues a list, Enter on an empty item ends it
-• Links: put the cursor in a link and tap “Open link”
-• Notes from Obsidian look neat: [[links]] and callouts are highlighted, and the list shows text without markup
-• Your text stays plain Markdown, so sync, backups and export work as before
+Cotes 1.2.1
+• Notes open for reading: formatted text, no Markdown symbols. Links open with a tap, the ☐ box ticks an item
+• Tap the pencil (or the text) to edit — then the markup is visible; the tick returns to reading
+• No more extra blank line after headings

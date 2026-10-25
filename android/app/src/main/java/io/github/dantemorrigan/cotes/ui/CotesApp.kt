@@ -92,6 +92,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Settings
@@ -154,6 +155,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
@@ -1268,17 +1270,35 @@ private fun EditorPane(
     }
 
     val haptics = LocalHapticFeedback.current
-    val markdown = remember(colors, settings.textSize) {
-        MarkdownVisualTransformation(
-            MarkdownColors(
-                accent = colors.primary,
-                faint = colors.onSurfaceVariant.copy(alpha = 0.5f),
-                muted = colors.onSurfaceVariant,
-                codeBackground = colors.surfaceContainerHigh,
-                mark = colors.primary.copy(alpha = 0.22f),
-            ),
-            settings.textSize.sp,
-        )
+    val focusManager = LocalFocusManager.current
+    // Готовая заметка открывается для чтения — разметка скрыта; новая — сразу для правки.
+    var editing by rememberSaveable(note.id) { mutableStateOf(note.isBlank) }
+    var focusContentOnEdit by remember { mutableStateOf(false) }
+
+    fun startEditing() {
+        if (!editing) {
+            editing = true
+            content = content.copy(selection = TextRange(content.text.length))
+        }
+        focusContentOnEdit = true
+    }
+
+    LaunchedEffect(editing, focusContentOnEdit) {
+        if (editing && focusContentOnEdit) {
+            focusContentOnEdit = false
+            runCatching { contentFocus.requestFocus() }
+        }
+    }
+
+    val markdownColors = MarkdownColors(
+        accent = colors.primary,
+        faint = colors.onSurfaceVariant.copy(alpha = 0.5f),
+        muted = colors.onSurfaceVariant,
+        codeBackground = colors.surfaceContainerHigh,
+        mark = colors.primary.copy(alpha = 0.22f),
+    )
+    val markdown = remember(markdownColors, settings.textSize) {
+        MarkdownVisualTransformation(markdownColors, settings.textSize.sp)
     }
 
     // Заметку изменили на другом устройстве, пока она открыта здесь: показываем новую версию,
@@ -1310,6 +1330,25 @@ private fun EditorPane(
                     }
                 }
                 Spacer(Modifier.weight(1f))
+                // Карандаш — править (разметка видна), галочка — готово (оформленный текст).
+                IconButton(
+                    onClick = {
+                        if (editing) {
+                            focusManager.clearFocus()
+                            editing = false
+                        } else {
+                            startEditing()
+                        }
+                    },
+                    modifier = Modifier.testTag("edit-toggle"),
+                ) {
+                    Crossfade(editing, label = "edit-icon") { e ->
+                        Icon(
+                            if (e) Icons.Default.Check else Icons.Default.Edit,
+                            contentDescription = stringResource(if (e) R.string.done_editing else R.string.edit_note),
+                        )
+                    }
+                }
                 IconButton(onClick = onTogglePin, modifier = Modifier.testTag("pin")) {
                     Crossfade(note.pinned, label = "pin-icon") { pinned ->
                         Icon(
@@ -1348,7 +1387,7 @@ private fun EditorPane(
                             val clean = value.replace("\n", "")
                             title = clean
                             onEdit(clean, content.text)
-                            if (clean != value) contentFocus.requestFocus()
+                            if (clean != value) startEditing()
                         },
                         modifier = Modifier
                             .fillMaxWidth()
@@ -1380,7 +1419,7 @@ private fun EditorPane(
                         },
                     )
                     Spacer(Modifier.height(12.dp))
-                    BasicTextField(
+                    if (editing) BasicTextField(
                         value = content,
                         onValueChange = { value ->
                             var next = value
@@ -1430,6 +1469,23 @@ private fun EditorPane(
                                 inner()
                             }
                         },
+                    ) else NoteView(
+                        text = content.text,
+                        colors = markdownColors,
+                        baseSp = settings.textSize.sp,
+                        style = MaterialTheme.typography.bodyLarge.copy(
+                            color = colors.onSurface,
+                            fontSize = settings.textSize.sp.sp,
+                            lineHeight = settings.textSize.lineHeight.sp,
+                        ),
+                        hintColor = colors.onSurfaceVariant.copy(alpha = 0.6f),
+                        onToggle = { inner ->
+                            val text = Markdown.toggleCheckbox(content.text, inner)
+                            haptics.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                            content = content.copy(text = text)
+                            onEdit(title, text)
+                        },
+                        onEdit = { startEditing() },
                     )
                     // Нажатие на пустое место под текстом ставит курсор в конец.
                     Spacer(
@@ -1438,7 +1494,7 @@ private fun EditorPane(
                             .height(320.dp)
                             .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
                                 content = content.copy(selection = TextRange(content.text.length))
-                                runCatching { contentFocus.requestFocus() }
+                                startEditing()
                             }
                     )
                 }
@@ -1488,8 +1544,8 @@ private fun EditorPane(
                 }
             }
             // Курсор стоит в ссылке — её можно открыть (в поле ввода нажатие ставит курсор, а не переходит).
-            val link = remember(content.text, content.selection) {
-                if (content.selection.collapsed) Markdown.linkAt(content.text, content.selection.start) else null
+            val link = remember(content.text, content.selection, editing) {
+                if (editing && content.selection.collapsed) Markdown.linkAt(content.text, content.selection.start) else null
             }
             val uriHandler = LocalUriHandler.current
             val countsLine = @Composable {
@@ -1547,3 +1603,31 @@ private fun readImport(context: Context, uri: Uri): ImportResult = runCatching {
     val bytes = context.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: return@runCatching ImportResult.Empty
     NoteImport.fromFile(name, bytes, modified)
 }.getOrDefault(ImportResult.Empty)
+
+/**
+ * Заметка в режиме чтения: оформленный текст без значков разметки. Ссылки открываются,
+ * ☐ / ☑ отмечают пункт, нажатие в остальном месте переводит в правку.
+ */
+@Composable
+private fun NoteView(
+    text: String,
+    colors: MarkdownColors,
+    baseSp: Int,
+    style: TextStyle,
+    hintColor: Color,
+    onToggle: (Int) -> Unit,
+    onEdit: () -> Unit,
+) {
+    val toggle by rememberUpdatedState(onToggle)
+    val rendered = remember(text, colors, baseSp) { MarkdownRender.render(text, colors, baseSp) { toggle(it) } }
+    val modifier = Modifier
+        .fillMaxWidth()
+        .heightIn(min = 120.dp)
+        .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null, onClick = onEdit)
+        .testTag("note-view")
+    if (text.isEmpty()) {
+        Text(stringResource(R.string.content_hint), style = style, color = hintColor, modifier = modifier)
+    } else {
+        Text(rendered, style = style, modifier = modifier)
+    }
+}

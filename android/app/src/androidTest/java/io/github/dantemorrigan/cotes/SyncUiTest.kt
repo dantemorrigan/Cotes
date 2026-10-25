@@ -19,15 +19,16 @@ class SyncUiTest : CotesTest() {
         seed("Покупки" to "Молоко")
         launch()
         row("Покупки").performClick()
-        compose.onNodeWithTag("content").assertExists()
+        compose.onNodeWithTag("note-view").assertExists()
 
         // Пока заметка открыта, синхронизация приносит её новую версию с другого устройства.
         val note = repo.notes.value.single()
         val remote = note.copy(content = "Молоко\nХлеб", changed = note.changed + 1_000)
         repo.applySync(listOf(remote), emptyMap(), emptyList(), mapOf(note.id to note.changed))
         compose.waitUntil(5_000) {
-            compose.onAllNodes(hasTestTag("content") and hasText("Молоко\nХлеб")).fetchSemanticsNodes().isNotEmpty()
+            compose.onAllNodes(hasTestTag("note-view") and hasText("Молоко\nХлеб")).fetchSemanticsNodes().isNotEmpty()
         }
+        compose.onNodeWithTag("edit-toggle").performClick()
 
         // Следующая правка здесь продолжает новую версию, а не затирает её старой.
         compose.onNodeWithTag("content").performTextInput("!")
