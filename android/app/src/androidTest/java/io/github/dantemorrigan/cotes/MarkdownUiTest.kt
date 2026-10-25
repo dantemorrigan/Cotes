@@ -1,5 +1,6 @@
 package io.github.dantemorrigan.cotes
 
+import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
