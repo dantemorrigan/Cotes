@@ -667,6 +667,12 @@ fun CotesApp(
 
 @Composable
 private fun BrandTile(size: Int) {
+    // Пасхалка: касание картинки — «мяу» и пружинистый поворот-прыжок логотипа.
+    val context = LocalContext.current
+    val sounds = remember { Sounds.get(context) }
+    val scope = rememberCoroutineScope()
+    val wiggle = remember { Animatable(0f) }
+    val pop = remember { Animatable(1f) }
     Box(
         Modifier
             .size(size.dp)
@@ -678,7 +684,28 @@ private fun BrandTile(size: Int) {
         Image(
             painter = painterResource(R.drawable.ic_cotes_cat),
             contentDescription = null,
-            modifier = Modifier.size((size * 0.72f).dp),
+            modifier = Modifier
+                .size((size * 0.72f).dp)
+                .graphicsLayer {
+                    rotationZ = wiggle.value
+                    scaleX = pop.value
+                    scaleY = pop.value
+                }
+                .clickable(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = null,
+                ) {
+                    sounds.play(Sound.Meow)
+                    scope.launch {
+                        launch {
+                            pop.snapTo(1f)
+                            pop.animateTo(1.22f, tween(110, easing = FastOutSlowInEasing))
+                            pop.animateTo(1f, spring(dampingRatio = Spring.DampingRatioMediumBouncy))
+                        }
+                        wiggle.snapTo(0f)
+                        for (a in listOf(-14f, 12f, -8f, 5f, 0f)) wiggle.animateTo(a, tween(90))
+                    }
+                },
         )
     }
 }
@@ -713,6 +740,7 @@ private fun NoteListPane(
     val q = query.trim()
     val focus = LocalFocusManager.current
     val scope = rememberCoroutineScope()
+    val sounds = remember { Sounds.get(LocalContext.current) }
     val listState = rememberLazyListState()
     val scrolled by remember { derivedStateOf { listState.canScrollBackward } }
     val headerColor by animateColorAsState(
@@ -787,6 +815,7 @@ private fun NoteListPane(
                                     }
                                 }
                                 IconButton(onClick = {
+                                    sounds.play(Sound.Gear)
                                     scope.launch {
                                         val start = gear.value
                                         launch {
