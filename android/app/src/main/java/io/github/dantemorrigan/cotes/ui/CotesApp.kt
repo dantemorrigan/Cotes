@@ -740,7 +740,8 @@ private fun NoteListPane(
     val q = query.trim()
     val focus = LocalFocusManager.current
     val scope = rememberCoroutineScope()
-    val sounds = remember { Sounds.get(LocalContext.current) }
+    val noteListContext = LocalContext.current
+    val sounds = remember { Sounds.get(noteListContext) }
     val listState = rememberLazyListState()
     val scrolled by remember { derivedStateOf { listState.canScrollBackward } }
     val headerColor by animateColorAsState(
