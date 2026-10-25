@@ -1,6 +1,6 @@
 # Cotes — Privacy Policy
 
-_Last updated: 24 October 2026_
+_Last updated: 26 October 2026_
 
 Cotes is a notes app for Android. It is built so that your notes never leave your phone unless you decide to send them somewhere.
 
@@ -18,13 +18,13 @@ Cotes is a notes app for Android. It is built so that your notes never leave you
 
 **Changes:** if this policy changes, the new version will be published at the same address with a new date.
 
-**Contact:** [support e-mail — to be filled in]
+**Contact:** kukispuki1209@gmail.com
 
 ---
 
 # Cotes — Политика конфиденциальности
 
-_Обновлено: 24 октября 2026 г._
+_Обновлено: 26 октября 2026 г._
 
 Cotes — приложение для заметок на Android. Оно устроено так, что заметки не покидают телефон, пока вы сами их куда-нибудь не отправите.
 
@@ -42,4 +42,4 @@ Cotes — приложение для заметок на Android. Оно уст
 
 **Изменения:** если политика изменится, новая версия будет опубликована по тому же адресу с новой датой.
 
-**Контакт:** [адрес поддержки — заполнить]
+**Контакт:** kukispuki1209@gmail.com
