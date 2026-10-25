@@ -46,7 +46,7 @@ class MarkdownUiTest : CotesTest() {
         row("Планы на неделю").performClick()
         // Чтение: оформленный текст без значков разметки.
         compose.onNodeWithTag("note-view").assert(hasText("Важно: позвонить маме", substring = true))
-        compose.onNodeWithTag("note-view").assert(hasText("Взять зарядку", substring = true))
+        compose.onNodeWithTag("note-view").assert(hasText("Note · Взять зарядку", substring = true))
         compose.onNodeWithTag("note-view").assert(hasText("**", substring = true).not())
         shot("44-markdown-view")
         // Правка: разметка видна.

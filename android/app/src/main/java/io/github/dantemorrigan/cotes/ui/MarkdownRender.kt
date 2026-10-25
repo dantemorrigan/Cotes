@@ -86,7 +86,7 @@ object MarkdownRender {
         quote.find(line)?.let { m ->
             out.append("▍")
             out.addStyle(SpanStyle(color = colors.accent), at, out.length)
-            val type = m.groupValues[2].removePrefix("[!").removeSuffix("]").trim()
+            val type = m.groupValues[2].trim().removePrefix("[!").removeSuffix("]").trim()
             if (type.isNotEmpty()) {
                 val tagAt = out.length
                 out.append(type.replaceFirstChar { it.uppercase() })
