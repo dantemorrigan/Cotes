@@ -559,7 +559,14 @@ fun CotesApp(
                     ) {
                         SettingsScreen(
                             settings = settings,
-                            onChange = { settingsRepo.update(it) },
+                            onChange = { change ->
+                                val activity = context.findActivity()
+                                if (activity != null && change(settings).restylesUi(settings)) {
+                                    activity.fadeThrough { settingsRepo.update(change) }
+                                } else {
+                                    settingsRepo.update(change)
+                                }
+                            },
                             onBack = { settingsOpen = false },
                             onExport = { exportLauncher.launch("cotes-${LocalDate.now()}.json") },
                             onExportMarkdown = { markdownLauncher.launch("cotes-markdown-${LocalDate.now()}.zip") },
