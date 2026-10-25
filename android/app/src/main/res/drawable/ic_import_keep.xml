@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Значок «keep» для окна «Переезд»: упрощённое векторное изображение. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#FFBA00"
+        android:pathData="M10,3H30L45,18V38A7,7 0 0 1 38,45H10A7,7 0 0 1 3,38V10A7,7 0 0 1 10,3z" />
+    <path
+        android:fillColor="#F29900"
+        android:pathData="M30,3L45,18H35A5,5 0 0 1 30,13z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,15.5A8,8 0 0 1 28.2,30.4V33H19.8V30.4A8,8 0 0 1 24,15.5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20.5,35H27.5V37.2H20.5z" />
+</vector>

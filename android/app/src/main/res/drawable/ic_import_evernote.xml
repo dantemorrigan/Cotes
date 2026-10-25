@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Значок «evernote» для окна «Переезд»: упрощённое векторное изображение. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#00A82D"
+        android:pathData="M12,2H36A10,10 0 0 1 46,12V36A10,10 0 0 1 36,46H12A10,10 0 0 1 2,36V12A10,10 0 0 1 12,2z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,13A9,9 0 1 1 30,31A9,9 0 0 1 30,13z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M21,16A8.5,8.5 0 1 1 21,33A8.5,8.5 0 0 1 21,16z" />
+    <path
+        android:pathData="M15.5,29C13.5,32 13.5,36 16,37.5C18,38.6 20,37.4 19.8,35.6"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#00A82D"
+        android:pathData="M18.2,22.2A1.4,1.4 0 1 1 18.2,25A1.4,1.4 0 0 1 18.2,22.2z" />
+</vector>

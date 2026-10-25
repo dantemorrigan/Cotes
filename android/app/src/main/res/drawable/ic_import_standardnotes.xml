@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Значок «standardnotes» для окна «Переезд»: упрощённое векторное изображение. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#086DD6"
+        android:pathData="M12,2H36A10,10 0 0 1 46,12V36A10,10 0 0 1 36,46H12A10,10 0 0 1 2,36V12A10,10 0 0 1 12,2z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,10H29L36,17V36A3,3 0 0 1 33,39H14A3,3 0 0 1 11,36V13A3,3 0 0 1 14,10z" />
+    <path
+        android:fillColor="#B7D4F5"
+        android:pathData="M29,10L36,17H31.5A2.5,2.5 0 0 1 29,14.5z" />
+    <path
+        android:pathData="M16,24H31M16,29H31M16,34H24"
+        android:strokeColor="#086DD6"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Значок «simplenote» для окна «Переезд»: упрощённое векторное изображение. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="#3361CC"
+        android:pathData="M12,2H36A10,10 0 0 1 46,12V36A10,10 0 0 1 36,46H12A10,10 0 0 1 2,36V12A10,10 0 0 1 12,2z" />
+    <path
+        android:pathData="M32,16C30,13 26,12 22.5,12.8C18,13.8 16.8,18 19.5,20.5C22.5,23.2 28,24 30.2,27C32.5,30.5 30,34.8 25,35.6C21,36.2 17.5,35 15.5,32.5"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4.4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

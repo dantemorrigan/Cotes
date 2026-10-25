@@ -345,9 +345,9 @@ fun SettingsScreen(
                     Modifier.verticalScroll(rememberScrollState()),
                     verticalArrangement = Arrangement.spacedBy(14.dp),
                 ) {
-                    importHelpApps.forEach { (emoji, name, how) ->
+                    importHelpApps.forEach { (icon, name, how) ->
                         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                            Text(emoji, fontSize = 22.sp)
+                            Image(painterResource(icon), contentDescription = null, modifier = Modifier.size(36.dp))
                             Column {
                                 Text(stringResource(name), style = MaterialTheme.typography.titleSmall)
                                 Text(stringResource(how), style = MaterialTheme.typography.bodyMedium)
@@ -541,15 +541,15 @@ private fun AccentSwatch(accent: Accent, selected: Boolean, dark: Boolean, onCli
     }
 }
 
-/** Приложения в окне «Переезд»: эмодзи, название и короткая инструкция по экспорту. */
+/** Приложения в окне «Переезд»: значок, название и короткая инструкция по экспорту. */
 private val importHelpApps = listOf(
-        Triple("📝", R.string.import_help_simplenote_name, R.string.import_help_simplenote),
-        Triple("💡", R.string.import_help_keep_name, R.string.import_help_keep),
-        Triple("🐘", R.string.import_help_evernote_name, R.string.import_help_evernote),
-        Triple("🔐", R.string.import_help_sn_name, R.string.import_help_sn),
-        Triple("📓", R.string.import_help_joplin_name, R.string.import_help_joplin),
-        Triple("🐻", R.string.import_help_bear_name, R.string.import_help_bear),
-        Triple("⬛", R.string.import_help_notion_name, R.string.import_help_notion),
-        Triple("💎", R.string.import_help_obsidian_name, R.string.import_help_obsidian),
-        Triple("📄", R.string.import_help_other_name, R.string.import_help_other),
+        Triple(R.drawable.ic_import_simplenote, R.string.import_help_simplenote_name, R.string.import_help_simplenote),
+        Triple(R.drawable.ic_import_keep, R.string.import_help_keep_name, R.string.import_help_keep),
+        Triple(R.drawable.ic_import_evernote, R.string.import_help_evernote_name, R.string.import_help_evernote),
+        Triple(R.drawable.ic_import_standardnotes, R.string.import_help_sn_name, R.string.import_help_sn),
+        Triple(R.drawable.ic_import_joplin, R.string.import_help_joplin_name, R.string.import_help_joplin),
+        Triple(R.drawable.ic_import_bear, R.string.import_help_bear_name, R.string.import_help_bear),
+        Triple(R.drawable.ic_import_notion, R.string.import_help_notion_name, R.string.import_help_notion),
+        Triple(R.drawable.ic_import_obsidian, R.string.import_help_obsidian_name, R.string.import_help_obsidian),
+        Triple(R.drawable.ic_import_other, R.string.import_help_other_name, R.string.import_help_other),
 )
