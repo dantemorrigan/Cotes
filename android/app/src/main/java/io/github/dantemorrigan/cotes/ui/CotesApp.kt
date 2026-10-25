@@ -36,6 +36,8 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.IntOffset
@@ -82,6 +84,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
@@ -157,6 +160,9 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.TextFieldValue
@@ -1500,6 +1506,15 @@ private fun EditorPane(
                 }
             }
 
+            // Панель форматирования — только в режиме правки, над клавиатурой.
+            AnimatedVisibility(editing) {
+                FormatBar { action ->
+                    val e = action(content.text, content.selection.start, content.selection.end)
+                    content = TextFieldValue(e.text, TextRange(e.start, e.end))
+                    onEdit(title, e.text)
+                    focusContentOnEdit = true
+                }
+            }
             HorizontalDivider(color = colors.outlineVariant)
             val barModifier = Modifier
                 .fillMaxWidth()
@@ -1629,5 +1644,58 @@ private fun NoteView(
         Text(stringResource(R.string.content_hint), style = style, color = hintColor, modifier = modifier)
     } else {
         Text(rendered, style = style, modifier = modifier)
+    }
+}
+
+private typealias Format = (String, Int, Int) -> Markdown.Edit
+
+private fun fmt(label: String, description: Int, action: Format) = Triple(label, description, action)
+
+/** Кнопки Markdown для выделенного текста или текущей строки. */
+@Composable
+private fun FormatBar(onFormat: (Format) -> Unit) {
+    val colors = MaterialTheme.colorScheme
+    val items: List<Triple<String, Int, Format>> = listOf(
+        fmt("H", R.string.fmt_heading) { t, s, e -> Markdown.heading(t, s, e) },
+        fmt("B", R.string.fmt_bold) { t, s, e -> Markdown.wrap(t, s, e, "**") },
+        fmt("I", R.string.fmt_italic) { t, s, e -> Markdown.wrap(t, s, e, "*") },
+        fmt("S", R.string.fmt_strike) { t, s, e -> Markdown.wrap(t, s, e, "~~") },
+        fmt("<>", R.string.fmt_code) { t, s, e -> Markdown.wrap(t, s, e, "`") },
+        fmt("•", R.string.fmt_bullets) { t, s, e -> Markdown.block(t, s, e, Markdown.Block.Bullet) },
+        fmt("1.", R.string.fmt_numbers) { t, s, e -> Markdown.block(t, s, e, Markdown.Block.Numbered) },
+        fmt("☐", R.string.fmt_task) { t, s, e -> Markdown.block(t, s, e, Markdown.Block.Task) },
+        fmt("❝", R.string.fmt_quote) { t, s, e -> Markdown.block(t, s, e, Markdown.Block.Quote) },
+        fmt("🔗", R.string.fmt_link) { t, s, e -> Markdown.link(t, s, e) },
+    )
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState())
+            .padding(horizontal = 8.dp, vertical = 2.dp)
+            .testTag("format-bar"),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        items.forEach { (label, description, action) ->
+            val name = stringResource(description)
+            Box(
+                Modifier
+                    .size(44.dp)
+                    .clip(RoundedCornerShape(10.dp))
+                    .clickable(role = Role.Button) { onFormat(action) }
+                    .semantics { contentDescription = name }
+                    .testTag("fmt-$label"),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(
+                    label,
+                    color = colors.onSurfaceVariant,
+                    fontSize = 17.sp,
+                    fontWeight = if (label == "B" || label == "H") FontWeight.Bold else FontWeight.Medium,
+                    fontStyle = if (label == "I") FontStyle.Italic else FontStyle.Normal,
+                    textDecoration = if (label == "S") TextDecoration.LineThrough else null,
+                    fontFamily = if (label == "<>") FontFamily.Monospace else null,
+                )
+            }
+        }
     }
 }

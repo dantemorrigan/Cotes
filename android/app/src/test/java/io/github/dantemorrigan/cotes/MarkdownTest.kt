@@ -74,4 +74,68 @@ class MarkdownTest {
     fun displayTitle_skipsHeadingMarks() {
         assertEquals("Покупки", Note(id = "1", content = "# Покупки\n- хлеб", created = 1).displayTitle)
     }
+
+    // --- Панель форматирования ---
+
+    private fun at(text: String, sel: String): Pair<Int, Int> = text.indexOf(sel).let { it to it + sel.length }
+
+    @Test
+    fun wrap_boldItalicStrike_andUnwrap() {
+        val t = "купить хлеб"
+        val (s, e) = at(t, "хлеб")
+        val bold = Markdown.wrap(t, s, e, "**")
+        assertEquals(Markdown.Edit("купить **хлеб**", 9, 13), bold)
+        // Повторное нажатие снимает.
+        assertEquals(Markdown.Edit(t, 7, 11), Markdown.wrap(bold.text, bold.start, bold.end, "**"))
+        // Выделили вместе со значками — тоже снимает.
+        assertEquals(Markdown.Edit(t, 7, 11), Markdown.wrap(bold.text, 7, 15, "**"))
+        // Курсив внутри жирного не ломает жирный.
+        assertEquals("купить ***хлеб***", Markdown.wrap(bold.text, bold.start, bold.end, "*").text)
+        // Пробелы по краям выделения остаются снаружи.
+        assertEquals("купить **хлеб** ", Markdown.wrap("купить хлеб ", 6, 12, "**").text)
+    }
+
+    @Test
+    fun wrap_withoutSelection_putsCursorBetween() {
+        assertEquals(Markdown.Edit("а ~~~~", 4, 4), Markdown.wrap("а ", 2, 2, "~~"))
+    }
+
+    @Test
+    fun link_wrapsSelection_andSelectsUrl() {
+        val e = Markdown.link("см. сайт", 4, 8)
+        assertEquals("см. [сайт](https://)", e.text)
+        assertEquals("https://", e.text.substring(e.start, e.end))
+        assertEquals(Markdown.Edit("[](https://)", 1, 1), Markdown.link("", 0, 0))
+    }
+
+    @Test
+    fun heading_cycles() {
+        var e = Markdown.heading("Покупки", 3, 3)
+        assertEquals("# Покупки", e.text)
+        e = Markdown.heading(e.text, e.start, e.end)
+        assertEquals("## Покупки", e.text)
+        e = Markdown.heading(e.text, e.start, e.end)
+        assertEquals("### Покупки", e.text)
+        e = Markdown.heading(e.text, e.start, e.end)
+        assertEquals("Покупки", e.text)
+        // Только строка с курсором.
+        assertEquals("раз\n# два\nтри", Markdown.heading("раз\nдва\nтри", 5, 5).text)
+    }
+
+    @Test
+    fun block_listsTasksQuotes_toggleAndReplace() {
+        val t = "молоко\nхлеб"
+        val bullets = Markdown.block(t, 0, t.length, Markdown.Block.Bullet)
+        assertEquals("- молоко\n- хлеб", bullets.text)
+        assertEquals(t, Markdown.block(bullets.text, 0, bullets.text.length, Markdown.Block.Bullet).text)
+        assertEquals("1. молоко\n2. хлеб", Markdown.block(t, 0, t.length, Markdown.Block.Numbered).text)
+        assertEquals("- [ ] молоко\n- [ ] хлеб", Markdown.block(bullets.text, 0, bullets.text.length, Markdown.Block.Task).text)
+        assertEquals("> молоко", Markdown.block("молоко", 2, 2, Markdown.Block.Quote).text)
+        // Курсор сдвигается вместе с текстом.
+        val e = Markdown.block("молоко", 3, 3, Markdown.Block.Task)
+        assertEquals(9, e.start)
+        // Пустые строки в многострочном выделении не трогаем.
+        assertEquals("- а\n\n- б", Markdown.block("а\n\nб", 0, 4, Markdown.Block.Bullet).text)
+    }
 }
+

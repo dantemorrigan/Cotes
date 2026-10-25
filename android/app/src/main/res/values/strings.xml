@@ -211,4 +211,14 @@
     <string name="open_link">Open link</string>
     <string name="edit_note">Edit</string>
     <string name="done_editing">Done</string>
+    <string name="fmt_heading">Heading</string>
+    <string name="fmt_bold">Bold</string>
+    <string name="fmt_italic">Italic</string>
+    <string name="fmt_strike">Strikethrough</string>
+    <string name="fmt_code">Code</string>
+    <string name="fmt_bullets">Bulleted list</string>
+    <string name="fmt_numbers">Numbered list</string>
+    <string name="fmt_task">Checklist</string>
+    <string name="fmt_quote">Quote</string>
+    <string name="fmt_link">Link</string>
 </resources>

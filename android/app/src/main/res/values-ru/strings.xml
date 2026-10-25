@@ -219,4 +219,14 @@
     <string name="open_link">Открыть ссылку</string>
     <string name="edit_note">Редактировать</string>
     <string name="done_editing">Готово</string>
+    <string name="fmt_heading">Заголовок</string>
+    <string name="fmt_bold">Жирный</string>
+    <string name="fmt_italic">Курсив</string>
+    <string name="fmt_strike">Зачёркнутый</string>
+    <string name="fmt_code">Код</string>
+    <string name="fmt_bullets">Маркированный список</string>
+    <string name="fmt_numbers">Нумерованный список</string>
+    <string name="fmt_task">Список дел</string>
+    <string name="fmt_quote">Цитата</string>
+    <string name="fmt_link">Ссылка</string>
 </resources>

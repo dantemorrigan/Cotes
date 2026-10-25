@@ -56,4 +56,24 @@ class MarkdownUiTest : CotesTest() {
         compose.onNodeWithTag("note-view").assertExists()
         assertEquals(text, repo.notes.value.single().content)
     }
+
+    @Test
+    fun formatBar_boldsSelection_andMakesList() {
+        seed("Покупки" to "купить хлеб")
+        launch()
+        row("Покупки").performClick()
+        compose.onNodeWithTag("edit-toggle").performClick()
+        compose.onNodeWithTag("format-bar").assertExists()
+        val field = compose.onNodeWithTag("content")
+        field.performTextInputSelection(TextRange(7, 11))
+        compose.onNodeWithTag("fmt-B").performClick()
+        compose.waitUntil(5_000) { repo.notes.value.single().content == "купить **хлеб**" }
+        compose.onNodeWithTag("fmt-☐").performClick()
+        compose.waitUntil(5_000) { repo.notes.value.single().content == "- [ ] купить **хлеб**" }
+        shot("45-format-bar")
+        // В режиме чтения панели нет.
+        compose.onNodeWithTag("edit-toggle").performClick()
+        compose.waitUntil(5_000) { compose.onAllNodes(androidx.compose.ui.test.hasTestTag("format-bar")).fetchSemanticsNodes().isEmpty() }
+    }
 }
+
