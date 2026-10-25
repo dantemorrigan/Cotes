@@ -1,3 +1,2 @@
-Cotes 1.2.2
-• The settings gear now has a short mechanical click (muted with the other sounds)
-• Easter egg: tap the cat logo — it meows and bounces
+Cotes 1.2.3
+• "Moving from another app" dialog: app icons for Simplenote, Google Keep, Evernote, Standard Notes, Joplin, Bear, Notion and Obsidian instead of emoji, tidy cards with the instructions

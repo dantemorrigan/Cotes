@@ -343,18 +343,34 @@ fun SettingsScreen(
             text = {
                 Column(
                     Modifier.verticalScroll(rememberScrollState()),
-                    verticalArrangement = Arrangement.spacedBy(14.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     importHelpApps.forEach { (icon, name, how) ->
-                        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                            Image(painterResource(icon), contentDescription = null, modifier = Modifier.size(36.dp))
-                            Column {
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .clip(RoundedCornerShape(16.dp))
+                                .background(MaterialTheme.colorScheme.surfaceContainerHighest)
+                                .padding(12.dp),
+                            horizontalArrangement = Arrangement.spacedBy(12.dp),
+                        ) {
+                            Image(painterResource(icon), contentDescription = null, modifier = Modifier.size(40.dp))
+                            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                                 Text(stringResource(name), style = MaterialTheme.typography.titleSmall)
-                                Text(stringResource(how), style = MaterialTheme.typography.bodyMedium)
+                                Text(
+                                    stringResource(how),
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                )
                             }
                         }
                     }
-                    Text(stringResource(R.string.import_help_footer), style = MaterialTheme.typography.bodySmall)
+                    Text(
+                        stringResource(R.string.import_help_footer),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(top = 4.dp, start = 4.dp, end = 4.dp),
+                    )
                 }
             },
             confirmButton = {
