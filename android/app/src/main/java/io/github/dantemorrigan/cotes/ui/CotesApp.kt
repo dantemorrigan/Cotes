@@ -1130,8 +1130,8 @@ private fun NoteRow(
     onLongClick: () -> Unit,
 ) {
     val colors = MaterialTheme.colorScheme
-    val settings = LocalAppSettings.current
-    val compact = settings.compactList
+    val compact by rememberSetting { it.compactList }
+    val showPreview by rememberSetting { it.showPreview }
     val mark = SpanStyle(background = LocalCotesColors.current.mark, color = colors.onSurface)
     val title = note.displayTitle
     val bg by animateColorAsState(
@@ -1164,7 +1164,7 @@ private fun NoteRow(
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
-            val preview = if (settings.showPreview) note.preview(query) else ""
+            val preview = if (showPreview) note.preview(query) else ""
             if (preview.isNotEmpty()) {
                 Text(
                     text = highlight(preview, query, mark),
@@ -1289,7 +1289,7 @@ private fun EditorPane(
     modifier: Modifier = Modifier,
 ) {
     val colors = MaterialTheme.colorScheme
-    val settings = LocalAppSettings.current
+    val textSize by rememberSetting { it.textSize }
     val context = LocalContext.current
     val anchors = LocalCoachAnchors.current
     if (anchors != null) {
@@ -1340,8 +1340,8 @@ private fun EditorPane(
         codeBackground = colors.surfaceContainerHigh,
         mark = colors.primary.copy(alpha = 0.22f),
     )
-    val markdown = remember(markdownColors, settings.textSize) {
-        MarkdownVisualTransformation(markdownColors, settings.textSize.sp)
+    val markdown = remember(markdownColors, textSize) {
+        MarkdownVisualTransformation(markdownColors, textSize.sp)
     }
 
     // Заметку изменили на другом устройстве, пока она открыта здесь: показываем новую версию,
@@ -1492,8 +1492,8 @@ private fun EditorPane(
                             .testTag("content"),
                         textStyle = MaterialTheme.typography.bodyLarge.copy(
                             color = colors.onSurface,
-                            fontSize = settings.textSize.sp.sp,
-                            lineHeight = settings.textSize.lineHeight.sp,
+                            fontSize = textSize.sp.sp,
+                            lineHeight = textSize.lineHeight.sp,
                         ),
                         cursorBrush = SolidColor(colors.primary),
                         keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
@@ -1503,8 +1503,8 @@ private fun EditorPane(
                                     Text(
                                         stringResource(R.string.content_hint),
                                         style = MaterialTheme.typography.bodyLarge.copy(
-                                            fontSize = settings.textSize.sp.sp,
-                                            lineHeight = settings.textSize.lineHeight.sp,
+                                            fontSize = textSize.sp.sp,
+                                            lineHeight = textSize.lineHeight.sp,
                                         ),
                                         color = colors.onSurfaceVariant.copy(alpha = 0.6f),
                                     )
@@ -1515,11 +1515,11 @@ private fun EditorPane(
                     ) else NoteView(
                         text = content.text,
                         colors = markdownColors,
-                        baseSp = settings.textSize.sp,
+                        baseSp = textSize.sp,
                         style = MaterialTheme.typography.bodyLarge.copy(
                             color = colors.onSurface,
-                            fontSize = settings.textSize.sp.sp,
-                            lineHeight = settings.textSize.lineHeight.sp,
+                            fontSize = textSize.sp.sp,
+                            lineHeight = textSize.lineHeight.sp,
                         ),
                         hintColor = colors.onSurfaceVariant.copy(alpha = 0.6f),
                         onToggle = { inner ->

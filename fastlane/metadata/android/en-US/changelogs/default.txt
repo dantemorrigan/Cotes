@@ -1,3 +1,2 @@
-Cotes 1.2.4
-• Switching the theme, accent and Pure black is now smooth and lag-free: the old look fades out over the new one
-• The window behind the UI now always matches the app theme
+Cotes 1.2.5
+• Every switch in Settings is now instant and smooth: changing one setting no longer redraws the note list and editor behind it

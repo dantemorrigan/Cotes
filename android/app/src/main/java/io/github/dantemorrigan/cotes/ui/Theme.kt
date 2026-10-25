@@ -13,9 +13,13 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.State
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.SideEffect
-import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
@@ -132,24 +136,35 @@ private fun accentScheme(accent: Accent, dark: Boolean, pureBlack: Boolean): Col
 data class CotesExtraColors(val mark: Color)
 
 val LocalCotesColors = staticCompositionLocalOf { CotesExtraColors(mark = Color(0xFFA0F0ED)) }
-val LocalAppSettings = compositionLocalOf { AppSettings() }
+/** Настройки как State: смена любой из них не перерисовывает всех, кто их читает, — только тех, кому нужно именно это поле. */
+val LocalAppSettings = staticCompositionLocalOf<State<AppSettings>> { mutableStateOf(AppSettings()) }
+
+@Composable
+fun <T> rememberSetting(select: (AppSettings) -> T): State<T> {
+    val settings = LocalAppSettings.current
+    return remember(settings) { derivedStateOf { select(settings.value) } }
+}
 
 val dynamicColorAvailable: Boolean get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
 
 @Composable
 fun CotesTheme(settings: AppSettings, dark: Boolean, content: @Composable () -> Unit) {
     val context = LocalContext.current
-    var scheme = if (settings.dynamicColor && dynamicColorAvailable) {
-        if (dark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-    } else {
-        accentScheme(settings.accent, dark, settings.pureBlack)
-    }
-    if (dark && settings.pureBlack && settings.dynamicColor && dynamicColorAvailable) {
-        scheme = scheme.copy(background = Color.Black, surface = Color.Black)
+    val appSettings = rememberUpdatedState(settings)
+    val scheme = remember(dark, settings.dynamicColor, settings.accent, settings.pureBlack) {
+        var scheme = if (settings.dynamicColor && dynamicColorAvailable) {
+            if (dark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        } else {
+            accentScheme(settings.accent, dark, settings.pureBlack)
+        }
+        if (dark && settings.pureBlack && settings.dynamicColor && dynamicColorAvailable) {
+            scheme = scheme.copy(background = Color.Black, surface = Color.Black)
+        }
+        scheme
     }
     CompositionLocalProvider(
         LocalCotesColors provides CotesExtraColors(mark = if (dark) Color(0xFF1D5552) else Color(0xFFA0F0ED)),
-        LocalAppSettings provides settings,
+        LocalAppSettings provides appSettings,
     ) {
         MaterialTheme(colorScheme = scheme, content = content)
     }

@@ -61,7 +61,7 @@ fastlane/metadata/android/  тексты, иконка и скриншоты д�
 docs/STORES.md              как публиковать в Google Play, RuStore, F-Droid
 ```
 
-Текущая версия — **1.2.4**.
+Текущая версия — **1.2.5**.
 
 Сборка: `cd android && ./gradlew assembleDebug` (JDK 17, Android SDK 37). Проверки, как в CI: `./scripts/check-strings.sh && ./gradlew testDebugUnitTest lintRelease`.
 
