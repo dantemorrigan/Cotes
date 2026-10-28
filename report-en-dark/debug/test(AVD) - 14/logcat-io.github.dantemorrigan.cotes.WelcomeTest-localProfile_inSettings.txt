@@ -1,0 +1,165 @@
+10-28 11:58:31.910  7513  7542 I TestRunner: started: localProfile_inSettings(io.github.dantemorrigan.cotes.WelcomeTest)
+10-28 11:58:31.919   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:31.946  7513  7542 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@135992e]
+10-28 11:58:31.981  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:31.989  7513  7542 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-28 11:58:32.086  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.213   524  1850 I ImeTracker: com.android.settings:c3f89a18: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:58:32.268  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2241 
+10-28 11:58:32.269  1565  1565 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-28 11:58:32.269  1565  1565 I InputBundle: InputBundle.consumeEvent():923 Skip consuming an event as keyboard status is 0
+10-28 11:58:32.269  1565  1565 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-28 11:58:32.269  1565  1565 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+10-28 11:58:32.270  1565  1565 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+10-28 11:58:32.271  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:32.272  1565  1625 W ModuleManager: ModuleManager.loadModule():450 Module jjj is not available
+10-28 11:58:32.276  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:32.276  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-28 11:58:32.276  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:32.277  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:32.298  7661  7661 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@efd71ba
+10-28 11:58:32.311   524  1889 W InputManager-JNI: Input channel object '28e7950 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:58:32.355  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{bc0f718 V.E...... ......ID 0,0-0,0}
+10-28 11:58:32.355  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:58:32.355  4246  4374 D SplashScreenView: Branding: view: android.view.View{102b571 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:58:32.358  1565  1646 D EGL_emulation: app_time_stats: avg=928.36ms min=24.05ms max=2638.41ms count=3
+10-28 11:58:32.375   524  2375 I ImeTracker: com.android.settings:c3f89a18: onFailed at PHASE_WM_HAS_IME_INSETS_CONTROL_TARGET
+10-28 11:58:32.390   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:32.468  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.474   343  4238 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 8730112
+10-28 11:58:32.480  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.486  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.490  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.490  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.493  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.518  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b9d4e8c in: PRE_ON_CREATE
+10-28 11:58:32.519  7513  7513 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-28 11:58:32.609  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:32.733  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b9d4e8c in: CREATED
+10-28 11:58:32.734  7513  7513 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b9d4e8c
+10-28 11:58:32.747  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b9d4e8c in: STARTED
+10-28 11:58:32.747  7513  7513 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b9d4e8c
+10-28 11:58:32.772  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b9d4e8c in: RESUMED
+10-28 11:58:32.773  7513  7513 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b9d4e8c
+10-28 11:58:32.833   524  2102 W InputManager-JNI: Input channel object 'fbddc52 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-28 11:58:32.906  4246  4341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@6b1e6b3
+10-28 11:58:32.926  7513  7513 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-28 11:58:32.956  4246  4424 D EGL_emulation: app_time_stats: avg=1327.16ms min=1327.16ms max=1327.16ms count=1
+10-28 11:58:33.033  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.034  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.034  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.035  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.035  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.036  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.122  7513  7564 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-28 11:58:33.123  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.535  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.535  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.536  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.536  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.536  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.536  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.545   524   541 W ziparchive: Unable to open '/data/app/~~5NaxZ57aUTSs40rFQ7Ye_Q==/io.github.dantemorrigan.cotes-E7nJT9LLPTHBaDvlUPL3Ww==/base.dm': No such file or directory
+10-28 11:58:33.546   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +1s461ms
+10-28 11:58:33.547  7513  7513 I Choreographer: Skipped 42 frames!  The application may be doing too much work on its main thread.
+10-28 11:58:33.561   524  1850 I ImeTracker: io.github.dantemorrigan.cotes:67e28b84: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:58:33.561   524  1850 I ImeTracker: io.github.dantemorrigan.cotes:67e28b84: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:58:33.563  7513  7608 I OpenGLRenderer: Davey! duration=812ms; Flags=1, FrameTimelineVsyncId=72550, IntendedVsync=399479850845, Vsync=399546517509, InputEventId=0, HandleInputStart=399561427867, AnimationStart=399561431705, PerformTraversalsStart=399561434670, DrawStart=399890457318, FrameDeadline=399496517511, FrameInterval=399561403322, FrameStartTime=16666666, SyncQueued=399900657558, SyncStart=399905282202, IssueDrawCommandsStart=399905387092, SwapBuffers=400175391823, FrameCompleted=400296821278, DequeueBufferDuration=3085, QueueBufferDuration=163265, GpuCompleted=400296821278, SwapBuffersCompleted=400284784375, DisplayPresentTime=0, CommandSubmissionCompleted=400175391823, 
+10-28 11:58:33.563  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:33.568  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:33.570  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-28 11:58:33.570  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:33.573  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:33.576   524  1850 W InputManager-JNI: Input channel object '4512b12 Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-28 11:58:33.645  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:33.659   399  1052 D audioserver: FGS Logger Transaction failed
+10-28 11:58:33.659   399  1052 D audioserver: -129
+10-28 11:58:33.665   399  1052 D audioserver: FGS Logger Transaction failed
+10-28 11:58:33.665   399  1052 D audioserver: -129
+10-28 11:58:33.706   399   507 D AudioFlinger: mixer(0x7b7679758930) throttle end: throttle time(33)
+10-28 11:58:33.913   399   507 D audioserver: FGS Logger Transaction failed
+10-28 11:58:33.913   399   507 D audioserver: -129
+10-28 11:58:34.036  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.037  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.038  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.039  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.040  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.041  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.059   399   507 D audioserver: FGS Logger Transaction failed
+10-28 11:58:34.059   399   507 D audioserver: -129
+10-28 11:58:34.146  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.537  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.538  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.538  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.539  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.541  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.541  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.647  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:34.988  8377  8377 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-28 11:58:34.990  1658  2280 W MediaProvider: isAppCloneUserPair for user 0: false
+10-28 11:58:34.991  8377  8377 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-28 11:58:35.008   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-28 11:58:35.008  8377  8380 I Gralloc4: mapper 4.x is not supported
+10-28 11:58:35.039  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.040  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.040  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.041  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.042  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.042  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.071  6149  7323 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 401 [CONTEXT service_id=218 ]
+10-28 11:58:35.107  6149  7640 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 92 uptime_millis: 92 exec_start_elapsed_seconds: 401 [CONTEXT service_id=218 ]
+10-28 11:58:35.148  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.198   524  2465 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-28 11:58:35.202   524   541 I ActivityManager: Broadcast completed: result=0
+10-28 11:58:35.205  1658  2516 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:58:35.212  1658  2516 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:58:35.222  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{6bcb253 V.E...... ......ID 0,0-0,0}
+10-28 11:58:35.222  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:58:35.222  4246  4374 D SplashScreenView: Branding: view: android.view.View{bdf6790 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:58:35.226  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b9d4e8c in: PAUSED
+10-28 11:58:35.226  7513  7513 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b9d4e8c
+10-28 11:58:35.236   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:35.324  7513  7564 D EGL_emulation: app_time_stats: avg=215.21ms min=21.68ms max=895.53ms count=8
+10-28 11:58:35.333  6149  7323 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 401 [CONTEXT service_id=218 ]
+10-28 11:58:35.344  6149  7640 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 113 uptime_millis: 113 exec_start_elapsed_seconds: 401 [CONTEXT service_id=218 ]
+10-28 11:58:35.377   402   418 W TransactionTracing: Could not find layer id 1534
+10-28 11:58:35.377   402   418 W TransactionTracing: Could not find layer id 1536
+10-28 11:58:35.382  4246  4424 D EGL_emulation: app_time_stats: avg=943.33ms min=9.48ms max=3068.69ms count=4
+10-28 11:58:35.446  7661  7680 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-28 11:58:35.526  4246  4424 D EGL_emulation: app_time_stats: avg=2569.62ms min=2569.62ms max=2569.62ms count=1
+10-28 11:58:35.540  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.541  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.542  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.542  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.543  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.543  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.701  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:35.723   524   541 W ziparchive: Unable to open '/data/app/~~F63SERnc7i_hYd_AU0wF2Q==/io.github.dantemorrigan.cotes.test-Z6pR02sDMP8O6HlMb2wChw==/base.dm': No such file or directory
+10-28 11:58:35.725   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +504ms
+10-28 11:58:35.736   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:35.736  7513  7513 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@f7355ef
+10-28 11:58:35.784  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b9d4e8c in: STOPPED
+10-28 11:58:35.784  7513  7513 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b9d4e8c
+10-28 11:58:35.873   524   827 I ImeTracker: com.android.settings:49679d7a: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:58:35.873   524   827 I ImeTracker: com.android.settings:49679d7a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:58:35.882  7513  7513 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@801cdc1
+10-28 11:58:35.886  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b9d4e8c in: DESTROYED
+10-28 11:58:35.886  7513  7513 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 11:58:35.904  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:35.969   524  1850 W InputManager-JNI: Input channel object '962d509 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:58:35.976  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:35.976  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-28 11:58:35.978  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:35.980  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:36.014  7661  7661 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@bcc8fc2
+10-28 11:58:36.015   524  2465 W InputManager-JNI: Input channel object 'fbd38da io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:58:36.017   524  2375 W InputManager-JNI: Input channel object 'ef9c291 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-28 11:58:36.041  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:36.041  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:36.043  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:36.043  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:36.046  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:36.046  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:36.048  7513  7542 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@135992e]
+10-28 11:58:36.053  4246  4341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a5cc79a
+10-28 11:58:36.059  7513  7542 I TestRunner: finished: localProfile_inSettings(io.github.dantemorrigan.cotes.WelcomeTest)

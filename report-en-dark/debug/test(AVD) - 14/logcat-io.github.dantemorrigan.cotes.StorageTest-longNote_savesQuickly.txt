@@ -1,0 +1,17 @@
+10-28 11:58:21.331  7513  7542 I TestRunner: started: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)
+10-28 11:58:21.447  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:21.485  4246  4246 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-28 11:58:21.502  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:21.676  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:21.680  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:21.685  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:21.686  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:21.687  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:21.948  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:22.002  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:22.177  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:22.181  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:22.185  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:22.187  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:22.187  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:22.331  7513  7542 I TestRunner: finished: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)

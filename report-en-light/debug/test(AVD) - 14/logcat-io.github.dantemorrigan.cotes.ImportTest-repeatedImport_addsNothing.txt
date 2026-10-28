@@ -1,0 +1,9 @@
+10-28 11:53:29.168  5080  5111 I TestRunner: started: repeatedImport_addsNothing(io.github.dantemorrigan.cotes.ImportTest)
+10-28 11:53:29.177  1053  1053 D CarrierSvcBindHelper: onPackageModified: io.github.dantemorrigan.cotes
+10-28 11:53:29.178  1053  1053 D CarrierSvcBindHelper: No carrier app for: 0
+10-28 11:53:29.197   844  1025 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+10-28 11:53:29.199  1028  1028 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-28 11:53:29.199  1028  1028 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-28 11:53:29.205  1053  1353 D ImsResolver: maybeAddedImsService, packageName: io.github.dantemorrigan.cotes
+10-28 11:53:29.208   524   624 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-28 11:53:29.211  5080  5111 I TestRunner: finished: repeatedImport_addsNothing(io.github.dantemorrigan.cotes.ImportTest)

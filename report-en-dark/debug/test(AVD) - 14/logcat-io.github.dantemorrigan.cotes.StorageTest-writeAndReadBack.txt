@@ -1,0 +1,2 @@
+10-28 11:58:22.333  7513  7542 I TestRunner: started: writeAndReadBack(io.github.dantemorrigan.cotes.StorageTest)
+10-28 11:58:22.342  7513  7542 I TestRunner: finished: writeAndReadBack(io.github.dantemorrigan.cotes.StorageTest)

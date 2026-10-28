@@ -1,0 +1,174 @@
+10-28 11:58:15.878  7513  7542 I TestRunner: started: appShortcut_opensNewNote(io.github.dantemorrigan.cotes.RegressionTest)
+10-28 11:58:15.891  7513  7542 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@65da155]
+10-28 11:58:15.962   524   533 I system_server: NativeAlloc concurrent copying GC freed 215392(7383KB) AllocSpace objects, 13(260KB) LOS objects, 47% free, 26MB/50MB, paused 61us,91us total 196.855ms
+10-28 11:58:15.976  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:15.977  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:15.978  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.000  7513  7542 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-28 11:58:16.009  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{fb39251 V.E...... ......ID 0,0-0,0}
+10-28 11:58:16.009  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:58:16.009  4246  4374 D SplashScreenView: Branding: view: android.view.View{1b02ab6 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:58:16.049  1658  1978 I PickerSyncController: Executing SyncRemove. isLocal: true. authority: com.android.providers.media.photopicker
+10-28 11:58:16.056  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.057  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.070  1658  1978 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=267}]. Result count: 0. Cursor count: 0
+10-28 11:58:16.071  1658  1978 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-28 11:58:16.071  1658  1978 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-28 11:58:16.071  1658  1978 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-28 11:58:16.071  1658  1978 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-28 11:58:16.071  1658  1978 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-28 11:58:16.071  1658  1978 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-28 11:58:16.071  1658  1978 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-28 11:58:16.071  1658  1978 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-28 11:58:16.071  1658  1978 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-28 11:58:16.071  1658  1978 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-28 11:58:16.087  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@fb4d83c in: PRE_ON_CREATE
+10-28 11:58:16.088  7513  7513 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-28 11:58:16.135   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:16.189  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@fb4d83c in: CREATED
+10-28 11:58:16.190  7513  7513 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@fb4d83c
+10-28 11:58:16.193  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@fb4d83c in: STARTED
+10-28 11:58:16.193  7513  7513 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@fb4d83c
+10-28 11:58:16.194  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@fb4d83c in: RESUMED
+10-28 11:58:16.195  7513  7513 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@fb4d83c
+10-28 11:58:16.366  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.368  7513  7513 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-28 11:58:16.397  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.494  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.506  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.507  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.527   524   541 W ziparchive: Unable to open '/data/app/~~5NaxZ57aUTSs40rFQ7Ye_Q==/io.github.dantemorrigan.cotes-E7nJT9LLPTHBaDvlUPL3Ww==/base.dm': No such file or directory
+10-28 11:58:16.528   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +523ms
+10-28 11:58:16.565  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.566  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.568   524  2106 I ImeTracker: io.github.dantemorrigan.cotes:dfff93eb: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:58:16.570   524  2106 I ImeTracker: io.github.dantemorrigan.cotes:dfff93eb: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:58:16.570   524   827 W InputManager-JNI: Input channel object '7ff3b39 Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-28 11:58:16.581  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:16.582  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:16.582  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-28 11:58:16.582  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:16.593  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:16.822  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:16.823  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:16.824  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x2c001(Normal) imeOptions=0x2000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[mParcelledData.dataSize=404]}, false)
+10-28 11:58:16.824  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:16.825  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:16.826  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x2c001(Normal) imeOptions=0x2000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[mParcelledData.dataSize=404]}, true)
+10-28 11:58:16.826  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:16.827  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:16.827  1565  1565 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-28 11:58:16.828  7513  7513 I ImeTracker: io.github.dantemorrigan.cotes:5d0ae1a2: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT_BY_INSETS_API
+10-28 11:58:16.828  7513  7513 D InsetsController: show(ime(), fromIme=false)
+10-28 11:58:16.829  7513  7513 D InputMethodManager: showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{30b8b1 VFED..... .F....ID 0,0-1080,2400 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT_BY_INSETS_API
+10-28 11:58:16.832  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1995 onStartInputView(EditorInfo{inputType=0x2c001(Normal) imeOptions=0x2000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}]}, false)
+10-28 11:58:16.832  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:16.833  1565  1565 W ModuleManager: ModuleManager.loadModule():450 Module erj is not available
+10-28 11:58:16.833  1565  1625 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:58:16.843  7513  7513 I AssistStructure: Flattened final assist data: 1020 bytes, containing 1 windows, 6 views
+10-28 11:58:16.849  7513  7513 I ImeTracker: io.github.dantemorrigan.cotes:eec28756: onRequestShow at ORIGIN_CLIENT_SHOW_SOFT_INPUT reason SHOW_SOFT_INPUT
+10-28 11:58:16.852  7513  7513 D InputMethodManager: showSoftInput() view=androidx.compose.ui.platform.AndroidComposeView{30b8b1 VFED..... .F...... 0,0-1080,2400 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+10-28 11:58:16.861  6149  6149 W AutofillChimeraService: Pending fill request while another request in the same session was triggered. [CONTEXT service_id=177 ]
+10-28 11:58:16.871  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.871  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-28 11:58:16.871  1565  1565 I AndroidIME: AbstractIme.onActivate():86 LatinIme.onActivate() : EditorInfo = inputType=0x2c001(Normal) imeOptions=0x2000005 privateImeOptions=null actionName=NEXT actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=0 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=-1 fieldName=null extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=9, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], IncognitoMode = false, DeviceLocked = false
+10-28 11:58:16.873  1580  1580 V InlineSuggestionRenderService: handleDestroySuggestionViews called for 0:1132223727
+10-28 11:58:16.873  6149  6735 I IPCThreadState: oneway function results for code 1 on binder at 0x756278736130 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+10-28 11:58:16.873  1565  1565 I Delight5Facilitator: Delight5Facilitator.initializeForIme():777 initializeForIme() : Locale = [en_US], layout = qwerty
+10-28 11:58:16.874  1565  1565 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():55 cancelShutdown()
+10-28 11:58:16.874  1565  1565 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():67 syncLanguagePacks()
+10-28 11:58:16.875  1565  1565 I LatinIme: LatinIme.updateEnableInlineSuggestionsOnDecoderSideFlags():1003 inline flag updated to:false
+10-28 11:58:16.875  1565  5882 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():205 maybeScheduleAutoPackDownloadForFallback()
+10-28 11:58:16.875  1565  5882 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():195 maybeScheduleAutoPackDownload() for language tag en-US
+10-28 11:58:16.879  1565  1565 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-28 11:58:16.884  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+10-28 11:58:16.885  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:58:16.886  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = HEADER, shownType = SHOW_OPTIONAL
+10-28 11:58:16.886  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+10-28 11:58:16.886  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = BODY, shownType = SHOW_MANDATORY
+10-28 11:58:16.886  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = true
+10-28 11:58:16.887  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3483 setKeyboardViewShown() : type = FLOATING_CANDIDATES, shownType = HIDE
+10-28 11:58:16.887  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.setKeyboardViewShown():3530 setKeyboardViewShown() : shouldShow = false
+10-28 11:58:16.888  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.calculateMaxKeyboardBodyHeight():40 leave 354 height for app when screen height:2274, header height:116 and isFullscreenMode:false, so the max keyboard body height is:1804
+10-28 11:58:16.889  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:58:16.891  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:58:16.891  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-28 11:58:16.892  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:58:16.892  1565  1565 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+10-28 11:58:16.892  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:58:16.892  1565  1565 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():604 Set finalPaddingBottom = 0 while keyboardBottomGapFromScreen = 0; navigationHeight = 126
+10-28 11:58:16.893  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-28 11:58:16.893  1565  1565 I VoiceImeExtension: VoiceImeExtension.shouldStartVoiceInputAutomatically():383 No private IME option set to start voice input.
+10-28 11:58:16.898  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:16.973  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:58:16.974  1565  2070 I Delight5Decoder: Delight5DecoderWrapper.setKeyboardLayout():457 setKeyboardLayout()
+10-28 11:58:16.979  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{1441833 V.E...... ......ID 0,0-0,0}
+10-28 11:58:16.979  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:58:16.979  4246  4374 D SplashScreenView: Branding: view: android.view.View{3d007f0 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:58:16.981  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@fb4d83c in: PAUSED
+10-28 11:58:16.982  7513  7513 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@fb4d83c
+10-28 11:58:16.986   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:16.991  7513  7513 D InsetsController: show(ime(), fromIme=true)
+10-28 11:58:16.993  7513  7513 D InsetsController: show(ime(), fromIme=true)
+10-28 11:58:16.993  7513  7513 I ImeTracker: io.github.dantemorrigan.cotes:eec28756: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+10-28 11:58:16.995  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.007  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.012  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.015  6270  6270 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-28 11:58:17.015  6270  6270 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-28 11:58:17.018  6270  6270 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-28 11:58:17.030  7513  7513 I ImeTracker: io.github.dantemorrigan.cotes:5d0ae1a2: onShown
+10-28 11:58:17.062  6270  6270 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-28 11:58:17.062  6270  6270 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-28 11:58:17.070  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.106  1565  1565 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-28 11:58:17.108  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.160  6270  6270 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-28 11:58:17.359  7661  7680 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-28 11:58:17.391  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.395  4246  4424 D EGL_emulation: app_time_stats: avg=535.79ms min=6.95ms max=1733.95ms count=4
+10-28 11:58:17.398  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.461  4246  4424 D EGL_emulation: app_time_stats: avg=922.86ms min=116.92ms max=1728.79ms count=2
+10-28 11:58:17.496  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.509  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.514  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.570  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.628  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.656   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:17.677  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@fb4d83c in: STOPPED
+10-28 11:58:17.678  7513  7513 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@fb4d83c
+10-28 11:58:17.864  7513  7513 D AutofillManager: onActivityFinishing(): calling cancelLocked()
+10-28 11:58:17.869  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@fb4d83c in: DESTROYED
+10-28 11:58:17.870  7513  7513 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 11:58:17.870  7513  7513 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=ImeCallback=ImeOnBackInvokedCallback@120752915 Callback=android.window.IOnBackInvokedCallback$Stub$Proxy@e4d57da
+10-28 11:58:17.877  7661  7661 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@4b22dee
+10-28 11:58:17.881   524   911 I ImeTracker: com.android.settings:ed9189c9: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:58:17.882  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():2241 
+10-28 11:58:17.883  1565  1565 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-28 11:58:17.883  1565  1565 I InputBundle: InputBundle.consumeEvent():923 Skip consuming an event as keyboard status is 0
+10-28 11:58:17.884  1565  1565 I KeyboardWrapper: KeyboardWrapper.consumeEvent():275 Skip consuming an event as current keyboard is deactivated (state=0, keyboard existence=true)
+10-28 11:58:17.888  1565  1565 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():77 shutdown()
+10-28 11:58:17.888  1565  1565 I AndroidIME: AbstractIme.onDeactivate():207 LatinIme.onDeactivate()
+10-28 11:58:17.923  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:17.926  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.926  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:17.926  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-28 11:58:17.926  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:17.934   524  2468 W InputManager-JNI: Input channel object '6aff5a1 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:58:17.952  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:17.952  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:17.958   524   827 W InputManager-JNI: Input channel object 'f88ce9f Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-28 11:58:17.961  4246  4246 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-28 11:58:17.968  1565  1625 W ModuleManager: ModuleManager.loadModule():450 Module jjj is not available
+10-28 11:58:17.969  1565  1625 I NebulaeTrainingCacheMetricsProcessor: NebulaeTrainingCacheMetricsProcessor.processEndSession():447 No input action collection in this session, skip logging.
+10-28 11:58:17.992   524  2468 W InputManager-JNI: Input channel object '67c15fb io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:58:18.058  7513  7513 I ImeTracker: io.github.dantemorrigan.cotes:423bb0b1: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-28 11:58:18.058  7513  7513 I ImeTracker: io.github.dantemorrigan.cotes:423bb0b1: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-28 11:58:18.059  7513  7513 I ImeTracker: com.android.settings:ed9189c9: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+10-28 11:58:18.114  7513  7542 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@65da155]
+10-28 11:58:18.121  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:18.124  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:18.124  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:18.125  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:18.136  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:18.183  7513  7542 I TestRunner: finished: appShortcut_opensNewNote(io.github.dantemorrigan.cotes.RegressionTest)

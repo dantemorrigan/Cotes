@@ -1,0 +1,13 @@
+10-28 12:00:09.070  8674  8728 I TestRunner: started: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)
+10-28 12:00:09.089  8674  8728 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@f42c672]
+10-28 12:00:09.093  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.096  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.102  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.109  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.111  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.120  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.123  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.189  8674  8706 W System  : A resource failed to call release. 
+10-28 12:00:09.198  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:09.219  8674  8728 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@f42c672]
+10-28 12:00:09.221  8674  8728 I TestRunner: finished: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)

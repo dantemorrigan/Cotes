@@ -1,0 +1,23 @@
+10-28 12:00:50.866  8674  8728 I TestRunner: started: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)
+10-28 12:00:51.017  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.145  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.145  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.146  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.255  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.255  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.257  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.273  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.280  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.353  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.490  4246  4246 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-28 12:00:51.518  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.645  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.646  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.647  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.755  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.756  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.757  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.774  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.781  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.854  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 12:00:51.859  8674  8728 I TestRunner: finished: longNote_savesQuickly(io.github.dantemorrigan.cotes.StorageTest)

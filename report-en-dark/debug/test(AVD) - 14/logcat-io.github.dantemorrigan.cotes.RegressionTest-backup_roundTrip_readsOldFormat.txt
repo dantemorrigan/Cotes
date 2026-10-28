@@ -1,0 +1,7 @@
+10-28 11:57:41.230  7513  7542 I TestRunner: started: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)
+10-28 11:57:41.242   524   533 I system_server: NativeAlloc concurrent copying GC freed 228123(7487KB) AllocSpace objects, 6(120KB) LOS objects, 47% free, 26MB/50MB, paused 72us,53us total 157.085ms
+10-28 11:57:41.262  4246  4261 I ndroid.systemui: NativeAlloc concurrent copying GC freed 137172(5620KB) AllocSpace objects, 1(20KB) LOS objects, 49% free, 14MB/29MB, paused 73us,37us total 462.689ms
+10-28 11:57:41.303  7513  7542 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@bed66d]
+10-28 11:57:41.317  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:57:41.365  7513  7542 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@bed66d]
+10-28 11:57:41.369  7513  7542 I TestRunner: finished: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)

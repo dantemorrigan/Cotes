@@ -1,0 +1,493 @@
+10-28 11:56:42.430  7513  7542 I TestRunner: started: longNote_opensAndScrolls(io.github.dantemorrigan.cotes.LayoutTest)
+10-28 11:56:42.471  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:42.520  4246  4424 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-28 11:56:42.521  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:42.524  7661  7661 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@fa1935e
+10-28 11:56:42.526  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:42.526  7513  7542 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@5cdbab1]
+10-28 11:56:42.552   524  2467 W InputManager-JNI: Input channel object '86bb6f8 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:56:42.673  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:42.779  7513  7542 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-28 11:56:42.787  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{d1248c8 V.E...... ......ID 0,0-0,0}
+10-28 11:56:42.787  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:56:42.787  4246  4374 D SplashScreenView: Branding: view: android.view.View{5a61d61 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:56:42.803  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:56:42.803  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+10-28 11:56:42.803  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:56:42.805   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:56:42.834  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@e51b221 in: PRE_ON_CREATE
+10-28 11:56:42.835  7513  7513 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-28 11:56:42.867  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@e51b221 in: CREATED
+10-28 11:56:42.867  7513  7513 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@e51b221
+10-28 11:56:42.873  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@e51b221 in: STARTED
+10-28 11:56:42.873  7513  7513 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@e51b221
+10-28 11:56:42.875  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@e51b221 in: RESUMED
+10-28 11:56:42.875  7513  7513 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@e51b221
+10-28 11:56:42.933  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:42.945  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:42.945  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:42.972  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b8693548 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/52 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b86932f8 : 0(0 size) total buffers - 0(0 size) used buffers - 1/7 (recycle/alloc) - 6/66 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b8694eb8 : 0(0 size) total buffers - 0(0 size) used buffers - 1/7 (recycle/alloc) - 6/60 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b86929b8 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/124 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b868ed98 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/62 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b86955a8 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/40 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b8690df8 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/58 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: bufferpool2 0x7562b8693e88 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/94 (fetch/transfer)
+10-28 11:56:43.022  7513  7589 D BufferPoolAccessor2.0: evictor expired: 8, evicted: 8
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x73627720f2b8 : 0(0 size) total buffers - 0(0 size) used buffers - 42/45 (recycle/alloc) - 3/44 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x73627720ebc8 : 0(0 size) total buffers - 0(0 size) used buffers - 21/24 (recycle/alloc) - 3/23 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x736277213a68 : 0(0 size) total buffers - 0(0 size) used buffers - 25/27 (recycle/alloc) - 2/26 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x73627720e4d8 : 0(0 size) total buffers - 0(0 size) used buffers - 24/28 (recycle/alloc) - 4/27 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x73627720f068 : 0(0 size) total buffers - 0(0 size) used buffers - 29/31 (recycle/alloc) - 2/30 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x7362772117b8 : 0(0 size) total buffers - 0(0 size) used buffers - 58/60 (recycle/alloc) - 2/59 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x73627720f508 : 0(0 size) total buffers - 0(0 size) used buffers - 25/29 (recycle/alloc) - 4/28 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: bufferpool2 0x736277213378 : 0(0 size) total buffers - 0(0 size) used buffers - 17/18 (recycle/alloc) - 1/17 (fetch/transfer)
+10-28 11:56:43.026   479   836 D BufferPoolAccessor2.0: evictor expired: 8, evicted: 8
+10-28 11:56:43.058  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.068  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.153  7513  7513 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-28 11:56:43.198  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.348   343  4238 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 4944960
+10-28 11:56:43.433  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.446  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.446  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.473  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.558  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.569  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.699  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.934  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.936  7513  7527 W emorrigan.cotes: Cleared Reference was only reachable from finalizer (only reported once)
+10-28 11:56:43.947  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.947  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:43.973  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.059  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.069  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.200  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.435  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.447  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.447  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.474  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.482  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:56:44.482  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+10-28 11:56:44.482  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:56:44.559  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.570  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.700  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.936  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.947  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.947  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:44.975  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.060  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.071  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.202  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.217  1737  1737 E A       : disposing SearchServiceClient after timeout []
+10-28 11:56:45.245  1658  1978 D PickerSyncController: syncAllMedia
+10-28 11:56:45.245  1658  1978 D PickerSyncController: syncAllMediaFromProvider() LOCAL, auth=com.android.providers.media.photopicker, retry=true
+10-28 11:56:45.245  1658  1978 D PickerSyncController: getSyncRequestParams() LOCAL, auth=com.android.providers.media.photopicker
+10-28 11:56:45.246  1658  1978 D PickerSyncController:    Latest ID/Gen=1407:00887b6e-9ea4-4a6d-a27b-06ca0d6982f7:external_primary/199
+10-28 11:56:45.246  1658  1978 D PickerSyncController:    Cached ID/Gen=1407:00887b6e-9ea4-4a6d-a27b-06ca0d6982f7:external_primary/185
+10-28 11:56:45.246  1658  1978 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_INCREMENTAL, gen=185, latest=Bundle[{last_media_sync_generation=199, media_collection_id=1407:00887b6e-9ea4-4a6d-a27b-06ca0d6982f7:external_primary}]}
+10-28 11:56:45.247  1658  1978 I PickerSyncController: Executing SyncAdd. isLocal: true. authority: com.android.providers.media.photopicker
+10-28 11:56:45.248  1658  1978 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=185}]. Result count: 2. Cursor count: 2
+10-28 11:56:45.250  1658  1978 I PickerSyncController: Executing SyncRemove. isLocal: true. authority: com.android.providers.media.photopicker
+10-28 11:56:45.251  1658  1978 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=185}]. Result count: 0. Cursor count: 0
+10-28 11:56:45.251  1658  1978 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-28 11:56:45.251  1658  1978 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-28 11:56:45.251  1658  1978 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-28 11:56:45.251  1658  1978 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-28 11:56:45.251  1658  1978 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-28 11:56:45.251  1658  1978 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-28 11:56:45.251  1658  1978 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-28 11:56:45.251  1658  1978 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-28 11:56:45.251  1658  1978 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-28 11:56:45.251  1658  1978 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-28 11:56:45.286  6149  7323 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:4 exec_start_elapsed_seconds: 292 [CONTEXT service_id=218 ]
+10-28 11:56:45.288  6149  7535 V NFC     : this device does not have NFC support
+10-28 11:56:45.291  6149  7535 W TapAndPay: NfcAdapter is null while obtaining CardEmulation instance. [CONTEXT service_id=79 ]
+10-28 11:56:45.291  6149  7535 W TapAndPay: java.lang.NullPointerException: NfcAdapter is null
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at android.nfc.cardemulation.CardEmulation.getInstance(CardEmulation.java:152)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at cdoy.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at com.google.android.gms.tapandpay.hce.task.TapAndPayAidRegistrationTaskOperation.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskChimeraService.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at avzs.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.291  6149  7535 W TapAndPay: 	at java.lang.Thread.run(Thread.java:1012)
+10-28 11:56:45.296  6149  7640 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:4 result: 3 elapsed_millis: 17 uptime_millis: 17 exec_start_elapsed_seconds: 292 [CONTEXT service_id=218 ]
+10-28 11:56:45.323  6149  7535 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService started execution. cause:5 exec_start_elapsed_seconds: 292 [CONTEXT service_id=218 ]
+10-28 11:56:45.405  3331  3331 W binder:3331_7: type=1400 audit(0.0:78): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-28 11:56:45.413  3331  4804 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+10-28 11:56:45.417  3331  4804 W libc    : Access denied finding property "service.adb.tls.port"
+10-28 11:56:45.413  3331  3331 W binder:3331_7: type=1400 audit(0.0:79): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-28 11:56:45.423   337  7701 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10128 0}
+10-28 11:56:45.424  3331  4804 D TrafficStats: tagSocket(115) with statsTag=0x1809, statsUid=-1
+10-28 11:56:45.430  6149  6708 W GmsUrlRequestImpl: Content-Type header is overwritten.
+10-28 11:56:45.436   337  7702 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10128 0}
+10-28 11:56:45.436  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.438   337  7703 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-28 11:56:45.438   337  7703 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x799d3e854c10
+10-28 11:56:45.438   337  7703 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+10-28 11:56:45.439   337  7704 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-28 11:56:45.446   337  7704 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x799d6e85a9b0
+10-28 11:56:45.447   337  7704 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+10-28 11:56:45.448  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.448  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.448  6149  6392 D TrafficStats: tagSocket(270) with statsTag=0x401, statsUid=10128
+10-28 11:56:45.476  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.502  6149  6708 W GLSUser : [AppCertManager] Exception while requesting key: 
+10-28 11:56:45.502  6149  6708 W GLSUser : java.util.concurrent.ExecutionException: avvw: Parse Proto Exception.
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dlnv.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at oub.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at otz.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at otu.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at otx.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at lzq.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+10-28 11:56:45.502  6149  6708 W GLSUser : Caused by: avvw: Parse Proto Exception.
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at avxk.onSucceeded(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at jf.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at ie.run(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):4)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	... 6 more
+10-28 11:56:45.502  6149  6708 W GLSUser : Caused by: dzfz: Protocol message contained an invalid tag (zero).
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzdb.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):13)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzha.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):47)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzha.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):45)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzfd.A(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzex.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzcx.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzcx.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at dzcx.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at avwn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-28 11:56:45.502  6149  6708 W GLSUser : 	... 9 more
+10-28 11:56:45.503  6149  7323 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService finished executing. cause:5 result: 3 elapsed_millis: 186 uptime_millis: 186 exec_start_elapsed_seconds: 292 [CONTEXT service_id=218 ]
+10-28 11:56:45.559  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.572  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.703  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.937  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.941  7513  7513 I Choreographer: Skipped 179 frames!  The application may be doing too much work on its main thread.
+10-28 11:56:45.948  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.949  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.961  7513  7593 I OpenGLRenderer: Davey! duration=3082ms; Flags=1, FrameTimelineVsyncId=46194, IntendedVsync=289613188573, Vsync=289629855239, InputEventId=0, HandleInputStart=289641698033, AnimationStart=289641701369, PerformTraversalsStart=289641703893, DrawStart=292645149602, FrameDeadline=289629855239, FrameInterval=289641671282, FrameStartTime=16666666, SyncQueued=292661070734, SyncStart=292667775384, IssueDrawCommandsStart=292667853540, SwapBuffers=292670590749, FrameCompleted=292702284358, DequeueBufferDuration=2936, QueueBufferDuration=161200, GpuCompleted=292702284358, SwapBuffersCompleted=292684244114, DisplayPresentTime=0, CommandSubmissionCompleted=292670590749, 
+10-28 11:56:45.962   524   541 W ziparchive: Unable to open '/data/app/~~5NaxZ57aUTSs40rFQ7Ye_Q==/io.github.dantemorrigan.cotes-E7nJT9LLPTHBaDvlUPL3Ww==/base.dm': No such file or directory
+10-28 11:56:45.963   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +3s162ms
+10-28 11:56:45.963   524  2465 I ImeTracker: io.github.dantemorrigan.cotes:359b1855: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:56:45.963   524  2465 I ImeTracker: io.github.dantemorrigan.cotes:359b1855: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:56:45.965  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:56:45.965  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:56:45.966  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-28 11:56:45.966  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:56:45.966  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:56:45.980  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:45.990   524  2402 W InputManager-JNI: Input channel object 'e430b8a Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-28 11:56:46.060  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.090  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.137   399  3826 D audioserver: FGS Logger Transaction failed
+10-28 11:56:46.137   399  3826 D audioserver: -129
+10-28 11:56:46.209  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.298   399   507 D audioserver: FGS Logger Transaction failed
+10-28 11:56:46.298   399   507 D audioserver: -129
+10-28 11:56:46.370  6270  7406 I ContentMaintenance: Internal cache bytes used: 0; limit: 100000000; download size: 0
+10-28 11:56:46.372  6270  7406 I RealtimeCacheCleanup: Beginning Realtime garbage collection.
+10-28 11:56:46.373  6270  7406 I RealtimeCacheCleanup: Finished Realtime garbage collection.
+10-28 11:56:46.439  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.449  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.450  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.480  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.561  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.591  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.708  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.939  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.950  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.950  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:46.981  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.062  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.091  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.209  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.440  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.450  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.451  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.482  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.563  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.591  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.710  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.941  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.950  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.951  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:47.982  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.064  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.091  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.211  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.272  7513  7513 I Choreographer: Skipped 127 frames!  The application may be doing too much work on its main thread.
+10-28 11:56:48.413  7513  7564 D EGL_emulation: app_time_stats: avg=618.26ms min=66.72ms max=2226.94ms count=4
+10-28 11:56:48.426  7513  7593 I OpenGLRenderer: Davey! duration=2265ms; Flags=0, FrameTimelineVsyncId=46474, IntendedVsync=292896521775, Vsync=295013188357, InputEventId=0, HandleInputStart=295016891732, AnimationStart=295016895198, PerformTraversalsStart=295017110089, DrawStart=295017279966, FrameDeadline=292979855105, FrameInterval=295016215241, FrameStartTime=16666666, SyncQueued=295144710304, SyncStart=295145879458, IssueDrawCommandsStart=295145947225, SwapBuffers=295151467733, FrameCompleted=295163551603, DequeueBufferDuration=3827, QueueBufferDuration=321870, GpuCompleted=295163551603, SwapBuffersCompleted=295157770860, DisplayPresentTime=0, CommandSubmissionCompleted=295151467733, 
+10-28 11:56:48.448  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.453  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.454  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.482  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.565  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.592  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.712  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.949  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.954  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.955  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.961  7710  7710 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-28 11:56:48.964  1658  6031 W MediaProvider: isAppCloneUserPair for user 0: false
+10-28 11:56:48.969  7710  7710 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-28 11:56:48.984  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:48.985   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-28 11:56:48.985  7710  7713 I Gralloc4: mapper 4.x is not supported
+10-28 11:56:49.031  6149  7535 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 295 [CONTEXT service_id=218 ]
+10-28 11:56:49.034  6149  7323 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 18 uptime_millis: 18 exec_start_elapsed_seconds: 295 [CONTEXT service_id=218 ]
+10-28 11:56:49.066  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.092  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.177   343  4238 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 5094016
+10-28 11:56:49.213  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.224  6149  6149 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.nearby.exposurenotification.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiServiceNoInstantApps }
+10-28 11:56:49.310   524  2467 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-28 11:56:49.312   524   541 I ActivityManager: Broadcast completed: result=0
+10-28 11:56:49.313  1658  2516 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:56:49.325  1658  2516 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:56:49.364  6149  7535 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 296 [CONTEXT service_id=218 ]
+10-28 11:56:49.381  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{f633f7d V.E...... ......ID 0,0-0,0}
+10-28 11:56:49.381  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:56:49.381  4246  4374 D SplashScreenView: Branding: view: android.view.View{2484e72 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:56:49.393  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@e51b221 in: PAUSED
+10-28 11:56:49.393  7513  7513 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@e51b221
+10-28 11:56:49.398  6149  6157 W System  : A resource failed to call close. 
+10-28 11:56:49.399  6149  7535 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 23 uptime_millis: 23 exec_start_elapsed_seconds: 296 [CONTEXT service_id=218 ]
+10-28 11:56:49.402   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:56:49.420  1737  1737 I BgTaskExecutorImpl: Starting EXCLUSIVE background task UPLOAD_ASSISTANT_DEVICE_SETTINGS.
+10-28 11:56:49.426  1737  7395 I NetworkRecognitionRnr: Using pair HTTP connection
+10-28 11:56:49.429  1737  3085 I A       : [Upload] Connected
+10-28 11:56:49.479  1737  2653 W LocationOracle: getBestLocation(): no location is available
+10-28 11:56:49.481  1737  2378 W CronetNetworkRqstWrppr: Upload request without a content type.
+10-28 11:56:49.489  7513  7564 D EGL_emulation: app_time_stats: avg=1075.62ms min=1075.62ms max=1075.62ms count=1
+10-28 11:56:49.530  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.532  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.532  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.532  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.534  1737  2394 W LocationOracle: No location returned by GMS core getLastLocation()
+10-28 11:56:49.535  1737  3085 I NetworkRecognitionRnr: Using pair HTTP connection
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: Exception in upload method
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: com.google.android.apps.gsa.shared.r.d: Error code: 262182
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.ab.bk.d(PG:5)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.ar.d(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.bo.b(PG:5)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.e.a(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.a.run(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.i(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:12)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.c.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.bu.cancel(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:17)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.staticplugins.bk.b.h.run(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.i(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:12)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.aj.a(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.c.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.o.c(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.r.a(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.staticplugins.dc.a.c.e(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.staticplugins.dc.a.c.c(PG:3)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.staticplugins.dc.a.e.a(PG:5)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.n.hh(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.cd.g.a.f.e(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:22)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.speech.k.a.g.ks(PG:6)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.o.e(PG:14)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.p.run(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:2)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at java.lang.Thread.run(Thread.java:1012)
+10-28 11:56:49.536  1737  2536 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:5)
+10-28 11:56:49.537  1737  3089 I A       : [Upload] Connected
+10-28 11:56:49.537  1737  1737 E A       : onError
+10-28 11:56:49.537  1737  1737 E A       : com.google.android.apps.gsa.shared.speech.a.m: errorCode: 65561, engine: 2
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.staticplugins.dc.a.e.a(PG:3)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.s3.n.hh(PG:1)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.cd.g.a.f.e(PG:2)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:22)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.ks(PG:6)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.s3.o.e(PG:14)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.s3.p.run(PG:1)
+10-28 11:56:49.537  1737  1737 E A       : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-28 11:56:49.537  1737  1737 E A       : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:2)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-28 11:56:49.537  1737  1737 E A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-28 11:56:49.537  1737  1737 E A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-28 11:56:49.537  1737  1737 E A       : 	at java.lang.Thread.run(Thread.java:1012)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:5)
+10-28 11:56:49.537  1737  1737 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.o: errorCode: 65586, engine: 2
+10-28 11:56:49.537  1737  1737 E A       : 	... 15 more
+10-28 11:56:49.537  1737  1737 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.k: errorCode: 401, engine: 2
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.assistant.shared.n.h.a(PG:5)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.s3.producers.j.hE(PG:2)
+10-28 11:56:49.537  1737  1737 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:16)
+10-28 11:56:49.537  1737  1737 E A       : 	... 12 more
+10-28 11:56:49.549  1737  2369 W CronetNetworkRqstWrppr: Upload request without a content type.
+10-28 11:56:49.572  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.613  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: Exception in upload method
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: com.google.android.apps.gsa.shared.r.d: Error code: 262182
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.ab.bk.d(PG:5)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.ar.d(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.bo.b(PG:5)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.e.a(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.libraries.gsa.c.a.a.run(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.i(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:12)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.c.a(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.bu.cancel(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:17)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.staticplugins.bk.b.h.run(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.bf.execute(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.i(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:12)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.j.a(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.aj.a(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.m(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.c.a(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.l(PG:3)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.common.util.concurrent.d.cancel(PG:8)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.r.c(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.n.e(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.n.hh(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.cd.g.a.f.e(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:22)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.speech.k.a.g.ks(PG:6)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.o.e(PG:14)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.s3.p.run(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:2)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at java.lang.Thread.run(Thread.java:1012)
+10-28 11:56:49.632  1737  2547 E cr_CronetUrlRequestContext: 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:5)
+10-28 11:56:49.633  1737  1737 W A       : Failed to sync device settings.
+10-28 11:56:49.633  1737  1737 I A       : Retrying to sync device settings.
+10-28 11:56:49.648  4246  4424 D EGL_emulation: app_time_stats: avg=1143.77ms min=12.10ms max=7584.04ms count=7
+10-28 11:56:49.686  1737  2653 W A       : [Download] response code: 400
+10-28 11:56:49.687  7661  7680 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-28 11:56:49.712  4246  4424 D EGL_emulation: app_time_stats: avg=4169.51ms min=384.05ms max=7954.96ms count=2
+10-28 11:56:49.719  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:49.913   524   541 W ziparchive: Unable to open '/data/app/~~F63SERnc7i_hYd_AU0wF2Q==/io.github.dantemorrigan.cotes.test-Z6pR02sDMP8O6HlMb2wChw==/base.dm': No such file or directory
+10-28 11:56:49.914   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +554ms
+10-28 11:56:49.931  4246  4341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d14276c
+10-28 11:56:49.935   524   916 W InputManager-JNI: Input channel object '1ce6350 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-28 11:56:49.949   524  2469 I ImeTracker: io.github.dantemorrigan.cotes.test:162b9735: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:56:49.950   524  2469 I ImeTracker: io.github.dantemorrigan.cotes.test:162b9735: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:56:49.953  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:56:49.954  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:56:49.954  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes.test fieldId=0 fieldName=null extras=null}, false)
+10-28 11:56:49.954  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:56:49.954  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:56:49.957   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:56:49.985  7513  7513 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@4dd2a70
+10-28 11:56:50.068  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:50.074  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:50.082  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:50.084  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:50.084  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:50.119  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:50.220   524  2467 I ImeTracker: com.android.settings:ad9adfd8: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:56:50.220   524  2467 I ImeTracker: com.android.settings:ad9adfd8: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:56:50.235  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:56:50.253  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:56:50.253  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:56:50.254  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-28 11:56:50.254  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:56:50.254  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:56:50.269  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@e51b221 in: STOPPED
+10-28 11:56:50.271  7513  7513 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@e51b221
+10-28 11:56:50.323  7661  7661 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@ae9d1f
+10-28 11:56:50.328   524  2467 W InputManager-JNI: Input channel object 'b810bbd io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:56:50.378  7513  7513 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@5569282
+10-28 11:56:50.384  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@e51b221 in: DESTROYED
+10-28 11:56:50.384  7513  7513 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 11:56:50.419   524  2469 W InputManager-JNI: Input channel object 'ead26d7 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:56:50.466  7513  7542 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@5cdbab1]
+10-28 11:56:50.480  7513  7542 I TestRunner: finished: longNote_opensAndScrolls(io.github.dantemorrigan.cotes.LayoutTest)

@@ -1,0 +1,3 @@
+10-28 11:59:01.214  8674  8728 I TestRunner: started: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)
+10-28 11:59:01.224  8674  8728 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10196; state: ENABLED
+10-28 11:59:01.232  8674  8728 I TestRunner: finished: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)

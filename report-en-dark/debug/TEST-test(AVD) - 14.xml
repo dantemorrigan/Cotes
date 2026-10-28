@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="33" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-10-28T11:58:41" hostname="localhost">
+  <testsuite name="io.github.dantemorrigan.cotes.ImportTest" tests="2" failures="0" errors="0" skipped="0" time="0.001" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="evernote_enex" classname="io.github.dantemorrigan.cotes.ImportTest" time="0.001" />
+    <testcase name="repeatedImport_addsNothing" classname="io.github.dantemorrigan.cotes.ImportTest" time="0.000" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.LayoutTest" tests="3" failures="0" errors="0" skipped="0" time="19.820" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="hugeFontScale_keepsMainControlsReachable" classname="io.github.dantemorrigan.cotes.LayoutTest" time="7.026" />
+    <testcase name="longNote_opensAndScrolls" classname="io.github.dantemorrigan.cotes.LayoutTest" time="8.014" />
+    <testcase name="landscape_showsListAndEditorSideBySide" classname="io.github.dantemorrigan.cotes.LayoutTest" time="4.780" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.MarkdownUiTest" tests="3" failures="0" errors="0" skipped="0" time="15.042" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="enter_continuesList_andCheckboxToggles" classname="io.github.dantemorrigan.cotes.MarkdownUiTest" time="4.966" />
+    <testcase name="formatBar_boldsSelection_andMakesList" classname="io.github.dantemorrigan.cotes.MarkdownUiTest" time="4.472" />
+    <testcase name="richNote_looksRight_andStaysUnchanged" classname="io.github.dantemorrigan.cotes.MarkdownUiTest" time="5.604" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.OnboardingTest" tests="3" failures="0" errors="0" skipped="0" time="14.559" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="skip_endsOnboarding" classname="io.github.dantemorrigan.cotes.OnboardingTest" time="2.635" />
+    <testcase name="existingNotes_noTips" classname="io.github.dantemorrigan.cotes.OnboardingTest" time="2.655" />
+    <testcase name="threeSteps_fromFirstNoteToSwipe" classname="io.github.dantemorrigan.cotes.OnboardingTest" time="9.269" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.RegressionTest" tests="12" failures="0" errors="0" skipped="0" time="52.414" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="search_filters_andOpensTheRightNote" classname="io.github.dantemorrigan.cotes.RegressionTest" time="5.202" />
+    <testcase name="language_switchesInSettings_andSticks" classname="io.github.dantemorrigan.cotes.RegressionTest" time="3.550" />
+    <testcase name="editorButtons_pinAndDelete" classname="io.github.dantemorrigan.cotes.RegressionTest" time="4.573" />
+    <testcase name="blankNote_isDiscarded" classname="io.github.dantemorrigan.cotes.RegressionTest" time="2.465" />
+    <testcase name="backup_roundTrip_readsOldFormat" classname="io.github.dantemorrigan.cotes.RegressionTest" time="0.136" />
+    <testcase name="createNote_autosaves_andShowsInList" classname="io.github.dantemorrigan.cotes.RegressionTest" time="5.233" />
+    <testcase name="swipeRight_pins_swipeLeft_deletes_withUndo" classname="io.github.dantemorrigan.cotes.RegressionTest" time="7.494" />
+    <testcase name="settings_themeAccentAndTextApply_andPersist" classname="io.github.dantemorrigan.cotes.RegressionTest" time="9.624" />
+    <testcase name="fab_collapsesWhileScrollingDown_andExpandsAtRest" classname="io.github.dantemorrigan.cotes.RegressionTest" time="4.558" />
+    <testcase name="selection_deletesSeveral_withUndo" classname="io.github.dantemorrigan.cotes.RegressionTest" time="5.113" />
+    <testcase name="shortSwipe_doesNothing" classname="io.github.dantemorrigan.cotes.RegressionTest" time="2.248" />
+    <testcase name="appShortcut_opensNewNote" classname="io.github.dantemorrigan.cotes.RegressionTest" time="2.218" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.SoundsTest" tests="1" failures="0" errors="0" skipped="0" time="2.962" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="soundsSwitch_turnsOffAndPersists" classname="io.github.dantemorrigan.cotes.SoundsTest" time="2.962" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.StorageTest" tests="4" failures="0" errors="0" skipped="0" time="1.106" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="missingOrEmptyFile_isJustEmpty" classname="io.github.dantemorrigan.cotes.StorageTest" time="0.006" />
+    <testcase name="damagedFile_isSetAside_notOverwritten" classname="io.github.dantemorrigan.cotes.StorageTest" time="0.094" />
+    <testcase name="longNote_savesQuickly" classname="io.github.dantemorrigan.cotes.StorageTest" time="0.997" />
+    <testcase name="writeAndReadBack" classname="io.github.dantemorrigan.cotes.StorageTest" time="0.009" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.StoreScreenshotsTest" tests="1" failures="0" errors="0" skipped="0" time="5.939" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="storeScreenshots" classname="io.github.dantemorrigan.cotes.StoreScreenshotsTest" time="5.939" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.SyncUiTest" tests="1" failures="0" errors="0" skipped="0" time="3.551" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="openNote_showsRemoteChange_andKeepsItOnNextEdit" classname="io.github.dantemorrigan.cotes.SyncUiTest" time="3.551" />
+  </testsuite>
+  <testsuite name="io.github.dantemorrigan.cotes.WelcomeTest" tests="3" failures="0" errors="0" skipped="0" time="8.655" timestamp="2026-10-28T11:58:41" hostname="localhost">
+    <properties>
+      <property name="device" value="emulator-5554" />
+    </properties>
+    <testcase name="localProfile_inSettings" classname="io.github.dantemorrigan.cotes.WelcomeTest" time="4.127" />
+    <testcase name="firstLaunch_choosesLocal_thenOnboarding" classname="io.github.dantemorrigan.cotes.WelcomeTest" time="3.253" />
+    <testcase name="existingNotes_skipWelcome" classname="io.github.dantemorrigan.cotes.WelcomeTest" time="1.275" />
+  </testsuite>
+</testsuites>

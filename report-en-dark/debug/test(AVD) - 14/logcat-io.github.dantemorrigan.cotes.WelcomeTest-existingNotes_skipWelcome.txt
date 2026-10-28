@@ -1,0 +1,72 @@
+10-28 11:58:39.344  7513  7542 I TestRunner: started: existingNotes_skipWelcome(io.github.dantemorrigan.cotes.WelcomeTest)
+10-28 11:58:39.355  7513  7542 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@ddc472e]
+10-28 11:58:39.459  7513  7542 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-28 11:58:39.468  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{c57aaea V.E...... ......ID 0,0-0,0}
+10-28 11:58:39.468  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:58:39.468  4246  4374 D SplashScreenView: Branding: view: android.view.View{26341db G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:58:39.486   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:39.501  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@f9c93ea in: PRE_ON_CREATE
+10-28 11:58:39.505  7513  7513 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-28 11:58:39.580  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:39.580  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:39.580  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:39.581  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:39.581  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:39.581  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:39.590  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@f9c93ea in: CREATED
+10-28 11:58:39.591  7513  7513 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@f9c93ea
+10-28 11:58:39.596  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@f9c93ea in: STARTED
+10-28 11:58:39.596  7513  7513 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@f9c93ea
+10-28 11:58:39.627  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@f9c93ea in: RESUMED
+10-28 11:58:39.628  7513  7513 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@f9c93ea
+10-28 11:58:39.784  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:39.823  7513  7513 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-28 11:58:39.939   524   541 W ziparchive: Unable to open '/data/app/~~5NaxZ57aUTSs40rFQ7Ye_Q==/io.github.dantemorrigan.cotes-E7nJT9LLPTHBaDvlUPL3Ww==/base.dm': No such file or directory
+10-28 11:58:39.941   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +475ms
+10-28 11:58:39.948  7513  7513 E FrameTracker: force finish cuj, time out: J<IME_INSETS_ANIMATION::0@1@io.github.dantemorrigan.cotes>
+10-28 11:58:39.962   524  2467 W InputManager-JNI: Input channel object '4f8323b Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-28 11:58:39.966   524  2467 I ImeTracker: io.github.dantemorrigan.cotes:935adf1a: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:58:39.966   524  2467 I ImeTracker: io.github.dantemorrigan.cotes:935adf1a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:58:39.968  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:39.969  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:39.969  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-28 11:58:39.970  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:39.977  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:40.081  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:40.082  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:40.083  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:40.083  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:40.083  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:40.083  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:40.130  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{9bee64a V.E...... ......ID 0,0-0,0}
+10-28 11:58:40.130  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:58:40.130  4246  4374 D SplashScreenView: Branding: view: android.view.View{7aec9bb G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:58:40.133  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@f9c93ea in: PAUSED
+10-28 11:58:40.133  7513  7513 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@f9c93ea
+10-28 11:58:40.153   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:40.274  7661  7680 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-28 11:58:40.277  4246  4424 D EGL_emulation: app_time_stats: avg=440.37ms min=10.58ms max=957.34ms count=4
+10-28 11:58:40.301  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:58:40.476  4246  4424 D EGL_emulation: app_time_stats: avg=973.44ms min=457.85ms max=1489.04ms count=2
+10-28 11:58:40.479   524   541 W ziparchive: Unable to open '/data/app/~~F63SERnc7i_hYd_AU0wF2Q==/io.github.dantemorrigan.cotes.test-Z6pR02sDMP8O6HlMb2wChw==/base.dm': No such file or directory
+10-28 11:58:40.480   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +353ms
+10-28 11:58:40.514  4246  4341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@f63e06d
+10-28 11:58:40.518   524  2402 I ImeTracker: io.github.dantemorrigan.cotes.test:c6ebdf9a: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:58:40.518   524  2402 I ImeTracker: io.github.dantemorrigan.cotes.test:c6ebdf9a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:58:40.519   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:58:40.524   524  2471 W InputManager-JNI: Input channel object '65a23ef Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-28 11:58:40.528  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:58:40.530  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:58:40.530  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes.test fieldId=0 fieldName=null extras=null}, false)
+10-28 11:58:40.530  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:58:40.532  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:58:40.561  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@f9c93ea in: STOPPED
+10-28 11:58:40.561  7513  7513 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@f9c93ea
+10-28 11:58:40.579  7513  7513 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@99f7b54
+10-28 11:58:40.580  7513  7513 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@f9c93ea in: DESTROYED
+10-28 11:58:40.581  7513  7513 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 11:58:40.600  1737  1737 I BgTaskExecutorImpl: Starting EXCLUSIVE background task SEND_GSA_HOME_REQUEST.
+10-28 11:58:40.618   343  4238 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 9024960
+10-28 11:58:40.631   524  2472 W InputManager-JNI: Input channel object 'd84af70 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:58:40.689  7513  7542 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@ddc472e]
+10-28 11:58:40.691  7513  7542 I TestRunner: finished: existingNotes_skipWelcome(io.github.dantemorrigan.cotes.WelcomeTest)

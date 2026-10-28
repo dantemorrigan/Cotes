@@ -1,0 +1,2 @@
+10-28 11:58:21.232  7513  7542 I TestRunner: started: damagedFile_isSetAside_notOverwritten(io.github.dantemorrigan.cotes.StorageTest)
+10-28 11:58:21.329  7513  7542 I TestRunner: finished: damagedFile_isSetAside_notOverwritten(io.github.dantemorrigan.cotes.StorageTest)

@@ -1,0 +1,6 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   49G   96G  34% /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   50G   96G  35% /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       145G   55G   90G  39% /

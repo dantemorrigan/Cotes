@@ -1,0 +1,29 @@
+10-28 11:55:09.125  5080  5111 I TestRunner: started: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)
+10-28 11:55:09.128  6149  6214 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ads.social.GcmSchedulerWakeupService finished executing. cause:5 result: 1 elapsed_millis: 96 uptime_millis: 96 exec_start_elapsed_seconds: 194 [CONTEXT service_id=218 ]
+10-28 11:55:09.136   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:55:09.148  6270  6350 I Checkin : [CheckinRequestProcessor] Default Task : Checkin Succeeded: https://android.googleapis.com/checkin (fragment #1).
+10-28 11:55:09.205  5080  5111 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@7dd3532]
+10-28 11:55:09.327  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:55:09.329  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:55:09.329  4246  4424 D EGL_emulation: app_time_stats: avg=760.28ms min=104.28ms max=2022.22ms count=3
+10-28 11:55:09.367  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:55:09.390   524   911 D WifiNl80211Manager: Scan result ready event
+10-28 11:55:09.390   524   911 D WifiNative: Scan result ready event
+10-28 11:55:09.429   524   762 D WificondScannerImpl: Filtering out 1 scan results.
+10-28 11:55:09.465   524  2469 I ImeTracker: com.android.settings:372db130: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:55:09.468   524  2469 I ImeTracker: com.android.settings:372db130: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:55:09.495  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:55:09.505  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:55:09.506  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-28 11:55:09.506  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:55:09.529  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:55:09.574  4246  4341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@45d43c0
+10-28 11:55:09.576   524  2471 W InputManager-JNI: Input channel object '267e929 Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-28 11:55:09.623  6149  6718 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_CONN_ALARM type: 2 triggerAtMillis: 206367]
+10-28 11:55:09.636  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:55:09.736  6270  6591 I AccountSeedingPrefetchI: AccountSeedingPrefetchInit intent operation started. [CONTEXT service_id=42 ]
+10-28 11:55:09.746  5382  5382 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@bf9b0c5
+10-28 11:55:09.748   524  2469 W InputManager-JNI: Input channel object '35fe265 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:55:09.794  6270  6350 I Checkin : [CheckinOperation] Checkin Operation finished with result: SUCCESS finish time: 196537.
+10-28 11:55:09.795  5080  5111 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@7dd3532]
+10-28 11:55:09.799  5080  5111 I TestRunner: finished: backup_roundTrip_readsOldFormat(io.github.dantemorrigan.cotes.RegressionTest)

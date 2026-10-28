@@ -1,0 +1,5 @@
+10-28 11:55:53.547  5080  5111 I TestRunner: started: missingOrEmptyFile_isJustEmpty(io.github.dantemorrigan.cotes.StorageTest)
+10-28 11:55:53.586  4246  4246 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-28 11:55:53.589  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:55:53.593  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:55:53.659  5080  5111 I TestRunner: finished: missingOrEmptyFile_isJustEmpty(io.github.dantemorrigan.cotes.StorageTest)

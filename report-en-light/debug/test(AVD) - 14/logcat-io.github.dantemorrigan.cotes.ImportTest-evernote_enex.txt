@@ -1,0 +1,7 @@
+10-28 11:53:29.115  5080  5111 I TestRunner: started: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)
+10-28 11:53:29.130  1650  2086 I SP.AiAi : Scheduling: download stopped, 0 started, 0 paused, 1 scheduled, 2 pending: manifests:spelling_correction-22110320 * {W:b:I:l, bg}, text-classifier-langid:tc_model_436dc3fd14049b93d75788a8c0cc8eea @ {W:b:u:l, bg}
+10-28 11:53:29.140  5080  5111 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10192; state: ENABLED
+10-28 11:53:29.152   844  5056 I PermissionControllerServiceImpl: Updating user sensitive for uid 10192
+10-28 11:53:29.157   524   614 I RoleService: Granting default roles...
+10-28 11:53:29.164  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:53:29.165  5080  5111 I TestRunner: finished: evernote_enex(io.github.dantemorrigan.cotes.ImportTest)

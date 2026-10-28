@@ -1,0 +1,1482 @@
+10-28 11:59:01.255  8674  8728 I TestRunner: started: hugeFontScale_keepsMainControlsReachable(io.github.dantemorrigan.cotes.LayoutTest)
+10-28 11:59:01.302  8674  8728 W FileTestStorage: Output properties is not supported.
+10-28 11:59:01.302  8674  8728 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+10-28 11:59:01.311  8674  8674 D EventInjectionStrategy: Creating injection strategy with input manager.
+10-28 11:59:01.312  8674  8674 W emorrigan.cotes: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+10-28 11:59:01.313  8674  8674 W emorrigan.cotes: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+10-28 11:59:01.313  8674  8674 W emorrigan.cotes: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+10-28 11:59:01.319  8674  8674 W emorrigan.cotes: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+10-28 11:59:01.320  8674  8674 W emorrigan.cotes: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+10-28 11:59:01.320  8674  8674 W emorrigan.cotes: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+10-28 11:59:01.321  8674  8728 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@ab26e07]
+10-28 11:59:01.369  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.384  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.384  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.385  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.386  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.386  8674  8728 I UiAutomation: Initialized for user 0 on display 0
+10-28 11:59:01.387  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.390  1650  3446 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+10-28 11:59:01.390  8674  8736 V UiAutomation: Init UiAutomation@5f282f6[id=3, displayId=0, flags=0]
+10-28 11:59:01.391  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:01.391  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:01.391  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:01.393  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:01.397  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:01.397  1737  2380 I A       : NGA disabled since it's running Panthera and at least one a11y feature is on.
+10-28 11:59:01.397  1737  2380 I A       : Nga state changed to NgaStateDetails{state=DISABLED, isSpecialExperience=false}
+10-28 11:59:01.399  1663  7729 I A       : APA or Classic session decision: SessionDecision(sessionVariance=CLASSIC, platformVariance=CLASSIC, justification=CURRENT_PLATFORM_VARIANCE).
+10-28 11:59:01.399  1663  7729 I A       : [Memory] eligibility: StashEligibility{4}
+10-28 11:59:01.400  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:01.400  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:01.401  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:01.402  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0 (types=[])
+10-28 11:59:01.405  1663  2439 I A       : Unsubscribed to apa or classic variant change.
+10-28 11:59:01.411  4246  4246 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-28 11:59:01.411  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-28 11:59:01.411  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:01.434  4246  4246 I NoBackGesture: NavbarController: newConfig={2.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2048 fontWeightAdjustment=0} mTaskbarDelegate initialized=false willApplyConfigToNavbars=true navBarCount=1
+10-28 11:59:01.434  4246  4246 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@4523ea8
+10-28 11:59:01.442   402   460 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:59:01.450  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.455  1565  1565 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {2.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2035 fontWeightAdjustment=0}
+10-28 11:59:01.455  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 40000000
+10-28 11:59:01.455  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in ebn
+10-28 11:59:01.455  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in ebn
+10-28 11:59:01.455  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+10-28 11:59:01.455  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+10-28 11:59:01.455  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in een
+10-28 11:59:01.455  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in een
+10-28 11:59:01.455  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in csi
+10-28 11:59:01.456  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in csi
+10-28 11:59:01.456  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.456  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-28 11:59:01.456  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:59:01.456  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-28 11:59:01.457  1565  1565 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+10-28 11:59:01.457  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.457  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.457  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.457  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.457  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.457  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+10-28 11:59:01.458  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214024 -> 0_resource_name_obfuscated : WaitTime = 2 ms : RunTime = 1 ms
+10-28 11:59:01.458  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 3 ms : RunTime = 0 ms
+10-28 11:59:01.458  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214034 -> 0_resource_name_obfuscated : WaitTime = 3 ms : RunTime = 0 ms
+10-28 11:59:01.458  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214033 -> 0_resource_name_obfuscated : WaitTime = 3 ms : RunTime = 0 ms
+10-28 11:59:01.460  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.462  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.462  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-28 11:59:01.462  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, true)
+10-28 11:59:01.462  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:01.462  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:01.462  1565  1565 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-28 11:59:01.463  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in ebn.
+10-28 11:59:01.463  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in eco.
+10-28 11:59:01.463  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in een.
+10-28 11:59:01.463  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in csi.
+10-28 11:59:01.480   524  2473 W InputManager-JNI: Input channel object '[Gesture Monitor] edge-swipe (client)' was disposed without first being removed with the input manager!
+10-28 11:59:01.482   524  2473 W InputManager-JNI: Input channel object '381fed0 NavigationBar0 (client)' was disposed without first being removed with the input manager!
+10-28 11:59:01.492   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:59:01.496  1054  1054 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@f4ef6de
+10-28 11:59:01.530  4246  4424 D EGL_emulation: app_time_stats: avg=3708.64ms min=56.18ms max=17934.17ms count=5
+10-28 11:59:01.538  1565  1565 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {2.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2105 fontWeightAdjustment=0}
+10-28 11:59:01.538  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 20000400
+10-28 11:59:01.538  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in ebn
+10-28 11:59:01.538  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in ebn
+10-28 11:59:01.539  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+10-28 11:59:01.539  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+10-28 11:59:01.539  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in een
+10-28 11:59:01.539  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in een
+10-28 11:59:01.539  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in csi
+10-28 11:59:01.539  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in csi
+10-28 11:59:01.539  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.539  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-28 11:59:01.540  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:59:01.540  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-28 11:59:01.544  1565  1565 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+10-28 11:59:01.545  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.545  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.545  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.545  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.545  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.545  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+10-28 11:59:01.549  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214024 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 0 ms
+10-28 11:59:01.549  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 10 ms : RunTime = 0 ms
+10-28 11:59:01.550  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214034 -> 0_resource_name_obfuscated : WaitTime = 10 ms : RunTime = 0 ms
+10-28 11:59:01.550  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214033 -> 0_resource_name_obfuscated : WaitTime = 11 ms : RunTime = 0 ms
+10-28 11:59:01.550  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.550  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.551  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-28 11:59:01.551  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, true)
+10-28 11:59:01.551  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:01.569  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:01.577  4246  4246 D NavigationModeController: getCurrentInteractionMode: mode=2 contextUser=0
+10-28 11:59:01.591  1565  1565 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-28 11:59:01.592  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.592  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in ebn.
+10-28 11:59:01.593  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in eco.
+10-28 11:59:01.593  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in een.
+10-28 11:59:01.593  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in csi.
+10-28 11:59:01.597  6149  6708 I NearbySharing: Screen is already unlocked, skipping invalidate [CONTEXT service_id=194 ]
+10-28 11:59:01.604   524   538 W InputManager-JNI: Input channel object '13fe71b com.android.settings/com.android.settings.FallbackHome (client)' was disposed without first being removed with the input manager!
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: No service published for: ethernet
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1184)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+10-28 11:59:01.612   999  1024 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-28 11:59:01.615  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.616  4246  4246 D NavigationModeController: getCurrentInteractionMode: mode=2 contextUser=0
+10-28 11:59:01.632  8674  8728 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-28 11:59:01.641  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: No service published for: ethernet
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1184)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+10-28 11:59:01.685   999  1024 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-28 11:59:01.697   844   870 I PermissionControllerServiceImpl: Updating user sensitive for uid 10196
+10-28 11:59:01.700  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.706   524   614 I RoleService: Granting default roles...
+10-28 11:59:01.728   844  8640 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+10-28 11:59:01.732   844  8640 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+10-28 11:59:01.733   844  8640 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+10-28 11:59:01.734  1053  1053 D CarrierSvcBindHelper: onPackageModified: io.github.dantemorrigan.cotes
+10-28 11:59:01.734  1053  1053 D CarrierSvcBindHelper: No carrier app for: 0
+10-28 11:59:01.738   844  8640 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+10-28 11:59:01.745  1053  1353 D ImsResolver: maybeAddedImsService, packageName: io.github.dantemorrigan.cotes
+10-28 11:59:01.754  1028  1028 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-28 11:59:01.754  1028  1028 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-28 11:59:01.760  8674  8751 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-28 11:59:01.761  4246  4424 D EGL_emulation: app_time_stats: avg=3724.91ms min=56.87ms max=18046.11ms count=5
+10-28 11:59:01.761  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{e43acc5 V.E...... ......ID 0,0-0,0}
+10-28 11:59:01.761  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:59:01.761  4246  4374 D SplashScreenView: Branding: view: android.view.View{6d2c61a G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:59:01.762  8674  8751 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-28 11:59:01.763  8674  8751 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-28 11:59:01.789  4246  4424 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-28 11:59:01.808   524   624 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-28 11:59:01.814  4246  4246 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+10-28 11:59:01.814   524   551 E system_server: No package ID 7f found for resource ID 0x7f070082.
+10-28 11:59:01.814   524   551 E system_server: No package ID 7f found for resource ID 0x7f0f00da.
+10-28 11:59:01.814   524   551 E system_server: No package ID 7f found for resource ID 0x7f0f00da.
+10-28 11:59:01.830  1650  1650 I AiAiEcho: AppFetcherImpl onPackageChanged io.github.dantemorrigan.cotes.
+10-28 11:59:01.838  1650  8567 I AiAiEcho: AppIndexer Package:[io.github.dantemorrigan.cotes] UserProfile:[0] Enabled:[true].
+10-28 11:59:01.841  4246  4422 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-28 11:59:01.842  1650  8567 I AiAiEcho: AppFetcherImplV2 updateApps package:[io.github.dantemorrigan.cotes], userId:[0], reason:[package is updated.].
+10-28 11:59:01.843  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b625394 in: PRE_ON_CREATE
+10-28 11:59:01.860  8674  8674 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-28 11:59:01.870  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.875  4246  4422 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-28 11:59:01.885  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.885  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.905  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.905  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.906  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:01.910  4246  4422 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-28 11:59:01.912  4246  4422 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-28 11:59:01.913  4246  4422 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-28 11:59:01.914  4246  4422 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-28 11:59:01.914  4246  4422 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-28 11:59:01.915  4246  4422 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-28 11:59:01.915  4246  4422 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-28 11:59:01.916  4246  4422 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-28 11:59:01.916  4246  4422 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-28 11:59:01.934  6149  6708 I NearbySharing: Screen is already unlocked, skipping invalidate [CONTEXT service_id=194 ]
+10-28 11:59:01.949  1565  1565 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {2.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2176 fontWeightAdjustment=0}
+10-28 11:59:01.949  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 20000400
+10-28 11:59:01.949  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in ebn
+10-28 11:59:01.949  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in ebn
+10-28 11:59:01.949  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+10-28 11:59:01.949  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+10-28 11:59:01.949  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in een
+10-28 11:59:01.951  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 1 ms
+10-28 11:59:01.951  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214024 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 1 ms
+10-28 11:59:01.951  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in een
+10-28 11:59:01.951  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in csi
+10-28 11:59:01.951  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in csi
+10-28 11:59:01.953  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.953  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-28 11:59:01.953  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:59:01.953  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-28 11:59:01.954  1565  1565 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+10-28 11:59:01.954  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.954  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.954  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.954  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.954  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.955  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+10-28 11:59:01.956  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214033 -> 0_resource_name_obfuscated : WaitTime = 3 ms : RunTime = 1 ms
+10-28 11:59:01.956  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214034 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 0 ms
+10-28 11:59:01.958  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.961  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.962  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-28 11:59:01.963  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, true)
+10-28 11:59:01.963  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:01.963  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:01.963  1565  1565 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-28 11:59:01.965  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:01.966  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in ebn.
+10-28 11:59:01.966  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in eco.
+10-28 11:59:01.966  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in een.
+10-28 11:59:01.966  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in csi.
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: No service published for: ethernet
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1184)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+10-28 11:59:02.030   999  1024 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-28 11:59:02.038  8674  8674 W emorrigan.cotes: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+10-28 11:59:02.041  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b625394 in: CREATED
+10-28 11:59:02.042  8674  8674 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b625394
+10-28 11:59:02.044  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b625394 in: STARTED
+10-28 11:59:02.045  8674  8674 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b625394
+10-28 11:59:02.048  4246  4246 D CentralSurfaces: Received new disable state: enaihbcrso.qingr (unchanged)
+10-28 11:59:02.049  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b625394 in: RESUMED
+10-28 11:59:02.049  4246  4246 D CentralSurfaces: Received new disable state: enaihbcrso.qingr (unchanged)
+10-28 11:59:02.050  8674  8674 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b625394
+10-28 11:59:02.063  8674  8674 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10196; state: DISABLED
+10-28 11:59:02.066  8674  8674 W OpenGLRenderer: Unknown dataspace 0
+10-28 11:59:02.083  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b625394 in: PAUSED
+10-28 11:59:02.083  8674  8674 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b625394
+10-28 11:59:02.106  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b625394 in: STOPPED
+10-28 11:59:02.107  8674  8674 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b625394
+10-28 11:59:02.111  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b625394 in: DESTROYED
+10-28 11:59:02.112  8674  8674 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 11:59:02.114   524   538 W InputManager-JNI: Input channel object '9e85062 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:59:02.116  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.126  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@dfb454 in: PRE_ON_CREATE
+10-28 11:59:02.127  8674  8674 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was DESTROYED
+10-28 11:59:02.142  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.143  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@dfb454 in: CREATED
+10-28 11:59:02.144  8674  8674 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@dfb454
+10-28 11:59:02.146  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@dfb454 in: STARTED
+10-28 11:59:02.146  8674  8674 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@dfb454
+10-28 11:59:02.149  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@dfb454 in: RESUMED
+10-28 11:59:02.149  8674  8674 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@dfb454
+10-28 11:59:02.152  4246  4246 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:02.174  4246  4246 D LockscreenSmartspaceController: Ended smartspace session for lockscreen
+10-28 11:59:02.179  4246  4694 E KeyguardClockSwitch: No clock being shown
+10-28 11:59:02.200  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.203  4246  4246 W AlarmManager: Unrecognized alarm listener com.google.android.systemui.smartspace.KeyguardZenAlarmViewController$showNextAlarm$1@a7738b6
+10-28 11:59:02.203  4246  4246 W AlarmManager: Unrecognized alarm listener com.google.android.systemui.smartspace.KeyguardZenAlarmViewController$showNextAlarm$1@a7738b6
+10-28 11:59:02.206  4246  4246 D LockscreenSmartspaceController: Starting smartspace session for lockscreen
+10-28 11:59:02.207  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:02.207  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:02.207  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:02.207  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:02.207  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-28 11:59:02.208  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:02.208  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:02.208  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:02.208  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:02.209  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-28 11:59:02.213  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:02.214  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:02.215  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:02.219  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:02.219  4246  4246 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+10-28 11:59:02.221  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:02.221  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:02.221  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:02.221  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:02.222  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-28 11:59:02.226  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:02.226  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:02.226  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:02.227  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:02.273  4246  4246 D QSPanel : setUsingHorizontalLayout: false, true
+10-28 11:59:02.274  4246  4246 D QSPanel : Reattaching media host: false, current com.android.systemui.qs.QSPanel{c5dce37 IFE...... ......ID 0,126-996,1733 #7f0a05d8 app:id/quick_settings_panel}, new com.android.systemui.qs.QSPanel{b686c23 VFE...... ......I. 0,0-0,0 #7f0a05d8 app:id/quick_settings_panel}
+10-28 11:59:02.274  4246  4246 D QSPanel : setUsingHorizontalLayout: false, true
+10-28 11:59:02.275  4246  4246 D QSPanel : Reattaching media host: false, current com.android.systemui.qs.QSPanel{b686c23 VFE...... ......I. 0,0-0,0 #7f0a05d8 app:id/quick_settings_panel}, new com.android.systemui.qs.QSPanel{b686c23 VFE...... ......I. 0,0-0,0 #7f0a05d8 app:id/quick_settings_panel}
+10-28 11:59:02.277  4246  4246 D QuickQSPanel: setUsingHorizontalLayout: false, true
+10-28 11:59:02.277  4246  4246 D QuickQSPanel: Reattaching media host: false, current com.android.systemui.qs.QuickQSPanel{6e10f6c VFE...... ......ID 0,126-996,526 #7f0a05d6 app:id/quick_qs_panel}, new com.android.systemui.qs.QuickQSPanel{b62828b VFE...... ......I. 0,0-0,0 #7f0a05d6 app:id/quick_qs_panel}
+10-28 11:59:02.279  4246  4246 D QS      : Binding the View implementation of the QS footer actions
+10-28 11:59:02.284  4246  4246 I Choreographer: Skipped 50 frames!  The application may be doing too much work on its main thread.
+10-28 11:59:02.286  4246  4246 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+10-28 11:59:02.312  8674  8674 D CompatibilityChangeReporter: Compat change id reported: 193247900; UID 10196; state: ENABLED
+10-28 11:59:02.321  4246  5867 I OpenGLRenderer: Davey! duration=883ms; Flags=1, FrameTimelineVsyncId=75768, IntendedVsync=428179849697, Vsync=429013182997, InputEventId=0, HandleInputStart=429028817628, AnimationStart=429028818319, PerformTraversalsStart=429029120112, DrawStart=429053771924, FrameDeadline=428196516363, FrameInterval=429028474658, FrameStartTime=16666666, SyncQueued=429053871470, SyncStart=429054068387, IssueDrawCommandsStart=429054141163, SwapBuffers=429054626547, FrameCompleted=429063417285, DequeueBufferDuration=2705, QueueBufferDuration=334614, GpuCompleted=429063417285, SwapBuffersCompleted=429060669289, DisplayPresentTime=0, CommandSubmissionCompleted=429054626547, 
+10-28 11:59:02.362  4246  4424 D EGL_emulation: app_time_stats: avg=2332.36ms min=2332.36ms max=2332.36ms count=1
+10-28 11:59:02.363  4246  4246 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@69dbe14
+10-28 11:59:02.364   524  1889 W InputManager-JNI: Input channel object '8f0d48d SecondaryHomeHandle0 (client)' was disposed without first being removed with the input manager!
+10-28 11:59:02.367  4246  4246 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@592e931
+10-28 11:59:02.368   524  1889 W InputManager-JNI: Input channel object 'c3f645c EdgeBackGestureHandler0 (client)' was disposed without first being removed with the input manager!
+10-28 11:59:02.372  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.374  4246  5470 I OpenGLRenderer: Davey! duration=933ms; Flags=1, FrameTimelineVsyncId=75768, IntendedVsync=428179849697, Vsync=429013182997, InputEventId=0, HandleInputStart=429028817628, AnimationStart=429028818319, PerformTraversalsStart=429029120112, DrawStart=429096911385, FrameDeadline=428196516363, FrameInterval=429028474658, FrameStartTime=16666666, SyncQueued=429097328853, SyncStart=429097535638, IssueDrawCommandsStart=429097684495, SwapBuffers=429101940958, FrameCompleted=429113275136, DequeueBufferDuration=4899, QueueBufferDuration=149198, GpuCompleted=429113275136, SwapBuffersCompleted=429106962156, DisplayPresentTime=0, CommandSubmissionCompleted=429101940958, 
+10-28 11:59:02.377  4246  4246 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-28 11:59:02.380  4246  4246 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-28 11:59:02.385  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.396  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:02.397  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:02.398  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:02.404  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.405  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.406  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.406  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.416  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:02.417  8674  8761 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:02.419  8674  8761 I Codec2Client: Available Codec2 services: "default" "software"
+10-28 11:59:02.434  8674  8761 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:02.436  8674  8761 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:02.436  8674  8761 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:02.440  8674  8761 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:02.444  8674  8761 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:02.444  8674  8761 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:02.444  8674  8761 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:02.444  8674  8761 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:02.444  8674  8761 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:02.444  8674  8761 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:02.445  8674  8761 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.445  8674  8761 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:02.445  8674  8761 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:02.445  8674  8761 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:02.445  8674  8761 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:02.445  8674  8761 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:02.445  8674  8761 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:02.445  8674  8761 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:02.445  8674  8761 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:02.445  8674  8761 D CCodecConfig: }
+10-28 11:59:02.460  8674  8761 D MediaCodec: flushMediametrics
+10-28 11:59:02.460  8674  8761 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:02.460  8674  8761 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:02.460  8674  8761 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:02.460  8674  8761 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:02.460  8674  8761 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:02.461  8674  8761 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 86000
+10-28 11:59:02.461  8674  8761 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-28 11:59:02.461  8674  8761 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:02.461  8674  8761 D CCodec  : encoding statistics level = 0
+10-28 11:59:02.461  8674  8761 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t bitrate = 86000
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:02.461  8674  8761 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.461  8674  8761 D CCodec  : }
+10-28 11:59:02.461  8674  8761 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.461  8674  8761 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:02.461  8674  8761 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:02.461  8674  8761 D CCodec  : }
+10-28 11:59:02.461  8674  8761 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.461  8674  8761 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:02.461  8674  8761 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:02.462  8674  8761 D C2Store : Using DMABUF Heaps
+10-28 11:59:02.462  8674  8761 D CCodecBufferChannel: [c2.android.vorbis.decoder#668] Created input block pool with allocatorID 16 => poolID 17 - OK (0)
+10-28 11:59:02.463  8674  8761 I CCodecBufferChannel: [c2.android.vorbis.decoder#668] Created output block pool with allocatorID 16 => poolID 47 - OK
+10-28 11:59:02.463  8674  8761 D CCodecBufferChannel: [c2.android.vorbis.decoder#668] Configured output block pool ids 47 => OK
+10-28 11:59:02.466  8674  8761 I DMABUFHEAPS: Using DMA-BUF heap named: system
+10-28 11:59:02.482   479  8766 D SimpleC2Component: Using output block pool with poolID 47 => got 47 - 0
+10-28 11:59:02.531  6149  8710 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-28 11:59:02.549  6149  8697 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-28 11:59:02.561  6149  6238 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-28 11:59:02.564  6149  6238 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-28 11:59:02.619  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.623  6270  8685 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-28 11:59:02.625  6270  8685 I Icing   : Indexing done com.google.android.gms-apps
+10-28 11:59:02.643  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.645  8674  8761 D CCodecBufferChannel: [c2.android.vorbis.decoder#668] MediaCodec discarded an unknown buffer
+10-28 11:59:02.645  8674  8761 D CCodecBufferChannel: [c2.android.vorbis.decoder#668] MediaCodec discarded an unknown buffer
+10-28 11:59:02.645  8674  8761 D CCodecBufferChannel: [c2.android.vorbis.decoder#668] MediaCodec discarded an unknown buffer
+10-28 11:59:02.662  8674  8774 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.662   479  5188 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.662   479  5188 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.663  8674  8760 D MediaCodec: flushMediametrics
+10-28 11:59:02.666  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:02.683  8674  8776 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:02.684  8674  8776 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:02.685  8674  8776 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:02.685  8674  8776 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:02.691  8674  8776 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:02.692  8674  8776 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:02.692  8674  8776 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:02.692  8674  8776 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:02.692  8674  8776 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:02.693  8674  8776 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:02.693  8674  8776 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:02.693  8674  8776 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.693  8674  8776 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:02.693  8674  8776 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:02.693  8674  8776 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:02.693  8674  8776 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:02.693  8674  8776 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:02.693  8674  8776 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:02.693  8674  8776 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:02.693  8674  8776 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:02.693  8674  8776 D CCodecConfig: }
+10-28 11:59:02.695  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:02.697  8674  8776 D MediaCodec: flushMediametrics
+10-28 11:59:02.697  8674  8776 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:02.697  8674  8776 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:02.697  8674  8776 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:02.697  8674  8776 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:02.697  8674  8776 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:02.701  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.702  8674  8776 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 86000
+10-28 11:59:02.702  8674  8776 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-28 11:59:02.704  8674  8776 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:02.704  8674  8776 D CCodec  : encoding statistics level = 0
+10-28 11:59:02.704  8674  8776 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t bitrate = 86000
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:02.704  8674  8776 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.704  8674  8776 D CCodec  : }
+10-28 11:59:02.704  8674  8776 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.704  8674  8776 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:02.704  8674  8776 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:02.704  8674  8776 D CCodec  : }
+10-28 11:59:02.705  8674  8776 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.705  8674  8776 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:02.706  8674  8776 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:02.706  8674  8776 D CCodecBufferChannel: [c2.android.vorbis.decoder#200] Created input block pool with allocatorID 16 => poolID 18 - OK (0)
+10-28 11:59:02.706  8674  8776 I CCodecBufferChannel: [c2.android.vorbis.decoder#200] Created output block pool with allocatorID 16 => poolID 48 - OK
+10-28 11:59:02.707  8674  8776 D CCodecBufferChannel: [c2.android.vorbis.decoder#200] Configured output block pool ids 48 => OK
+10-28 11:59:02.708   479  8777 D SimpleC2Component: Using output block pool with poolID 48 => got 48 - 0
+10-28 11:59:02.709  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:02.730  8674  8776 D CCodecBufferChannel: [c2.android.vorbis.decoder#200] MediaCodec discarded an unknown buffer
+10-28 11:59:02.730  8674  8776 D CCodecBufferChannel: [c2.android.vorbis.decoder#200] MediaCodec discarded an unknown buffer
+10-28 11:59:02.730  8674  8776 D CCodecBufferChannel: [c2.android.vorbis.decoder#200] MediaCodec discarded an unknown buffer
+10-28 11:59:02.735   479  8425 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.735   479  8425 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.735  8674  8776 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.741  8674  8760 D MediaCodec: flushMediametrics
+10-28 11:59:02.742  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:02.745  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:02.746  8674  8779 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:02.746  8674  8779 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:02.747  8674  8779 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:02.748  8674  8779 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:02.752  8674  8779 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:02.753  8674  8779 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:02.753  8674  8779 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:02.754  8674  8779 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:02.754  8674  8779 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:02.754  8674  8779 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:02.754  8674  8779 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:02.755  8674  8779 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.755  8674  8779 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:02.755  8674  8779 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:02.755  8674  8779 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:02.755  8674  8779 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:02.755  8674  8779 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:02.755  8674  8779 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:02.755  8674  8779 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:02.755  8674  8779 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:02.755  8674  8779 D CCodecConfig: }
+10-28 11:59:02.757  8674  8779 D MediaCodec: flushMediametrics
+10-28 11:59:02.757  8674  8779 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:02.757  8674  8779 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:02.757  8674  8779 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:02.757  8674  8779 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:02.758  8674  8779 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:02.758  8674  8779 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 86000
+10-28 11:59:02.758  8674  8779 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-28 11:59:02.758  8674  8779 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:02.758  8674  8779 D CCodec  : encoding statistics level = 0
+10-28 11:59:02.758  8674  8779 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:02.758  8674  8779 D CCodec  :   int32_t bitrate = 86000
+10-28 11:59:02.758  8674  8779 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.758  8674  8779 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:02.758  8674  8779 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:02.758  8674  8779 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.758  8674  8779 D CCodec  : }
+10-28 11:59:02.759  8674  8779 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:02.759  8674  8779 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.759  8674  8779 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:02.759  8674  8779 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.759  8674  8779 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:02.759  8674  8779 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:02.759  8674  8779 D CCodec  : }
+10-28 11:59:02.759  8674  8779 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.759  8674  8779 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:02.759  8674  8779 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:02.760  8674  8779 D CCodecBufferChannel: [c2.android.vorbis.decoder#256] Created input block pool with allocatorID 16 => poolID 19 - OK (0)
+10-28 11:59:02.760  8674  8779 I CCodecBufferChannel: [c2.android.vorbis.decoder#256] Created output block pool with allocatorID 16 => poolID 49 - OK
+10-28 11:59:02.761  8674  8779 D CCodecBufferChannel: [c2.android.vorbis.decoder#256] Configured output block pool ids 49 => OK
+10-28 11:59:02.761   479  8780 D SimpleC2Component: Using output block pool with poolID 49 => got 49 - 0
+10-28 11:59:02.775  8674  8779 D CCodecBufferChannel: [c2.android.vorbis.decoder#256] MediaCodec discarded an unknown buffer
+10-28 11:59:02.775  8674  8779 D CCodecBufferChannel: [c2.android.vorbis.decoder#256] MediaCodec discarded an unknown buffer
+10-28 11:59:02.775  8674  8779 D CCodecBufferChannel: [c2.android.vorbis.decoder#256] MediaCodec discarded an unknown buffer
+10-28 11:59:02.778  4246  4261 I ndroid.systemui: Background young concurrent copying GC freed 228335(10MB) AllocSpace objects, 4(80KB) LOS objects, 33% free, 19MB/29MB, paused 41us,28us total 123.071ms
+10-28 11:59:02.781  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:02.790  8674  8779 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.791   479  8425 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.791   479  8425 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.792  8674  8760 D MediaCodec: flushMediametrics
+10-28 11:59:02.803  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:02.806  8674  8782 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:02.807  8674  8782 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:02.808  8674  8782 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:02.808  8674  8782 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:02.809  8674  8782 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:02.810  8674  8782 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:02.810  8674  8782 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:02.810  8674  8782 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:02.810  8674  8782 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:02.810  8674  8782 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:02.811  8674  8782 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:02.811  8674  8782 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.811  8674  8782 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:02.811  8674  8782 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:02.811  8674  8782 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:02.811  8674  8782 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:02.811  8674  8782 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:02.811  8674  8782 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:02.811  8674  8782 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:02.811  8674  8782 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:02.811  8674  8782 D CCodecConfig: }
+10-28 11:59:02.814  8674  8782 D MediaCodec: flushMediametrics
+10-28 11:59:02.814  8674  8782 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:02.814  8674  8782 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:02.815  8674  8782 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:02.815  8674  8782 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:02.815  8674  8782 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:02.818  8674  8782 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 86000
+10-28 11:59:02.818  8674  8782 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-28 11:59:02.818  8674  8782 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:02.818  8674  8782 D CCodec  : encoding statistics level = 0
+10-28 11:59:02.818  8674  8782 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t bitrate = 86000
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:02.818  8674  8782 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.818  8674  8782 D CCodec  : }
+10-28 11:59:02.818  8674  8782 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.818  8674  8782 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:02.818  8674  8782 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:02.818  8674  8782 D CCodec  : }
+10-28 11:59:02.819  8674  8782 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.819  8674  8782 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:02.819  8674  8782 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:02.820  8674  8782 D CCodecBufferChannel: [c2.android.vorbis.decoder#315] Created input block pool with allocatorID 16 => poolID 20 - OK (0)
+10-28 11:59:02.821  8674  8782 I CCodecBufferChannel: [c2.android.vorbis.decoder#315] Created output block pool with allocatorID 16 => poolID 50 - OK
+10-28 11:59:02.821  8674  8782 D CCodecBufferChannel: [c2.android.vorbis.decoder#315] Configured output block pool ids 50 => OK
+10-28 11:59:02.821   479  8783 D SimpleC2Component: Using output block pool with poolID 50 => got 50 - 0
+10-28 11:59:02.837  8674  8782 D CCodecBufferChannel: [c2.android.vorbis.decoder#315] MediaCodec discarded an unknown buffer
+10-28 11:59:02.837  8674  8782 D CCodecBufferChannel: [c2.android.vorbis.decoder#315] MediaCodec discarded an unknown buffer
+10-28 11:59:02.840  8674  8782 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.840   479  5188 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.840   479  5188 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.842  8674  8760 D MediaCodec: flushMediametrics
+10-28 11:59:02.850  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:02.853  8674  8785 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:02.854  8674  8785 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:02.855  8674  8785 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:02.855  8674  8785 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:02.855  8674  8785 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:02.856  8674  8785 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:02.856  8674  8785 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:02.856  8674  8785 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:02.856  8674  8785 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:02.856  8674  8785 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:02.856  8674  8785 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:02.857  8674  8785 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.857  8674  8785 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:02.857  8674  8785 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:02.857  8674  8785 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:02.857  8674  8785 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:02.857  8674  8785 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:02.857  8674  8785 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:02.857  8674  8785 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:02.857  8674  8785 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:02.857  8674  8785 D CCodecConfig: }
+10-28 11:59:02.858  8674  8785 D MediaCodec: flushMediametrics
+10-28 11:59:02.858  8674  8785 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:02.859  8674  8785 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:02.859  8674  8785 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:02.859  8674  8785 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:02.859  8674  8785 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:02.865  1053  1053 D CarrierSvcBindHelper: onPackageModified: io.github.dantemorrigan.cotes
+10-28 11:59:02.865  1053  1053 D CarrierSvcBindHelper: No carrier app for: 0
+10-28 11:59:02.868  1028  1028 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-28 11:59:02.868   524   624 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-28 11:59:02.869  1028  1028 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-28 11:59:02.872   844   870 I PermissionControllerServiceImpl: Updating user sensitive for uid 10196
+10-28 11:59:02.872  8674  8785 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 86000
+10-28 11:59:02.872  8674  8785 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-28 11:59:02.872  8674  8785 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:02.872  8674  8785 D CCodec  : encoding statistics level = 0
+10-28 11:59:02.872  8674  8785 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t bitrate = 86000
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:02.872  8674  8785 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.872  8674  8785 D CCodec  : }
+10-28 11:59:02.872  8674  8785 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.872  8674  8785 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:02.872  8674  8785 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:02.872  8674  8785 D CCodec  : }
+10-28 11:59:02.873  8674  8785 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.873  4246  4246 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-28 11:59:02.875  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.876  8674  8785 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:02.876  8674  8785 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:02.877  8674  8785 D CCodecBufferChannel: [c2.android.vorbis.decoder#779] Created input block pool with allocatorID 16 => poolID 21 - OK (0)
+10-28 11:59:02.877  4246  4422 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-28 11:59:02.878  4246  4422 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-28 11:59:02.878  8674  8785 I CCodecBufferChannel: [c2.android.vorbis.decoder#779] Created output block pool with allocatorID 16 => poolID 51 - OK
+10-28 11:59:02.879  8674  8785 D CCodecBufferChannel: [c2.android.vorbis.decoder#779] Configured output block pool ids 51 => OK
+10-28 11:59:02.881   524   614 I RoleService: Granting default roles...
+10-28 11:59:02.881  4246  4422 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-28 11:59:02.882   479  8786 D SimpleC2Component: Using output block pool with poolID 51 => got 51 - 0
+10-28 11:59:02.888  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.890   524   551 E system_server: No package ID 7f found for resource ID 0x7f070082.
+10-28 11:59:02.890   524   551 E system_server: No package ID 7f found for resource ID 0x7f0f00da.
+10-28 11:59:02.890   524   551 E system_server: No package ID 7f found for resource ID 0x7f0f00da.
+10-28 11:59:02.893  1650  1650 I AiAiEcho: AppFetcherImpl onPackageChanged io.github.dantemorrigan.cotes.
+10-28 11:59:02.894  1650  8652 I AiAiEcho: AppIndexer Package:[io.github.dantemorrigan.cotes] UserProfile:[0] Enabled:[true].
+10-28 11:59:02.894  1650  8652 I AiAiEcho: AppFetcherImplV2 updateApps package:[io.github.dantemorrigan.cotes], userId:[0], reason:[package is updated.].
+10-28 11:59:02.897  1053  1353 D ImsResolver: maybeAddedImsService, packageName: io.github.dantemorrigan.cotes
+10-28 11:59:02.901   844  8640 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+10-28 11:59:02.902  4246  4422 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-28 11:59:02.903  4246  4422 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-28 11:59:02.905  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.906  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.906  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.907   844  8640 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+10-28 11:59:02.907   844  8640 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+10-28 11:59:02.907  4246  4422 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-28 11:59:02.907  4246  4422 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-28 11:59:02.909  4246  4422 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-28 11:59:02.910  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:02.910   844  8640 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+10-28 11:59:02.910  4246  4422 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-28 11:59:02.911  4246  4422 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-28 11:59:02.918  4246  4422 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-28 11:59:02.930  8674  8785 D CCodecBufferChannel: [c2.android.vorbis.decoder#779] MediaCodec discarded an unknown buffer
+10-28 11:59:02.930  8674  8785 D CCodecBufferChannel: [c2.android.vorbis.decoder#779] MediaCodec discarded an unknown buffer
+10-28 11:59:02.930  8674  8785 D CCodecBufferChannel: [c2.android.vorbis.decoder#779] MediaCodec discarded an unknown buffer
+10-28 11:59:02.933  8674  8785 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.933   479  7603 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.933   479  7603 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.934  8674  8760 D MediaCodec: flushMediametrics
+10-28 11:59:02.939  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:02.945  8674  8788 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:02.946  8674  8788 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:02.947  8674  8788 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:02.947  8674  8788 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:02.948  8674  8788 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:02.948  8674  8788 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:02.948  8674  8788 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:02.948  8674  8788 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:02.948  8674  8788 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:02.948  8674  8788 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:02.948  8674  8788 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:02.949  8674  8788 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.949  8674  8788 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:02.949  8674  8788 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:02.949  8674  8788 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:02.949  8674  8788 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:02.949  8674  8788 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:02.949  8674  8788 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:02.949  8674  8788 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:02.949  8674  8788 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:02.949  8674  8788 D CCodecConfig: }
+10-28 11:59:02.950  8674  8788 D MediaCodec: flushMediametrics
+10-28 11:59:02.950  8674  8788 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:02.950  8674  8788 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:02.950  8674  8788 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:02.950  8674  8788 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:02.950  8674  8788 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:02.951  8674  8788 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 86000
+10-28 11:59:02.951  8674  8788 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-28 11:59:02.951  8674  8788 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:02.951  8674  8788 D CCodec  : encoding statistics level = 0
+10-28 11:59:02.951  8674  8788 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t bitrate = 86000
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:02.951  8674  8788 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.951  8674  8788 D CCodec  : }
+10-28 11:59:02.951  8674  8788 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:02.951  8674  8788 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:02.951  8674  8788 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:02.951  8674  8788 D CCodec  : }
+10-28 11:59:02.951  8674  8788 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:02.951  8674  8788 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:02.951  8674  8788 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:02.952  8674  8788 D CCodecBufferChannel: [c2.android.vorbis.decoder#193] Created input block pool with allocatorID 16 => poolID 22 - OK (0)
+10-28 11:59:02.953  8674  8788 I CCodecBufferChannel: [c2.android.vorbis.decoder#193] Created output block pool with allocatorID 16 => poolID 52 - OK
+10-28 11:59:02.953  8674  8788 D CCodecBufferChannel: [c2.android.vorbis.decoder#193] Configured output block pool ids 52 => OK
+10-28 11:59:02.953   479  8789 D SimpleC2Component: Using output block pool with poolID 52 => got 52 - 0
+10-28 11:59:02.978  8674  8788 D CCodecBufferChannel: [c2.android.vorbis.decoder#193] MediaCodec discarded an unknown buffer
+10-28 11:59:02.978  8674  8788 D CCodecBufferChannel: [c2.android.vorbis.decoder#193] MediaCodec discarded an unknown buffer
+10-28 11:59:02.978  8674  8788 D CCodecBufferChannel: [c2.android.vorbis.decoder#193] MediaCodec discarded an unknown buffer
+10-28 11:59:02.979   479  8425 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.979   479  8425 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.979  8674  8788 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:02.981  8674  8760 D MediaCodec: flushMediametrics
+10-28 11:59:03.010  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:03.017  8674  8791 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:03.018  8674  8791 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:03.019  8674  8791 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:03.019  8674  8791 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:03.021  8674  8791 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:03.021  8674  8791 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:03.021  8674  8791 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:03.022  8674  8791 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:03.022  8674  8791 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:03.022  8674  8791 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:03.022  8674  8791 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:03.023  8674  8791 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:03.023  8674  8791 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:03.023  8674  8791 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:03.023  8674  8791 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:03.023  8674  8791 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:03.023  8674  8791 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:03.023  8674  8791 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:03.023  8674  8791 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:03.023  8674  8791 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:03.023  8674  8791 D CCodecConfig: }
+10-28 11:59:03.024  8674  8791 D MediaCodec: flushMediametrics
+10-28 11:59:03.024  8674  8791 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:03.024  8674  8791 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:03.024  8674  8791 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:03.024  8674  8791 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:03.024  8674  8791 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:03.025  8674  8791 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 86000
+10-28 11:59:03.025  8674  8791 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+10-28 11:59:03.025  8674  8791 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:03.025  8674  8791 D CCodec  : encoding statistics level = 0
+10-28 11:59:03.025  8674  8791 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t bitrate = 86000
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:03.025  8674  8791 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:03.025  8674  8791 D CCodec  : }
+10-28 11:59:03.025  8674  8791 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:03.025  8674  8791 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t sample-rate = 44100
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:03.025  8674  8791 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:03.025  8674  8791 D CCodec  : }
+10-28 11:59:03.025  8674  8791 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:03.026  8674  8791 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:03.026  8674  8791 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:03.027  8674  8791 D CCodecBufferChannel: [c2.android.vorbis.decoder#312] Created input block pool with allocatorID 16 => poolID 23 - OK (0)
+10-28 11:59:03.027  8674  8791 I CCodecBufferChannel: [c2.android.vorbis.decoder#312] Created output block pool with allocatorID 16 => poolID 53 - OK
+10-28 11:59:03.027  8674  8791 D CCodecBufferChannel: [c2.android.vorbis.decoder#312] Configured output block pool ids 53 => OK
+10-28 11:59:03.028   479  8792 D SimpleC2Component: Using output block pool with poolID 53 => got 53 - 0
+10-28 11:59:03.050  8674  8791 D CCodecBufferChannel: [c2.android.vorbis.decoder#312] MediaCodec discarded an unknown buffer
+10-28 11:59:03.050  8674  8791 D CCodecBufferChannel: [c2.android.vorbis.decoder#312] MediaCodec discarded an unknown buffer
+10-28 11:59:03.051  8674  8791 D CCodecBufferChannel: [c2.android.vorbis.decoder#312] MediaCodec discarded an unknown buffer
+10-28 11:59:03.053  8674  8793 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.053   479   939 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.054   479   939 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.054  8674  8760 D MediaCodec: flushMediametrics
+10-28 11:59:03.057  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:03.058  8674  8794 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:03.059  8674  8794 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:03.060  8674  8794 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:03.060  8674  8794 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:03.062  8674  8794 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:03.062  8674  8794 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:03.062  8674  8794 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:03.063  8674  8794 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:03.063  8674  8794 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:03.063  8674  8794 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:03.063  8674  8794 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:03.064  8674  8794 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:03.064  8674  8794 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:03.064  8674  8794 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:03.064  8674  8794 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:03.064  8674  8794 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:03.064  8674  8794 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:03.064  8674  8794 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:03.064  8674  8794 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:03.064  8674  8794 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:03.064  8674  8794 D CCodecConfig: }
+10-28 11:59:03.065  8674  8794 D MediaCodec: flushMediametrics
+10-28 11:59:03.065  8674  8794 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:03.065  8674  8794 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:03.065  8674  8794 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:03.065  8674  8794 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:03.065  8674  8794 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:03.066  8674  8794 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 78000
+10-28 11:59:03.066  8674  8794 D CCodecConfig:   c2::u32 raw.sample-rate.value = 32000
+10-28 11:59:03.066  8674  8794 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:03.066  8674  8794 D CCodec  : encoding statistics level = 0
+10-28 11:59:03.066  8674  8794 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t bitrate = 78000
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:03.066  8674  8794 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t sample-rate = 32000
+10-28 11:59:03.066  8674  8794 D CCodec  : }
+10-28 11:59:03.066  8674  8794 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:03.066  8674  8794 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t sample-rate = 32000
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:03.066  8674  8794 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:03.066  8674  8794 D CCodec  : }
+10-28 11:59:03.066  8674  8794 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:03.067  8674  8794 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:03.067  8674  8794 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:03.067  8674  8794 D CCodecBufferChannel: [c2.android.vorbis.decoder#840] Created input block pool with allocatorID 16 => poolID 24 - OK (0)
+10-28 11:59:03.068  8674  8794 I CCodecBufferChannel: [c2.android.vorbis.decoder#840] Created output block pool with allocatorID 16 => poolID 54 - OK
+10-28 11:59:03.069  8674  8794 D CCodecBufferChannel: [c2.android.vorbis.decoder#840] Configured output block pool ids 54 => OK
+10-28 11:59:03.069   479  8795 D SimpleC2Component: Using output block pool with poolID 54 => got 54 - 0
+10-28 11:59:03.085  8674  8794 D CCodecBufferChannel: [c2.android.vorbis.decoder#840] MediaCodec discarded an unknown buffer
+10-28 11:59:03.085  8674  8794 D CCodecBufferChannel: [c2.android.vorbis.decoder#840] MediaCodec discarded an unknown buffer
+10-28 11:59:03.089  8674  8794 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.089   479   939 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.089   479   939 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.090  8674  8794 D MediaCodec: flushMediametrics
+10-28 11:59:03.092  4246  4246 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-28 11:59:03.094  8674  8760 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-28 11:59:03.095  8674  8797 D CCodec  : allocate(c2.android.vorbis.decoder)
+10-28 11:59:03.096  8674  8797 I CCodec  : setting up 'default' as default (vendor) store
+10-28 11:59:03.097  8674  8797 I CCodec  : Created component [c2.android.vorbis.decoder]
+10-28 11:59:03.097  8674  8797 D CCodecConfig: read media type: audio/vorbis
+10-28 11:59:03.098  8674  8797 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-28 11:59:03.098  8674  8797 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-28 11:59:03.099  8674  8797 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-28 11:59:03.099  8674  8797 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-28 11:59:03.099  8674  8797 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-28 11:59:03.100  8674  8797 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-28 11:59:03.100  8674  8797 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-28 11:59:03.101  8674  8797 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:03.101  8674  8797 D CCodecConfig: c2 config diff is Dict {
+10-28 11:59:03.101  8674  8797 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-28 11:59:03.101  8674  8797 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 32768
+10-28 11:59:03.101  8674  8797 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-28 11:59:03.101  8674  8797 D CCodecConfig:   string input.media-type.value = "audio/vorbis"
+10-28 11:59:03.101  8674  8797 D CCodecConfig:   string output.media-type.value = "audio/raw"
+10-28 11:59:03.101  8674  8797 D CCodecConfig:   c2::u32 raw.channel-count.value = 1
+10-28 11:59:03.101  8674  8797 D CCodecConfig:   c2::u32 raw.sample-rate.value = 48000
+10-28 11:59:03.101  8674  8797 D CCodecConfig: }
+10-28 11:59:03.102  8674  8797 D MediaCodec: flushMediametrics
+10-28 11:59:03.102  8674  8797 D CCodec  : [c2.android.vorbis.decoder] buffers are bound to CCodec for this session
+10-28 11:59:03.102  8674  8797 D CCodecConfig: no c2 equivalents for durationUs
+10-28 11:59:03.102  8674  8797 D CCodecConfig: no c2 equivalents for track-id
+10-28 11:59:03.102  8674  8797 D CCodecConfig: no c2 equivalents for csd-1
+10-28 11:59:03.102  8674  8797 D CCodecConfig: no c2 equivalents for flags
+10-28 11:59:03.103  8674  8797 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 78000
+10-28 11:59:03.103  8674  8797 D CCodecConfig:   c2::u32 raw.sample-rate.value = 32000
+10-28 11:59:03.103  8674  8797 W Codec2Client: query -- param skipped: index = 1107298332.
+10-28 11:59:03.103  8674  8797 D CCodec  : encoding statistics level = 0
+10-28 11:59:03.103  8674  8797 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t bitrate = 78000
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t max-input-size = 32768
+10-28 11:59:03.103  8674  8797 D CCodec  :   string mime = "audio/vorbis"
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t sample-rate = 32000
+10-28 11:59:03.103  8674  8797 D CCodec  : }
+10-28 11:59:03.103  8674  8797 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t channel-count = 1
+10-28 11:59:03.103  8674  8797 D CCodec  :   string mime = "audio/raw"
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t sample-rate = 32000
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t channel-mask = 1
+10-28 11:59:03.103  8674  8797 D CCodec  :   int32_t android._config-pcm-encoding = 2
+10-28 11:59:03.103  8674  8797 D CCodec  : }
+10-28 11:59:03.103  8674  8797 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+10-28 11:59:03.104  8674  8797 W Codec2Client: query -- param skipped: index = 1342179345.
+10-28 11:59:03.104  8674  8797 W Codec2Client: query -- param skipped: index = 2415921170.
+10-28 11:59:03.104  8674  8797 D CCodecBufferChannel: [c2.android.vorbis.decoder#253] Created input block pool with allocatorID 16 => poolID 25 - OK (0)
+10-28 11:59:03.105  8674  8797 I CCodecBufferChannel: [c2.android.vorbis.decoder#253] Created output block pool with allocatorID 16 => poolID 55 - OK
+10-28 11:59:03.106  8674  8797 D CCodecBufferChannel: [c2.android.vorbis.decoder#253] Configured output block pool ids 55 => OK
+10-28 11:59:03.106   479  8798 D SimpleC2Component: Using output block pool with poolID 55 => got 55 - 0
+10-28 11:59:03.116  8674  8797 D CCodecBufferChannel: [c2.android.vorbis.decoder#253] MediaCodec discarded an unknown buffer
+10-28 11:59:03.116  8674  8797 D CCodecBufferChannel: [c2.android.vorbis.decoder#253] MediaCodec discarded an unknown buffer
+10-28 11:59:03.117  8674  8799 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.117   479   939 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.117  8674  8797 D MediaCodec: flushMediametrics
+10-28 11:59:03.117   479   939 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-28 11:59:03.120  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.144  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.182  8674  8674 D CompatibilityChangeReporter: Compat change id reported: 289878283; UID 10196; state: ENABLED
+10-28 11:59:03.202  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.233  8674  8674 D CompatibilityChangeReporter: Compat change id reported: 170233598; UID 10196; state: ENABLED
+10-28 11:59:03.276   402   416 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10196 pid=0
+10-28 11:59:03.276   402   416 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10196 => denied (90 us)
+10-28 11:59:03.277   402   634 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10196 pid=8674
+10-28 11:59:03.277   402   634 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10196 => denied (135 us)
+10-28 11:59:03.277   402   634 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10196 pid=8674
+10-28 11:59:03.277   402   634 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10196 => denied (158 us)
+10-28 11:59:03.277   402   416 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10196 pid=0
+10-28 11:59:03.277   402   416 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10196 => denied (419 us)
+10-28 11:59:03.285  8674  8749 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-28 11:59:03.323   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-28 11:59:03.323  8674  8749 I Gralloc4: mapper 4.x is not supported
+10-28 11:59:03.374  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.381  6149  8709 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-28 11:59:03.390  6149  6708 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-28 11:59:03.392  6149  6708 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-28 11:59:03.392  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.395  6149  8715 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-28 11:59:03.407  6270  6330 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-28 11:59:03.408  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.408  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.408  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.411  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.416  6270  6330 I Icing   : Indexing done com.google.android.gms-apps
+10-28 11:59:03.619  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.645  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.703  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.789   524   826 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10196 pid=0
+10-28 11:59:03.789   524   826 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10196 => denied (150 us)
+10-28 11:59:03.789   524   826 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10196 pid=0
+10-28 11:59:03.789   524   826 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10196 => denied (24 us)
+10-28 11:59:03.789   524   826 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10196 pid=0
+10-28 11:59:03.789   524   826 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10196 => denied (15 us)
+10-28 11:59:03.792   524   541 W ziparchive: Unable to open '/data/app/~~OkxsNa_kEWoXoXw8zwaxbw==/io.github.dantemorrigan.cotes-iB4mSTkdgu1-LrUnS5YOgw==/base.dm': No such file or directory
+10-28 11:59:03.792   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes/.MainActivity for user 0: +2s129ms
+10-28 11:59:03.796  8674  8674 W emorrigan.cotes: Accessing hidden method Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V (unsupported, reflection, allowed)
+10-28 11:59:03.798  8674  8674 I Choreographer: Skipped 96 frames!  The application may be doing too much work on its main thread.
+10-28 11:59:03.806  8674  8775 I OpenGLRenderer: Davey! duration=1733ms; Flags=1, FrameTimelineVsyncId=76123, IntendedVsync=428813183005, Vsync=428896516335, InputEventId=0, HandleInputStart=428903280666, AnimationStart=428903282980, PerformTraversalsStart=428903284943, DrawStart=430099816635, FrameDeadline=428829849671, FrameInterval=428903261499, FrameStartTime=16666666, SyncQueued=430144893421, SyncStart=430145103553, IssueDrawCommandsStart=430145465437, SwapBuffers=430447217241, FrameCompleted=430546742902, DequeueBufferDuration=3187, QueueBufferDuration=181759, GpuCompleted=430546742902, SwapBuffersCompleted=430532046516, DisplayPresentTime=0, CommandSubmissionCompleted=430447217241, 
+10-28 11:59:03.809   524   826 W InputManager-JNI: Input channel object '5e7dc3a Splash Screen io.github.dantemorrigan.cotes (client)' was disposed without first being removed with the input manager!
+10-28 11:59:03.816  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:59:03.816  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+10-28 11:59:03.816  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:59:03.819  6149  6444 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+10-28 11:59:03.819  6149  6444 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+10-28 11:59:03.820  6149  6444 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+10-28 11:59:03.827   524   916 I ImeTracker: io.github.dantemorrigan.cotes:32816737: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:59:03.827   524   916 I ImeTracker: io.github.dantemorrigan.cotes:32816737: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:59:03.829  4246  4424 D EGL_emulation: app_time_stats: avg=244.48ms min=19.83ms max=1147.78ms count=6
+10-28 11:59:03.830  6149  6444 I FontLog : Pulling font file for id = 2, cache size = 1 [CONTEXT service_id=132 ]
+10-28 11:59:03.834  6149  6444 I FontLog : Pulling font file for id = 2, cache size = 1 [CONTEXT service_id=132 ]
+10-28 11:59:03.841  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:59:03.844  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:59:03.845  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, false)
+10-28 11:59:03.845  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:03.846  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:03.885  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.901  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.908  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.911  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.913  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:03.920  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.119  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.146  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.203  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.386  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.402  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.408  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.412  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.413  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.420  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.550  8810  8810 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-28 11:59:04.552  1658  6032 W MediaProvider: isAppCloneUserPair for user 0: false
+10-28 11:59:04.554  8810  8810 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-28 11:59:04.568   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-28 11:59:04.570  8810  8813 I Gralloc4: mapper 4.x is not supported
+10-28 11:59:04.614  6149  6207 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 431 [CONTEXT service_id=218 ]
+10-28 11:59:04.618  6149  8286 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 36 uptime_millis: 36 exec_start_elapsed_seconds: 431 [CONTEXT service_id=218 ]
+10-28 11:59:04.620  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.647  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.703  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.798   524   826 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-28 11:59:04.802   524   541 I ActivityManager: Broadcast completed: result=0
+10-28 11:59:04.803  1658  2516 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:59:04.812  1658  2516 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:59:04.831  6149  6207 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 431 [CONTEXT service_id=218 ]
+10-28 11:59:04.834  6149  8286 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 431 [CONTEXT service_id=218 ]
+10-28 11:59:04.848   399   838 D audioserver: FGS Logger Transaction failed
+10-28 11:59:04.848   399   838 D audioserver: -129
+10-28 11:59:04.850   399   507 D AudioFlinger: mixer(0x7b7679758930) throttle end: throttle time(29)
+10-28 11:59:04.887  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.895   399   507 D AudioFlinger: mixer(0x7b7679758930) throttle end: throttle time(33)
+10-28 11:59:04.903  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.909  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.913  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.913  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.921  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:04.998  8674  8749 D EGL_emulation: app_time_stats: avg=241.47ms min=14.96ms max=706.55ms count=5
+10-28 11:59:05.011   399   507 D audioserver: FGS Logger Transaction failed
+10-28 11:59:05.012   399   507 D audioserver: -129
+10-28 11:59:05.121  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.148  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.204  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.388  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.404  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.409  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.414  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.415  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.421  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.621  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.649  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.705  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.749  8824  8824 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+10-28 11:59:05.751  1658  2280 W MediaProvider: isAppCloneUserPair for user 0: false
+10-28 11:59:05.753  8824  8824 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+10-28 11:59:05.764   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-28 11:59:05.764  8824  8827 I Gralloc4: mapper 4.x is not supported
+10-28 11:59:05.788  6149  8818 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 432 [CONTEXT service_id=218 ]
+10-28 11:59:05.790  6149  8286 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 18 uptime_millis: 18 exec_start_elapsed_seconds: 432 [CONTEXT service_id=218 ]
+10-28 11:59:05.889  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.905  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.909  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.915  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.915  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.922  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:05.951   524   916 I ActivityManager: Broadcasting: Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x400000 }
+10-28 11:59:05.954  1658  2516 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:59:05.955   524   541 I ActivityManager: Broadcast completed: result=0
+10-28 11:59:05.960  1658  2516 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-28 11:59:05.977  6149  6207 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 432 [CONTEXT service_id=218 ]
+10-28 11:59:05.981  6149  8286 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 432 [CONTEXT service_id=218 ]
+10-28 11:59:05.995   399   838 D audioserver: FGS Logger Transaction failed
+10-28 11:59:05.995   399   838 D audioserver: -129
+10-28 11:59:06.087  8674  8674 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=androidx.navigationevent.OnBackInvokedInput$createOnBackAnimationCallback$1@e4e46b9
+10-28 11:59:06.094  4246  4246 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-28 11:59:06.121  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.150  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.153  8674  8749 D EGL_emulation: app_time_stats: avg=577.55ms min=352.31ms max=802.79ms count=2
+10-28 11:59:06.206  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.233   399   507 D audioserver: FGS Logger Transaction failed
+10-28 11:59:06.233   399   507 D audioserver: -129
+10-28 11:59:06.318  8674  8832 D ProfileInstaller: Installing profile for io.github.dantemorrigan.cotes
+10-28 11:59:06.385  4246  4246 I NoBackGesture: NavbarController: newConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2258 fontWeightAdjustment=0} mTaskbarDelegate initialized=false willApplyConfigToNavbars=true navBarCount=1
+10-28 11:59:06.385  4246  4246 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@de4a22f
+10-28 11:59:06.387   402   634 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:59:06.389  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.405  1565  1565 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2246 fontWeightAdjustment=0}
+10-28 11:59:06.405  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 40000000
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in ebn
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in ebn
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in een
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in een
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in csi
+10-28 11:59:06.405  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in csi
+10-28 11:59:06.406  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.406  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-28 11:59:06.406  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:59:06.406  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-28 11:59:06.407  1565  1565 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+10-28 11:59:06.407  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.407  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.407  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.407  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.407  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.407  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+10-28 11:59:06.410  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.410  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.410  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.411  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.411  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-28 11:59:06.411  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 6 ms : RunTime = 0 ms
+10-28 11:59:06.412  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, true)
+10-28 11:59:06.413  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:06.413  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:06.413  1565  1565 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-28 11:59:06.413  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214034 -> 0_resource_name_obfuscated : WaitTime = 7 ms : RunTime = 1 ms
+10-28 11:59:06.414  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214033 -> 0_resource_name_obfuscated : WaitTime = 8 ms : RunTime = 1 ms
+10-28 11:59:06.416  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.416  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.416  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.416  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in ebn.
+10-28 11:59:06.416  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in eco.
+10-28 11:59:06.416  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in een.
+10-28 11:59:06.416  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in csi.
+10-28 11:59:06.418  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214024 -> 0_resource_name_obfuscated : WaitTime = 6 ms : RunTime = 7 ms
+10-28 11:59:06.419   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:59:06.425  4246  4424 D EGL_emulation: app_time_stats: avg=1631.58ms min=132.68ms max=4381.84ms count=3
+10-28 11:59:06.427  4246  4424 D EGL_emulation: app_time_stats: avg=1555.44ms min=90.77ms max=4363.97ms count=3
+10-28 11:59:06.435  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.444  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@dfb454 in: PAUSED
+10-28 11:59:06.444  8674  8674 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@dfb454
+10-28 11:59:06.451   524  2473 W InputManager-JNI: Input channel object '[Gesture Monitor] edge-swipe (client)' was disposed without first being removed with the input manager!
+10-28 11:59:06.461  4246  4374 D SplashScreenView: Build android.window.SplashScreenView{1271a2f V.E...... ......ID 0,0-0,0}
+10-28 11:59:06.461  4246  4374 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-28 11:59:06.461  4246  4374 D SplashScreenView: Branding: view: android.view.View{6faa83c G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: No service published for: ethernet
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1184)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+10-28 11:59:06.462   999  1024 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-28 11:59:06.479   338   338 D Zygote  : Forked child process 8839
+10-28 11:59:06.483   524  2473 W InputManager-JNI: Input channel object 'a544213 NavigationBar0 (client)' was disposed without first being removed with the input manager!
+10-28 11:59:06.493  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@dfb454 in: STOPPED
+10-28 11:59:06.493  8674  8674 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@dfb454
+10-28 11:59:06.520  8839  8839 I igan.cotes.test: Late-enabling -Xcheck:jni
+10-28 11:59:06.537  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.542  1565  1565 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h866dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2316 fontWeightAdjustment=0}
+10-28 11:59:06.542  4246  4246 D NavigationModeController: getCurrentInteractionMode: mode=2 contextUser=0
+10-28 11:59:06.543  6149  6708 I NearbySharing: Screen is already unlocked, skipping invalidate [CONTEXT service_id=194 ]
+10-28 11:59:06.543  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 20000400
+10-28 11:59:06.544  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in ebn
+10-28 11:59:06.545  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in ebn
+10-28 11:59:06.545  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+10-28 11:59:06.546  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+10-28 11:59:06.546  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in een
+10-28 11:59:06.546  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in een
+10-28 11:59:06.546  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in csi
+10-28 11:59:06.546  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in csi
+10-28 11:59:06.547  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.547  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-28 11:59:06.547  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:59:06.547  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-28 11:59:06.548  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214024 -> 0_resource_name_obfuscated : WaitTime = 0 ms : RunTime = 1 ms
+10-28 11:59:06.549  1565  1565 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+10-28 11:59:06.549  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.549  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.549  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.550  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.550  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.554  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+10-28 11:59:06.556  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.556  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: No service published for: ethernet
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1184)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+10-28 11:59:06.566   999  1024 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-28 11:59:06.567  8839  8839 I igan.cotes.test: Using CollectorTypeCC GC.
+10-28 11:59:06.568  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 2 ms : RunTime = 2 ms
+10-28 11:59:06.568  8839  8839 W igan.cotes.test: Unexpected CPU variant for x86: x86_64.
+10-28 11:59:06.568  8839  8839 W igan.cotes.test: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+10-28 11:59:06.572  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-28 11:59:06.575  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, true)
+10-28 11:59:06.575  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:06.577  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:06.577  1565  1565 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-28 11:59:06.578  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in ebn.
+10-28 11:59:06.578  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in eco.
+10-28 11:59:06.579  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in een.
+10-28 11:59:06.579  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in csi.
+10-28 11:59:06.580  1565  1628 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214034 -> 0_resource_name_obfuscated : WaitTime = 6 ms : RunTime = 27 ms
+10-28 11:59:06.622  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.625  4246  4246 D NavigationModeController: getCurrentInteractionMode: mode=2 contextUser=0
+10-28 11:59:06.625  4246  4246 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+10-28 11:59:06.631  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214033 -> 0_resource_name_obfuscated : WaitTime = 22 ms : RunTime = 63 ms
+10-28 11:59:06.644   417   430 I adbd    : jdwp connection from 8839
+10-28 11:59:06.654  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.659  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.660  1565  1565 W GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1557 onConfigurationChanged() : NewConfig = {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h842dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 128 - 1080, 2337) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mDisplayWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.5 s.2386 fontWeightAdjustment=0}
+10-28 11:59:06.660  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onConfigurationChanged():1575 changedMask : 20000400
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in ebn
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in ebn
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in eco
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in eco
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in een
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in een
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.maybeDestroyExistingKeyboardGroupManager():512 Destroy existing keyboard group manager in csi
+10-28 11:59:06.661  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():124 Create keyboard group manager listenable future in csi
+10-28 11:59:06.661  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.661  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+10-28 11:59:06.662  1565  1565 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+10-28 11:59:06.662  1565  1565 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+10-28 11:59:06.663  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214024 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 1 ms
+10-28 11:59:06.665  1565  1565 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0]
+10-28 11:59:06.665  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214027 -> 0_resource_name_obfuscated : WaitTime = 2 ms : RunTime = 2 ms
+10-28 11:59:06.665  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214034 -> 0_resource_name_obfuscated : WaitTime = 4 ms : RunTime = 0 ms
+10-28 11:59:06.676  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.677  6149  6708 I NearbySharing: Screen is already unlocked, skipping invalidate [CONTEXT service_id=194 ]
+10-28 11:59:06.677  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.678  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.678  1565  1627 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():88 parseKeyboardGroupDef() 2132214033 -> 0_resource_name_obfuscated : WaitTime = 5 ms : RunTime = 12 ms
+10-28 11:59:06.678  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.678  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.678  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff1f0f7-ffb2c5ff-734dbefe1e6f4840c010420f35e14fb0_port
+10-28 11:59:06.680  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.681  1565  1565 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+10-28 11:59:06.681  1565  1565 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+10-28 11:59:06.681  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes fieldId=0 fieldName=null extras=null}, true)
+10-28 11:59:06.681  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:06.689  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:06.689  1565  1565 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-28 11:59:06.689  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in ebn.
+10-28 11:59:06.690  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in eco.
+10-28 11:59:06.690  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in een.
+10-28 11:59:06.690  1565  1565 I AbstractOpenableExtension: AbstractOpenableExtension$3.onSuccess():525 KeyboardGroupManager destroyed in csi.
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: No service published for: ethernet
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:166)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$139.createService(SystemServiceRegistry.java:1872)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:1971)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1645)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2212)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:934)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1582)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2550)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2524)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:546)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1184)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1802)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$gDuJqgxY6Zb-ifyeubKeivTLAwk(Unknown Source:0)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(Unknown Source:2)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:958)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:205)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:294)
+10-28 11:59:06.702   999  1024 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-28 11:59:06.712  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.754  8839  8839 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10197; state: ENABLED
+10-28 11:59:06.754  8839  8839 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10197; state: ENABLED
+10-28 11:59:06.755  8674  8674 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@851c869
+10-28 11:59:06.756  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@dfb454 in: DESTROYED
+10-28 11:59:06.756  8674  8674 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 11:59:06.770  8839  8839 W ziparchive: Unable to open '/data/app/~~nRZE3sH7lZbDZsWgwX_KSw==/io.github.dantemorrigan.cotes.test-8b6Ip-EbMIz57m-Ay7FZeg==/base.dm': No such file or directory
+10-28 11:59:06.770  8839  8839 W ziparchive: Unable to open '/data/app/~~nRZE3sH7lZbDZsWgwX_KSw==/io.github.dantemorrigan.cotes.test-8b6Ip-EbMIz57m-Ay7FZeg==/base.dm': No such file or directory
+10-28 11:59:06.773  4246  4246 D CentralSurfaces: Received new disable state: enaihbcrso.qingr (unchanged)
+10-28 11:59:06.773  4246  4246 D CentralSurfaces: Received new disable state: enaihbcrso.qingr (unchanged)
+10-28 11:59:06.783   524  2470 W InputManager-JNI: Input channel object '1bc8786 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:59:06.820  4246  4246 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:06.824  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b382f51 in: PRE_ON_CREATE
+10-28 11:59:06.825  8839  8839 D nativeloader: Configuring clns-6 for other apk /data/app/~~nRZE3sH7lZbDZsWgwX_KSw==/io.github.dantemorrigan.cotes.test-8b6Ip-EbMIz57m-Ay7FZeg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~nRZE3sH7lZbDZsWgwX_KSw==/io.github.dantemorrigan.cotes.test-8b6Ip-EbMIz57m-Ay7FZeg==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/io.github.dantemorrigan.cotes.test
+10-28 11:59:06.825  8674  8674 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was DESTROYED
+10-28 11:59:06.837  4246  4246 D LockscreenSmartspaceController: Ended smartspace session for lockscreen
+10-28 11:59:06.838  8839  8839 V GraphicsEnvironment: Currently set values for:
+10-28 11:59:06.839  8839  8839 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-28 11:59:06.839  8839  8839 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-28 11:59:06.839  4246  4694 E KeyguardClockSwitch: No clock being shown
+10-28 11:59:06.839  8839  8839 V GraphicsEnvironment: ANGLE GameManagerService for io.github.dantemorrigan.cotes.test: false
+10-28 11:59:06.839  8839  8839 V GraphicsEnvironment: io.github.dantemorrigan.cotes.test is not listed in per-application setting
+10-28 11:59:06.839  8839  8839 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-28 11:59:06.848  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b382f51 in: CREATED
+10-28 11:59:06.848  8674  8674 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b382f51
+10-28 11:59:06.850  4246  4246 W AlarmManager: Unrecognized alarm listener com.google.android.systemui.smartspace.KeyguardZenAlarmViewController$showNextAlarm$1@a7738b6
+10-28 11:59:06.850  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b382f51 in: STARTED
+10-28 11:59:06.850  4246  4246 W AlarmManager: Unrecognized alarm listener com.google.android.systemui.smartspace.KeyguardZenAlarmViewController$showNextAlarm$1@a7738b6
+10-28 11:59:06.850  8674  8674 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b382f51
+10-28 11:59:06.851  4246  4246 D LockscreenSmartspaceController: Starting smartspace session for lockscreen
+10-28 11:59:06.851  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b382f51 in: RESUMED
+10-28 11:59:06.852  8674  8674 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b382f51
+10-28 11:59:06.853  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:06.853  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:06.853  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:06.853  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:06.854  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-28 11:59:06.855  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:06.855  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:06.855  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:06.855  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:06.856  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-28 11:59:06.858  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:06.859  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:06.859  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:06.859  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:06.859  4246  4246 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+10-28 11:59:06.860  1650  1861 I AiAiEcho: Predicting[0]: 
+10-28 11:59:06.861  1650  1861 I AiAiEcho: EchoTargets: 
+10-28 11:59:06.861  1650  1861 I AiAiEcho: Filtered by AiAi flag check: 
+10-28 11:59:06.861  1650  1861 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-28 11:59:06.862  1650  1861 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-28 11:59:06.863  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b382f51 in: PAUSED
+10-28 11:59:06.864  8674  8674 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b382f51
+10-28 11:59:06.865  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:06.865  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:06.865  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:06.865  4246  4246 W ConstraintSet: Unknown attribute 0x39   0
+10-28 11:59:06.891  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.903  8839  8859 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-28 11:59:06.906  8839  8859 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-28 11:59:06.913  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.914  8839  8859 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-28 11:59:06.925  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.926  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.926  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.937  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:06.942  8839  8839 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10197; state: DISABLED
+10-28 11:59:06.943  8839  8839 W OpenGLRenderer: Unknown dataspace 0
+10-28 11:59:06.951  4246  4246 D QSPanel : setUsingHorizontalLayout: false, true
+10-28 11:59:06.951  4246  4246 D QSPanel : Reattaching media host: false, current com.android.systemui.qs.QSPanel{b686c23 IFE...... ......ID 0,126-996,1877 #7f0a05d8 app:id/quick_settings_panel}, new com.android.systemui.qs.QSPanel{473b19b VFE...... ......I. 0,0-0,0 #7f0a05d8 app:id/quick_settings_panel}
+10-28 11:59:06.952  4246  4246 D QSPanel : setUsingHorizontalLayout: false, true
+10-28 11:59:06.952  4246  4246 D QSPanel : Reattaching media host: false, current com.android.systemui.qs.QSPanel{473b19b VFE...... ......I. 0,0-0,0 #7f0a05d8 app:id/quick_settings_panel}, new com.android.systemui.qs.QSPanel{473b19b VFE...... ......I. 0,0-0,0 #7f0a05d8 app:id/quick_settings_panel}
+10-28 11:59:06.969   402   460 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10197 pid=8839
+10-28 11:59:06.969   402   460 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10197 => denied (351 us)
+10-28 11:59:06.970   402   415 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10197 pid=0
+10-28 11:59:06.970   402   415 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10197 => denied (978 us)
+10-28 11:59:06.970   402   415 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10197 pid=0
+10-28 11:59:06.970   402   415 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10197 => denied (141 us)
+10-28 11:59:06.970   402   415 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10197 pid=0
+10-28 11:59:06.970   402   415 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10197 => denied (98 us)
+10-28 11:59:06.972   402   460 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10197 pid=8839
+10-28 11:59:06.972   402   460 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10197 => denied (2352 us)
+10-28 11:59:06.984  4246  4246 D QuickQSPanel: setUsingHorizontalLayout: false, true
+10-28 11:59:06.985  4246  4246 D QuickQSPanel: Reattaching media host: false, current com.android.systemui.qs.QuickQSPanel{b62828b VFE...... ......ID 0,126-996,526 #7f0a05d6 app:id/quick_qs_panel}, new com.android.systemui.qs.QuickQSPanel{1bca480 VFE...... ......I. 0,0-0,0 #7f0a05d6 app:id/quick_qs_panel}
+10-28 11:59:06.989  4246  4246 D QS      : Binding the View implementation of the QS footer actions
+10-28 11:59:06.996  4246  4246 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a43e0bd
+10-28 11:59:06.997   524   826 W InputManager-JNI: Input channel object 'fc02c88 SecondaryHomeHandle0 (client)' was disposed without first being removed with the input manager!
+10-28 11:59:06.999  4246  4246 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+10-28 11:59:07.001  4246  4246 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+10-28 11:59:07.010  8839  8858 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-28 11:59:07.066   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-28 11:59:07.066  8839  8858 I Gralloc4: mapper 4.x is not supported
+10-28 11:59:07.118  4246  4424 D EGL_emulation: app_time_stats: avg=816.47ms min=14.53ms max=3163.91ms count=4
+10-28 11:59:07.150  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.160  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.161  4246  4246 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@72dffb3
+10-28 11:59:07.162   524  2473 W InputManager-JNI: Input channel object 'd88a0a EdgeBackGestureHandler0 (client)' was disposed without first being removed with the input manager!
+10-28 11:59:07.192  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:07.193  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:07.193  4246  4246 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-28 11:59:07.213  4246  5470 I OpenGLRenderer: Davey! duration=711ms; Flags=1, FrameTimelineVsyncId=76794, IntendedVsync=433146516165, Vsync=433729849475, InputEventId=0, HandleInputStart=433743947549, AnimationStart=433743948000, PerformTraversalsStart=433744146991, DrawStart=433820136882, FrameDeadline=433163182831, FrameInterval=433743367919, FrameStartTime=16666666, SyncQueued=433820470242, SyncStart=433824996480, IssueDrawCommandsStart=433829230711, SwapBuffers=433837253353, FrameCompleted=433862605882, DequeueBufferDuration=5280, QueueBufferDuration=345604, GpuCompleted=433862139482, SwapBuffersCompleted=433862605882, DisplayPresentTime=0, CommandSubmissionCompleted=433837253353, 
+10-28 11:59:07.214   524  2473 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10197 pid=0
+10-28 11:59:07.222   524  2473 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10197 => denied (8024 us)
+10-28 11:59:07.235   524  2473 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10197 pid=0
+10-28 11:59:07.236   524  2473 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10197 => denied (882 us)
+10-28 11:59:07.237   524  2473 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10197 pid=0
+10-28 11:59:07.241   524  2473 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10197 => denied (4075 us)
+10-28 11:59:07.242  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.276   524   541 W ziparchive: Unable to open '/data/app/~~nRZE3sH7lZbDZsWgwX_KSw==/io.github.dantemorrigan.cotes.test-8b6Ip-EbMIz57m-Ay7FZeg==/base.dm': No such file or directory
+10-28 11:59:07.281   524   541 I ActivityTaskManager: Displayed io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +836ms
+10-28 11:59:07.315  8674  8674 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-28 11:59:07.378   524   916 I ImeTracker: io.github.dantemorrigan.cotes.test:8142355c: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:59:07.379   524   916 I ImeTracker: io.github.dantemorrigan.cotes.test:8142355c: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:59:07.406  4246  4341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@41748b1
+10-28 11:59:07.418  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:59:07.418  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode 1
+10-28 11:59:07.418  1028  1349 D BtGatt.ScanManager: uid 10128 isForeground true scanMode -1
+10-28 11:59:07.429  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.432  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.433  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.440  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:59:07.443  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:59:07.443  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.dantemorrigan.cotes.test fieldId=0 fieldName=null extras=null}, false)
+10-28 11:59:07.443  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:07.449  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:07.450  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.450  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.450  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.461  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:07.461   524  2470 W InputManager-JNI: Input channel object '8d9448d Splash Screen io.github.dantemorrigan.cotes.test (client)' was disposed without first being removed with the input manager!
+10-28 11:59:07.477  8674  8764 D BufferPoolAccessor2.0: bufferpool2 0x7562b868a398 : 0(0 size) total buffers - 0(0 size) used buffers - 2/7 (recycle/alloc) - 5/34 (fetch/transfer)
+10-28 11:59:07.481   479   836 D BufferPoolAccessor2.0: bufferpool2 0x73627720ebc8 : 0(0 size) total buffers - 0(0 size) used buffers - 11/15 (recycle/alloc) - 4/14 (fetch/transfer)
+10-28 11:59:07.482  8674  8764 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-28 11:59:07.482   479   836 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-28 11:59:07.563  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:07.576  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:07.596  4246  4422 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-28 11:59:07.651  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.660  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.694  4246  4261 I ndroid.systemui: Background young concurrent copying GC freed 138848(7533KB) AllocSpace objects, 1(20KB) LOS objects, 19% free, 24MB/29MB, paused 110us,35us total 310.185ms
+10-28 11:59:07.704  8674  8674 I Choreographer: Skipped 46 frames!  The application may be doing too much work on its main thread.
+10-28 11:59:07.739  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b382f51 in: STOPPED
+10-28 11:59:07.740  8674  8674 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=io.github.dantemorrigan.cotes.MainActivity@b382f51
+10-28 11:59:07.742  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.757  1054  1054 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@89c7884
+10-28 11:59:07.769   402   402 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-28 11:59:07.773   524   826 W InputManager-JNI: Input channel object '5d08c41 com.android.settings/com.android.settings.FallbackHome (client)' was disposed without first being removed with the input manager!
+10-28 11:59:07.779  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.893   524  2468 I ImeTracker: com.android.settings:890a2316: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-28 11:59:07.894   524  2468 I ImeTracker: com.android.settings:890a2316: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-28 11:59:07.927  4246  4424 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-28 11:59:07.953  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-28 11:59:07.965  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.984  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-28 11:59:07.984  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.settings fieldId=0 fieldName=null extras=null}, false)
+10-28 11:59:07.984  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-28 11:59:07.984  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.986  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.989  1565  1565 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-28 11:59:07.989  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.990  8839  8839 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@fa1935e
+10-28 11:59:07.992  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:07.992  1054  1054 D FallbackHome: User unlocked but no home; let's hope someone enables one soon?
+10-28 11:59:08.070   524  2101 W InputManager-JNI: Input channel object '321d244 io.github.dantemorrigan.cotes.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:59:08.085  8674  8674 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.app.Activity$$ExternalSyntheticLambda0@a9de2f2
+10-28 11:59:08.086  8674  8674 D LifecycleMonitor: Lifecycle status change: io.github.dantemorrigan.cotes.MainActivity@b382f51 in: DESTROYED
+10-28 11:59:08.086  8674  8674 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 11:59:08.124   524   826 W InputManager-JNI: Input channel object '245f995 io.github.dantemorrigan.cotes/io.github.dantemorrigan.cotes.MainActivity (client)' was disposed without first being removed with the input manager!
+10-28 11:59:08.147  8674  8728 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@ab26e07]
+10-28 11:59:08.150  8674  8728 I TestRunner: finished: hugeFontScale_keepsMainControlsReachable(io.github.dantemorrigan.cotes.LayoutTest)
