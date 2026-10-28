@@ -1159,7 +1159,7 @@ private fun NoteRow(
                 text = if (title.isEmpty()) AnnotatedString(stringResource(if (note.isBlank) R.string.new_note else R.string.untitled))
                 else highlight(title, query, mark),
                 style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = if (title.isEmpty()) colors.onSurfaceVariant else colors.onSurface,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,

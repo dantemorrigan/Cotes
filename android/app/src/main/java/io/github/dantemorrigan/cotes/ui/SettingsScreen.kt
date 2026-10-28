@@ -53,6 +53,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -93,6 +94,7 @@ fun SettingsScreen(
     val colors = MaterialTheme.colorScheme
     val context = LocalContext.current
     val res = LocalResources.current
+    val uriHandler = LocalUriHandler.current
     val version = remember(res) {
         runCatching {
             val info = context.packageManager.getPackageInfo(context.packageName, 0)
@@ -276,6 +278,16 @@ fun SettingsScreen(
                         LinkRow(stringResource(R.string.backup), stringResource(R.string.backup_sub), onExport)
                         Divider()
                         LinkRow(stringResource(R.string.export_md), stringResource(R.string.export_md_sub), onExportMarkdown)
+                    }
+
+                    Section(stringResource(R.string.section_support))
+                    Card {
+                        LinkRow(
+                            stringResource(R.string.support_title),
+                            stringResource(R.string.support_sub),
+                        ) {
+                            uriHandler.openUri("https://boosty.to/dante_morr/purchase/4062968?ssource=DIRECT&share=subscription_link")
+                        }
                     }
 
                     Section(stringResource(R.string.section_about))

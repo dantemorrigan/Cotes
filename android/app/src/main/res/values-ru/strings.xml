@@ -159,6 +159,9 @@
     <string name="import_help_footer">Можно выбрать сразу несколько файлов. Заметки, которые уже есть в Cotes, пропускаются, теги становятся #тегами в конце заметки, а заметки из корзины не переносятся.</string>
     <string name="import_source_text">текстовых файлов</string>
     <string name="import_source_json">JSON</string>
+    <string name="section_support">Поддержка</string>
+    <string name="support_title">Поддержать Cotes на Boosty</string>
+    <string name="support_sub">Помогите развивать проект</string>
     <string name="section_about">О приложении</string>
     <string name="version">Версия %1$s (сборка %2$d)</string>
     <string name="privacy">Конфиденциальность</string>

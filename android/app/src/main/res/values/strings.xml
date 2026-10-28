@@ -151,6 +151,9 @@
     <string name="import_help_footer">You can pick several files at once. Notes that are already in Cotes are skipped, tags become #tags at the end of a note, and notes from the trash are left out.</string>
     <string name="import_source_text">text files</string>
     <string name="import_source_json">JSON</string>
+    <string name="section_support">Support</string>
+    <string name="support_title">Support Cotes on Boosty</string>
+    <string name="support_sub">Help fund future updates</string>
     <string name="section_about">About</string>
     <string name="version">Version %1$s (build %2$d)</string>
     <string name="privacy">Privacy</string>
